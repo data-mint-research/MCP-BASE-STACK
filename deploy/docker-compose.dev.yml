@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  librechat:
+    volumes:
+      - ../services/librechat/config/librechat.yaml:/app/librechat.yaml
+      - ../services/librechat/config/.env:/app/.env
+
+  mcp-server:
+    volumes:
+      - ../services/mcp-server:/app
+    environment:
+      - DEBUG=true
+      - RELOAD=true

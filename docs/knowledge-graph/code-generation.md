@@ -46,17 +46,17 @@ Dependencies between components map to imports and instantiations:
 
 **Graph:**
 ```
-(Component: mcp_server) --DEPENDS_ON--> (Component: ollama)
+(Component: mcp_server) --DEPENDS_ON--> (Component: llm_server)
 ```
 
 **Code:**
 ```python
 # mcp_server.py
-from ollama import Client
+from llm_server import Client
 
 class MCPServer:
     def __init__(self):
-        self.ollama_client = Client(host="ollama", port=11434)
+        self.llm_client = Client(host="llm-server", port=11434)
 ```
 
 ### Feature to Method/Function
@@ -161,7 +161,7 @@ Here's a complete example of generating the MCP Server from the Knowledge Graph:
 (Component: mcp_server)
   |-- type: "service"
   |-- status: "implemented"
-  |-- DEPENDS_ON --> (Component: ollama)
+  |-- DEPENDS_ON --> (Component: llm_server)
   |-- IMPLEMENTS --> (Feature: health_check)
   |-- IMPLEMENTS --> (Feature: infer)
   |-- EXPOSES --> (Port: 8000)
@@ -173,10 +173,10 @@ Here's a complete example of generating the MCP Server from the Knowledge Graph:
 # mcp_server.py
 import time
 from fastapi import FastAPI, HTTPException
-from ollama import Client
+from llm_server import Client
 
 app = FastAPI()
-ollama_client = Client(host="ollama", port=11434)
+llm_client = Client(host="llm-server", port=11434)
 
 @app.get("/debug/health")
 async def health_check():
@@ -201,7 +201,7 @@ async def infer(request: dict):
             return {"answer": "Command executed.", "tool_output": "..."}
         else:
             # Handle LLM query
-            response = ollama_client.generate(model="deepseek-coder", prompt=prompt)
+            response = llm_client.generate(model="deepseek-coder", prompt=prompt)
             return {"answer": response, "tool_output": None}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
@@ -268,8 +268,8 @@ When working with code generation from the Knowledge Graph:
 
 The MCP-BASE-STACK includes tools and scripts for code generation:
 
-- `kg/scripts/generate_code.py`: Generate code from the Knowledge Graph
-- `kg/scripts/reverse_engineer.py`: Update the Knowledge Graph from code
-- `kg/scripts/validate_consistency.py`: Validate consistency between code and graph
+- `core/kg/scripts/generate_code.py`: Generate code from the Knowledge Graph
+- `core/kg/scripts/reverse_engineer.py`: Update the Knowledge Graph from code
+- `core/kg/scripts/validate_consistency.py`: Validate consistency between code and graph
 
 For more information on using these tools, see the [Usage Guide](usage-guide.md).

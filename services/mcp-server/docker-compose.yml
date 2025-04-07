@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  mcp-server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./src:/app/src
+      - ./config:/app/config
+    environment:
+      - OLLAMA_HOST=llm-server
+      - OLLAMA_PORT=11434

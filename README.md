@@ -1,59 +1,106 @@
 # MCP-BASE-STACK
 
-MCP-BASE-STACK is a comprehensive environment for running large language models (LLMs) with the following components:
+A service-based architecture for managing and deploying AI models and services.
 
-- **LibreChat**: Web interface for interacting with LLMs
-- **Ollama**: Local LLM server for running models
-- **MCP Server**: Model Context Protocol server for enhanced model capabilities
-- **Knowledge Graph**: Source of truth for system components and relationships
+## Directory Structure
 
-## Documentation
-
-Comprehensive documentation is available in the `docs/` directory:
-
-- [Knowledge Graph Documentation](docs/knowledge-graph/): Schema, code generation, examples, and usage guide
-- [Tutorials](docs/tutorials/): Step-by-step guides for common tasks
-- [Troubleshooting](docs/troubleshooting/): Known issues and how to fix them
-- [Conventions](docs/conventions/): Project-wide standards and guidelines
-
-## Test Structure
-
-The test suite is organized in the `tests/` directory:
-
-- Unit tests for individual components
-- Integration tests for component interactions
-- Agent tests for specific scenarios
-- End-to-end tests for realistic user flows
-- Performance tests for load and latency measurements
-- Regression tests for detecting changes
+- `services/`: Contains service-specific code and configuration
+  - `librechat/`: LibreChat service
+  - `llm-server/`: LLM server (renamed from Ollama)
+  - `mcp-server/`: MCP Server for orchestrating services
+- `config/`: Contains configuration files
+  - `environments/`: Environment-specific configuration
+  - `models/`: Model-related configuration
+- `data/`: Contains data files
+  - `models/`: Model files organized by provider
+- `deploy/`: Contains deployment configuration
+  - `volumes/`: Volume configuration
+- `scripts/`: Contains utility scripts
+  - `setup/`: Setup scripts
+  - `deployment/`: Deployment scripts
+  - `maintenance/`: Maintenance scripts
+- `core/`: Contains core components
+  - `kg/`: Knowledge Graph
+- `docs/`: Contains documentation
+- `tests/`: Contains test files
 
 ## Getting Started
 
-To get started with the MCP-BASE-STACK:
+### Prerequisites
 
-1. Ensure you have Docker and NVIDIA drivers installed
-2. Clone the repository
-3. Run the setup script
-4. Access LibreChat at http://localhost:3080
+- Docker
+- Docker Compose
+- Python 3.10 or higher
 
-## System Architecture
+### Setup
 
+```bash
+./mcp.sh setup
 ```
-┌─────────────┐     ┌─────────────┐     ┌─────────────┐
-│  LibreChat  │────▶│  MCP Server │────▶│    Ollama   │
-│  (Frontend) │     │ (Middleware)│     │  (LLM Host) │
-└─────────────┘     └─────────────┘     └─────────────┘
-       │                   │                   │
-       │                   │                   │
-       ▼                   ▼                   ▼
-┌─────────────────────────────────────────────────┐
-│               Knowledge Graph                    │
-│  (Source of Truth for System Configuration)      │
-└─────────────────────────────────────────────────┘
+
+### Starting the Stack
+
+```bash
+./mcp.sh start
 ```
+
+### Checking Status
+
+```bash
+./mcp.sh status
+```
+
+### Stopping the Stack
+
+```bash
+./mcp.sh stop
+```
+
+### Development Mode
+
+```bash
+./mcp.sh dev
+```
+
+## Services
+
+- **LibreChat**: Web interface for interacting with AI models
+- **LLM Server**: Serves AI models (renamed from Ollama)
+- **MCP Server**: Orchestrates services and provides API endpoints
+
+## Configuration
+
+Configuration files are located in the `config/` directory:
+
+- `environments/development.yaml`: Development environment configuration
+- `environments/production.yaml`: Production environment configuration
+- `models/registry.yaml`: Model registry configuration
+
+## Deployment
+
+Deployment files are located in the `deploy/` directory:
+
+- `docker-compose.yml`: Main Docker Compose file
+- `docker-compose.dev.yml`: Development Docker Compose file
+- `volumes/model-volumes.yml`: Model volumes configuration
+
+## Documentation
+
+Documentation is located in the `docs/` directory.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the terms of the LICENSE file included in this repository.
+## File Update Hooks
 
-Copyright (c) 2025 MINT-RESEARCH
+This repository includes Git hooks that automatically update README.md, .gitignore, and LICENSE files before every commit.
+
+To install the hooks, run:
+
+```bash
+./install-file-update-hooks.sh
+```
+
+## Maintenance
+
+Last updated: 2025-04-07 15:22:36

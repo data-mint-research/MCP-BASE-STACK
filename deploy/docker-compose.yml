@@ -1,0 +1,32 @@
+version: "3.8"
+
+services:
+  librechat:
+    extends:
+      file: ./services/librechat/docker-compose.yml
+      service: api
+    depends_on:
+      - llm-server
+      - mcp-server
+      - mongodb
+
+  mongodb:
+    extends:
+      file: ./services/librechat/docker-compose.yml
+      service: mongodb
+
+  llm-server:
+    extends:
+      file: ./services/llm-server/docker-compose.yml
+      service: llm-server
+
+  mcp-server:
+    extends:
+      file: ./services/mcp-server/docker-compose.yml
+      service: mcp-server
+    depends_on:
+      - llm-server
+
+volumes:
+  mongodb_data:
+  llm_server_data:

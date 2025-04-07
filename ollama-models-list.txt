@@ -1,3 +1,0 @@
-NAME                   ID              SIZE      MODIFIED      
-deepseek-coder:6.7b    ce298d984115    3.8 GB    3 minutes ago    
-mistral:latest         f974a74358d6    4.1 GB    4 minutes ago    

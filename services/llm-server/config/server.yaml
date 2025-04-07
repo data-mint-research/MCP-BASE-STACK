@@ -1,0 +1,15 @@
+server:
+  name: llm-server
+  host: 0.0.0.0
+  port: 11434
+  models_path: /data/models
+
+models:
+  mistral:
+    path: /data/models/mistral
+    versions:
+      - latest
+  deepseek:
+    path: /data/models/deepseek
+    versions:
+      - 6.7b

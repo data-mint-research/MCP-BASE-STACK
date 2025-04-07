@@ -1,0 +1,182 @@
+@prefix ns1: <http://mcp-base-stack.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns1:docs a ns1:Directory ;
+    ns1:contains ns1:docs_conventions,
+        ns1:docs_knowledge-graph,
+        ns1:docs_troubleshooting,
+        ns1:docs_tutorials,
+        ns1:git_hooks_kg_integration_plan ;
+    ns1:last_modified 1.74403e+09 ;
+    ns1:path "docs" .
+
+ns1:documentation a ns1:Component ;
+    ns1:status "created" .
+
+ns1:project ns1:contains ns1:deepseek,
+        ns1:docker,
+        ns1:feature_git_file_update_hooks,
+        ns1:librechat,
+        ns1:mcp_server,
+        ns1:meilisearch,
+        ns1:mistral,
+        ns1:mongodb,
+        ns1:nvidia_container,
+        ns1:nvidia_gpu,
+        ns1:ollama,
+        ns1:wsl2 .
+
+ns1:project_root ns1:contains ns1:git_hooks .
+
+ns1:tests a ns1:Component ;
+    ns1:contains ns1:tests_agent_tests,
+        ns1:tests_data,
+        ns1:tests_e2e,
+        ns1:tests_integration,
+        ns1:tests_performance,
+        ns1:tests_regression,
+        ns1:tests_unit ;
+    ns1:last_modified 1.744024e+09 ;
+    ns1:path "tests" ;
+    ns1:status "created" .
+
+ns1:docs_conventions a ns1:Directory ;
+    ns1:file_count 4 ;
+    ns1:last_modified 1.744023e+09 ;
+    ns1:path "docs/conventions" .
+
+ns1:docs_knowledge-graph a ns1:Directory ;
+    ns1:file_count 4 ;
+    ns1:last_modified 1.744023e+09 ;
+    ns1:path "docs/knowledge-graph" .
+
+ns1:docs_troubleshooting a ns1:Directory ;
+    ns1:file_count 8 ;
+    ns1:last_modified 1.74403e+09 ;
+    ns1:path "docs/troubleshooting" .
+
+ns1:docs_tutorials a ns1:Directory ;
+    ns1:file_count 7 ;
+    ns1:last_modified 1.74403e+09 ;
+    ns1:path "docs/tutorials" .
+
+ns1:git_hooks a ns1:Component ;
+    ns1:contains ns1:hooks_documentation,
+        ns1:install_hooks_script,
+        ns1:pre_commit_hook ;
+    ns1:implements ns1:feature_git_file_update_hooks ;
+    ns1:name "Git Hooks" ;
+    ns1:status "implemented" .
+
+ns1:git_hooks_kg_integration_plan a ns1:File ;
+    ns1:documents ns1:feature_git_file_update_hooks ;
+    ns1:language "markdown" ;
+    ns1:path "docs/git-hooks-kg-integration-plan.md" .
+
+ns1:hooks_documentation a ns1:File ;
+    ns1:language "markdown" ;
+    ns1:path ".git-hooks/README.md" .
+
+ns1:install_hooks_script a ns1:File ;
+    ns1:language "bash" ;
+    ns1:path "install-file-update-hooks.sh" .
+
+ns1:librechat a ns1:software ;
+    rdfs:label "LibreChat UI and API" ;
+    ns1:containerized_in ns1:docker ;
+    ns1:integrates ns1:deepseek,
+        ns1:mistral ;
+    ns1:status "cloned",
+        "configured" ;
+    ns1:uses ns1:meilisearch,
+        ns1:mongodb .
+
+ns1:mcp_server a ns1:software ;
+    rdfs:label "MCP FastAPI Server" ;
+    ns1:status "implemented" ;
+    ns1:uses ns1:deepseek .
+
+ns1:nvidia_container a ns1:software ;
+    rdfs:label "NVIDIA Container Toolkit" ;
+    ns1:enables_access ns1:nvidia_gpu ;
+    ns1:extends ns1:docker .
+
+ns1:pre_commit_hook a ns1:File ;
+    ns1:language "bash" ;
+    ns1:path ".git-hooks/pre-commit" .
+
+ns1:tests_agent_tests a ns1:Directory ;
+    ns1:file_count 0 ;
+    ns1:last_modified 1.744023e+09 ;
+    ns1:path "tests/agent_tests" .
+
+ns1:tests_data a ns1:Directory ;
+    ns1:file_count 1 ;
+    ns1:last_modified 1.74403e+09 ;
+    ns1:path "tests/data" .
+
+ns1:tests_e2e a ns1:Directory ;
+    ns1:file_count 0 ;
+    ns1:last_modified 1.744023e+09 ;
+    ns1:path "tests/e2e" .
+
+ns1:tests_integration a ns1:Directory ;
+    ns1:file_count 0 ;
+    ns1:last_modified 1.744023e+09 ;
+    ns1:path "tests/integration" .
+
+ns1:tests_performance a ns1:Directory ;
+    ns1:file_count 0 ;
+    ns1:last_modified 1.744023e+09 ;
+    ns1:path "tests/performance" .
+
+ns1:tests_regression a ns1:Directory ;
+    ns1:file_count 0 ;
+    ns1:last_modified 1.744023e+09 ;
+    ns1:path "tests/regression" .
+
+ns1:tests_unit a ns1:Directory ;
+    ns1:file_count 0 ;
+    ns1:last_modified 1.744023e+09 ;
+    ns1:path "tests/unit" .
+
+ns1:meilisearch a ns1:software ;
+    rdfs:label "Meilisearch Engine" ;
+    ns1:containerized_in ns1:docker .
+
+ns1:mistral a ns1:model ;
+    rdfs:label "Mistral 7B LLM" ;
+    ns1:served_by ns1:ollama .
+
+ns1:mongodb a ns1:software ;
+    rdfs:label "MongoDB Database" ;
+    ns1:containerized_in ns1:docker .
+
+ns1:deepseek a ns1:model ;
+    rdfs:label "DeepSeek Coder LLM" ;
+    ns1:served_by ns1:ollama .
+
+ns1:feature_git_file_update_hooks ns1:created_at "2025-04-07T15:17:54.664243" ;
+    ns1:description "Automatically updates README.md, .gitignore, LICENSE, and Knowledge Graph before every commit" ;
+    ns1:name "Git File Update Hooks" ;
+    ns1:owner "DevOps Team" ;
+    ns1:status "planned" ;
+    ns1:type ns1:Feature .
+
+ns1:nvidia_gpu a ns1:hardware ;
+    rdfs:label "NVIDIA RTX 4090 GPU" ;
+    ns1:accessible_from ns1:wsl2 .
+
+ns1:ollama a ns1:software ;
+    rdfs:label "Ollama LLM Server" ;
+    ns1:containerized_in ns1:docker ;
+    ns1:uses ns1:nvidia_gpu .
+
+ns1:wsl2 a ns1:platform ;
+    rdfs:label "Windows Subsystem for Linux 2" .
+
+ns1:docker a ns1:software ;
+    rdfs:label "Docker Engine" ;
+    ns1:runs_on ns1:wsl2 .
+

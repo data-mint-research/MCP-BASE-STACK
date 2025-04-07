@@ -1,0 +1,11 @@
+environment: development
+debug: true
+log_level: debug
+
+services:
+  librechat:
+    url: http://localhost:3080
+  llm-server:
+    url: http://localhost:11434
+  mcp-server:
+    url: http://localhost:8000

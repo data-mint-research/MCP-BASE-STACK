@@ -1,4 +1,0 @@
-NAME                  IMAGE                        COMMAND                  SERVICE   CREATED          STATUS          PORTS
-librechat-api-1       librechat/librechat:latest   "docker-entrypoint.s…"   api       52 minutes ago   Up 52 minutes   0.0.0.0:3080->3080/tcp, [::]:3080->3080/tcp
-librechat-mongodb-1   mongo:latest                 "docker-entrypoint.s…"   mongodb   52 minutes ago   Up 52 minutes   0.0.0.0:27017->27017/tcp, [::]:27017->27017/tcp
-b9c65a51f88f   ollama/ollama:latest         "/bin/ollama serve"      47 minutes ago   Up 47 minutes   0.0.0.0:11434->11434/tcp, [::]:11434->11434/tcp   ollama

@@ -21,7 +21,7 @@ The Knowledge Graph contains the relationships between components and features. 
 
 ```bash
 # Copy Knowledge Graph data to backup directory
-cp -r kg/data backups/$(date +%Y%m%d)/kg-data
+cp -r core/kg/data backups/$(date +%Y%m%d)/kg-data
 ```
 
 ## Backing up Configuration Files
@@ -49,8 +49,8 @@ If you've made custom modifications to models, you might want to back them up:
 # Create a models backup directory
 mkdir -p backups/$(date +%Y%m%d)/models
 
-# Back up Ollama model information
-docker exec ollama ollama list > backups/$(date +%Y%m%d)/models/ollama-models-list.txt
+# Back up LLM Server model information
+docker exec llm-server ollama list > backups/$(date +%Y%m%d)/models/llm-server-models-list.txt
 ```
 
 ## Automated Backups
@@ -69,7 +69,7 @@ docker exec chat-mongodb mongodump --out /tmp/mongo-backup
 docker cp chat-mongodb:/tmp/mongo-backup $BACKUP_DIR/mongo-backup
 
 # Backup Knowledge Graph
-cp -r kg/data $BACKUP_DIR/kg-data
+cp -r core/kg/data $BACKUP_DIR/kg-data
 
 # Backup configs
 mkdir -p $BACKUP_DIR/config
@@ -108,7 +108,7 @@ docker exec chat-mongodb mongorestore /tmp/mongo-backup
 kill $(cat mcp_server.pid)
 
 # Restore Knowledge Graph data
-cp -r backups/20250407/kg-data/* kg/data/
+cp -r backups/20250407/kg-data/* core/kg/data/
 
 # Restart the MCP server
 ./start_mcp_server.sh

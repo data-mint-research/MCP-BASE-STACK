@@ -1,0 +1,11 @@
+environment: production
+debug: false
+log_level: info
+
+services:
+  librechat:
+    url: http://librechat:3080
+  llm-server:
+    url: http://llm-server:11434
+  mcp-server:
+    url: http://mcp-server:8000

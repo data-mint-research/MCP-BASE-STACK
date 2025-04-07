@@ -8,7 +8,11 @@ curl -I http://localhost:3080/ 2>/dev/null | head -n 1 | tee -a stack-health-rep
 echo "" | tee -a stack-health-report.txt
 
 echo "=== LLM Server API Availability ===" | tee -a stack-health-report.txt
-curl -s http://localhost:11434/api/tags 2>/dev/null | grep -q "models" && echo "LLM Server API is responding" || echo "LLM Server API not available" | tee -a stack-health-report.txt
+if curl -s http://localhost:11434/api/tags 2>/dev/null | grep -q "models"; then
+  echo "LLM Server API is responding" | tee -a stack-health-report.txt
+else
+  echo "LLM Server API not available" | tee -a stack-health-report.txt
+fi
 echo "" | tee -a stack-health-report.txt
 
 echo "=== MCP Server Availability ===" | tee -a stack-health-report.txt

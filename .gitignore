@@ -64,4 +64,14 @@ mcp_server.pid
 mcp_debug.log
 mcp_server.log
 stack-health-report.txt
-stack-health-check.txt
+stack-health-check.txt*.tmp
+*.temp
+*.bak
+pids
+*.pid
+*.seed
+*.pid.lock
+coverage
+.nyc_output
+mcp_*.log.*
+*.health-report.txt

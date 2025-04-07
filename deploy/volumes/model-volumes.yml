@@ -1,0 +1,9 @@
+version: "3.8"
+
+volumes:
+  model_storage:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ${PWD}/data/models

@@ -8,13 +8,13 @@ Regular maintenance ensures the Knowledge Graph accurately reflects the system s
 
 ```bash
 # Update the Knowledge Graph manually
-python3 kg/scripts/update_knowledge_graph.py
+python3 core/kg/scripts/update_knowledge_graph.py
 
 # View current graph statistics
-cat kg/docs/graph_stats.txt
+cat core/kg/docs/graph_stats.txt
 
 # Visualize the current graph (requires matplotlib)
-python3 kg/scripts/visualize_graph.py  # (create this script if needed)
+python3 core/kg/scripts/visualize_graph.py  # (create this script if needed)
 ```
 
 ## Registering New Features
@@ -23,12 +23,12 @@ When implementing new features or modifications:
 
 ```bash
 # Before implementation
-python3 kg/scripts/register_feature.py --name "Feature Name" \
+python3 core/kg/scripts/register_feature.py --name "Feature Name" \
   --description "Feature description" \
   --owner "Engineer Name"
 
 # After completion
-python3 kg/scripts/update_feature.py --name "Feature Name" --status "completed"
+python3 core/kg/scripts/update_feature.py --name "Feature Name" --status "completed"
 ```
 
 ## Querying the Knowledge Graph
@@ -38,8 +38,8 @@ The Knowledge Graph can be queried to understand relationships between component
 ## Extending the Knowledge Graph
 
 To extend the Knowledge Graph with new component types or relationships, modify the following files:
-- `kg/scripts/update_knowledge_graph.py`: Add new component checks
-- `kg/scripts/register_feature.py`: For new feature types
-- `kg/scripts/update_feature.py`: For new status types
+- `core/kg/scripts/update_knowledge_graph.py`: Add new component checks
+- `core/kg/scripts/register_feature.py`: For new feature types
+- `core/kg/scripts/update_feature.py`: For new status types
 
 The Knowledge Graph is designed to be extensible to accommodate the evolving needs of the project.

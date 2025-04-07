@@ -1,0 +1,42 @@
+registry:
+  providers:
+    mistral:
+      name: Mistral AI
+      description: Open-source large language models from Mistral AI
+      models:
+        mistral:
+          name: Mistral
+          versions:
+            - version: latest
+              description: Latest version of Mistral
+              parameters:
+                context_length: 8192
+                model_type: text-generation
+                parameter_size: 7.2B
+                quantization: Q4_0
+                format: GGUF
+                size_on_disk: 4.1GB
+                family: llama
+    
+    deepseek:
+      name: DeepSeek
+      description: Code-specialized models from DeepSeek
+      models:
+        deepseek-coder:
+          name: DeepSeek Coder
+          versions:
+            - version: 6.7b
+              description: 6.7B parameter version of DeepSeek Coder
+              parameters:
+                context_length: 16384
+                model_type: code-generation
+                parameter_size: 7B
+                quantization: Q4_0
+                format: GGUF
+                size_on_disk: 3.8GB
+                family: llama
+    
+    other:
+      name: Other Models
+      description: Additional models that may be used in the future
+      models: {}

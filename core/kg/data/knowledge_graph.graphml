@@ -1,0 +1,321 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d12" for="edge" attr.name="relationship" attr.type="string" />
+  <key id="d11" for="edge" attr.name="relation" attr.type="string" />
+  <key id="d10" for="node" attr.name="language" attr.type="string" />
+  <key id="d9" for="node" attr.name="created_at" attr.type="string" />
+  <key id="d8" for="node" attr.name="owner" attr.type="string" />
+  <key id="d7" for="node" attr.name="description" attr.type="string" />
+  <key id="d6" for="node" attr.name="file_count" attr.type="long" />
+  <key id="d5" for="node" attr.name="last_modified" attr.type="double" />
+  <key id="d4" for="node" attr.name="path" attr.type="string" />
+  <key id="d3" for="node" attr.name="status" attr.type="string" />
+  <key id="d2" for="node" attr.name="name" attr.type="string" />
+  <key id="d1" for="node" attr.name="type" attr.type="string" />
+  <key id="d0" for="graph" attr.name="name" attr.type="string" />
+  <graph edgedefault="directed">
+    <node id="project_root">
+      <data key="d1">project</data>
+      <data key="d2">MCP-BASE-STACK</data>
+    </node>
+    <node id="nvidia_gpu">
+      <data key="d1">hardware</data>
+      <data key="d2">NVIDIA RTX 4090 GPU</data>
+    </node>
+    <node id="wsl2">
+      <data key="d1">platform</data>
+      <data key="d2">Windows Subsystem for Linux 2</data>
+    </node>
+    <node id="docker">
+      <data key="d1">software</data>
+      <data key="d2">Docker Engine</data>
+    </node>
+    <node id="nvidia_container">
+      <data key="d1">software</data>
+      <data key="d2">NVIDIA Container Toolkit</data>
+    </node>
+    <node id="librechat">
+      <data key="d1">software</data>
+      <data key="d2">LibreChat UI and API</data>
+      <data key="d3">configured</data>
+    </node>
+    <node id="mongodb">
+      <data key="d1">software</data>
+      <data key="d2">MongoDB Database</data>
+    </node>
+    <node id="meilisearch">
+      <data key="d1">software</data>
+      <data key="d2">Meilisearch Engine</data>
+    </node>
+    <node id="ollama">
+      <data key="d1">software</data>
+      <data key="d2">Ollama LLM Server</data>
+    </node>
+    <node id="mistral">
+      <data key="d1">model</data>
+      <data key="d2">Mistral 7B LLM</data>
+    </node>
+    <node id="deepseek">
+      <data key="d1">model</data>
+      <data key="d2">DeepSeek Coder LLM</data>
+    </node>
+    <node id="mcp_server">
+      <data key="d1">software</data>
+      <data key="d2">MCP FastAPI Server</data>
+      <data key="d3">implemented</data>
+    </node>
+    <node id="documentation">
+      <data key="d3">created</data>
+      <data key="d1">component</data>
+    </node>
+    <node id="tests">
+      <data key="d3">created</data>
+      <data key="d1">component</data>
+      <data key="d4">tests</data>
+      <data key="d5">1744023880.175151</data>
+    </node>
+    <node id="docs">
+      <data key="d1">directory</data>
+      <data key="d4">docs</data>
+      <data key="d5">1744030276.1074038</data>
+    </node>
+    <node id="docs_knowledge-graph">
+      <data key="d1">directory</data>
+      <data key="d4">docs/knowledge-graph</data>
+      <data key="d5">1744023202.3854399</data>
+      <data key="d6">4</data>
+    </node>
+    <node id="docs_tutorials">
+      <data key="d1">directory</data>
+      <data key="d4">docs/tutorials</data>
+      <data key="d5">1744030200.58876</data>
+      <data key="d6">7</data>
+    </node>
+    <node id="docs_troubleshooting">
+      <data key="d1">directory</data>
+      <data key="d4">docs/troubleshooting</data>
+      <data key="d5">1744030185.4666543</data>
+      <data key="d6">8</data>
+    </node>
+    <node id="docs_conventions">
+      <data key="d1">directory</data>
+      <data key="d4">docs/conventions</data>
+      <data key="d5">1744023202.3854399</data>
+      <data key="d6">4</data>
+    </node>
+    <node id="tests_unit">
+      <data key="d1">directory</data>
+      <data key="d4">tests/unit</data>
+      <data key="d5">1744022989.4370184</data>
+      <data key="d6">0</data>
+    </node>
+    <node id="tests_integration">
+      <data key="d1">directory</data>
+      <data key="d4">tests/integration</data>
+      <data key="d5">1744022989.4370184</data>
+      <data key="d6">0</data>
+    </node>
+    <node id="tests_agent_tests">
+      <data key="d1">directory</data>
+      <data key="d4">tests/agent_tests</data>
+      <data key="d5">1744022989.4370184</data>
+      <data key="d6">0</data>
+    </node>
+    <node id="tests_e2e">
+      <data key="d1">directory</data>
+      <data key="d4">tests/e2e</data>
+      <data key="d5">1744022989.4370184</data>
+      <data key="d6">0</data>
+    </node>
+    <node id="tests_performance">
+      <data key="d1">directory</data>
+      <data key="d4">tests/performance</data>
+      <data key="d5">1744022989.4370184</data>
+      <data key="d6">0</data>
+    </node>
+    <node id="tests_regression">
+      <data key="d1">directory</data>
+      <data key="d4">tests/regression</data>
+      <data key="d5">1744022989.4370184</data>
+      <data key="d6">0</data>
+    </node>
+    <node id="tests_data">
+      <data key="d1">directory</data>
+      <data key="d4">tests/data</data>
+      <data key="d5">1744030243.6570637</data>
+      <data key="d6">1</data>
+    </node>
+    <node id="feature_git_file_update_hooks">
+      <data key="d1">feature</data>
+      <data key="d2">Git File Update Hooks</data>
+      <data key="d7">Automatically updates README.md, .gitignore, LICENSE, and Knowledge Graph before every commit</data>
+      <data key="d8">DevOps Team</data>
+      <data key="d3">planned</data>
+      <data key="d9">2025-04-07T15:17:54.664161</data>
+    </node>
+    <node id="git_hooks">
+      <data key="d1">component</data>
+      <data key="d2">Git Hooks</data>
+      <data key="d3">implemented</data>
+    </node>
+    <node id="pre_commit_hook">
+      <data key="d1">file</data>
+      <data key="d4">.git-hooks/pre-commit</data>
+      <data key="d10">bash</data>
+    </node>
+    <node id="install_hooks_script">
+      <data key="d1">file</data>
+      <data key="d4">install-file-update-hooks.sh</data>
+      <data key="d10">bash</data>
+    </node>
+    <node id="hooks_documentation">
+      <data key="d1">file</data>
+      <data key="d4">.git-hooks/README.md</data>
+      <data key="d10">markdown</data>
+    </node>
+    <node id="git_hooks_kg_integration_plan">
+      <data key="d1">file</data>
+      <data key="d4">docs/git-hooks-kg-integration-plan.md</data>
+      <data key="d10">markdown</data>
+    </node>
+    <edge source="project_root" target="nvidia_gpu">
+      <data key="d11">contains</data>
+    </edge>
+    <edge source="project_root" target="wsl2">
+      <data key="d11">contains</data>
+    </edge>
+    <edge source="project_root" target="docker">
+      <data key="d11">contains</data>
+    </edge>
+    <edge source="project_root" target="nvidia_container">
+      <data key="d11">contains</data>
+    </edge>
+    <edge source="project_root" target="librechat">
+      <data key="d11">contains</data>
+    </edge>
+    <edge source="project_root" target="mongodb">
+      <data key="d11">contains</data>
+    </edge>
+    <edge source="project_root" target="meilisearch">
+      <data key="d11">contains</data>
+    </edge>
+    <edge source="project_root" target="ollama">
+      <data key="d11">contains</data>
+    </edge>
+    <edge source="project_root" target="mistral">
+      <data key="d11">contains</data>
+    </edge>
+    <edge source="project_root" target="deepseek">
+      <data key="d11">contains</data>
+    </edge>
+    <edge source="project_root" target="mcp_server">
+      <data key="d11">contains</data>
+    </edge>
+    <edge source="project_root" target="feature_git_file_update_hooks">
+      <data key="d11">contains</data>
+    </edge>
+    <edge source="project_root" target="git_hooks">
+      <data key="d11">contains</data>
+    </edge>
+    <edge source="nvidia_gpu" target="wsl2">
+      <data key="d11">accessible_from</data>
+    </edge>
+    <edge source="docker" target="wsl2">
+      <data key="d11">runs_on</data>
+    </edge>
+    <edge source="nvidia_container" target="docker">
+      <data key="d11">extends</data>
+    </edge>
+    <edge source="nvidia_container" target="nvidia_gpu">
+      <data key="d11">enables_access</data>
+    </edge>
+    <edge source="librechat" target="docker">
+      <data key="d11">containerized_in</data>
+    </edge>
+    <edge source="librechat" target="mongodb">
+      <data key="d11">uses</data>
+    </edge>
+    <edge source="librechat" target="meilisearch">
+      <data key="d11">uses</data>
+    </edge>
+    <edge source="librechat" target="mistral">
+      <data key="d11">integrates</data>
+    </edge>
+    <edge source="librechat" target="deepseek">
+      <data key="d11">integrates</data>
+    </edge>
+    <edge source="mongodb" target="docker">
+      <data key="d11">containerized_in</data>
+    </edge>
+    <edge source="meilisearch" target="docker">
+      <data key="d11">containerized_in</data>
+    </edge>
+    <edge source="ollama" target="docker">
+      <data key="d11">containerized_in</data>
+    </edge>
+    <edge source="ollama" target="nvidia_gpu">
+      <data key="d11">uses</data>
+    </edge>
+    <edge source="mistral" target="ollama">
+      <data key="d11">served_by</data>
+    </edge>
+    <edge source="deepseek" target="ollama">
+      <data key="d11">served_by</data>
+    </edge>
+    <edge source="mcp_server" target="deepseek">
+      <data key="d11">uses</data>
+    </edge>
+    <edge source="tests" target="tests_unit">
+      <data key="d12">contains</data>
+    </edge>
+    <edge source="tests" target="tests_integration">
+      <data key="d12">contains</data>
+    </edge>
+    <edge source="tests" target="tests_agent_tests">
+      <data key="d12">contains</data>
+    </edge>
+    <edge source="tests" target="tests_e2e">
+      <data key="d12">contains</data>
+    </edge>
+    <edge source="tests" target="tests_performance">
+      <data key="d12">contains</data>
+    </edge>
+    <edge source="tests" target="tests_regression">
+      <data key="d12">contains</data>
+    </edge>
+    <edge source="tests" target="tests_data">
+      <data key="d12">contains</data>
+    </edge>
+    <edge source="docs" target="docs_knowledge-graph">
+      <data key="d12">contains</data>
+    </edge>
+    <edge source="docs" target="docs_tutorials">
+      <data key="d12">contains</data>
+    </edge>
+    <edge source="docs" target="docs_troubleshooting">
+      <data key="d12">contains</data>
+    </edge>
+    <edge source="docs" target="docs_conventions">
+      <data key="d12">contains</data>
+    </edge>
+    <edge source="docs" target="git_hooks_kg_integration_plan">
+      <data key="d11">contains</data>
+    </edge>
+    <edge source="git_hooks" target="pre_commit_hook">
+      <data key="d11">contains</data>
+    </edge>
+    <edge source="git_hooks" target="install_hooks_script">
+      <data key="d11">contains</data>
+    </edge>
+    <edge source="git_hooks" target="hooks_documentation">
+      <data key="d11">contains</data>
+    </edge>
+    <edge source="git_hooks" target="feature_git_file_update_hooks">
+      <data key="d11">implements</data>
+    </edge>
+    <edge source="git_hooks_kg_integration_plan" target="feature_git_file_update_hooks">
+      <data key="d11">documents</data>
+    </edge>
+    <data key="d0">MCP-BASE-STACK</data>
+  </graph>
+</graphml>

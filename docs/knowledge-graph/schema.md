@@ -29,7 +29,7 @@ Represents a software component in the system.
 - `docker`: Docker container runtime
 - `nvidia_container`: NVIDIA Container Toolkit
 - `librechat`: LibreChat web interface
-- `ollama`: Ollama LLM server
+- `llm_server`: LLM server
 - `mistral`: Mistral language model
 - `deepseek`: DeepSeek Coder language model
 - `mcp_server`: MCP Server middleware
@@ -93,8 +93,8 @@ Indicates that one node depends on another.
 - `criticality`: How critical the dependency is (e.g., "critical", "important", "nice-to-have")
 
 **Examples:**
-- `(librechat) --DEPENDS_ON--> (ollama)`
-- `(mcp_server) --DEPENDS_ON--> (ollama)`
+- `(librechat) --DEPENDS_ON--> (llm_server)`
+- `(mcp_server) --DEPENDS_ON--> (llm_server)`
 
 ### IMPLEMENTS
 
@@ -116,7 +116,7 @@ Indicates that one component connects to another.
 - `direction`: Direction of communication (e.g., "bidirectional", "outbound", "inbound")
 
 **Examples:**
-- `(librechat) --CONNECTS_TO--> (ollama)`
+- `(librechat) --CONNECTS_TO--> (llm_server)`
 - `(librechat) --CONNECTS_TO--> (mcp_server)`
 
 ### CONTAINS
@@ -177,13 +177,13 @@ The schema can be queried programmatically using the NetworkX library (for Graph
 ```python
 # Using NetworkX
 import networkx as nx
-graph = nx.read_graphml("kg/data/knowledge_graph.graphml")
+graph = nx.read_graphml("core/kg/data/knowledge_graph.graphml")
 components = [n for n, d in graph.nodes(data=True) if d.get('type') == 'component']
 
 # Using RDFLib
 from rdflib import Graph, Namespace
 rdf_graph = Graph()
-rdf_graph.parse("kg/data/knowledge_graph.ttl", format="turtle")
+rdf_graph.parse("core/kg/data/knowledge_graph.ttl", format="turtle")
 ns = Namespace("http://mcp-base-stack.org/")
 components = list(rdf_graph.subjects(ns.type, ns.Component))
 ```
