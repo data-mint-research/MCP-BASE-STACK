@@ -1,0 +1,764 @@
+{
+  "specification_manifest": {
+    "metadata": {
+      "version": "1.0.0",
+      "created_at": "2025-04-07",
+      "description": "Specification manifest for MCP-BASE-STACK",
+      "purpose": "Single source of truth for the Autonomous AI Coding Agent"
+    },
+    "directory_structure": {
+      "root": {
+        "description": "Project root directory",
+        "required_subdirectories": [
+          "docs",
+          "config",
+          "core",
+          "services",
+          "scripts",
+          "tests"
+        ],
+        "optional_subdirectories": [
+          "data",
+          "deploy",
+          "LibreChat"
+        ]
+      },
+      "docs": {
+        "description": "Project documentation",
+        "required_subdirectories": [
+          "conventions",
+          "knowledge-graph",
+          "tutorials",
+          "troubleshooting"
+        ],
+        "optional_subdirectories": [
+          "backlog"
+        ]
+      },
+      "config": {
+        "description": "Configuration files",
+        "required_subdirectories": [
+          "environments"
+        ],
+        "optional_subdirectories": [
+          "models"
+        ]
+      },
+      "core": {
+        "description": "Core functionality",
+        "required_subdirectories": [
+          "kg"
+        ],
+        "optional_subdirectories": []
+      },
+      "core/kg": {
+        "description": "Knowledge graph functionality",
+        "required_subdirectories": [
+          "data",
+          "scripts"
+        ],
+        "optional_subdirectories": [
+          "docs",
+          "models",
+          "queries"
+        ]
+      },
+      "services": {
+        "description": "Service implementations",
+        "required_subdirectories": [
+          "mcp-server"
+        ],
+        "optional_subdirectories": [
+          "librechat",
+          "llm-server"
+        ]
+      },
+      "services/mcp-server": {
+        "description": "MCP server implementation",
+        "required_subdirectories": [
+          "src",
+          "config"
+        ],
+        "optional_subdirectories": []
+      },
+      "services/mcp-server/src": {
+        "description": "MCP server source code",
+        "required_subdirectories": [
+          "di",
+          "services",
+          "tools"
+        ],
+        "optional_subdirectories": []
+      },
+      "scripts": {
+        "description": "Utility scripts",
+        "required_subdirectories": [
+          "deployment",
+          "maintenance",
+          "setup"
+        ],
+        "optional_subdirectories": []
+      },
+      "tests": {
+        "description": "Test suite",
+        "required_subdirectories": [
+          "unit",
+          "integration",
+          "data"
+        ],
+        "optional_subdirectories": [
+          "e2e",
+          "performance",
+          "regression",
+          "agent_tests"
+        ]
+      }
+    },
+    "file_templates": {
+      "root": {
+        "required_files": {
+          "README.md": {
+            "description": "Project overview",
+            "template": "# MCP-BASE-STACK\n\n## Overview\n\nMCP-BASE-STACK is a comprehensive framework for building and managing AI-powered applications.\n\n## Installation\n\n```bash\n# Clone the repository\ngit clone https://github.com/your-org/MCP-BASE-STACK.git\ncd MCP-BASE-STACK\n\n# Install dependencies\n./scripts/setup/install_dependencies.sh\n```\n\n## Usage\n\nSee the [documentation](./docs/README.md) for usage instructions.\n\n## License\n\nSee [LICENSE](./LICENSE) for details."
+          },
+          "LICENSE": {
+            "description": "Project license",
+            "template": "MIT License\n\nCopyright (c) 2025 MCP-BASE-STACK Contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE."
+          },
+          ".gitignore": {
+            "description": "Git ignore file",
+            "template": "# Python\n__pycache__/\n*.py[cod]\n*$py.class\n*.so\n.Python\nenv/\nbuild/\ndevelop-eggs/\ndist/\ndownloads/\neggs/\n.eggs/\nlib/\nlib64/\nparts/\nsdist/\nvar/\n*.egg-info/\n.installed.cfg\n*.egg\n\n# Virtual Environment\nvenv/\nenv/\nENV/\n\n# IDE\n.idea/\n.vscode/\n*.swp\n*.swo\n\n# OS\n.DS_Store\nThumbs.db\n\n# Logs\nlogs/\n*.log\n\n# Data\ndata/models/*\n!data/models/.gitkeep\ndata/logs/*\n!data/logs/.gitkeep\n\n# Docker\n.docker/\n\n# Environment variables\n.env\n.env.local\n.env.development.local\n.env.test.local\n.env.production.local\n\n# Node.js\nnode_modules/\nnpm-debug.log*\nyarn-debug.log*\nyarn-error.log*\n\n# Build artifacts\nbuild/\ndist/\n\n# Temporary files\ntmp/\ntemp/"
+          }
+        },
+        "optional_files": {
+          "pyproject.toml": {
+            "description": "Python project configuration",
+            "template": "[tool.black]\nline-length = 88\ntarget-version = ['py38']\ninclude = '\\.pyi?$'\nexclude = '''\n/(\n    \\.git\n  | \\.hg\n  | \\.mypy_cache\n  | \\.tox\n  | \\.venv\n  | _build\n  | buck-out\n  | build\n  | dist\n)/\n'''\n\n[tool.isort]\nprofile = \"black\"\nline_length = 88\nmulti_line_output = 3\ninclude_trailing_comma = true\nforce_grid_wrap = 0\nuse_parentheses = true\nensure_newline_before_comments = true\nskip_gitignore = true"
+          },
+          ".flake8": {
+            "description": "Flake8 configuration",
+            "template": "[flake8]\nmax-line-length = 88\nextend-ignore = E203\nexclude = .git,__pycache__,build,dist"
+          },
+          "mypy.ini": {
+            "description": "MyPy configuration",
+            "template": "[mypy]\npython_version = 3.8\nwarn_return_any = true\nwarn_unused_configs = true\ndisallow_untyped_defs = true\ndisallow_incomplete_defs = true"
+          }
+        }
+      },
+      "docs": {
+        "required_files": {
+          "README.md": {
+            "description": "Documentation overview",
+            "template": "# MCP-BASE-STACK Documentation\n\n## Overview\n\nThis directory contains the documentation for the MCP-BASE-STACK project.\n\n## Contents\n\n- [Conventions](./conventions/): Coding standards and conventions\n- [Knowledge Graph](./knowledge-graph/): Knowledge graph documentation\n- [Tutorials](./tutorials/): Step-by-step guides\n- [Troubleshooting](./troubleshooting/): Common issues and solutions"
+          }
+        },
+        "optional_files": {}
+      },
+      "core/kg/scripts": {
+        "required_files": {
+          "__init__.py": {
+            "description": "Package initialization",
+            "template": "\"\"\"Knowledge graph scripts package.\n\nThis package contains scripts for managing the knowledge graph.\n\"\"\"\n"
+          },
+          "update_knowledge_graph.py": {
+            "description": "Script to update the knowledge graph",
+            "template": "#!/usr/bin/env python3\n\"\"\"\nUpdate the knowledge graph based on the current state of the project.\n\nThis script scans the project directory for changes and updates the knowledge graph accordingly.\n\"\"\"\n\nimport os\nimport sys\nfrom pathlib import Path\n\n# Add the project root to the Python path\nsys.path.insert(0, str(Path(__file__).resolve().parents[3]))\n\nfrom core.kg.models import KnowledgeGraph\n\n\ndef main():\n    \"\"\"Update the knowledge graph.\"\"\"\n    # Initialize the knowledge graph\n    kg = KnowledgeGraph()\n    \n    # Load the existing graph\n    kg.load()\n    \n    # Update the graph based on the current state of the project\n    kg.update()\n    \n    # Save the updated graph\n    kg.save()\n    \n    print(\"Knowledge graph updated successfully.\")\n    return 0\n\n\nif __name__ == \"__main__\":\n    sys.exit(main())\n"
+          }
+        },
+        "optional_files": {}
+      },
+      "services/mcp-server/src": {
+        "required_files": {
+          "__init__.py": {
+            "description": "Package initialization",
+            "template": "\"\"\"MCP server package.\n\nThis package contains the MCP server implementation.\n\"\"\"\n"
+          },
+          "app.py": {
+            "description": "FastAPI application",
+            "template": "\"\"\"FastAPI application for the MCP server.\n\nThis module defines the FastAPI application for the MCP server.\n\"\"\"\n\n# Standard library imports\nimport logging\nfrom typing import Dict, List, Optional\n\n# Third-party imports\nfrom fastapi import FastAPI, Depends, HTTPException\nfrom pydantic import BaseModel\n\n# Local imports\nfrom .di.containers import Container\nfrom .services.prompt_processor import PromptProcessor\n\n# Initialize logging\nlogging.basicConfig(level=logging.INFO)\nlogger = logging.getLogger(__name__)\n\n# Initialize dependency injection container\ncontainer = Container()\n\n# Create FastAPI app\napp = FastAPI(title=\"MCP Server\", description=\"Model Context Protocol Server\")\n\n\n# Dependency to get the prompt processor\ndef get_prompt_processor() -> PromptProcessor:\n    \"\"\"Get the prompt processor from the DI container.\"\"\"\n    return container.prompt_processor()\n\n\n# Health check endpoint\n@app.get(\"/debug/health\")\nasync def health_check() -> Dict[str, str]:\n    \"\"\"Health check endpoint.\"\"\"\n    return {\"status\": \"ok\"}\n\n\n# Define request and response models\nclass PromptRequest(BaseModel):\n    \"\"\"Prompt request model.\"\"\"\n    prompt: str\n    context: Optional[Dict[str, str]] = None\n\n\nclass PromptResponse(BaseModel):\n    \"\"\"Prompt response model.\"\"\"\n    response: str\n\n\n# Define API endpoints\n@app.post(\"/api/v1/prompt\", response_model=PromptResponse)\nasync def process_prompt(\n    request: PromptRequest,\n    prompt_processor: PromptProcessor = Depends(get_prompt_processor)\n) -> PromptResponse:\n    \"\"\"Process a prompt and return a response.\"\"\"\n    try:\n        response = prompt_processor.process(request.prompt, request.context)\n        return PromptResponse(response=response)\n    except Exception as e:\n        logger.error(f\"Error processing prompt: {e}\")\n        raise HTTPException(status_code=500, detail=str(e))\n"
+          }
+        },
+        "optional_files": {}
+      },
+      "tests/unit": {
+        "required_files": {
+          "__init__.py": {
+            "description": "Package initialization",
+            "template": "\"\"\"Unit tests package.\n\nThis package contains unit tests for the MCP-BASE-STACK project.\n\"\"\"\n"
+          },
+          "test_example.py": {
+            "description": "Example unit test",
+            "template": "\"\"\"Example unit test.\n\nThis module contains example unit tests.\n\"\"\"\n\n# Standard library imports\nimport unittest\nfrom unittest.mock import patch, MagicMock\n\n\nclass TestExample(unittest.TestCase):\n    \"\"\"Example test case.\"\"\"\n\n    def setUp(self):\n        \"\"\"Set up test fixtures.\"\"\"\n        pass\n\n    def tearDown(self):\n        \"\"\"Tear down test fixtures.\"\"\"\n        pass\n\n    def test_example(self):\n        \"\"\"Example test method.\"\"\"\n        self.assertEqual(1 + 1, 2)\n\n\nif __name__ == \"__main__\":\n    unittest.main()\n"
+          }
+        },
+        "optional_files": {}
+      }
+    },
+    "naming_conventions": {
+      "python": {
+        "packages": {
+          "pattern": "snake_case",
+          "regex": "^[a-z][a-z0-9_]*$",
+          "examples": [
+            "knowledge_graph",
+            "core"
+          ]
+        },
+        "modules": {
+          "pattern": "snake_case.py",
+          "regex": "^[a-z][a-z0-9_]*\\.py$",
+          "examples": [
+            "config.py",
+            "error.py"
+          ]
+        },
+        "classes": {
+          "pattern": "CamelCase",
+          "regex": "^[A-Z][a-zA-Z0-9]*$",
+          "examples": [
+            "ConfigManager",
+            "KnowledgeGraph"
+          ]
+        },
+        "functions": {
+          "pattern": "snake_case",
+          "regex": "^[a-z][a-z0-9_]*$",
+          "examples": [
+            "validate_config",
+            "process_data"
+          ]
+        },
+        "variables": {
+          "pattern": "snake_case",
+          "regex": "^[a-z][a-z0-9_]*$",
+          "examples": [
+            "config_manager",
+            "data_processor"
+          ]
+        },
+        "constants": {
+          "pattern": "UPPER_CASE",
+          "regex": "^[A-Z][A-Z0-9_]*$",
+          "examples": [
+            "DEFAULT_CONFIG_DIR",
+            "MAX_RETRY_COUNT"
+          ]
+        },
+        "private_attributes": {
+          "pattern": "_snake_case",
+          "regex": "^_[a-z][a-z0-9_]*$",
+          "examples": [
+            "_initialized",
+            "_config"
+          ]
+        }
+      },
+      "shell": {
+        "scripts": {
+          "pattern": "kebab-case.sh",
+          "regex": "^[a-z][a-z0-9-]*\\.sh$",
+          "examples": [
+            "create-backup.sh",
+            "install-hooks.sh"
+          ]
+        },
+        "functions": {
+          "pattern": "snake_case",
+          "regex": "^[a-z][a-z0-9_]*$",
+          "examples": [
+            "check_config",
+            "process_file"
+          ]
+        },
+        "variables": {
+          "pattern": "snake_case",
+          "regex": "^[a-z][a-z0-9_]*$",
+          "examples": [
+            "config_file",
+            "output_dir"
+          ]
+        },
+        "environment_variables": {
+          "pattern": "UPPER_CASE",
+          "regex": "^[A-Z][A-Z0-9_]*$",
+          "examples": [
+            "CONFIG_PATH",
+            "DEBUG_MODE"
+          ]
+        }
+      },
+      "documentation": {
+        "markdown_files": {
+          "pattern": "kebab-case.md",
+          "regex": "^[a-z][a-z0-9-]*\\.md$",
+          "examples": [
+            "style-guide.md",
+            "coding-conventions.md"
+          ]
+        },
+        "readme_files": {
+          "pattern": "README.md",
+          "regex": "^README\\.md$",
+          "examples": [
+            "README.md"
+          ]
+        }
+      },
+      "configuration": {
+        "yaml_files": {
+          "pattern": "kebab-case.yaml or kebab-case.yml",
+          "regex": "^[a-z][a-z0-9-]*\\.(yaml|yml)$",
+          "examples": [
+            "docker-compose.yml",
+            "config.yaml"
+          ]
+        },
+        "json_files": {
+          "pattern": "kebab-case.json",
+          "regex": "^[a-z][a-z0-9-]*\\.json$",
+          "examples": [
+            "tsconfig.json",
+            "package.json"
+          ]
+        },
+        "env_files": {
+          "pattern": ".env or .env.environment",
+          "regex": "^\\.env(\\..*)?$",
+          "examples": [
+            ".env",
+            ".env.development"
+          ]
+        }
+      },
+      "knowledge_graph": {
+        "node_ids": {
+          "pattern": "snake_case",
+          "regex": "^[a-z][a-z0-9_]*$",
+          "examples": [
+            "knowledge_graph",
+            "git_hooks"
+          ]
+        },
+        "feature_ids": {
+          "pattern": "feature_snake_case",
+          "regex": "^feature_[a-z][a-z0-9_]*$",
+          "examples": [
+            "feature_git_file_update_hooks",
+            "feature_knowledge_graph_integration"
+          ]
+        },
+        "directory_ids": {
+          "pattern": "path_based_with_underscores",
+          "regex": "^[a-z][a-z0-9_]*$",
+          "examples": [
+            "docs_conventions",
+            "core_kg_scripts"
+          ]
+        },
+        "file_ids": {
+          "pattern": "descriptive_name_with_underscores",
+          "regex": "^[a-z][a-z0-9_]*$",
+          "examples": [
+            "style_guide_md",
+            "pre_commit_hook"
+          ]
+        }
+      }
+    },
+    "code_patterns": {
+      "python": {
+        "module_header": {
+          "description": "Standard module header with docstring",
+          "required": true,
+          "template": "\"\"\"Module description.\n\nThis module provides [functionality description].\n\"\"\"\n\n# Standard library imports\n\n# Third-party imports\n\n# Local imports",
+          "validation_regex": "^\\s*\"\"\"[\\s\\S]*?\"\"\"\\s*$"
+        },
+        "class_definition": {
+          "description": "Standard class definition with docstring",
+          "required": true,
+          "template": "class ClassName:\n    \"\"\"Class description.\n    \n    This class provides [functionality description].\n    \n    Attributes:\n        attribute_name: Description of the attribute.\n    \"\"\"\n    \n    def __init__(self, param1, param2=None):\n        \"\"\"Initialize the class.\n        \n        Args:\n            param1: Description of param1\n            param2: Description of param2, defaults to None\n        \"\"\"\n        self.param1 = param1\n        self.param2 = param2",
+          "validation_regex": "^\\s*class\\s+[A-Z][a-zA-Z0-9]*\\s*(?:\\([^)]*\\))?\\s*:\\s*\\n\\s+\"\"\"[\\s\\S]*?\"\"\"\\s*$"
+        },
+        "function_definition": {
+          "description": "Standard function definition with docstring",
+          "required": true,
+          "template": "def function_name(param1: type1, param2: type2 = None) -> return_type:\n    \"\"\"Function description.\n    \n    Args:\n        param1: Description of param1\n        param2: Description of param2, defaults to None\n        \n    Returns:\n        Description of the return value\n        \n    Raises:\n        ExceptionType: Description of when this exception is raised\n    \"\"\"\n    # Function implementation",
+          "validation_regex": "^\\s*def\\s+[a-z][a-z0-9_]*\\s*\\([^)]*\\)\\s*(?:->\\s*[^:]+)?:\\s*\\n\\s+\"\"\"[\\s\\S]*?\"\"\"\\s*$"
+        },
+        "error_handling": {
+          "description": "Standard error handling pattern",
+          "required": true,
+          "template": "try:\n    # Code that might raise an exception\n    result = risky_operation()\nexcept SpecificException as e:\n    # Handle specific exception\n    logging.error(f\"Specific error occurred: {e}\")\n    # Appropriate error handling\nexcept Exception as e:\n    # Handle general exception\n    logging.error(f\"Unexpected error occurred: {e}\")\n    # Appropriate error handling\nelse:\n    # Code to run if no exception occurs\n    process_result(result)\nfinally:\n    # Code to run regardless of whether an exception occurred\n    cleanup_resources()",
+          "validation_regex": "^\\s*try:\\s*\\n[\\s\\S]*?\\n\\s*except\\s+[A-Za-z0-9_]+(?:\\s+as\\s+[A-Za-z0-9_]+)?:\\s*\\n"
+        },
+        "context_manager": {
+          "description": "Standard context manager pattern",
+          "required": true,
+          "template": "with resource_manager() as resource:\n    # Use the resource\n    result = resource.operation()",
+          "validation_regex": "^\\s*with\\s+[A-Za-z0-9_().]+(?:\\s+as\\s+[A-Za-z0-9_]+)?:\\s*\\n"
+        },
+        "logging": {
+          "description": "Standard logging pattern",
+          "required": true,
+          "template": "import logging\n\n# Initialize logger\nlogger = logging.getLogger(__name__)\n\n# Usage\nlogger.debug(\"Debug message\")\nlogger.info(\"Info message\")\nlogger.warning(\"Warning message\")\nlogger.error(\"Error message\")\nlogger.critical(\"Critical message\")",
+          "validation_regex": "^\\s*(?:import\\s+logging|from\\s+logging\\s+import)[\\s\\S]*?\\n\\s*logger\\s*=\\s*logging\\.getLogger\\([^)]*\\)\\s*\\n"
+        }
+      },
+      "shell": {
+        "script_header": {
+          "description": "Standard shell script header",
+          "required": true,
+          "template": "#!/bin/bash\n#\n# Description: Script description\n\n# Exit on error\nset -e",
+          "validation_regex": "^#!/bin/bash\\s*\\n#\\s*\\n#\\s*Description:\\s*.*\\n\\n#\\s*Exit on error\\s*\\nset -e"
+        },
+        "function_definition": {
+          "description": "Standard function definition",
+          "required": true,
+          "template": "# Function to perform a specific task\nfunction function_name() {\n    local param1=\"$1\"\n    local param2=\"$2\"\n    \n    # Function implementation\n}",
+          "validation_regex": "^\\s*(?:#[^\\n]*\\n)?\\s*function\\s+[a-z][a-z0-9_]*\\s*\\(\\)\\s*\\{\\s*\\n"
+        },
+        "error_handling": {
+          "description": "Standard error handling pattern",
+          "required": true,
+          "template": "# Function to handle errors\nfunction handle_error() {\n    local exit_code=$1\n    local line_number=$2\n    echo \"Error on line $line_number, exit code $exit_code\" >&2\n    exit $exit_code\n}\n\n# Set up error trap\ntrap 'handle_error $? $LINENO' ERR",
+          "validation_regex": "^\\s*(?:#[^\\n]*\\n)?\\s*function\\s+handle_error\\s*\\(\\)\\s*\\{[\\s\\S]*?\\n\\s*trap\\s+'[^']*'\\s+ERR\\s*\\n"
+        },
+        "command_checking": {
+          "description": "Standard command checking pattern",
+          "required": true,
+          "template": "# Check if command exists\nif ! command -v command_name &> /dev/null; then\n    echo \"Error: command_name is not installed\" >&2\n    exit 1\nfi",
+          "validation_regex": "^\\s*(?:#[^\\n]*\\n)?\\s*if\\s+!\\s+command\\s+-v\\s+[A-Za-z0-9_-]+\\s+&>\\s*/dev/null;\\s*then\\s*\\n"
+        }
+      }
+    },
+    "validation_rules": {
+      "directory_structure": [
+        {
+          "rule": "All required directories must exist",
+          "severity": "error",
+          "validation_function": "validateRequiredDirectories",
+          "error_message": "Required directory '{directory}' is missing"
+        },
+        {
+          "rule": "Directory names must follow naming conventions",
+          "severity": "error",
+          "validation_function": "validateDirectoryNames",
+          "error_message": "Directory name '{directory}' does not follow the required pattern '{pattern}'"
+        }
+      ],
+      "file_presence": [
+        {
+          "rule": "All required files must exist in their respective directories",
+          "severity": "error",
+          "validation_function": "validateRequiredFiles",
+          "error_message": "Required file '{file}' is missing in directory '{directory}'"
+        },
+        {
+          "rule": "File names must follow naming conventions",
+          "severity": "error",
+          "validation_function": "validateFileNames",
+          "error_message": "File name '{file}' does not follow the required pattern '{pattern}'"
+        }
+      ],
+      "code_patterns": [
+        {
+          "rule": "Python modules must have proper docstrings",
+          "severity": "error",
+          "validation_function": "validatePythonDocstrings",
+          "error_message": "Python module '{file}' is missing proper docstring"
+        },
+        {
+          "rule": "Python classes must have proper docstrings",
+          "severity": "error",
+          "validation_function": "validatePythonClassDocstrings",
+          "error_message": "Python class '{class_name}' in file '{file}' is missing proper docstring"
+        },
+        {
+          "rule": "Python functions must have proper docstrings",
+          "severity": "error",
+          "validation_function": "validatePythonFunctionDocstrings",
+          "error_message": "Python function '{function_name}' in file '{file}' is missing proper docstring"
+        },
+        {
+          "rule": "Python functions must have type hints",
+          "severity": "error",
+          "validation_function": "validatePythonTypeHints",
+          "error_message": "Python function '{function_name}' in file '{file}' is missing type hints"
+        },
+        {
+          "rule": "Shell scripts must have proper headers",
+          "severity": "error",
+          "validation_function": "validateShellHeaders",
+          "error_message": "Shell script '{file}' is missing proper header"
+        },
+        {
+          "rule": "Shell scripts must have error handling",
+          "severity": "error",
+          "validation_function": "validateShellErrorHandling",
+          "error_message": "Shell script '{file}' is missing error handling"
+        }
+      ],
+      "naming_conventions": [
+        {
+          "rule": "Python package names must follow snake_case convention",
+          "severity": "error",
+          "validation_function": "validatePythonPackageNames",
+          "error_message": "Python package name '{name}' does not follow snake_case convention"
+        },
+        {
+          "rule": "Python module names must follow snake_case convention",
+          "severity": "error",
+          "validation_function": "validatePythonModuleNames",
+          "error_message": "Python module name '{name}' does not follow snake_case convention"
+        },
+        {
+          "rule": "Python class names must follow CamelCase convention",
+          "severity": "error",
+          "validation_function": "validatePythonClassNames",
+          "error_message": "Python class name '{name}' does not follow CamelCase convention"
+        },
+        {
+          "rule": "Python function names must follow snake_case convention",
+          "severity": "error",
+          "validation_function": "validatePythonFunctionNames",
+          "error_message": "Python function name '{name}' does not follow snake_case convention"
+        },
+        {
+          "rule": "Python variable names must follow snake_case convention",
+          "severity": "error",
+          "validation_function": "validatePythonVariableNames",
+          "error_message": "Python variable name '{name}' does not follow snake_case convention"
+        },
+        {
+          "rule": "Python constant names must follow UPPER_CASE convention",
+          "severity": "error",
+          "validation_function": "validatePythonConstantNames",
+          "error_message": "Python constant name '{name}' does not follow UPPER_CASE convention"
+        },
+        {
+          "rule": "Shell script names must follow kebab-case.sh convention",
+          "severity": "error",
+          "validation_function": "validateShellScriptNames",
+          "error_message": "Shell script name '{name}' does not follow kebab-case.sh convention"
+        },
+        {
+          "rule": "Shell function names must follow snake_case convention",
+          "severity": "error",
+          "validation_function": "validateShellFunctionNames",
+          "error_message": "Shell function name '{name}' does not follow snake_case convention"
+        },
+        {
+          "rule": "Markdown file names must follow kebab-case.md convention",
+          "severity": "error",
+          "validation_function": "validateMarkdownFileNames",
+          "error_message": "Markdown file name '{name}' does not follow kebab-case.md convention"
+        }
+      ]
+    },
+    "agent_integration": {
+      "code_generation": {
+        "directory_creation": {
+          "description": "Generate directory structures that comply with project standards",
+          "process": [
+            "Agent consults manifest's directory_structure section",
+            "Creates required directories in the correct hierarchy",
+            "Ensures directory names follow naming conventions"
+          ],
+          "example": "When creating a new feature, agent automatically creates all required subdirectories"
+        },
+        "file_creation": {
+          "description": "Generate files with proper templates and naming",
+          "process": [
+            "Agent consults manifest's file_templates section",
+            "Creates files using the specified templates",
+            "Ensures file names follow naming conventions"
+          ],
+          "example": "When creating a new Python module, agent automatically includes proper docstrings and import organization"
+        },
+        "code_structure": {
+          "description": "Generate code that follows required patterns",
+          "process": [
+            "Agent consults manifest's code_patterns section",
+            "Structures code according to the specified patterns",
+            "Includes required elements like docstrings, error handling, etc."
+          ],
+          "example": "When generating a new class, agent automatically includes proper docstrings, type hints, and error handling"
+        }
+      },
+      "code_analysis": {
+        "structure_validation": {
+          "description": "Validate project structure against manifest standards",
+          "process": [
+            "Agent scans project directory structure",
+            "Compares against manifest's directory_structure section",
+            "Identifies missing or incorrectly named directories"
+          ],
+          "example": "Agent detects and reports missing required directories"
+        },
+        "naming_validation": {
+          "description": "Validate naming conventions in code",
+          "process": [
+            "Agent analyzes file and symbol names",
+            "Compares against manifest's naming_conventions section",
+            "Identifies violations of naming conventions"
+          ],
+          "example": "Agent detects and reports incorrectly named variables or classes"
+        },
+        "pattern_validation": {
+          "description": "Validate code patterns in files",
+          "process": [
+            "Agent analyzes code structure",
+            "Compares against manifest's code_patterns section",
+            "Identifies violations of required patterns"
+          ],
+          "example": "Agent detects and reports missing docstrings or improper error handling"
+        }
+      },
+      "code_refactoring": {
+        "structure_refactoring": {
+          "description": "Refactor project structure to comply with standards",
+          "process": [
+            "Agent identifies structural issues",
+            "Proposes directory reorganization based on manifest",
+            "Implements approved changes while maintaining functionality"
+          ],
+          "example": "Agent reorganizes files into the correct directory structure"
+        },
+        "naming_refactoring": {
+          "description": "Refactor names to comply with conventions",
+          "process": [
+            "Agent identifies naming convention violations",
+            "Proposes name changes based on manifest",
+            "Implements approved changes with proper reference updates"
+          ],
+          "example": "Agent renames variables and updates all references to maintain functionality"
+        },
+        "pattern_refactoring": {
+          "description": "Refactor code to comply with required patterns",
+          "process": [
+            "Agent identifies pattern violations",
+            "Proposes code changes based on manifest",
+            "Implements approved changes while maintaining functionality"
+          ],
+          "example": "Agent adds missing docstrings or improves error handling"
+        }
+      },
+      "decision_making": {
+        "file_placement": {
+          "description": "Decide where new files should be placed",
+          "process": [
+            "Agent analyzes file purpose and type",
+            "Consults manifest's directory_structure section",
+            "Determines optimal location based on project standards"
+          ],
+          "example": "When creating a new utility function, agent places it in the appropriate module"
+        },
+        "naming_selection": {
+          "description": "Select appropriate names for new elements",
+          "process": [
+            "Agent analyzes element purpose and type",
+            "Consults manifest's naming_conventions section",
+            "Generates names that follow conventions"
+          ],
+          "example": "When creating a new class, agent generates a name that follows CamelCase convention"
+        },
+        "pattern_application": {
+          "description": "Apply appropriate patterns to new code",
+          "process": [
+            "Agent analyzes code purpose and context",
+            "Consults manifest's code_patterns section",
+            "Applies appropriate patterns based on context"
+          ],
+          "example": "When creating a function that accesses resources, agent automatically implements proper resource management"
+        }
+      },
+      "contextual_understanding": {
+        "project_structure": {
+          "description": "Understand the overall project structure",
+          "process": [
+            "Agent loads manifest's directory_structure section",
+            "Builds mental model of project organization",
+            "Uses this understanding to navigate and reason about the codebase"
+          ],
+          "example": "Agent understands that tests should be in the tests directory, organized by test type"
+        },
+        "code_organization": {
+          "description": "Understand how code should be organized",
+          "process": [
+            "Agent loads manifest's code_patterns section",
+            "Builds mental model of code organization patterns",
+            "Uses this understanding to structure new code"
+          ],
+          "example": "Agent understands that imports should be organized in a specific order"
+        },
+        "naming_semantics": {
+          "description": "Understand the semantics conveyed by naming conventions",
+          "process": [
+            "Agent loads manifest's naming_conventions section",
+            "Builds mental model of naming semantics",
+            "Uses this understanding to interpret existing code and name new elements"
+          ],
+          "example": "Agent understands that a leading underscore indicates a private attribute"
+        }
+      },
+      "interactive_guidance": {
+        "error_explanation": {
+          "description": "Explain validation errors to developers",
+          "process": [
+            "Agent detects validation errors",
+            "Consults manifest for relevant rules and patterns",
+            "Provides clear explanation with reference to standards"
+          ],
+          "example": "Agent explains that a class name violates naming conventions and suggests a compliant alternative"
+        },
+        "suggestion_provision": {
+          "description": "Provide suggestions for improvement",
+          "process": [
+            "Agent analyzes code against manifest standards",
+            "Identifies opportunities for improvement",
+            "Suggests changes with reference to standards"
+          ],
+          "example": "Agent suggests adding type hints to a function to comply with coding conventions"
+        },
+        "standard_education": {
+          "description": "Educate developers about project standards",
+          "process": [
+            "Agent identifies knowledge gaps based on code patterns",
+            "Consults manifest for relevant standards",
+            "Provides educational information about standards"
+          ],
+          "example": "Agent explains the project's error handling pattern when a developer uses a different approach"
+        }
+      },
+      "continuous_improvement": {
+        "pattern_identification": {
+          "description": "Identify emerging patterns in the codebase",
+          "process": [
+            "Agent analyzes code across the project",
+            "Identifies recurring patterns not in the manifest",
+            "Suggests additions to the manifest"
+          ],
+          "example": "Agent identifies a common logging pattern and suggests adding it to the manifest"
+        },
+        "standard_refinement": {
+          "description": "Suggest refinements to existing standards",
+          "process": [
+            "Agent analyzes application of standards",
+            "Identifies areas where standards could be improved",
+            "Suggests refinements to the manifest"
+          ],
+          "example": "Agent suggests improving a regex pattern to handle edge cases"
+        },
+        "validation_enhancement": {
+          "description": "Suggest enhancements to validation rules",
+          "process": [
+            "Agent analyzes validation results",
+            "Identifies false positives or negatives",
+            "Suggests improvements to validation rules"
+          ],
+          "example": "Agent suggests adding a new validation rule to catch a common error pattern"
+        }
+      }
+    }
+  }
+}

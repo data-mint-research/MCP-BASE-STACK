@@ -1,0 +1,54 @@
+{
+  "project_dir": "/home/skr/projects/MCP-BASE-STACK",
+  "timestamp": "2025-04-07T22:15:15.589987",
+  "summary": {
+    "total_files_scanned": 99,
+    "orphaned_files": 5,
+    "outdated_files": 0,
+    "duplicate_files": 0,
+    "total_files_to_cleanup": 5,
+    "total_size_to_cleanup": 129905,
+    "files_backed_up": 0,
+    "files_removed": 0,
+    "files_archived": 0
+  },
+  "orphaned_files": [
+    {
+      "path": ".git-hooks/pre-commit",
+      "size": 7330,
+      "last_modified": "2025-04-07T22:10:16.602447",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "cleanup_files.py",
+      "size": 41248,
+      "last_modified": "2025-04-07T22:10:46.150994",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "core/kg/data/knowledge_graph.graphml",
+      "size": 28762,
+      "last_modified": "2025-04-07T22:11:42.953397",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "core/kg/data/knowledge_graph.ttl",
+      "size": 15852,
+      "last_modified": "2025-04-07T22:11:42.972901",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "specification-manifest.json",
+      "size": 36713,
+      "last_modified": "2025-04-07T22:11:51.732661",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    }
+  ],
+  "outdated_files": [],
+  "duplicate_files": [],
+  "actions_taken": [],
+  "rollback_info": {
+    "backup_dir": "/home/skr/projects/MCP-BASE-STACK/backup_20250407_221515",
+    "files_backed_up": []
+  }
+}

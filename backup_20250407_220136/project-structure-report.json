@@ -1,0 +1,3064 @@
+{
+  "project_dir": "/home/skr/projects/MCP-BASE-STACK",
+  "timestamp": null,
+  "summary": {
+    "total_directories": 280,
+    "total_files": 510,
+    "compliant_directories": 36,
+    "compliant_files": 7,
+    "directory_issues": 0,
+    "file_issues": 3,
+    "naming_issues": 26,
+    "location_issues": 21,
+    "compliance_percentage": 93.67
+  },
+  "directory_structure": {
+    "expected": {
+      "root": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/root",
+        "subdirectories": [
+          "docs",
+          "config",
+          "core",
+          "services",
+          "scripts",
+          "tests"
+        ]
+      },
+      "docs": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/docs",
+        "subdirectories": [
+          "conventions",
+          "knowledge-graph",
+          "tutorials",
+          "troubleshooting"
+        ]
+      },
+      "config": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/config",
+        "subdirectories": [
+          "environments"
+        ]
+      },
+      "core": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/core",
+        "subdirectories": [
+          "kg"
+        ]
+      },
+      "services": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/services",
+        "subdirectories": [
+          "mcp-server"
+        ]
+      },
+      "scripts": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/scripts",
+        "subdirectories": [
+          "deployment",
+          "maintenance",
+          "setup"
+        ]
+      },
+      "tests": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/tests",
+        "subdirectories": [
+          "unit",
+          "integration",
+          "data"
+        ]
+      },
+      "docs/conventions": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/docs/conventions",
+        "subdirectories": []
+      },
+      "docs/knowledge-graph": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/docs/knowledge-graph",
+        "subdirectories": []
+      },
+      "docs/tutorials": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/docs/tutorials",
+        "subdirectories": []
+      },
+      "docs/troubleshooting": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/docs/troubleshooting",
+        "subdirectories": []
+      },
+      "config/environments": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/config/environments",
+        "subdirectories": []
+      },
+      "core/kg": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/core/kg",
+        "subdirectories": [
+          "data",
+          "scripts"
+        ]
+      },
+      "core/kg/data": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/core/kg/data",
+        "subdirectories": []
+      },
+      "core/kg/scripts": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/core/kg/scripts",
+        "subdirectories": []
+      },
+      "services/mcp-server": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/services/mcp-server",
+        "subdirectories": [
+          "src",
+          "config"
+        ]
+      },
+      "services/mcp-server/src": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/services/mcp-server/src",
+        "subdirectories": [
+          "di",
+          "services",
+          "tools"
+        ]
+      },
+      "services/mcp-server/config": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/services/mcp-server/config",
+        "subdirectories": []
+      },
+      "services/mcp-server/src/di": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/services/mcp-server/src/di",
+        "subdirectories": []
+      },
+      "services/mcp-server/src/services": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/services/mcp-server/src/services",
+        "subdirectories": []
+      },
+      "services/mcp-server/src/tools": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/services/mcp-server/src/tools",
+        "subdirectories": []
+      },
+      "scripts/deployment": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/scripts/deployment",
+        "subdirectories": []
+      },
+      "scripts/maintenance": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/scripts/maintenance",
+        "subdirectories": []
+      },
+      "scripts/setup": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/scripts/setup",
+        "subdirectories": []
+      },
+      "tests/unit": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/tests/unit",
+        "subdirectories": []
+      },
+      "tests/integration": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/tests/integration",
+        "subdirectories": []
+      },
+      "tests/data": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/tests/data",
+        "subdirectories": []
+      }
+    },
+    "actual": {
+      "root": {
+        "path": "/home/skr/projects/MCP-BASE-STACK",
+        "subdirectories": [
+          "LibreChat",
+          ".github",
+          "temp",
+          "data",
+          "services",
+          "__pycache__",
+          "deploy",
+          "config",
+          "scripts",
+          ".git-hooks",
+          "core",
+          ".git",
+          "tests",
+          "docs"
+        ]
+      },
+      "scripts": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/scripts",
+        "subdirectories": [
+          "setup",
+          "deployment",
+          "maintenance"
+        ]
+      },
+      "scripts/setup": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/scripts/setup",
+        "subdirectories": []
+      },
+      ".git/objects": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects",
+        "subdirectories": [
+          "f8",
+          "b8",
+          "09",
+          "eb",
+          "bb",
+          "dd",
+          "ec",
+          "e0",
+          "85",
+          "53",
+          "9f",
+          "12",
+          "f7",
+          "2a",
+          "ea",
+          "3c",
+          "b4",
+          "5e",
+          "ca",
+          "cf",
+          "a6",
+          "39",
+          "46",
+          "8e",
+          "f0",
+          "9c",
+          "76",
+          "75",
+          "33",
+          "8b",
+          "54",
+          "57",
+          "10",
+          "16",
+          "30",
+          "98",
+          "e8",
+          "81",
+          "cc",
+          "e6",
+          "5d",
+          "42",
+          "e7",
+          "fe",
+          "72",
+          "ce",
+          "b0",
+          "4d",
+          "6e",
+          "f4",
+          "61",
+          "9a",
+          "5f",
+          "f9",
+          "04",
+          "dc",
+          "24",
+          "fb",
+          "8d",
+          "92",
+          "4b",
+          "da",
+          "a5",
+          "71",
+          "2d",
+          "de",
+          "d3",
+          "8c",
+          "a1",
+          "a9",
+          "6a",
+          "c3",
+          "94",
+          "1b",
+          "3a",
+          "fd",
+          "bf",
+          "17",
+          "1c",
+          "9d",
+          "40",
+          "5a",
+          "e1",
+          "ba",
+          "68",
+          "5c",
+          "88",
+          "d8",
+          "ff",
+          "a7",
+          "db",
+          "28",
+          "c0",
+          "ae",
+          "f2",
+          "f1",
+          "d0",
+          "77",
+          "4e",
+          "36",
+          "50",
+          "2e",
+          "87",
+          "0d",
+          "2f",
+          "67",
+          "cb",
+          "c1",
+          "48",
+          "97",
+          "32",
+          "86",
+          "23",
+          "7b",
+          "b2",
+          "47",
+          "c4",
+          "3b",
+          "7a",
+          "21",
+          "95",
+          "74",
+          "51",
+          "44",
+          "19",
+          "73",
+          "b3",
+          "58",
+          "26",
+          "43",
+          "5b",
+          "93",
+          "84",
+          "c8",
+          "d6",
+          "89",
+          "15",
+          "01",
+          "07",
+          "ef",
+          "2c",
+          "d7",
+          "59",
+          "1d",
+          "4f",
+          "e4",
+          "c2",
+          "56",
+          "08",
+          "13",
+          "a3",
+          "14",
+          "41",
+          "info",
+          "82",
+          "1f",
+          "6f",
+          "ac",
+          "18",
+          "a0",
+          "69",
+          "ed",
+          "bd",
+          "91",
+          "be",
+          "c5",
+          "0e",
+          "3f",
+          "d9",
+          "79",
+          "ee",
+          "7d",
+          "52",
+          "c9",
+          "34",
+          "pack",
+          "d5",
+          "fc",
+          "b6",
+          "e3",
+          "cd",
+          "aa",
+          "ab",
+          "2b",
+          "df",
+          "f6",
+          "4a"
+        ]
+      },
+      ".git/objects/f8": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/f8",
+        "subdirectories": []
+      },
+      ".git/objects/b8": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/b8",
+        "subdirectories": []
+      },
+      ".git/objects/09": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/09",
+        "subdirectories": []
+      },
+      "services/mcp-server/src": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/services/mcp-server/src",
+        "subdirectories": [
+          "tools",
+          "di",
+          "services"
+        ]
+      },
+      "services/mcp-server/src/tools": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/services/mcp-server/src/tools",
+        "subdirectories": [
+          "shell"
+        ]
+      },
+      ".git/objects/eb": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/eb",
+        "subdirectories": []
+      },
+      "LibreChat": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/LibreChat",
+        "subdirectories": []
+      },
+      "core/kg": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/core/kg",
+        "subdirectories": [
+          "data",
+          "models",
+          "queries",
+          "docs",
+          "scripts"
+        ]
+      },
+      "core/kg/data": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/core/kg/data",
+        "subdirectories": []
+      },
+      ".git/objects/bb": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/bb",
+        "subdirectories": []
+      },
+      ".git/objects/dd": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/dd",
+        "subdirectories": []
+      },
+      ".git/objects/ec": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/ec",
+        "subdirectories": []
+      },
+      ".git/objects/e0": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/e0",
+        "subdirectories": []
+      },
+      "tests/unit": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/tests/unit",
+        "subdirectories": [
+          "core",
+          "langgraph",
+          "agents",
+          "llm",
+          "api"
+        ]
+      },
+      "tests/unit/core": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/tests/unit/core",
+        "subdirectories": []
+      },
+      ".github": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.github",
+        "subdirectories": [
+          "workflows"
+        ]
+      },
+      ".git/objects/85": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/85",
+        "subdirectories": []
+      },
+      ".git/objects/53": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/53",
+        "subdirectories": []
+      },
+      ".git/objects/9f": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/9f",
+        "subdirectories": []
+      },
+      ".git/objects/12": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/12",
+        "subdirectories": []
+      },
+      ".git/objects/f7": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/f7",
+        "subdirectories": []
+      },
+      ".git/objects/2a": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/2a",
+        "subdirectories": []
+      },
+      ".git/objects/ea": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/ea",
+        "subdirectories": []
+      },
+      "deploy": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/deploy",
+        "subdirectories": [
+          "volumes"
+        ]
+      },
+      "deploy/volumes": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/deploy/volumes",
+        "subdirectories": []
+      },
+      ".git/objects/3c": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/3c",
+        "subdirectories": []
+      },
+      "docs": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/docs",
+        "subdirectories": [
+          "conventions",
+          "backlog",
+          "tutorials",
+          "troubleshooting",
+          "knowledge-graph"
+        ]
+      },
+      "docs/conventions": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/docs/conventions",
+        "subdirectories": []
+      },
+      "tests/unit/langgraph": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/tests/unit/langgraph",
+        "subdirectories": []
+      },
+      ".git/objects/b4": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/b4",
+        "subdirectories": []
+      },
+      ".git/objects/5e": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/5e",
+        "subdirectories": []
+      },
+      ".git/objects/ca": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/ca",
+        "subdirectories": []
+      },
+      ".git/objects/cf": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/cf",
+        "subdirectories": []
+      },
+      ".git/objects/a6": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/a6",
+        "subdirectories": []
+      },
+      ".git/objects/39": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/39",
+        "subdirectories": []
+      },
+      ".git/objects/46": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/46",
+        "subdirectories": []
+      },
+      "data/models": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/data/models",
+        "subdirectories": [
+          "mistral",
+          "other",
+          "deepseek"
+        ]
+      },
+      "data/models/mistral": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/data/models/mistral",
+        "subdirectories": []
+      },
+      "tests/data": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/tests/data",
+        "subdirectories": [
+          "gold_standard",
+          "inputs",
+          "outputs"
+        ]
+      },
+      "tests/data/gold_standard": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/tests/data/gold_standard",
+        "subdirectories": []
+      },
+      ".git/objects/8e": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/8e",
+        "subdirectories": []
+      },
+      ".git/objects/f0": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/f0",
+        "subdirectories": []
+      },
+      ".git/objects/9c": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/9c",
+        "subdirectories": []
+      },
+      ".git/objects/76": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/76",
+        "subdirectories": []
+      },
+      ".git/objects/75": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/75",
+        "subdirectories": []
+      },
+      ".git/objects/33": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/33",
+        "subdirectories": []
+      },
+      ".git/objects/8b": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/8b",
+        "subdirectories": []
+      },
+      ".git/refs": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/refs",
+        "subdirectories": [
+          "tags",
+          "heads",
+          "remotes"
+        ]
+      },
+      ".git/refs/tags": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/refs/tags",
+        "subdirectories": []
+      },
+      "config": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/config",
+        "subdirectories": [
+          "environments",
+          "models"
+        ]
+      },
+      "config/environments": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/config/environments",
+        "subdirectories": []
+      },
+      ".git/objects/54": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/54",
+        "subdirectories": []
+      },
+      ".git/objects/57": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/57",
+        "subdirectories": []
+      },
+      ".git/objects/10": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/10",
+        "subdirectories": []
+      },
+      "temp": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/temp",
+        "subdirectories": []
+      },
+      ".git/objects/16": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/16",
+        "subdirectories": []
+      },
+      ".git/objects/30": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/30",
+        "subdirectories": []
+      },
+      ".git/objects/98": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/98",
+        "subdirectories": []
+      },
+      ".git/objects/e8": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/e8",
+        "subdirectories": []
+      },
+      ".git/objects/81": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/81",
+        "subdirectories": []
+      },
+      ".git": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git",
+        "subdirectories": [
+          "logs",
+          "hooks",
+          "objects",
+          "refs",
+          "info",
+          "branches"
+        ]
+      },
+      ".git/logs": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/logs",
+        "subdirectories": [
+          "refs"
+        ]
+      },
+      "core": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/core",
+        "subdirectories": [
+          "kg"
+        ]
+      },
+      ".git/objects/cc": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/cc",
+        "subdirectories": []
+      },
+      "tests/agent_tests": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/tests/agent_tests",
+        "subdirectories": [
+          "ruleset",
+          "dialogflows",
+          "behaviour"
+        ]
+      },
+      "tests/agent_tests/ruleset": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/tests/agent_tests/ruleset",
+        "subdirectories": []
+      },
+      "docs/backlog": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/docs/backlog",
+        "subdirectories": []
+      },
+      ".git/objects/e6": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/e6",
+        "subdirectories": []
+      },
+      ".git/objects/5d": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/5d",
+        "subdirectories": []
+      },
+      "tests/unit/agents": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/tests/unit/agents",
+        "subdirectories": []
+      },
+      ".git/objects/42": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/42",
+        "subdirectories": []
+      },
+      ".git/objects/e7": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/e7",
+        "subdirectories": []
+      },
+      "tests/agent_tests/dialogflows": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/tests/agent_tests/dialogflows",
+        "subdirectories": []
+      },
+      ".git/objects/fe": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/fe",
+        "subdirectories": []
+      },
+      ".git/objects/72": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/72",
+        "subdirectories": []
+      },
+      "tests": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/tests",
+        "subdirectories": [
+          "regression",
+          "data",
+          "integration",
+          "agent_tests",
+          "unit",
+          "e2e",
+          "performance"
+        ]
+      },
+      "tests/regression": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/tests/regression",
+        "subdirectories": [
+          "model_versions",
+          "prompt_changes"
+        ]
+      },
+      ".git/objects/ce": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/ce",
+        "subdirectories": []
+      },
+      ".git/objects/b0": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/b0",
+        "subdirectories": []
+      },
+      ".git/objects/4d": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/4d",
+        "subdirectories": []
+      },
+      ".git/objects/6e": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/6e",
+        "subdirectories": []
+      },
+      "tests/data/inputs": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/tests/data/inputs",
+        "subdirectories": []
+      },
+      ".git/objects/f4": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/f4",
+        "subdirectories": []
+      },
+      ".git/hooks": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/hooks",
+        "subdirectories": []
+      },
+      ".git/objects/61": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/61",
+        "subdirectories": []
+      },
+      ".git/objects/9a": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/9a",
+        "subdirectories": []
+      },
+      ".git/objects/5f": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/5f",
+        "subdirectories": []
+      },
+      ".git/objects/f9": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/f9",
+        "subdirectories": []
+      },
+      ".git/objects/04": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/04",
+        "subdirectories": []
+      },
+      "tests/e2e": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/tests/e2e",
+        "subdirectories": [
+          "recovery",
+          "inference"
+        ]
+      },
+      "tests/e2e/recovery": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/tests/e2e/recovery",
+        "subdirectories": []
+      },
+      ".git/objects/dc": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/dc",
+        "subdirectories": []
+      },
+      ".git/objects/24": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/24",
+        "subdirectories": []
+      },
+      ".git/objects/fb": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/fb",
+        "subdirectories": []
+      },
+      ".git/objects/8d": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/8d",
+        "subdirectories": []
+      },
+      "services": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/services",
+        "subdirectories": [
+          "llm-server",
+          "librechat",
+          "mcp-server"
+        ]
+      },
+      "services/llm-server": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/services/llm-server",
+        "subdirectories": [
+          "config",
+          "src"
+        ]
+      },
+      ".git/objects/92": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/92",
+        "subdirectories": []
+      },
+      ".git/objects/4b": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/4b",
+        "subdirectories": []
+      },
+      ".git/objects/da": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/da",
+        "subdirectories": []
+      },
+      ".git/objects/a5": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/a5",
+        "subdirectories": []
+      },
+      ".git/objects/71": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/71",
+        "subdirectories": []
+      },
+      ".git/objects/2d": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/2d",
+        "subdirectories": []
+      },
+      "data": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/data",
+        "subdirectories": [
+          "logs",
+          "models"
+        ]
+      },
+      "core/kg/models": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/core/kg/models",
+        "subdirectories": []
+      },
+      ".git/objects/de": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/de",
+        "subdirectories": []
+      },
+      ".git/objects/d3": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/d3",
+        "subdirectories": []
+      },
+      ".git/objects/8c": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/8c",
+        "subdirectories": []
+      },
+      ".git/objects/a1": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/a1",
+        "subdirectories": []
+      },
+      ".git/objects/a9": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/a9",
+        "subdirectories": []
+      },
+      "services/mcp-server/src/tools/shell": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/services/mcp-server/src/tools/shell",
+        "subdirectories": []
+      },
+      "services/mcp-server/src/di": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/services/mcp-server/src/di",
+        "subdirectories": []
+      },
+      ".git/objects/6a": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/6a",
+        "subdirectories": []
+      },
+      ".git/objects/c3": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/c3",
+        "subdirectories": []
+      },
+      "tests/integration": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/tests/integration",
+        "subdirectories": [
+          "mcp_interface",
+          "fastapi_langgraph",
+          "langgraph_llm",
+          "toolcalls"
+        ]
+      },
+      "tests/integration/mcp_interface": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/tests/integration/mcp_interface",
+        "subdirectories": []
+      },
+      "tests/e2e/inference": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/tests/e2e/inference",
+        "subdirectories": []
+      },
+      ".git/objects/94": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/94",
+        "subdirectories": []
+      },
+      ".git/objects/1b": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/1b",
+        "subdirectories": []
+      },
+      ".git/objects/3a": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/3a",
+        "subdirectories": []
+      },
+      ".git/objects/fd": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/fd",
+        "subdirectories": []
+      },
+      ".git/objects/bf": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/bf",
+        "subdirectories": []
+      },
+      "scripts/deployment": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/scripts/deployment",
+        "subdirectories": []
+      },
+      ".git/objects/17": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/17",
+        "subdirectories": []
+      },
+      ".git/objects/1c": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/1c",
+        "subdirectories": []
+      },
+      "config/models": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/config/models",
+        "subdirectories": []
+      },
+      ".git/objects/9d": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/9d",
+        "subdirectories": []
+      },
+      ".git/objects/40": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/40",
+        "subdirectories": []
+      },
+      ".git/objects/5a": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/5a",
+        "subdirectories": []
+      },
+      ".git/objects/e1": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/e1",
+        "subdirectories": []
+      },
+      ".git/objects/ba": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/ba",
+        "subdirectories": []
+      },
+      ".git/objects/68": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/68",
+        "subdirectories": []
+      },
+      ".git/objects/5c": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/5c",
+        "subdirectories": []
+      },
+      "tests/integration/fastapi_langgraph": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/tests/integration/fastapi_langgraph",
+        "subdirectories": []
+      },
+      "scripts/maintenance": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/scripts/maintenance",
+        "subdirectories": []
+      },
+      "data/models/other": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/data/models/other",
+        "subdirectories": []
+      },
+      "__pycache__": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/__pycache__",
+        "subdirectories": []
+      },
+      "tests/agent_tests/behaviour": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/tests/agent_tests/behaviour",
+        "subdirectories": []
+      },
+      ".git/objects/88": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/88",
+        "subdirectories": []
+      },
+      ".git/refs/heads": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/refs/heads",
+        "subdirectories": []
+      },
+      ".git/objects/d8": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/d8",
+        "subdirectories": []
+      },
+      ".git/objects/ff": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/ff",
+        "subdirectories": []
+      },
+      ".git/objects/a7": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/a7",
+        "subdirectories": []
+      },
+      ".git/objects/db": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/db",
+        "subdirectories": []
+      },
+      "tests/unit/llm": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/tests/unit/llm",
+        "subdirectories": []
+      },
+      ".git/objects/28": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/28",
+        "subdirectories": []
+      },
+      ".git/objects/c0": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/c0",
+        "subdirectories": []
+      },
+      "services/mcp-server": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/services/mcp-server",
+        "subdirectories": [
+          "src",
+          "config"
+        ]
+      },
+      ".git/objects/ae": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/ae",
+        "subdirectories": []
+      },
+      ".git/objects/f2": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/f2",
+        "subdirectories": []
+      },
+      ".git/objects/f1": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/f1",
+        "subdirectories": []
+      },
+      ".git/objects/d0": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/d0",
+        "subdirectories": []
+      },
+      ".git/objects/77": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/77",
+        "subdirectories": []
+      },
+      ".git/objects/4e": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/4e",
+        "subdirectories": []
+      },
+      ".git/objects/36": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/36",
+        "subdirectories": []
+      },
+      ".git/objects/50": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/50",
+        "subdirectories": []
+      },
+      ".git/objects/2e": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/2e",
+        "subdirectories": []
+      },
+      ".git/objects/87": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/87",
+        "subdirectories": []
+      },
+      ".git/objects/0d": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/0d",
+        "subdirectories": []
+      },
+      "tests/performance": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/tests/performance",
+        "subdirectories": [
+          "benchmarks",
+          "stress"
+        ]
+      },
+      "tests/performance/benchmarks": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/tests/performance/benchmarks",
+        "subdirectories": []
+      },
+      "services/llm-server/config": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/services/llm-server/config",
+        "subdirectories": []
+      },
+      ".git/objects/2f": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/2f",
+        "subdirectories": []
+      },
+      ".git/objects/67": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/67",
+        "subdirectories": []
+      },
+      ".git/objects/cb": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/cb",
+        "subdirectories": []
+      },
+      ".git/objects/c1": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/c1",
+        "subdirectories": []
+      },
+      ".git/objects/48": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/48",
+        "subdirectories": []
+      },
+      "tests/unit/api": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/tests/unit/api",
+        "subdirectories": []
+      },
+      "services/llm-server/src": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/services/llm-server/src",
+        "subdirectories": []
+      },
+      ".git/objects/97": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/97",
+        "subdirectories": []
+      },
+      "docs/tutorials": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/docs/tutorials",
+        "subdirectories": []
+      },
+      ".git/objects/32": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/32",
+        "subdirectories": []
+      },
+      ".git/objects/86": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/86",
+        "subdirectories": []
+      },
+      "services/librechat": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/services/librechat",
+        "subdirectories": [
+          "config",
+          "src"
+        ]
+      },
+      ".git/objects/23": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/23",
+        "subdirectories": []
+      },
+      ".git/objects/7b": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/7b",
+        "subdirectories": []
+      },
+      ".git/objects/b2": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/b2",
+        "subdirectories": []
+      },
+      ".git/objects/47": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/47",
+        "subdirectories": []
+      },
+      ".git/objects/c4": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/c4",
+        "subdirectories": []
+      },
+      "services/mcp-server/src/services": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/services/mcp-server/src/services",
+        "subdirectories": []
+      },
+      ".git/objects/3b": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/3b",
+        "subdirectories": []
+      },
+      ".git/objects/7a": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/7a",
+        "subdirectories": []
+      },
+      ".git-hooks": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git-hooks",
+        "subdirectories": []
+      },
+      ".git/objects/21": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/21",
+        "subdirectories": []
+      },
+      ".git/objects/95": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/95",
+        "subdirectories": []
+      },
+      ".git/objects/74": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/74",
+        "subdirectories": []
+      },
+      "tests/regression/model_versions": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/tests/regression/model_versions",
+        "subdirectories": []
+      },
+      "tests/integration/langgraph_llm": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/tests/integration/langgraph_llm",
+        "subdirectories": []
+      },
+      ".git/objects/51": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/51",
+        "subdirectories": []
+      },
+      ".git/objects/44": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/44",
+        "subdirectories": []
+      },
+      ".git/objects/19": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/19",
+        "subdirectories": []
+      },
+      ".git/objects/73": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/73",
+        "subdirectories": []
+      },
+      ".git/objects/b3": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/b3",
+        "subdirectories": []
+      },
+      ".git/objects/58": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/58",
+        "subdirectories": []
+      },
+      "core/kg/queries": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/core/kg/queries",
+        "subdirectories": []
+      },
+      ".git/logs/refs/remotes": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/logs/refs/remotes",
+        "subdirectories": [
+          "origin"
+        ]
+      },
+      ".git/logs/refs/remotes/origin": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/logs/refs/remotes/origin",
+        "subdirectories": []
+      },
+      ".git/objects/26": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/26",
+        "subdirectories": []
+      },
+      ".git/objects/43": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/43",
+        "subdirectories": []
+      },
+      ".git/objects/5b": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/5b",
+        "subdirectories": []
+      },
+      "tests/integration/toolcalls": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/tests/integration/toolcalls",
+        "subdirectories": []
+      },
+      ".git/logs/refs": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/logs/refs",
+        "subdirectories": [
+          "heads",
+          "remotes"
+        ]
+      },
+      ".git/logs/refs/heads": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/logs/refs/heads",
+        "subdirectories": []
+      },
+      ".git/objects/93": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/93",
+        "subdirectories": []
+      },
+      "data/logs": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/data/logs",
+        "subdirectories": []
+      },
+      "services/mcp-server/config": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/services/mcp-server/config",
+        "subdirectories": []
+      },
+      ".git/objects/84": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/84",
+        "subdirectories": []
+      },
+      ".git/objects/c8": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/c8",
+        "subdirectories": []
+      },
+      "services/librechat/config": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/services/librechat/config",
+        "subdirectories": []
+      },
+      ".git/objects/d6": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/d6",
+        "subdirectories": []
+      },
+      "services/librechat/src": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/services/librechat/src",
+        "subdirectories": []
+      },
+      ".git/objects/89": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/89",
+        "subdirectories": []
+      },
+      ".git/objects/15": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/15",
+        "subdirectories": []
+      },
+      ".git/objects/01": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/01",
+        "subdirectories": []
+      },
+      "tests/regression/prompt_changes": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/tests/regression/prompt_changes",
+        "subdirectories": []
+      },
+      ".git/objects/07": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/07",
+        "subdirectories": []
+      },
+      ".git/objects/ef": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/ef",
+        "subdirectories": []
+      },
+      ".git/objects/2c": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/2c",
+        "subdirectories": []
+      },
+      ".git/objects/d7": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/d7",
+        "subdirectories": []
+      },
+      ".git/objects/59": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/59",
+        "subdirectories": []
+      },
+      ".git/objects/1d": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/1d",
+        "subdirectories": []
+      },
+      ".git/objects/4f": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/4f",
+        "subdirectories": []
+      },
+      ".git/objects/e4": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/e4",
+        "subdirectories": []
+      },
+      ".git/objects/c2": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/c2",
+        "subdirectories": []
+      },
+      ".git/objects/56": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/56",
+        "subdirectories": []
+      },
+      ".git/objects/08": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/08",
+        "subdirectories": []
+      },
+      ".git/objects/13": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/13",
+        "subdirectories": []
+      },
+      ".git/objects/a3": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/a3",
+        "subdirectories": []
+      },
+      ".git/objects/14": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/14",
+        "subdirectories": []
+      },
+      ".git/objects/41": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/41",
+        "subdirectories": []
+      },
+      ".git/objects/info": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/info",
+        "subdirectories": []
+      },
+      ".git/objects/82": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/82",
+        "subdirectories": []
+      },
+      ".git/objects/1f": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/1f",
+        "subdirectories": []
+      },
+      ".git/objects/6f": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/6f",
+        "subdirectories": []
+      },
+      "docs/troubleshooting": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/docs/troubleshooting",
+        "subdirectories": []
+      },
+      ".git/info": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/info",
+        "subdirectories": []
+      },
+      ".git/objects/ac": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/ac",
+        "subdirectories": []
+      },
+      ".github/workflows": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.github/workflows",
+        "subdirectories": []
+      },
+      ".git/objects/18": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/18",
+        "subdirectories": []
+      },
+      "core/kg/docs": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/core/kg/docs",
+        "subdirectories": []
+      },
+      ".git/objects/a0": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/a0",
+        "subdirectories": []
+      },
+      ".git/objects/69": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/69",
+        "subdirectories": []
+      },
+      ".git/objects/ed": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/ed",
+        "subdirectories": []
+      },
+      ".git/objects/bd": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/bd",
+        "subdirectories": []
+      },
+      ".git/objects/91": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/91",
+        "subdirectories": []
+      },
+      ".git/objects/be": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/be",
+        "subdirectories": []
+      },
+      ".git/objects/c5": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/c5",
+        "subdirectories": []
+      },
+      ".git/objects/0e": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/0e",
+        "subdirectories": []
+      },
+      ".git/objects/3f": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/3f",
+        "subdirectories": []
+      },
+      ".git/objects/d9": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/d9",
+        "subdirectories": []
+      },
+      ".git/objects/79": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/79",
+        "subdirectories": []
+      },
+      ".git/objects/ee": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/ee",
+        "subdirectories": []
+      },
+      "core/kg/scripts": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/core/kg/scripts",
+        "subdirectories": []
+      },
+      ".git/objects/7d": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/7d",
+        "subdirectories": []
+      },
+      ".git/objects/52": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/52",
+        "subdirectories": []
+      },
+      ".git/objects/c9": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/c9",
+        "subdirectories": []
+      },
+      ".git/objects/34": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/34",
+        "subdirectories": []
+      },
+      ".git/objects/pack": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/pack",
+        "subdirectories": []
+      },
+      ".git/objects/d5": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/d5",
+        "subdirectories": []
+      },
+      "tests/performance/stress": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/tests/performance/stress",
+        "subdirectories": []
+      },
+      ".git/objects/fc": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/fc",
+        "subdirectories": []
+      },
+      ".git/objects/b6": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/b6",
+        "subdirectories": []
+      },
+      ".git/branches": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/branches",
+        "subdirectories": []
+      },
+      "tests/data/outputs": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/tests/data/outputs",
+        "subdirectories": []
+      },
+      ".git/objects/e3": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/e3",
+        "subdirectories": []
+      },
+      ".git/refs/remotes": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/refs/remotes",
+        "subdirectories": [
+          "origin"
+        ]
+      },
+      ".git/refs/remotes/origin": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/refs/remotes/origin",
+        "subdirectories": []
+      },
+      "data/models/deepseek": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/data/models/deepseek",
+        "subdirectories": []
+      },
+      "docs/knowledge-graph": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/docs/knowledge-graph",
+        "subdirectories": []
+      },
+      ".git/objects/cd": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/cd",
+        "subdirectories": []
+      },
+      ".git/objects/aa": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/aa",
+        "subdirectories": []
+      },
+      ".git/objects/ab": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/ab",
+        "subdirectories": []
+      },
+      ".git/objects/2b": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/2b",
+        "subdirectories": []
+      },
+      ".git/objects/df": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/df",
+        "subdirectories": []
+      },
+      ".git/objects/f6": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/f6",
+        "subdirectories": []
+      },
+      ".git/objects/4a": {
+        "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/4a",
+        "subdirectories": []
+      }
+    },
+    "issues": []
+  },
+  "file_presence": {
+    "expected": {
+      "root": [
+        "README.md",
+        "LICENSE",
+        ".gitignore"
+      ],
+      "docs": [
+        "README.md"
+      ],
+      "core/kg/scripts": [
+        "__init__.py",
+        "update_knowledge_graph.py"
+      ],
+      "services/mcp-server/src": [
+        "__init__.py",
+        "app.py"
+      ],
+      "tests/unit": [
+        "__init__.py",
+        "test_example.py"
+      ]
+    },
+    "actual": {
+      ".git/refs/heads": [
+        "backup-20250407-160818",
+        "backup-20250407-162629",
+        "backup-20250407-161555",
+        "backup-20250407-155857",
+        "dev",
+        "main",
+        "backup-20250407-161159",
+        "backup-20250407-162113",
+        "backup-20250407-155124"
+      ],
+      ".git": [
+        "HEAD",
+        "ORIG_HEAD",
+        "packed-refs",
+        "config",
+        "index",
+        "COMMIT_EDITMSG",
+        "description"
+      ],
+      "scripts/deployment": [
+        "register_new_features.sh",
+        "update_kg_root.py",
+        "restart_stack.sh",
+        "update_kg_deployment.py",
+        "update_ollama_references.sh",
+        "start_mcp_server.sh"
+      ],
+      ".git/objects/15": [
+        "f282df0dc9aa17a0da0033882d276a549dbffe",
+        "ef0b734b16079b912b717a1ab23149562aa1ad"
+      ],
+      ".git/objects/19": [
+        "69c94ac5ac37761448eb92355fb1261a92c7f4",
+        "d09e7e85431e027b125ce4a2a77e477c3ffc95",
+        "2c87d4bdb6373f5386442303b010cd7804baa3"
+      ],
+      ".git/objects/ac": [
+        "688170c3cf0cc3f0221f58dd74d47f3db9444d"
+      ],
+      ".git/refs/remotes/origin": [
+        "dev",
+        "main"
+      ],
+      "docs/conventions": [
+        "review-checklist.md",
+        "graph-guidelines.md",
+        "coding-conventions.md",
+        "style-guide.md"
+      ],
+      ".git/info": [
+        "exclude"
+      ],
+      "services/mcp-server/src/tools/shell": [
+        "__init__.py",
+        "command.py"
+      ],
+      ".git/objects/28": [
+        "9d1b33275a38ebc09ff5d7946c7d80e9a0b72c",
+        "cd9596c5e681ee5c3ff1eb26ed7134188bf105",
+        "145bd4691bb916606bcb208afc60f09e4774af"
+      ],
+      ".git/objects/e6": [
+        "813eb216f3f440349b28299b3e6fba91fa8eae",
+        "9de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "b55883c95070152ed6fe304cde50c23d758a7d"
+      ],
+      ".git/hooks": [
+        "pre-applypatch.sample",
+        "applypatch-msg.sample",
+        "fsmonitor-watchman.sample",
+        "prepare-commit-msg.sample",
+        "pre-receive.sample",
+        "pre-commit.sample",
+        "post-merge",
+        "pre-commit",
+        "pre-rebase.sample",
+        "pre-push.sample",
+        "pre-merge-commit.sample",
+        "commit-msg.sample",
+        "update.sample",
+        "push-to-checkout.sample",
+        "post-update.sample"
+      ],
+      ".git/objects/0e": [
+        "6ba6c66a8ee0b50f2e768e2d035b15864edf17",
+        "5c1137d46758ac23c1ae420676af70e37d6dde"
+      ],
+      ".git/objects/c5": [
+        "ae2c2e8eca94e35ea36c415d0a83bdabe12899",
+        "4e619085d56b40544206c044520910939effdf",
+        "8d94af48f5ab1284031606ac674df5bf87ba85"
+      ],
+      "data/logs": [
+        "llm-server-models-list.txt",
+        "llm-server-status.txt",
+        "librechat-status.txt",
+        "ollama-models-list.txt",
+        "ollama-status.txt",
+        "nvidia-container-output.txt",
+        "mcp-server-status.txt"
+      ],
+      "root": [
+        "mcp.sh",
+        ".flake8",
+        ".last_backup_branch",
+        "README.md",
+        "specification-manifest.json",
+        "check_kg_nodes.py",
+        "fix_code_quality.sh",
+        "code_review_report.md",
+        "validate-manifest.py",
+        "specification-manifest-schema.json",
+        "pyproject.toml",
+        "check_code_quality_nodes.py",
+        ".shellcheckrc",
+        "project-structure-report.json",
+        "mypy.ini",
+        ".pre-commit-config.yaml",
+        ".roocodes",
+        "install_pre_commit_hooks.sh",
+        "verify_stack_health.sh",
+        "LICENSE",
+        "install-file-update-hooks.sh",
+        ".gitignore",
+        "create_backup_branch.sh",
+        "traverse_project.py",
+        ".pylintrc",
+        "restore_from_backup.sh",
+        "project-report.json",
+        "check_code_quality.sh",
+        "specification-manifest-README.md"
+      ],
+      ".git/objects/9a": [
+        "ef25614b6c7b24fed1cd7830f827d06715fae7",
+        "742b16f91ea38e33e57007f3e06f925f430407",
+        "12fa0c7a1a87e9e9185b07896ada2624453b5d",
+        "752770c34f3fe2a1498256488cd0e63970cc44"
+      ],
+      "__pycache__": [
+        "mcp_server.cpython-310.pyc"
+      ],
+      ".git/objects/fd": [
+        "2bc3012e978daf8efde0aecf9c1ddda6b170d1",
+        "c2e6c3ac4a24dc225e528453f22d85e61939ba",
+        "efe8fd1a8b176bb56d787d0401150764379d87"
+      ],
+      ".git/objects/77": [
+        "8ac9fc36d00956d2efaa0bb1c975522bf57b8b",
+        "40f92a34475f6c60121b07b125a509e4c09184"
+      ],
+      ".git/logs/refs/heads": [
+        "backup-20250407-155124",
+        "backup-20250407-161159",
+        "backup-20250407-162113",
+        "backup-20250407-161555",
+        "main",
+        "dev",
+        "backup-20250407-160818",
+        "backup-20250407-155857",
+        "backup-20250407-162629"
+      ],
+      ".git/objects/cb": [
+        "d2f4126de17ac408edb540b2ff93582c5290ec",
+        "3f9cf843feb611e5059d0571952bacefbf2611",
+        "7274c4c5d72de1a6ac873b083bfe1e90a98083",
+        "06ac6afc598d39a7e169a6322b66a3d852ed6e"
+      ],
+      "docs/knowledge-graph": [
+        "code-generation.md",
+        "schema.md",
+        "examples.md",
+        "usage-guide.md"
+      ],
+      ".git/objects/51": [
+        "7e26b9d76af467233f8e4cc85d07ee333ac635"
+      ],
+      "scripts/maintenance": [
+        "automated_code_review.py",
+        "verify_kg_migration.py",
+        "verify_librechat_integration.sh",
+        "verify_stack_health.sh",
+        "test_mcp_agent.sh",
+        "generate_quality_report.py"
+      ],
+      ".git/objects/eb": [
+        "e255849fc9ffb2282cbf47435d42e6043b3235",
+        "56167f8edc84de4d9df5cb54b0960e11b33b21",
+        "7fb2c6000586ebcfb2a7be9bc90a9eb12c6fd0"
+      ],
+      ".git/objects/59": [
+        "7ee2c1ad64358ca4a671e51e5538505dfe3745"
+      ],
+      "services/mcp-server/src": [
+        "app.py",
+        "mcp_server.py",
+        "__init__.py"
+      ],
+      ".git/objects/79": [
+        "ead529f34082c57026f743bc9579c3f71c07a8",
+        "831030ef2241d2ebfe38d5de702f78b3b9aff4"
+      ],
+      ".git/objects/1d": [
+        "92e77a895f00ffdbf341b8f18608fe1cb2565c",
+        "3ef435e706aadea726f93f7da623d08c3d2afc"
+      ],
+      ".git/objects/98": [
+        "40a48c23196d62606c4e9910241c926a571475",
+        "8cc0f1fc9587e1ec4eb1b49ef3ad916454e995",
+        "d45186260a8f0eff46f26723602c6702115d14",
+        "0f14c0733c1c019cb5723c0bdfd51e18d3ba46"
+      ],
+      ".git/objects/5d": [
+        "39bead7f29a22573f631e7e3af1bf818c2ca43"
+      ],
+      ".git/objects/de": [
+        "c4df3ccf6e04a9e4591124021859db36225cb9",
+        "fcd255dd9a342b76d1db468c6064e1deb8de49"
+      ],
+      "core/kg/data": [
+        "knowledge_graph.ttl",
+        "knowledge_graph.graphml"
+      ],
+      ".git/objects/57": [
+        "ab5562931035517c23aecebda590c955d6d631"
+      ],
+      ".git/objects/ae": [
+        "ab94ec29e2329762a10ac14f0d9fca6cd1008c",
+        "a0fa146845cd77cb30efcca8d002cb60cb678f",
+        "a080733101ad3e315223e485163848ff6633c0"
+      ],
+      "core/kg/scripts": [
+        "add_git_hooks_to_kg.py",
+        "register_feature.py",
+        "install_hooks.sh",
+        "record_advanced_code_quality_tools.py",
+        "record_conventions_creation.py",
+        "update_knowledge_graph.py",
+        "record_code_quality_tooling.py",
+        "setup_knowledge_graph.py",
+        "update_feature.py",
+        "record_github_actions_workflow.py",
+        "record_dependency_injection.py"
+      ],
+      ".git/objects/9f": [
+        "762131b3809d6a1a1f671a561e03c1409ff75f",
+        "dca9657ab4c4e3ebc931fce1b038ed4d65c3cb",
+        "4c4d80c1f6ad449d7aa8c4b6c44b0884cf722b"
+      ],
+      ".git/objects/01": [
+        "5fe70529958bb8a640f86b46470615b480ceea",
+        "500b76c74cda70844c0211383dfbba58949d07",
+        "53fbc18531deb10565d3d428ed974527db9427"
+      ],
+      "deploy/volumes": [
+        "model-volumes.yml"
+      ],
+      ".git/objects/48": [
+        "58e8e3604116b3e64ba151128b4cc20959e4fa",
+        "7207c8956189016bd09ba9380115dc2b6c2162"
+      ],
+      ".git/objects/b2": [
+        "a8f8b17f6e34ce2448b5418f5c43ea852f52b6",
+        "e80a03d21b465de1b9625f147f3a40029db359"
+      ],
+      "services/librechat": [
+        ".env",
+        "docker-compose.yml",
+        "docker-compose.temp.yml"
+      ],
+      ".git/objects/93": [
+        "34e3aeb5e07425e58c002ccc9a928674f7f59f"
+      ],
+      ".git/objects/a9": [
+        "c541e0a0ea63440cbd5a0b34165abab096e7c0",
+        "f818fc6783f5fa9d1b7095108e1936ae49b10a",
+        "3ee3426ee91eb259d641430d6f8050971e7d15"
+      ],
+      "docs/tutorials": [
+        "generate-code.md",
+        "data-backup.md",
+        "run-end-to-end.md",
+        "update-components.md",
+        "create-agent.md",
+        "add-function.md",
+        "code_quality_guide.md",
+        "model-integration.md",
+        "setup_environment.md"
+      ],
+      "docs/troubleshooting": [
+        "librechat-fixes.md",
+        "monitoring-and-logging.md",
+        "ollama-errors.md",
+        "broken-links.md",
+        "agent-misbehavior.md",
+        "resource-management.md",
+        "code-not-updating.md",
+        "common-issues.md"
+      ],
+      ".git/objects/3f": [
+        "63ac05145ff974a8cc934f29e1f620f6f09880",
+        "d19e49ec2fc4d01743bac2213e21bdfe78444f",
+        "f0e14878f2d41149dc54d314ef1d2eabf95434",
+        "9fd3bb8537407680f033479c37d539e5f92be0"
+      ],
+      ".git/objects/4d": [
+        "cdcd87e3eaff7e55d348dd8852c77095e9c266"
+      ],
+      ".git/objects/43": [
+        "40685b16a1957005f330c8254f21500aded5d7",
+        "dde687f4c2e9f6e1eb89396492eb6df284fcb5"
+      ],
+      ".git/objects/f1": [
+        "10c1faeccc5b92a39ce34d7dc1fa048327e562"
+      ],
+      ".github/workflows": [
+        "code-quality.yml"
+      ],
+      ".git/objects/6a": [
+        "9beaa9c6ab4ab69d656272e31255aee3441eb5"
+      ],
+      ".git-hooks": [
+        "pre-commit",
+        "README.md"
+      ],
+      ".git/objects/41": [
+        "dfba486a4425db896f15ab237a250c7f5dac87"
+      ],
+      ".git/objects/2b": [
+        "76bdb61f367773e18e5a404cc92baf8e8b2888"
+      ],
+      ".git/objects/58": [
+        "37c7aa500604a32dbb262a451052b25e04c663",
+        "620d8e275badda5b9b88cf7f3cd652a7d2e83c"
+      ],
+      ".git/objects/cc": [
+        "1560d867cd0da0627e4e094f7daa0fa08761d5",
+        "aed398456fc3df020eab614d30db0bce2c7c20"
+      ],
+      ".git/objects/8b": [
+        "5b1a0343edb7a74109dfc6f2032ef154fee514",
+        "fbe8b3c8187350b669b51313275a6fcb0b8203",
+        "87b207129b789e96fb78548a234e0967c230ba",
+        "941dc7e582313704fdba781c37f747a0eaa1c1"
+      ],
+      ".git/objects/47": [
+        "dd01be2e9e04eb0858521ca4d9546737f19c1b",
+        "b325759e84bb13f02754230f292cd6cab46526",
+        "9f671529c5cca4bd7175f0e728da094d829248"
+      ],
+      ".git/objects/4b": [
+        "995fe97fa2a29b1446207b69a21e916fa1b6dc"
+      ],
+      ".git/objects/3a": [
+        "76ecb0f31986fe0d0d438d3635641ffb9929ca"
+      ],
+      ".git/objects/89": [
+        "2356df7f1ac896a6fa16069e4209cd19187acf",
+        "bc9e9b88a6480d96d7578cf801350585bd9331",
+        "2ff17894400d4a1ccbf4943133482d99ca2671"
+      ],
+      ".git/objects/46": [
+        "4a08e0fd33c6eb34b1b78a860ca2013aca2864",
+        "3a72e84a3245f55edb38787b0928517680d71d"
+      ],
+      ".git/objects/39": [
+        "1e764acdc7146ab840cf6d230dda0be165d361"
+      ],
+      ".git/objects/fe": [
+        "686632f7a8c9e737f32fa2b207d1aaf11d2054",
+        "6713b5a1478f0b55229898815238680124aaa5",
+        "5673d4de648ecff1857982421311c0688b6011"
+      ],
+      ".git/objects/8d": [
+        "a395b4ecdc790d712f714930eb43d7341d503c",
+        "a5602adf7d0849ba42a851b022240e287e58b9",
+        "fc072358de277249d4b801bfb4e62e00d9282a"
+      ],
+      ".git/objects/09": [
+        "0bd50c6d693fa2c396f49bcc67e7e69fd5d4ff",
+        "e22e70e9b972fe66cfa67c432ece51dac73214"
+      ],
+      ".git/objects/1b": [
+        "a4100c99944788e5720d28c20f3e03fe0477b0",
+        "6e2d3b6a65c0fdffecab305953060861562d89",
+        "ded2936971fcc32c9c4030aa16f1f551b53914"
+      ],
+      "services/mcp-server/src/di": [
+        "containers.py",
+        "__init__.py",
+        "README.md",
+        "providers.py"
+      ],
+      ".git/objects/3b": [
+        "230635ad9ff9413bf69d262148d78f8fe70a0f",
+        "e5b438267159e312564bf1de419220fc8dd94f"
+      ],
+      "tests": [
+        "test_code_review.py",
+        "README.md"
+      ],
+      ".git/objects/ed": [
+        "f7854219bab5b88bf27b50f78da3b23a4d20c4",
+        "7994de51dac4fadb66cabfa0ff431c06a2f5d2",
+        "17161c0ab3b0ec2f7687cf60db721b4af27e4f"
+      ],
+      ".git/objects/b6": [
+        "75734906578e6fc052ce62e871d8af429f1c8f",
+        "d6b38db40ec776e020c7cca63247cb11583532"
+      ],
+      ".git/objects/b4": [
+        "640261e79558d6f4061048b29015631ada00a7",
+        "7a76947eb40760ae07583f9e7e0ac1da7d7fe2",
+        "9f524ab447c2110a576cb7cb79511ade92cb1c"
+      ],
+      ".git/objects/ee": [
+        "250ed71942888785941360b99f969f720385ef"
+      ],
+      ".git/objects/50": [
+        "c1b742d3a65b6d5bb62dc0d1ddfe6b27e4cd24"
+      ],
+      ".git/objects/2f": [
+        "d7c183c9aea3d835793f37bf4b81401a8d0504"
+      ],
+      ".git/objects/be": [
+        "0f69e69e68a42b75239f63ccbfe1b5559226c4",
+        "061b4f9ffae8792c334ffc2869af987b577970"
+      ],
+      ".git/objects/cd": [
+        "e6001194b81cce34aacbdefe248480da4cef38"
+      ],
+      ".git/objects/97": [
+        "aa1882f0600500b7328c4b704c8e013686f4cb",
+        "9b5689c94cc90bd860d94bd0d03987b0a01483",
+        "a02f1e37b2e0ee74a42fa0394f573d7d17b44d"
+      ],
+      "LibreChat": [
+        "docker-compose.yml",
+        ".env",
+        "docker-compose.temp.yml",
+        "librechat.yaml"
+      ],
+      ".git/objects/0d": [
+        "4cdc3165bbf215c3b3540ee1c2426bc59f2307",
+        "859f28e85495a7ebcd6db6d366e04ca4f8ddc6"
+      ],
+      ".git/objects/e1": [
+        "4ac15cf9cc4da780b1b54bb7f9c44fd8f85872",
+        "ed5b969df4565fecfcc6f09e0e58673d5a8fa5",
+        "acbd0a7e4d0386359b4756e4f8b121507c25e8"
+      ],
+      ".git/objects/87": [
+        "9e0df9849c5b9de6833c1167a24324d3fc5d59",
+        "366b95cf0d0dc2fba1947ca33ac7f283282ed4",
+        "4ce2edeb362324f8b0bf3b6ba8069c3eef04b6",
+        "76423215188a4866e99f3e87a7ef559ebf0905"
+      ],
+      ".git/objects/94": [
+        "66cf55149008dca4747f59628cbef6b1399285",
+        "607fa34d4e9718c5d85a12aeec4199cdad24e9"
+      ],
+      ".git/objects/fb": [
+        "040d6a9f194966c1c3bb39888e4524efd31023",
+        "b6a1efe082a3b64f8bd2e50af3c01da1f8b9a0"
+      ],
+      ".git/objects/f6": [
+        "a31cf5795c138ffc99168c46237afc8035bf91",
+        "e28ec9edf34bcfcf2e9c6bd71fd7fc00aabc07",
+        "8fc679e0d069d388f3a034c30453f393ef180f"
+      ],
+      ".git/objects/9d": [
+        "abf9091c16d4289f6e4bb4754e0bf913ea8e92"
+      ],
+      ".git/objects/f8": [
+        "d91b09e14d3737a0bf00f07882f5e9f63c4cd5"
+      ],
+      ".git/objects/52": [
+        "ddc2395e419c36fba80acb8979e4f25cd56294",
+        "bd76ac0ad662ec9201a929f71f758ff50b611b"
+      ],
+      ".git/objects/4f": [
+        "caf3bb42c4fe05f8cd511a94421bc1dd836149"
+      ],
+      ".git/objects/d3": [
+        "2730d55980ca3a5f7a6dd1013c7d8b467e100d",
+        "b102378b8575202d3c783dfa9d287667c8e15c"
+      ],
+      ".git/objects/07": [
+        "c5dbf57530d7e42afd03390539d15a998bec19",
+        "e09d9820942a27af4c657b76ecf0a791a3d07a"
+      ],
+      ".git/objects/10": [
+        "802daa4986fd84a25fa5ffb491ca0ec9620dfd",
+        "38f8809da71b51299c84247f99d1d26eb35b70"
+      ],
+      ".git/objects/8e": [
+        "dd2f3c62848e90087973043347f8a1d17ee0a0"
+      ],
+      ".git/objects/53": [
+        "8ab3f0fbab144f499e7b1a199ffa69ee5fc444"
+      ],
+      ".git/objects/3c": [
+        "1a77929ac9b5109d64cc9a15321837e05569be",
+        "697847577c12234e64bb5354d28d7d2657c3f4",
+        "2bd1626de829bf250e9d34064dce8ec3421d35",
+        "02b185c534ca00720f7e8465e61e2c59c4d05a"
+      ],
+      "services/librechat/config": [
+        ".env",
+        "librechat.yaml"
+      ],
+      ".git/objects/21": [
+        "acf0438550f0e16483a8d6fe0e5ea66fc75c6c"
+      ],
+      "temp": [
+        "dependency-injection.md:Zone.Identifier",
+        "dependency-injection.md"
+      ],
+      ".git/objects/9c": [
+        "809dc044a1816bd7282f145f27fb299a0925ca"
+      ],
+      ".git/objects/84": [
+        "7f3e26d43f13339dd6aa90066629228a97c299"
+      ],
+      "services/mcp-server": [
+        "Dockerfile",
+        "requirements.txt",
+        "docker-compose.yml"
+      ],
+      "deploy": [
+        "docker-compose.dev.yml",
+        "docker-compose.yml",
+        "README.md"
+      ],
+      "services/mcp-server/src/services": [
+        "prompt_processor.py",
+        "__init__.py",
+        "example_service.py"
+      ],
+      ".git/objects/18": [
+        "79bc8c283ddf7e0fa2ad0c2ac7363cc20c8d4d",
+        "8e0b3289f76ca16dfd02088a3509e2640ffab3",
+        "587db0cc198565c11a781035863942dcedfcd2"
+      ],
+      ".git/objects/92": [
+        "9bab7034ab3ca74b32b0c4632adb79a2a2668b"
+      ],
+      ".git/objects/c0": [
+        "a3d78712f05904d74eec0157e064c015721764",
+        "766621f3694ed18989b00425b11f9034fa2a9e",
+        "9297384399f7b060fc2d0549eb99c862534bbf"
+      ],
+      ".git/objects/5c": [
+        "aee51675aa8c37cbd7eb6e78cdf8b9632e2ceb"
+      ],
+      ".git/objects/7d": [
+        "9a213f884c41a8030bd90490eb4a5f549b7b6f",
+        "09902749a0f576f40992cb1839ff03f0dbc6de"
+      ],
+      ".git/objects/bb": [
+        "dbf4fc6b3e7b4aa1ca195a9ab4046d115d7ac4"
+      ],
+      ".git/objects/e7": [
+        "af99ae0006a126a6045fe1194910d3020a8f7a",
+        "e512eaedfe1c89ea3aaf25fc69def321d93a3c",
+        "82ed63b3b4756ef63a000480830305b72e662f"
+      ],
+      "core/kg/docs": [
+        "graph_stats.txt",
+        "graph_visualization.png"
+      ],
+      ".git/objects/6f": [
+        "0c4e028d8d0b3d913fc9a136eb1d17e7d9e406"
+      ],
+      ".git/objects/69": [
+        "94b47dc2687ebc8a22322a7448beae92d63e69"
+      ],
+      ".git/objects/4e": [
+        "2c80a1a62e3d57492f67218e0139d98d58fb4e"
+      ],
+      ".git/objects/4a": [
+        "68ac3869bd1d6877cbcffda5e6ded06e3c7d8c",
+        "a421976a00b80e61b2f53b7b81c7331b8cabbd",
+        "6f2ea89405e4c18178de471115b7e4702cd22c"
+      ],
+      ".git/objects/82": [
+        "4e60f01c610ad72c0066b60e3002d611766510",
+        "a5f151b7f1b7d6d9cd4b0ffd8230e719659f0d"
+      ],
+      ".git/logs/refs/remotes/origin": [
+        "main",
+        "dev"
+      ],
+      ".git/objects/d8": [
+        "db14e86bda8902deaf752796e5ca18c5a7a520",
+        "8f7d2aaecd57c380e04a8778c52fb291b49e26"
+      ],
+      ".git/objects/86": [
+        "6ecd2a10d7dbec7e6a58d77c89296488d99439",
+        "5089b6299b694c4ed13ec6634741bccba22eea"
+      ],
+      ".git/objects/85": [
+        "158069d9b872eb997f8415a4b682b1c4105afa"
+      ],
+      ".git/objects/6e": [
+        "686ffa9a591785ffc25a4e6c526919f3688aea",
+        "8fb5249c17a3f8fe0c9af0cff14206e8f73b7c"
+      ],
+      ".git/objects/d7": [
+        "ec42fd8b42efd5359747d77d46231b60285ed0"
+      ],
+      ".git/objects/ab": [
+        "8f589d824893691d797d0f3853df50ab34c908",
+        "a1fcf0c90e8c63da9acb350874fbd966770e1e",
+        "e242e31fa35fcce61aec7fbbfb6a4a72267549"
+      ],
+      ".git/objects/ec": [
+        "a996a9d99088be9c100e2bc1b805405203a184"
+      ],
+      ".git/objects/c2": [
+        "316e4cfc4226a0b0c106fdc533dde0689070b2"
+      ],
+      ".git/objects/ca": [
+        "2a24d3c34a3638ecfbea1661a3b66590f57bff",
+        "d230ba77fa89855c5900745a078dad36051a1b"
+      ],
+      "tests/data": [
+        "mcp-agent-test.txt"
+      ],
+      "config": [
+        "README.md",
+        "code_review.yaml"
+      ],
+      ".git/objects/2d": [
+        "3eb9ed3d231fdc9beb68ef9c25cc5f55dcdcd0"
+      ],
+      ".git/objects/a0": [
+        "b566307c1257dd56b28cfb103ee6896a9c2f5b",
+        "2b16b0f0f8b9d2f283e091b3f7645666689e61"
+      ],
+      ".git/objects/e0": [
+        "8c64132335d23bb3f2ae71f7499bf9cda6423c"
+      ],
+      ".git/objects/5b": [
+        "5afd9bb239955219b69be3cbc24dc54d7e04b2"
+      ],
+      ".git/objects/f0": [
+        "36056880fcf85f78f5e4f72a612062469c2f6f",
+        "697416846ef4c5434184701bc71b7edff2d287"
+      ],
+      ".git/objects/d6": [
+        "daa57923328f654a0e8a4b447523b10a082bc2"
+      ],
+      ".git/objects/da": [
+        "2eed747485d80d786728cc22011a09e7a77f13",
+        "f1671e10ed3c6027d653c662e493944464bf3a",
+        "f4b0dba909cd472c929d79f855ffbef5ad0024",
+        "e6ba23e5e682de9b2e6537f82d69baca915816",
+        "5b879de09924589b80f9e9cb0d87aee4f63a72"
+      ],
+      ".git/refs": [
+        "stash"
+      ],
+      ".git/objects/bf": [
+        "700f5b742e8742b1a73d5790d0c2dc47847c7c",
+        "2817e8527b25acab8baabb5044f21e2bee6f50"
+      ],
+      ".git/objects/17": [
+        "bbcc982474048999684b6a99a8fa2738dc240c",
+        "49bd2d1e4dec7d0a515f5ada3e95c549786c8e"
+      ],
+      "services/mcp-server/src/tools": [
+        "__init__.py"
+      ],
+      ".git/objects/c3": [
+        "a578f98d8db924a41c283cf6cf38e1b8406a9b",
+        "3a462893b167319b14df8469af39bd057caae0"
+      ],
+      ".git/objects/ef": [
+        "4cea041c15791be7a772c0d232c81c5614f33e",
+        "4ee8c6b7e1fd5a5838ec07d5d6f7af6e82dae6",
+        "143f66dff26564c01275c93404f29d0cc41051"
+      ],
+      ".git/objects/95": [
+        "befa2b1346b6107f11126cd290d150e26d9d41"
+      ],
+      ".git/objects/5a": [
+        "0bcfcea13a1c2e34ac07b16814fcd68265b14e"
+      ],
+      ".git/objects/dd": [
+        "b7f8ad9addd33bdd18923f8f65eef643326911"
+      ],
+      ".git/objects/91": [
+        "f2d80fcc5b16fae46e6fe32dec1ad326e06b21",
+        "d5965abb3b2e86199397ab77b2e8855e89769c"
+      ],
+      ".git/objects/23": [
+        "8c3f5d2ebd6a25f506ddd603e15ce8d41228f0"
+      ],
+      "services/llm-server": [
+        "docker-compose.yml"
+      ],
+      "config/environments": [
+        "production.yaml",
+        "development.yaml"
+      ],
+      ".git/objects/30": [
+        "1920c0ac6f118e93c94e690a7eaf4aaac8efd6",
+        "7f75cb1e4f9c0688acc97344a414aa7e505d21"
+      ],
+      ".git/objects/24": [
+        "f7b52ff3f22bc0c426a4d6ca835c9153126eb4",
+        "149e64d04efea3ea0bea185827283ac42838e9"
+      ],
+      ".git/objects/42": [
+        "7c442dfad9d548e6cc2ac3954e7fc848b0e722",
+        "3739033c397993b708c3bdf938669cd7932da3"
+      ],
+      ".git/objects/33": [
+        "e88b98af62c4bae8341a2139a80d3f6f1983e7",
+        "0ec7abe2f34711b1283729ce5f13f0f0bad7a6"
+      ],
+      ".git/objects/68": [
+        "0de402cf0e673f8b66580a7ad7e3ed4e84151c",
+        "9ede39a0095f02db5776430c180fc734a22fe3"
+      ],
+      ".git/objects/72": [
+        "e5db24ff634c7ee36dbd1092ff0426027aeb36"
+      ],
+      ".git/objects/7a": [
+        "4104038d640919f253343430dcbeace281afeb",
+        "5d27a737db08eab15b31904b6aed4f40fed1b5",
+        "33d70884c0cd40312c4194a605ce30e8d1e094"
+      ],
+      ".git/objects/75": [
+        "ec2fd5830f0b668621a702cbe3fa24d2fe6699"
+      ],
+      ".git/objects/5e": [
+        "a8618b4bb277a6a1b1bf9ef00e4a17252308ae"
+      ],
+      ".git/objects/cf": [
+        "d7bad479f065b0f4af05a14528007a2b9b3c19"
+      ],
+      ".git/objects/ba": [
+        "8ceebc2fc2f3a0f1689a9159807f1fe134c1cb"
+      ],
+      ".git/objects/d0": [
+        "51be612808fd8f24d019d04de6797b5f9dafdb",
+        "19bdccc0b678ed0602d78a6ab249f9deb856ed"
+      ],
+      ".git/logs/refs": [
+        "stash"
+      ],
+      ".git/objects/d9": [
+        "824ad6f76e1caa78d25849b4054e14d5ad8f38",
+        "abf958f6e3bd6bf2ecc6ff6bcbfe2eddfb6fca"
+      ],
+      ".git/objects/fc": [
+        "03c8a5937e8ee08a4dfa4d8f8c1dedf0491d25"
+      ],
+      ".git/objects/dc": [
+        "cc230bdd7356e717a4772fe48ebfc1aa64c044"
+      ],
+      ".git/objects/a7": [
+        "d1f1d818e2101ef586384734ee4637a594cd3e"
+      ],
+      ".git/objects/a1": [
+        "12cb821c33a95b0cb6af3bc55a8a1807027be8"
+      ],
+      ".git/objects/1c": [
+        "05fdcaa01f2af0c67047a400677ff41090b735"
+      ],
+      ".git/objects/aa": [
+        "0fca399fd7130b9d0f1acead6c5581cbdbf873",
+        "28a88c7d628ca504c06a47732f7a0e60f2af4e",
+        "73fdd13a38e8245d3220632fb8116fe15a53ea"
+      ],
+      "scripts": [
+        "README.md"
+      ],
+      ".git/objects/26": [
+        "dba71a9eb0b448334589bbbe7e1b61a532d998",
+        "a389b9998f0adf483a0762c46260b08ead9ab8",
+        "c259c8b9bad80a88724e4ad6d13e4d7bfd9629",
+        "04bd0b937fb3bdd63cc2df18b1ac203c39c149"
+      ],
+      ".git/objects/b8": [
+        "f9fa197c38a5633b1c7f454d01855d2190860c"
+      ],
+      ".git/objects/c4": [
+        "1cab60b543e0e5c7fa83b382d9def27fafa629",
+        "a526026161e6654a75c8c7d974810373d87e9a"
+      ],
+      ".git/objects/12": [
+        "dbfcf3c42eb472cc30343bc71b4bc99c04a410",
+        "31bd2f7f0686443f71f6260703e4f89267d688"
+      ],
+      ".git/objects/ff": [
+        "98c3af6e7eae45c32d0354f85166a2a2ec8397",
+        "ad889be9ee6bd35db9d09ad9f1d81ad665b92f"
+      ],
+      ".git/objects/56": [
+        "4f4d0424324f6daceed356fcdcc89249e88f91",
+        "6d7815de9fd1736b8fff3db943d571d4ca2230"
+      ],
+      ".git/objects/e4": [
+        "fc19263bb4fd0c9fcdc8e12e57e2336ecb90b4"
+      ],
+      ".git/objects/04": [
+        "7bb3c6a60424dc8dab8a56c95ae654b3f7fc30"
+      ],
+      ".git/objects/14": [
+        "54c1ea1b9e5f4549decd72e9ff63d81daaf661"
+      ],
+      ".git/objects/a6": [
+        "6d1f05d827335ddb8dc4d39519c285f23d7e05"
+      ],
+      ".git/logs": [
+        "HEAD"
+      ],
+      "services/llm-server/config": [
+        "server.yaml"
+      ],
+      "config/models": [
+        "registry.yaml"
+      ],
+      ".git/objects/71": [
+        "a62001d75da342971a1b50901e4f03e4cfe8c3"
+      ],
+      ".git/objects/40": [
+        "2d5f8de2631ed88767d140b9c604298fb75941"
+      ],
+      ".git/objects/bd": [
+        "d4f112204626745557ec76f2843bb15de0f106",
+        "21b3f87cf725cef3d294ced4b585dbaa7ef410"
+      ],
+      ".git/objects/f7": [
+        "2182e3e7b73997bc66fd84e1b669e4f56db5b0"
+      ],
+      ".git/objects/73": [
+        "af247c6750579f0af0d64c583c47c5cbf83b18"
+      ],
+      ".git/objects/8c": [
+        "b14c334ddee86df971aad0345be4a98ff1fec9"
+      ],
+      ".git/objects/c1": [
+        "eb4fd5a741ae3cf5c3ba1b05466dd2f402015b",
+        "2e3d0bbb5f0224b8b754c54061d51bafb17b1d",
+        "f5e5c5ba9606302a594b7c4fd28deaac5f30a7"
+      ],
+      "docs": [
+        "mcp_maintenance_guide.md",
+        "maintenance_guide.md",
+        "git-hooks-kg-integration-plan.md",
+        "README.md",
+        "specification-manifest-plan.md"
+      ],
+      ".git/objects/74": [
+        "5aa5d67aa4be51b77d8912253d0bb6c21e39ec"
+      ],
+      ".git/objects/f4": [
+        "ee477d642a72ebefa6f87824ffe3dafbd7e03a"
+      ],
+      ".git/objects/e3": [
+        "b1947283903d3f646c0f678c2c767528da1c3d"
+      ],
+      ".git/objects/2e": [
+        "ad7939e95c54e20a02ce7dd1c8a010c71d5ddc",
+        "cea450b9155ddf9c8767b9d5f27a985fffaf55"
+      ],
+      ".git/objects/32": [
+        "6689c17037b4a9ecc9b0b2289dc825242af15e",
+        "3843a04cb91800b4d331a364fce06c25028f7f"
+      ],
+      ".git/objects/08": [
+        "2366bc07a9d25035c7768ceeed5e472a9727da"
+      ],
+      ".git/objects/61": [
+        "97c84506125a33718f9a486bd77950f750f4c1"
+      ],
+      ".git/objects/7b": [
+        "896d9bba5238b542163c1c113be586a680ac52"
+      ],
+      ".git/objects/13": [
+        "1676eccb65b28d85ae80088b5519def58e147a",
+        "d64b92287b77f44ba0607e8334cd0055cd0cb1"
+      ],
+      ".git/objects/5f": [
+        "1db5ff8d79fe1c07e3fc03b163c37cbf55f011"
+      ],
+      ".git/objects/a5": [
+        "402bebc57ccec8dd5f0e8385b5130cf733e173"
+      ],
+      "docs/backlog": [
+        "quality.md"
+      ],
+      ".git/objects/2a": [
+        "4aec736326f6339d37d5453366fc1d23e62873"
+      ],
+      ".git/objects/a3": [
+        "bba47385bdd6fce7c20f8bed759f6817964ee7"
+      ],
+      ".git/objects/db": [
+        "c497d5cee829bab5f9fab5bf862916567b8c06"
+      ],
+      ".git/objects/f2": [
+        "57920860612bc017b2041cc015986f4f71b1dc"
+      ],
+      ".git/objects/81": [
+        "3e8675bbab1d90e13d1ed52482cbdb86c3cae2"
+      ],
+      ".git/objects/34": [
+        "81574e350770e391d21e25df260daf997fb119"
+      ],
+      ".git/objects/c8": [
+        "9ca9d6e8d31def3d08db797ce7f501c59bdda0"
+      ],
+      ".git/objects/df": [
+        "034775d01c93b5b7636879a1bcc666fea890de"
+      ],
+      ".git/objects/e8": [
+        "32c3dfcf8f9e98489a85b1e7c9fee4636b2a86"
+      ],
+      ".git/objects/2c": [
+        "25df9c95b33cce929f12d46429272727611064"
+      ],
+      ".git/objects/b3": [
+        "659555283e1a38b6edcedb4ac2e9704541d2fb"
+      ],
+      ".git/objects/67": [
+        "94cf81a3849d131f2f53fd1fb6492dcff01a01"
+      ],
+      ".git/objects/c9": [
+        "55c4f8aa8c5f15d1b9fb4feb8510f980f806e0",
+        "b79bf4ab59832892e9762e1b5899c9e8a65ecc"
+      ],
+      ".git/objects/b0": [
+        "f002fccb2dbebae04f3ddb326ccd0f54302d6c"
+      ],
+      ".git/objects/ce": [
+        "17d67f84773a7d409de696a7d70c77c0794ec6"
+      ],
+      ".git/objects/d5": [
+        "23c3a1caf2fe69d367c6789b8812fc4da2c205"
+      ],
+      ".git/objects/44": [
+        "a3e9e7e659d4c56dec4029c95fa1f8ab1a6747"
+      ],
+      ".git/objects/36": [
+        "4015e27e341236c0324a3bfc3e7221228b6a5d"
+      ],
+      ".git/objects/f9": [
+        "b53508e629c5b4e384d98c405898a53a8ae465"
+      ],
+      ".git/objects/ea": [
+        "ebe542a201cd3aa3b04998bff3aaf3dcc6b261"
+      ],
+      ".git/objects/1f": [
+        "ed8207a7d929716feee429a3a9c9e0b525beae"
+      ],
+      ".git/objects/54": [
+        "d354ac36bf9c6377588e83f8a5072c85bff55a"
+      ],
+      ".git/objects/88": [
+        "9f194742c43f2be5d37845ab4a708f1a271129"
+      ],
+      ".git/objects/16": [
+        "8b830fcab3bad9f19a3d59a9c934bc3beedb08"
+      ],
+      ".git/objects/76": [
+        "66e87f3dec6a92be6be7b34bd8aed0fcebb3c1"
+      ]
+    },
+    "issues": [
+      {
+        "type": "missing_file",
+        "path": "core/kg/scripts/__init__.py",
+        "directory": "core/kg/scripts",
+        "severity": "error",
+        "message": "Required file '__init__.py' is missing in 'core/kg/scripts'"
+      },
+      {
+        "type": "missing_file",
+        "path": "tests/unit/__init__.py",
+        "directory": "tests/unit",
+        "severity": "error",
+        "message": "Required file '__init__.py' is missing in 'tests/unit'"
+      },
+      {
+        "type": "missing_file",
+        "path": "tests/unit/test_example.py",
+        "directory": "tests/unit",
+        "severity": "error",
+        "message": "Required file 'test_example.py' is missing in 'tests/unit'"
+      }
+    ]
+  },
+  "naming_conventions": {
+    "issues": [
+      {
+        "type": "invalid_python_module_name",
+        "path": "validate-manifest.py",
+        "name": "validate-manifest.py",
+        "pattern": "snake_case.py",
+        "severity": "error",
+        "message": "Python module name 'validate-manifest.py' does not follow the required pattern 'snake_case.py'"
+      },
+      {
+        "type": "invalid_python_module_name",
+        "path": "services/mcp-server/src/__init__.py",
+        "name": "__init__.py",
+        "pattern": "snake_case.py",
+        "severity": "error",
+        "message": "Python module name '__init__.py' does not follow the required pattern 'snake_case.py'"
+      },
+      {
+        "type": "invalid_python_module_name",
+        "path": "services/mcp-server/src/services/__init__.py",
+        "name": "__init__.py",
+        "pattern": "snake_case.py",
+        "severity": "error",
+        "message": "Python module name '__init__.py' does not follow the required pattern 'snake_case.py'"
+      },
+      {
+        "type": "invalid_python_module_name",
+        "path": "services/mcp-server/src/di/__init__.py",
+        "name": "__init__.py",
+        "pattern": "snake_case.py",
+        "severity": "error",
+        "message": "Python module name '__init__.py' does not follow the required pattern 'snake_case.py'"
+      },
+      {
+        "type": "invalid_python_module_name",
+        "path": "services/mcp-server/src/tools/__init__.py",
+        "name": "__init__.py",
+        "pattern": "snake_case.py",
+        "severity": "error",
+        "message": "Python module name '__init__.py' does not follow the required pattern 'snake_case.py'"
+      },
+      {
+        "type": "invalid_python_module_name",
+        "path": "services/mcp-server/src/tools/shell/__init__.py",
+        "name": "__init__.py",
+        "pattern": "snake_case.py",
+        "severity": "error",
+        "message": "Python module name '__init__.py' does not follow the required pattern 'snake_case.py'"
+      },
+      {
+        "type": "invalid_shell_script_name",
+        "path": "verify_stack_health.sh",
+        "name": "verify_stack_health.sh",
+        "pattern": "kebab-case.sh",
+        "severity": "error",
+        "message": "Shell script name 'verify_stack_health.sh' does not follow the required pattern 'kebab-case.sh'"
+      },
+      {
+        "type": "invalid_shell_script_name",
+        "path": "restore_from_backup.sh",
+        "name": "restore_from_backup.sh",
+        "pattern": "kebab-case.sh",
+        "severity": "error",
+        "message": "Shell script name 'restore_from_backup.sh' does not follow the required pattern 'kebab-case.sh'"
+      },
+      {
+        "type": "invalid_shell_script_name",
+        "path": "fix_code_quality.sh",
+        "name": "fix_code_quality.sh",
+        "pattern": "kebab-case.sh",
+        "severity": "error",
+        "message": "Shell script name 'fix_code_quality.sh' does not follow the required pattern 'kebab-case.sh'"
+      },
+      {
+        "type": "invalid_shell_script_name",
+        "path": "create_backup_branch.sh",
+        "name": "create_backup_branch.sh",
+        "pattern": "kebab-case.sh",
+        "severity": "error",
+        "message": "Shell script name 'create_backup_branch.sh' does not follow the required pattern 'kebab-case.sh'"
+      },
+      {
+        "type": "invalid_shell_script_name",
+        "path": "install_pre_commit_hooks.sh",
+        "name": "install_pre_commit_hooks.sh",
+        "pattern": "kebab-case.sh",
+        "severity": "error",
+        "message": "Shell script name 'install_pre_commit_hooks.sh' does not follow the required pattern 'kebab-case.sh'"
+      },
+      {
+        "type": "invalid_shell_script_name",
+        "path": "check_code_quality.sh",
+        "name": "check_code_quality.sh",
+        "pattern": "kebab-case.sh",
+        "severity": "error",
+        "message": "Shell script name 'check_code_quality.sh' does not follow the required pattern 'kebab-case.sh'"
+      },
+      {
+        "type": "invalid_shell_script_name",
+        "path": "core/kg/scripts/install_hooks.sh",
+        "name": "install_hooks.sh",
+        "pattern": "kebab-case.sh",
+        "severity": "error",
+        "message": "Shell script name 'install_hooks.sh' does not follow the required pattern 'kebab-case.sh'"
+      },
+      {
+        "type": "invalid_shell_script_name",
+        "path": "scripts/maintenance/test_mcp_agent.sh",
+        "name": "test_mcp_agent.sh",
+        "pattern": "kebab-case.sh",
+        "severity": "error",
+        "message": "Shell script name 'test_mcp_agent.sh' does not follow the required pattern 'kebab-case.sh'"
+      },
+      {
+        "type": "invalid_shell_script_name",
+        "path": "scripts/maintenance/verify_stack_health.sh",
+        "name": "verify_stack_health.sh",
+        "pattern": "kebab-case.sh",
+        "severity": "error",
+        "message": "Shell script name 'verify_stack_health.sh' does not follow the required pattern 'kebab-case.sh'"
+      },
+      {
+        "type": "invalid_shell_script_name",
+        "path": "scripts/maintenance/verify_librechat_integration.sh",
+        "name": "verify_librechat_integration.sh",
+        "pattern": "kebab-case.sh",
+        "severity": "error",
+        "message": "Shell script name 'verify_librechat_integration.sh' does not follow the required pattern 'kebab-case.sh'"
+      },
+      {
+        "type": "invalid_shell_script_name",
+        "path": "scripts/deployment/start_mcp_server.sh",
+        "name": "start_mcp_server.sh",
+        "pattern": "kebab-case.sh",
+        "severity": "error",
+        "message": "Shell script name 'start_mcp_server.sh' does not follow the required pattern 'kebab-case.sh'"
+      },
+      {
+        "type": "invalid_shell_script_name",
+        "path": "scripts/deployment/restart_stack.sh",
+        "name": "restart_stack.sh",
+        "pattern": "kebab-case.sh",
+        "severity": "error",
+        "message": "Shell script name 'restart_stack.sh' does not follow the required pattern 'kebab-case.sh'"
+      },
+      {
+        "type": "invalid_shell_script_name",
+        "path": "scripts/deployment/register_new_features.sh",
+        "name": "register_new_features.sh",
+        "pattern": "kebab-case.sh",
+        "severity": "error",
+        "message": "Shell script name 'register_new_features.sh' does not follow the required pattern 'kebab-case.sh'"
+      },
+      {
+        "type": "invalid_shell_script_name",
+        "path": "scripts/deployment/update_ollama_references.sh",
+        "name": "update_ollama_references.sh",
+        "pattern": "kebab-case.sh",
+        "severity": "error",
+        "message": "Shell script name 'update_ollama_references.sh' does not follow the required pattern 'kebab-case.sh'"
+      },
+      {
+        "type": "invalid_markdown_file_name",
+        "path": "code_review_report.md",
+        "name": "code_review_report.md",
+        "pattern": "kebab-case.md",
+        "severity": "error",
+        "message": "Markdown file name 'code_review_report.md' does not follow the required pattern 'kebab-case.md'"
+      },
+      {
+        "type": "invalid_markdown_file_name",
+        "path": "specification-manifest-README.md",
+        "name": "specification-manifest-README.md",
+        "pattern": "kebab-case.md",
+        "severity": "error",
+        "message": "Markdown file name 'specification-manifest-README.md' does not follow the required pattern 'kebab-case.md'"
+      },
+      {
+        "type": "invalid_markdown_file_name",
+        "path": "docs/mcp_maintenance_guide.md",
+        "name": "mcp_maintenance_guide.md",
+        "pattern": "kebab-case.md",
+        "severity": "error",
+        "message": "Markdown file name 'mcp_maintenance_guide.md' does not follow the required pattern 'kebab-case.md'"
+      },
+      {
+        "type": "invalid_markdown_file_name",
+        "path": "docs/maintenance_guide.md",
+        "name": "maintenance_guide.md",
+        "pattern": "kebab-case.md",
+        "severity": "error",
+        "message": "Markdown file name 'maintenance_guide.md' does not follow the required pattern 'kebab-case.md'"
+      },
+      {
+        "type": "invalid_markdown_file_name",
+        "path": "docs/tutorials/setup_environment.md",
+        "name": "setup_environment.md",
+        "pattern": "kebab-case.md",
+        "severity": "error",
+        "message": "Markdown file name 'setup_environment.md' does not follow the required pattern 'kebab-case.md'"
+      },
+      {
+        "type": "invalid_markdown_file_name",
+        "path": "docs/tutorials/code_quality_guide.md",
+        "name": "code_quality_guide.md",
+        "pattern": "kebab-case.md",
+        "severity": "error",
+        "message": "Markdown file name 'code_quality_guide.md' does not follow the required pattern 'kebab-case.md'"
+      }
+    ]
+  },
+  "location_analysis": {
+    "issues": [
+      {
+        "type": "non_ideal_location",
+        "path": "LibreChat/librechat.yaml",
+        "name": "librechat.yaml",
+        "extension": ".yaml",
+        "ideal_directories": [
+          "config"
+        ],
+        "severity": "warning",
+        "message": "File 'LibreChat/librechat.yaml' with extension '.yaml' is not in an ideal directory. Consider moving to one of: config"
+      },
+      {
+        "type": "non_ideal_location",
+        "path": "LibreChat/docker-compose.yml",
+        "name": "docker-compose.yml",
+        "extension": ".yml",
+        "ideal_directories": [
+          "config"
+        ],
+        "severity": "warning",
+        "message": "File 'LibreChat/docker-compose.yml' with extension '.yml' is not in an ideal directory. Consider moving to one of: config"
+      },
+      {
+        "type": "non_ideal_location",
+        "path": "LibreChat/docker-compose.temp.yml",
+        "name": "docker-compose.temp.yml",
+        "extension": ".yml",
+        "ideal_directories": [
+          "config"
+        ],
+        "severity": "warning",
+        "message": "File 'LibreChat/docker-compose.temp.yml' with extension '.yml' is not in an ideal directory. Consider moving to one of: config"
+      },
+      {
+        "type": "non_ideal_location",
+        "path": "deploy/README.md",
+        "name": "README.md",
+        "extension": ".md",
+        "ideal_directories": [
+          "docs"
+        ],
+        "severity": "warning",
+        "message": "File 'deploy/README.md' with extension '.md' is not in an ideal directory. Consider moving to one of: docs"
+      },
+      {
+        "type": "non_ideal_location",
+        "path": "deploy/docker-compose.yml",
+        "name": "docker-compose.yml",
+        "extension": ".yml",
+        "ideal_directories": [
+          "config"
+        ],
+        "severity": "warning",
+        "message": "File 'deploy/docker-compose.yml' with extension '.yml' is not in an ideal directory. Consider moving to one of: config"
+      },
+      {
+        "type": "non_ideal_location",
+        "path": "deploy/docker-compose.dev.yml",
+        "name": "docker-compose.dev.yml",
+        "extension": ".yml",
+        "ideal_directories": [
+          "config"
+        ],
+        "severity": "warning",
+        "message": "File 'deploy/docker-compose.dev.yml' with extension '.yml' is not in an ideal directory. Consider moving to one of: config"
+      },
+      {
+        "type": "non_ideal_location",
+        "path": "deploy/volumes/model-volumes.yml",
+        "name": "model-volumes.yml",
+        "extension": ".yml",
+        "ideal_directories": [
+          "config"
+        ],
+        "severity": "warning",
+        "message": "File 'deploy/volumes/model-volumes.yml' with extension '.yml' is not in an ideal directory. Consider moving to one of: config"
+      },
+      {
+        "type": "non_ideal_location",
+        "path": "tests/README.md",
+        "name": "README.md",
+        "extension": ".md",
+        "ideal_directories": [
+          "docs"
+        ],
+        "severity": "warning",
+        "message": "File 'tests/README.md' with extension '.md' is not in an ideal directory. Consider moving to one of: docs"
+      },
+      {
+        "type": "non_ideal_location",
+        "path": "services/llm-server/docker-compose.yml",
+        "name": "docker-compose.yml",
+        "extension": ".yml",
+        "ideal_directories": [
+          "config"
+        ],
+        "severity": "warning",
+        "message": "File 'services/llm-server/docker-compose.yml' with extension '.yml' is not in an ideal directory. Consider moving to one of: config"
+      },
+      {
+        "type": "non_ideal_location",
+        "path": "services/llm-server/config/server.yaml",
+        "name": "server.yaml",
+        "extension": ".yaml",
+        "ideal_directories": [
+          "config"
+        ],
+        "severity": "warning",
+        "message": "File 'services/llm-server/config/server.yaml' with extension '.yaml' is not in an ideal directory. Consider moving to one of: config"
+      },
+      {
+        "type": "non_ideal_location",
+        "path": "services/librechat/docker-compose.yml",
+        "name": "docker-compose.yml",
+        "extension": ".yml",
+        "ideal_directories": [
+          "config"
+        ],
+        "severity": "warning",
+        "message": "File 'services/librechat/docker-compose.yml' with extension '.yml' is not in an ideal directory. Consider moving to one of: config"
+      },
+      {
+        "type": "non_ideal_location",
+        "path": "services/librechat/docker-compose.temp.yml",
+        "name": "docker-compose.temp.yml",
+        "extension": ".yml",
+        "ideal_directories": [
+          "config"
+        ],
+        "severity": "warning",
+        "message": "File 'services/librechat/docker-compose.temp.yml' with extension '.yml' is not in an ideal directory. Consider moving to one of: config"
+      },
+      {
+        "type": "non_ideal_location",
+        "path": "services/librechat/config/librechat.yaml",
+        "name": "librechat.yaml",
+        "extension": ".yaml",
+        "ideal_directories": [
+          "config"
+        ],
+        "severity": "warning",
+        "message": "File 'services/librechat/config/librechat.yaml' with extension '.yaml' is not in an ideal directory. Consider moving to one of: config"
+      },
+      {
+        "type": "non_ideal_location",
+        "path": "services/mcp-server/docker-compose.yml",
+        "name": "docker-compose.yml",
+        "extension": ".yml",
+        "ideal_directories": [
+          "config"
+        ],
+        "severity": "warning",
+        "message": "File 'services/mcp-server/docker-compose.yml' with extension '.yml' is not in an ideal directory. Consider moving to one of: config"
+      },
+      {
+        "type": "non_ideal_location",
+        "path": "services/mcp-server/src/di/README.md",
+        "name": "README.md",
+        "extension": ".md",
+        "ideal_directories": [
+          "docs"
+        ],
+        "severity": "warning",
+        "message": "File 'services/mcp-server/src/di/README.md' with extension '.md' is not in an ideal directory. Consider moving to one of: docs"
+      },
+      {
+        "type": "non_ideal_location",
+        "path": ".git-hooks/README.md",
+        "name": "README.md",
+        "extension": ".md",
+        "ideal_directories": [
+          "docs"
+        ],
+        "severity": "warning",
+        "message": "File '.git-hooks/README.md' with extension '.md' is not in an ideal directory. Consider moving to one of: docs"
+      },
+      {
+        "type": "non_ideal_location",
+        "path": "core/kg/scripts/install_hooks.sh",
+        "name": "install_hooks.sh",
+        "extension": ".sh",
+        "ideal_directories": [
+          "scripts"
+        ],
+        "severity": "warning",
+        "message": "File 'core/kg/scripts/install_hooks.sh' with extension '.sh' is not in an ideal directory. Consider moving to one of: scripts"
+      },
+      {
+        "type": "non_ideal_location",
+        "path": "scripts/README.md",
+        "name": "README.md",
+        "extension": ".md",
+        "ideal_directories": [
+          "docs"
+        ],
+        "severity": "warning",
+        "message": "File 'scripts/README.md' with extension '.md' is not in an ideal directory. Consider moving to one of: docs"
+      },
+      {
+        "type": "non_ideal_location",
+        "path": ".github/workflows/code-quality.yml",
+        "name": "code-quality.yml",
+        "extension": ".yml",
+        "ideal_directories": [
+          "config"
+        ],
+        "severity": "warning",
+        "message": "File '.github/workflows/code-quality.yml' with extension '.yml' is not in an ideal directory. Consider moving to one of: config"
+      },
+      {
+        "type": "non_ideal_location",
+        "path": "config/README.md",
+        "name": "README.md",
+        "extension": ".md",
+        "ideal_directories": [
+          "docs"
+        ],
+        "severity": "warning",
+        "message": "File 'config/README.md' with extension '.md' is not in an ideal directory. Consider moving to one of: docs"
+      },
+      {
+        "type": "non_ideal_location",
+        "path": "temp/dependency-injection.md",
+        "name": "dependency-injection.md",
+        "extension": ".md",
+        "ideal_directories": [
+          "docs"
+        ],
+        "severity": "warning",
+        "message": "File 'temp/dependency-injection.md' with extension '.md' is not in an ideal directory. Consider moving to one of: docs"
+      }
+    ]
+  }
+}

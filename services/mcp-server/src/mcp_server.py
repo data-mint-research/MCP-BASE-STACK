@@ -1,20 +1,18 @@
 import subprocess
-import logging
+import sys
+import os
 from typing import Optional
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 import requests
 
-# Setup logging
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-    handlers=[
-        logging.FileHandler("mcp_debug.log"),
-        logging.StreamHandler()
-    ]
-)
-logger = logging.getLogger("mcp_server")
+# Add the project root to the Python path to allow importing from core
+sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))))
+
+from core.logging.config import configure_logger
+
+# Setup logging using the standardized logging system
+logger = configure_logger("mcp_server")
 logger.info("MCP Server starting up")
 
 app = FastAPI(title="MINTYcoder MCP Server")

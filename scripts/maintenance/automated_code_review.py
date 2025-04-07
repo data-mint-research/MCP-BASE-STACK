@@ -25,7 +25,6 @@ import ast
 import configparser
 import datetime
 import json
-import logging
 import os
 import re
 import subprocess
@@ -38,13 +37,13 @@ from typing import Any, Dict, List, Optional, Set, Tuple, Union
 
 import yaml
 
-# Configure logging
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
-    datefmt="%Y-%m-%d %H:%M:%S",
-)
-logger = logging.getLogger(__name__)
+# Add the project root to the Python path to allow importing from core
+sys.path.append(str(Path(__file__).resolve().parents[2]))
+
+from core.logging.config import configure_logger
+
+# Configure logging using the standardized logging system
+logger = configure_logger("automated_code_review")
 
 # Constants
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
@@ -206,11 +205,11 @@ class CodeReviewConfig:
                 "documentation": {
                     "enabled": True,
                     "tools": ["pylint"],
-                    "docstring_coverage_threshold": 0.7,
+                    "docstring_coverage_threshold": 0.99,
                 },
                 "test_coverage": {
                     "enabled": True,
-                    "coverage_threshold": 0.8,
+                    "coverage_threshold": 0.99,
                 },
             },
             "severity_thresholds": {

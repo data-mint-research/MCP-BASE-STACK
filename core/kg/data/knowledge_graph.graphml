@@ -1,7 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
 <graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
-  <key id="d14" for="edge" attr.name="relationship" attr.type="string" />
-  <key id="d13" for="edge" attr.name="relation" attr.type="string" />
+  <key id="d17" for="edge" attr.name="relationship" attr.type="string" />
+  <key id="d16" for="edge" attr.name="relation" attr.type="string" />
+  <key id="d15" for="node" attr.name="file_naming_pattern" attr.type="string" />
+  <key id="d14" for="node" attr.name="module_subdirectories" attr.type="string" />
+  <key id="d13" for="node" attr.name="base_directory" attr.type="string" />
   <key id="d12" for="node" attr.name="timestamp" attr.type="string" />
   <key id="d11" for="node" attr.name="rationale" attr.type="string" />
   <key id="d10" for="node" attr.name="language" attr.type="string" />
@@ -354,233 +357,510 @@
       <data key="d11">To enhance code quality monitoring, provide detailed metrics, and automate code reviews for the MCP-BASE-STACK project</data>
       <data key="d12">2025-04-07T18:00:39.555826</data>
     </node>
+    <node id="dependency_injection">
+      <data key="d1">component</data>
+      <data key="d2">Dependency Injection</data>
+      <data key="d7">Dependency injection framework for modular and testable code</data>
+      <data key="d3">implemented</data>
+    </node>
+    <node id="di_containers">
+      <data key="d1">file</data>
+      <data key="d2">containers.py</data>
+      <data key="d4">services/mcp-server/src/di/containers.py</data>
+      <data key="d7">Dependency injection container that wires up all application dependencies</data>
+      <data key="d10">python</data>
+      <data key="d5">1744042721.229517</data>
+    </node>
+    <node id="di_providers">
+      <data key="d1">file</data>
+      <data key="d2">providers.py</data>
+      <data key="d4">services/mcp-server/src/di/providers.py</data>
+      <data key="d7">Service providers for the dependency injection container</data>
+      <data key="d10">python</data>
+      <data key="d5">1744042721.229732</data>
+    </node>
+    <node id="di_init">
+      <data key="d1">file</data>
+      <data key="d2">__init__.py</data>
+      <data key="d4">services/mcp-server/src/di/__init__.py</data>
+      <data key="d7">Dependency injection module initialization</data>
+      <data key="d10">python</data>
+      <data key="d5">1744042721.229934</data>
+    </node>
+    <node id="di_readme">
+      <data key="d1">file</data>
+      <data key="d2">README.md</data>
+      <data key="d4">services/mcp-server/src/di/README.md</data>
+      <data key="d7">Documentation for the dependency injection framework</data>
+      <data key="d10">markdown</data>
+      <data key="d5">1744042721.230138</data>
+    </node>
+    <node id="example_service">
+      <data key="d1">file</data>
+      <data key="d2">example_service.py</data>
+      <data key="d4">services/mcp-server/src/services/example_service.py</data>
+      <data key="d7">Example service that demonstrates dependency injection</data>
+      <data key="d10">python</data>
+      <data key="d5">1744042721.230333</data>
+    </node>
+    <node id="app_py">
+      <data key="d1">file</data>
+      <data key="d2">app.py</data>
+      <data key="d4">services/mcp-server/src/app.py</data>
+      <data key="d7">Main application entry point with dependency injection integration</data>
+      <data key="d10">python</data>
+      <data key="d5">1744042721.230536</data>
+    </node>
+    <node id="decision_dependency_injection_1744042721">
+      <data key="d1">decision</data>
+      <data key="d2">Implementation of Dependency Injection</data>
+      <data key="d7">Implementation of a dependency injection framework for the MCP Server</data>
+      <data key="d11">To improve modularity, testability, and maintainability of the MCP Server</data>
+      <data key="d12">2025-04-07T18:18:41.230724</data>
+    </node>
+    <node id="feature_file_cleanup">
+      <data key="d1">feature</data>
+      <data key="d2">File Cleanup Tool</data>
+      <data key="d7">Identifies and safely removes orphaned or outdated files in the project</data>
+      <data key="d8">Maintenance Team</data>
+      <data key="d3">implemented</data>
+    </node>
+    <node id="file_cleanup_component">
+      <data key="d1">component</data>
+      <data key="d2">File Cleanup Tool</data>
+      <data key="d3">implemented</data>
+    </node>
+    <node id="cleanup_script">
+      <data key="d1">file</data>
+      <data key="d4">cleanup_files.py</data>
+      <data key="d10">python</data>
+    </node>
+    <node id="cleanup_report">
+      <data key="d1">file</data>
+      <data key="d4">cleanup-report.json</data>
+      <data key="d10">json</data>
+    </node>
+    <node id="file_cleanup_guide">
+      <data key="d1">file</data>
+      <data key="d4">docs/file-cleanup-guide.md</data>
+      <data key="d10">markdown</data>
+    </node>
+    <node id="decision_quality_standards_update_1744058413">
+      <data key="d1">decision</data>
+      <data key="d2">Update of Code Quality Standards</data>
+      <data key="d7">Changed quality thresholds to enforce stricter standards across the codebase</data>
+      <data key="d11">To enforce the highest possible quality standards across the codebase, ensuring near-perfect type hint coverage, documentation coverage, and minimal complexity in all code functions.</data>
+      <data key="d12">2025-04-07T22:40:13.706993</data>
+    </node>
+    <node id="decision_quality_standards_update_1744059399">
+      <data key="d1">decision</data>
+      <data key="d2">Update of Code Quality Standards</data>
+      <data key="d7">Changed quality thresholds to enforce stricter standards across the codebase</data>
+      <data key="d11">To enforce the highest possible quality standards across the codebase, ensuring near-perfect type hint coverage, documentation coverage, and minimal complexity in all code functions.</data>
+      <data key="d12">2025-04-07T22:56:39.767863</data>
+    </node>
+    <node id="logging_system">
+      <data key="d1">component</data>
+      <data key="d2">Logging System</data>
+      <data key="d7">Standardized logging system for the MCP-BASE-STACK project</data>
+      <data key="d3">implemented</data>
+    </node>
+    <node id="log_directory_manager">
+      <data key="d1">module</data>
+      <data key="d2">LogDirectoryManager</data>
+      <data key="d4">core/logging/directory_manager.py</data>
+      <data key="d7">Manages the creation and organization of log directories and files</data>
+      <data key="d10">python</data>
+      <data key="d5">1744061649.861487</data>
+    </node>
+    <node id="logging_config">
+      <data key="d1">module</data>
+      <data key="d2">LoggingConfig</data>
+      <data key="d4">core/logging/config.py</data>
+      <data key="d7">Configures loggers with standardized settings and handlers</data>
+      <data key="d10">python</data>
+      <data key="d5">1744061649.861718</data>
+    </node>
+    <node id="logging_system_documentation">
+      <data key="d1">file</data>
+      <data key="d2">Logging System Documentation</data>
+      <data key="d4">docs/logging-system.md</data>
+      <data key="d7">Documentation for the standardized logging system</data>
+      <data key="d10">markdown</data>
+      <data key="d5">1744061649.861915</data>
+    </node>
+    <node id="logging_integration_test">
+      <data key="d1">file</data>
+      <data key="d2">Logging Integration Test</data>
+      <data key="d4">tests/integration/test_logging_integration.py</data>
+      <data key="d7">Integration tests for the standardized logging system</data>
+      <data key="d10">python</data>
+      <data key="d5">1744061649.862175</data>
+    </node>
+    <node id="log_directory_manager_test">
+      <data key="d1">file</data>
+      <data key="d2">LogDirectoryManager Unit Test</data>
+      <data key="d4">tests/unit/test_log_directory_manager.py</data>
+      <data key="d7">Unit tests for the LogDirectoryManager module</data>
+      <data key="d10">python</data>
+      <data key="d5">1744061649.862433</data>
+    </node>
+    <node id="logging_config_test">
+      <data key="d1">file</data>
+      <data key="d2">LoggingConfig Unit Test</data>
+      <data key="d4">tests/unit/test_logging_config.py</data>
+      <data key="d7">Unit tests for the LoggingConfig module</data>
+      <data key="d10">python</data>
+      <data key="d5">1744061649.862697</data>
+    </node>
+    <node id="logging_directory_structure">
+      <data key="d1">metadata</data>
+      <data key="d2">Logging Directory Structure</data>
+      <data key="d7">Standardized directory structure for logs</data>
+      <data key="d13">docs/logs</data>
+      <data key="d14">docs/logs/&lt;module_name&gt;</data>
+      <data key="d5">1744061649.86296</data>
+    </node>
+    <node id="logging_naming_conventions">
+      <data key="d1">metadata</data>
+      <data key="d2">Logging Naming Conventions</data>
+      <data key="d7">Standardized naming conventions for log files</data>
+      <data key="d15">YYYY-MM-DD_module-name-log</data>
+      <data key="d5">1744061649.863158</data>
+    </node>
+    <node id="decision_logging_system_1744061649">
+      <data key="d1">decision</data>
+      <data key="d2">Implementation of Standardized Logging System</data>
+      <data key="d7">Implementation of a standardized logging system with consistent directory structure and naming conventions</data>
+      <data key="d11">To ensure consistent logging practices across the MCP-BASE-STACK project and improve debugging and monitoring capabilities</data>
+      <data key="d12">2025-04-07T23:34:09.863478</data>
+    </node>
     <edge source="project_root" target="nvidia_gpu">
-      <data key="d13">contains</data>
+      <data key="d16">contains</data>
     </edge>
     <edge source="project_root" target="wsl2">
-      <data key="d13">contains</data>
+      <data key="d16">contains</data>
     </edge>
     <edge source="project_root" target="docker">
-      <data key="d13">contains</data>
+      <data key="d16">contains</data>
     </edge>
     <edge source="project_root" target="nvidia_container">
-      <data key="d13">contains</data>
+      <data key="d16">contains</data>
     </edge>
     <edge source="project_root" target="librechat">
-      <data key="d13">contains</data>
+      <data key="d16">contains</data>
     </edge>
     <edge source="project_root" target="mongodb">
-      <data key="d13">contains</data>
+      <data key="d16">contains</data>
     </edge>
     <edge source="project_root" target="meilisearch">
-      <data key="d13">contains</data>
+      <data key="d16">contains</data>
     </edge>
     <edge source="project_root" target="ollama">
-      <data key="d13">contains</data>
+      <data key="d16">contains</data>
     </edge>
     <edge source="project_root" target="mistral">
-      <data key="d13">contains</data>
+      <data key="d16">contains</data>
     </edge>
     <edge source="project_root" target="deepseek">
-      <data key="d13">contains</data>
+      <data key="d16">contains</data>
     </edge>
     <edge source="project_root" target="mcp_server">
-      <data key="d13">contains</data>
+      <data key="d16">contains</data>
     </edge>
     <edge source="project_root" target="feature_git_file_update_hooks">
-      <data key="d13">contains</data>
+      <data key="d16">contains</data>
     </edge>
     <edge source="project_root" target="git_hooks">
-      <data key="d13">contains</data>
+      <data key="d16">contains</data>
     </edge>
     <edge source="project_root" target="code_quality">
-      <data key="d13">contains</data>
+      <data key="d16">contains</data>
+    </edge>
+    <edge source="project_root" target="feature_file_cleanup">
+      <data key="d16">contains</data>
+    </edge>
+    <edge source="project_root" target="file_cleanup_component">
+      <data key="d16">contains</data>
+    </edge>
+    <edge source="project_root" target="logging_system">
+      <data key="d16">contains</data>
     </edge>
     <edge source="nvidia_gpu" target="wsl2">
-      <data key="d13">accessible_from</data>
+      <data key="d16">accessible_from</data>
     </edge>
     <edge source="docker" target="wsl2">
-      <data key="d13">runs_on</data>
+      <data key="d16">runs_on</data>
     </edge>
     <edge source="nvidia_container" target="docker">
-      <data key="d13">extends</data>
+      <data key="d16">extends</data>
     </edge>
     <edge source="nvidia_container" target="nvidia_gpu">
-      <data key="d13">enables_access</data>
+      <data key="d16">enables_access</data>
     </edge>
     <edge source="librechat" target="docker">
-      <data key="d13">containerized_in</data>
+      <data key="d16">containerized_in</data>
     </edge>
     <edge source="librechat" target="mongodb">
-      <data key="d13">uses</data>
+      <data key="d16">uses</data>
     </edge>
     <edge source="librechat" target="meilisearch">
-      <data key="d13">uses</data>
+      <data key="d16">uses</data>
     </edge>
     <edge source="librechat" target="mistral">
-      <data key="d13">integrates</data>
+      <data key="d16">integrates</data>
     </edge>
     <edge source="librechat" target="deepseek">
-      <data key="d13">integrates</data>
+      <data key="d16">integrates</data>
     </edge>
     <edge source="mongodb" target="docker">
-      <data key="d13">containerized_in</data>
+      <data key="d16">containerized_in</data>
     </edge>
     <edge source="meilisearch" target="docker">
-      <data key="d13">containerized_in</data>
+      <data key="d16">containerized_in</data>
     </edge>
     <edge source="ollama" target="docker">
-      <data key="d13">containerized_in</data>
+      <data key="d16">containerized_in</data>
     </edge>
     <edge source="ollama" target="nvidia_gpu">
-      <data key="d13">uses</data>
+      <data key="d16">uses</data>
     </edge>
     <edge source="mistral" target="ollama">
-      <data key="d13">served_by</data>
+      <data key="d16">served_by</data>
     </edge>
     <edge source="deepseek" target="ollama">
-      <data key="d13">served_by</data>
+      <data key="d16">served_by</data>
     </edge>
     <edge source="mcp_server" target="deepseek">
-      <data key="d13">uses</data>
+      <data key="d16">uses</data>
+    </edge>
+    <edge source="mcp_server" target="dependency_injection">
+      <data key="d16">contains</data>
+    </edge>
+    <edge source="mcp_server" target="logging_system">
+      <data key="d16">uses</data>
     </edge>
     <edge source="tests" target="tests_unit">
-      <data key="d14">contains</data>
+      <data key="d17">contains</data>
     </edge>
     <edge source="tests" target="tests_integration">
-      <data key="d14">contains</data>
+      <data key="d17">contains</data>
     </edge>
     <edge source="tests" target="tests_agent_tests">
-      <data key="d14">contains</data>
+      <data key="d17">contains</data>
     </edge>
     <edge source="tests" target="tests_e2e">
-      <data key="d14">contains</data>
+      <data key="d17">contains</data>
     </edge>
     <edge source="tests" target="tests_performance">
-      <data key="d14">contains</data>
+      <data key="d17">contains</data>
     </edge>
     <edge source="tests" target="tests_regression">
-      <data key="d14">contains</data>
+      <data key="d17">contains</data>
     </edge>
     <edge source="tests" target="tests_data">
-      <data key="d14">contains</data>
+      <data key="d17">contains</data>
+    </edge>
+    <edge source="tests" target="logging_integration_test">
+      <data key="d16">contains</data>
+    </edge>
+    <edge source="tests" target="log_directory_manager_test">
+      <data key="d16">contains</data>
+    </edge>
+    <edge source="tests" target="logging_config_test">
+      <data key="d16">contains</data>
     </edge>
     <edge source="docs" target="docs_knowledge-graph">
-      <data key="d14">contains</data>
+      <data key="d17">contains</data>
     </edge>
     <edge source="docs" target="docs_tutorials">
-      <data key="d14">contains</data>
+      <data key="d17">contains</data>
     </edge>
     <edge source="docs" target="docs_troubleshooting">
-      <data key="d14">contains</data>
+      <data key="d17">contains</data>
     </edge>
     <edge source="docs" target="docs_conventions">
-      <data key="d14">contains</data>
+      <data key="d17">contains</data>
     </edge>
     <edge source="docs" target="git_hooks_kg_integration_plan">
-      <data key="d13">contains</data>
+      <data key="d16">contains</data>
+    </edge>
+    <edge source="docs" target="file_cleanup_guide">
+      <data key="d16">contains</data>
+    </edge>
+    <edge source="docs" target="logging_system_documentation">
+      <data key="d16">contains</data>
     </edge>
     <edge source="docs_conventions" target="style_guide">
-      <data key="d13">contains</data>
+      <data key="d16">contains</data>
     </edge>
     <edge source="docs_conventions" target="coding_conventions">
-      <data key="d13">contains</data>
+      <data key="d16">contains</data>
     </edge>
     <edge source="docs_conventions" target="review_checklist">
-      <data key="d13">contains</data>
+      <data key="d16">contains</data>
     </edge>
     <edge source="docs_conventions" target="graph_guidelines">
-      <data key="d13">contains</data>
+      <data key="d16">contains</data>
     </edge>
     <edge source="git_hooks" target="pre_commit_hook">
-      <data key="d13">contains</data>
+      <data key="d16">contains</data>
     </edge>
     <edge source="git_hooks" target="install_hooks_script">
-      <data key="d13">contains</data>
+      <data key="d16">contains</data>
     </edge>
     <edge source="git_hooks" target="hooks_documentation">
-      <data key="d13">contains</data>
+      <data key="d16">contains</data>
     </edge>
     <edge source="git_hooks" target="feature_git_file_update_hooks">
-      <data key="d13">implements</data>
+      <data key="d16">implements</data>
     </edge>
     <edge source="git_hooks_kg_integration_plan" target="feature_git_file_update_hooks">
-      <data key="d13">documents</data>
+      <data key="d16">documents</data>
     </edge>
     <edge source="code_quality" target="style_guide">
-      <data key="d13">contains</data>
+      <data key="d16">contains</data>
     </edge>
     <edge source="code_quality" target="coding_conventions">
-      <data key="d13">contains</data>
+      <data key="d16">contains</data>
     </edge>
     <edge source="code_quality" target="review_checklist">
-      <data key="d13">contains</data>
+      <data key="d16">contains</data>
     </edge>
     <edge source="code_quality" target="graph_guidelines">
-      <data key="d13">contains</data>
+      <data key="d16">contains</data>
     </edge>
     <edge source="code_quality" target="decision_conventions_creation_1744037680">
-      <data key="d13">has_decision</data>
+      <data key="d16">has_decision</data>
     </edge>
     <edge source="code_quality" target="pyproject_toml">
-      <data key="d13">contains</data>
+      <data key="d16">contains</data>
     </edge>
     <edge source="code_quality" target="flake8_config">
-      <data key="d13">contains</data>
+      <data key="d16">contains</data>
     </edge>
     <edge source="code_quality" target="mypy_config">
-      <data key="d13">contains</data>
+      <data key="d16">contains</data>
     </edge>
     <edge source="code_quality" target="pylint_config">
-      <data key="d13">contains</data>
+      <data key="d16">contains</data>
     </edge>
     <edge source="code_quality" target="shellcheck_config">
-      <data key="d13">contains</data>
+      <data key="d16">contains</data>
     </edge>
     <edge source="code_quality" target="pre_commit_config">
-      <data key="d13">contains</data>
+      <data key="d16">contains</data>
     </edge>
     <edge source="code_quality" target="check_code_quality_script">
-      <data key="d13">contains</data>
+      <data key="d16">contains</data>
     </edge>
     <edge source="code_quality" target="fix_code_quality_script">
-      <data key="d13">contains</data>
+      <data key="d16">contains</data>
     </edge>
     <edge source="code_quality" target="install_pre_commit_hooks_script">
-      <data key="d13">contains</data>
+      <data key="d16">contains</data>
     </edge>
     <edge source="code_quality" target="decision_code_quality_tooling_1744038759">
-      <data key="d13">has_decision</data>
+      <data key="d16">has_decision</data>
     </edge>
     <edge source="code_quality" target="github_actions_workflow">
-      <data key="d13">contains</data>
+      <data key="d16">contains</data>
     </edge>
     <edge source="code_quality" target="decision_ci_code_quality_1744039069">
-      <data key="d13">has_decision</data>
+      <data key="d16">has_decision</data>
     </edge>
     <edge source="code_quality" target="generate_quality_report">
-      <data key="d13">contains</data>
+      <data key="d16">contains</data>
     </edge>
     <edge source="code_quality" target="automated_code_review">
-      <data key="d13">contains</data>
+      <data key="d16">contains</data>
     </edge>
     <edge source="code_quality" target="code_review_config">
-      <data key="d13">contains</data>
+      <data key="d16">contains</data>
     </edge>
     <edge source="code_quality" target="decision_advanced_code_quality_1744041639">
-      <data key="d13">has_decision</data>
+      <data key="d16">has_decision</data>
+    </edge>
+    <edge source="code_quality" target="decision_quality_standards_update_1744058413">
+      <data key="d16">has_decision</data>
+    </edge>
+    <edge source="code_quality" target="decision_quality_standards_update_1744059399">
+      <data key="d16">has_decision</data>
+    </edge>
+    <edge source="code_quality" target="logging_system">
+      <data key="d16">uses</data>
     </edge>
     <edge source="github_actions_workflow" target="decision_ci_code_quality_1744039069">
-      <data key="d13">implements</data>
+      <data key="d16">implements</data>
     </edge>
     <edge source="generate_quality_report" target="decision_advanced_code_quality_1744041639">
-      <data key="d13">implements</data>
+      <data key="d16">implements</data>
     </edge>
     <edge source="automated_code_review" target="decision_advanced_code_quality_1744041639">
-      <data key="d13">implements</data>
+      <data key="d16">implements</data>
     </edge>
     <edge source="code_review_config" target="decision_advanced_code_quality_1744041639">
-      <data key="d13">implements</data>
+      <data key="d16">implements</data>
+    </edge>
+    <edge source="dependency_injection" target="di_containers">
+      <data key="d16">contains</data>
+    </edge>
+    <edge source="dependency_injection" target="di_providers">
+      <data key="d16">contains</data>
+    </edge>
+    <edge source="dependency_injection" target="di_init">
+      <data key="d16">contains</data>
+    </edge>
+    <edge source="dependency_injection" target="di_readme">
+      <data key="d16">contains</data>
+    </edge>
+    <edge source="dependency_injection" target="example_service">
+      <data key="d16">contains</data>
+    </edge>
+    <edge source="dependency_injection" target="app_py">
+      <data key="d16">contains</data>
+    </edge>
+    <edge source="dependency_injection" target="decision_dependency_injection_1744042721">
+      <data key="d16">has_decision</data>
+    </edge>
+    <edge source="file_cleanup_component" target="cleanup_script">
+      <data key="d16">contains</data>
+    </edge>
+    <edge source="file_cleanup_component" target="cleanup_report">
+      <data key="d16">contains</data>
+    </edge>
+    <edge source="file_cleanup_component" target="feature_file_cleanup">
+      <data key="d16">implements</data>
+    </edge>
+    <edge source="file_cleanup_guide" target="feature_file_cleanup">
+      <data key="d16">documents</data>
+    </edge>
+    <edge source="logging_system" target="log_directory_manager">
+      <data key="d16">contains</data>
+    </edge>
+    <edge source="logging_system" target="logging_config">
+      <data key="d16">contains</data>
+    </edge>
+    <edge source="logging_system" target="logging_system_documentation">
+      <data key="d16">documented_by</data>
+    </edge>
+    <edge source="logging_system" target="logging_directory_structure">
+      <data key="d16">has_metadata</data>
+    </edge>
+    <edge source="logging_system" target="logging_naming_conventions">
+      <data key="d16">has_metadata</data>
+    </edge>
+    <edge source="logging_system" target="decision_logging_system_1744061649">
+      <data key="d16">has_decision</data>
+    </edge>
+    <edge source="logging_integration_test" target="logging_system">
+      <data key="d16">tests</data>
+    </edge>
+    <edge source="log_directory_manager_test" target="logging_system">
+      <data key="d16">tests</data>
+    </edge>
+    <edge source="logging_config_test" target="logging_system">
+      <data key="d16">tests</data>
     </edge>
     <data key="d0">MCP-BASE-STACK</data>
   </graph>

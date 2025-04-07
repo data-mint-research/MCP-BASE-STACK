@@ -1,0 +1,720 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d14" for="edge" attr.name="relationship" attr.type="string" />
+  <key id="d13" for="edge" attr.name="relation" attr.type="string" />
+  <key id="d12" for="node" attr.name="timestamp" attr.type="string" />
+  <key id="d11" for="node" attr.name="rationale" attr.type="string" />
+  <key id="d10" for="node" attr.name="language" attr.type="string" />
+  <key id="d9" for="node" attr.name="created_at" attr.type="string" />
+  <key id="d8" for="node" attr.name="owner" attr.type="string" />
+  <key id="d7" for="node" attr.name="description" attr.type="string" />
+  <key id="d6" for="node" attr.name="file_count" attr.type="long" />
+  <key id="d5" for="node" attr.name="last_modified" attr.type="double" />
+  <key id="d4" for="node" attr.name="path" attr.type="string" />
+  <key id="d3" for="node" attr.name="status" attr.type="string" />
+  <key id="d2" for="node" attr.name="name" attr.type="string" />
+  <key id="d1" for="node" attr.name="type" attr.type="string" />
+  <key id="d0" for="graph" attr.name="name" attr.type="string" />
+  <graph edgedefault="directed">
+    <node id="project_root">
+      <data key="d1">project</data>
+      <data key="d2">MCP-BASE-STACK</data>
+    </node>
+    <node id="nvidia_gpu">
+      <data key="d1">hardware</data>
+      <data key="d2">NVIDIA RTX 4090 GPU</data>
+    </node>
+    <node id="wsl2">
+      <data key="d1">platform</data>
+      <data key="d2">Windows Subsystem for Linux 2</data>
+    </node>
+    <node id="docker">
+      <data key="d1">software</data>
+      <data key="d2">Docker Engine</data>
+    </node>
+    <node id="nvidia_container">
+      <data key="d1">software</data>
+      <data key="d2">NVIDIA Container Toolkit</data>
+    </node>
+    <node id="librechat">
+      <data key="d1">software</data>
+      <data key="d2">LibreChat UI and API</data>
+      <data key="d3">configured</data>
+    </node>
+    <node id="mongodb">
+      <data key="d1">software</data>
+      <data key="d2">MongoDB Database</data>
+    </node>
+    <node id="meilisearch">
+      <data key="d1">software</data>
+      <data key="d2">Meilisearch Engine</data>
+    </node>
+    <node id="ollama">
+      <data key="d1">software</data>
+      <data key="d2">Ollama LLM Server</data>
+    </node>
+    <node id="mistral">
+      <data key="d1">model</data>
+      <data key="d2">Mistral 7B LLM</data>
+    </node>
+    <node id="deepseek">
+      <data key="d1">model</data>
+      <data key="d2">DeepSeek Coder LLM</data>
+    </node>
+    <node id="mcp_server">
+      <data key="d1">software</data>
+      <data key="d2">MCP FastAPI Server</data>
+      <data key="d3">implemented</data>
+    </node>
+    <node id="documentation">
+      <data key="d3">created</data>
+      <data key="d1">component</data>
+    </node>
+    <node id="tests">
+      <data key="d3">created</data>
+      <data key="d1">component</data>
+      <data key="d4">tests</data>
+      <data key="d5">1744041399.5284119</data>
+    </node>
+    <node id="docs">
+      <data key="d1">directory</data>
+      <data key="d4">docs</data>
+      <data key="d5">1744038489.3983514</data>
+    </node>
+    <node id="docs_knowledge-graph">
+      <data key="d1">directory</data>
+      <data key="d4">docs/knowledge-graph</data>
+      <data key="d5">1744023202.3854399</data>
+      <data key="d6">4</data>
+    </node>
+    <node id="docs_tutorials">
+      <data key="d1">directory</data>
+      <data key="d4">docs/tutorials</data>
+      <data key="d5">1744038844.1385777</data>
+      <data key="d6">9</data>
+    </node>
+    <node id="docs_troubleshooting">
+      <data key="d1">directory</data>
+      <data key="d4">docs/troubleshooting</data>
+      <data key="d5">1744030185.4666543</data>
+      <data key="d6">8</data>
+    </node>
+    <node id="docs_conventions">
+      <data key="d1">directory</data>
+      <data key="d4">docs/conventions</data>
+      <data key="d5">1744023202.3854399</data>
+      <data key="d6">4</data>
+    </node>
+    <node id="tests_unit">
+      <data key="d1">directory</data>
+      <data key="d4">tests/unit</data>
+      <data key="d5">1744022989.4370184</data>
+      <data key="d6">0</data>
+    </node>
+    <node id="tests_integration">
+      <data key="d1">directory</data>
+      <data key="d4">tests/integration</data>
+      <data key="d5">1744022989.4370184</data>
+      <data key="d6">0</data>
+    </node>
+    <node id="tests_agent_tests">
+      <data key="d1">directory</data>
+      <data key="d4">tests/agent_tests</data>
+      <data key="d5">1744022989.4370184</data>
+      <data key="d6">0</data>
+    </node>
+    <node id="tests_e2e">
+      <data key="d1">directory</data>
+      <data key="d4">tests/e2e</data>
+      <data key="d5">1744022989.4370184</data>
+      <data key="d6">0</data>
+    </node>
+    <node id="tests_performance">
+      <data key="d1">directory</data>
+      <data key="d4">tests/performance</data>
+      <data key="d5">1744022989.4370184</data>
+      <data key="d6">0</data>
+    </node>
+    <node id="tests_regression">
+      <data key="d1">directory</data>
+      <data key="d4">tests/regression</data>
+      <data key="d5">1744022989.4370184</data>
+      <data key="d6">0</data>
+    </node>
+    <node id="tests_data">
+      <data key="d1">directory</data>
+      <data key="d4">tests/data</data>
+      <data key="d5">1744030243.6570637</data>
+      <data key="d6">1</data>
+    </node>
+    <node id="feature_git_file_update_hooks">
+      <data key="d1">feature</data>
+      <data key="d2">Git File Update Hooks</data>
+      <data key="d7">Automatically updates README.md, .gitignore, LICENSE, and Knowledge Graph before every commit</data>
+      <data key="d8">DevOps Team</data>
+      <data key="d3">planned</data>
+      <data key="d9">2025-04-07T15:17:54.664161</data>
+    </node>
+    <node id="git_hooks">
+      <data key="d1">component</data>
+      <data key="d2">Git Hooks</data>
+      <data key="d3">implemented</data>
+    </node>
+    <node id="pre_commit_hook">
+      <data key="d1">file</data>
+      <data key="d4">.git-hooks/pre-commit</data>
+      <data key="d10">bash</data>
+    </node>
+    <node id="install_hooks_script">
+      <data key="d1">file</data>
+      <data key="d4">install-file-update-hooks.sh</data>
+      <data key="d10">bash</data>
+    </node>
+    <node id="hooks_documentation">
+      <data key="d1">file</data>
+      <data key="d4">.git-hooks/README.md</data>
+      <data key="d10">markdown</data>
+    </node>
+    <node id="git_hooks_kg_integration_plan">
+      <data key="d1">file</data>
+      <data key="d4">docs/git-hooks-kg-integration-plan.md</data>
+      <data key="d10">markdown</data>
+    </node>
+    <node id="code_quality">
+      <data key="d1">component</data>
+      <data key="d2">Code Quality</data>
+      <data key="d7">Code quality standards and tools</data>
+      <data key="d3">implemented</data>
+    </node>
+    <node id="style_guide">
+      <data key="d1">file</data>
+      <data key="d2">Style Guide</data>
+      <data key="d4">docs/conventions/style-guide.md</data>
+      <data key="d7">Coding standards and conventions for the MCP-BASE-STACK project</data>
+      <data key="d10">markdown</data>
+      <data key="d5">1744037680.670222</data>
+    </node>
+    <node id="coding_conventions">
+      <data key="d1">file</data>
+      <data key="d2">Coding Conventions</data>
+      <data key="d4">docs/conventions/coding-conventions.md</data>
+      <data key="d7">Specific coding practices and patterns for the MCP-BASE-STACK project</data>
+      <data key="d10">markdown</data>
+      <data key="d5">1744037680.670498</data>
+    </node>
+    <node id="review_checklist">
+      <data key="d1">file</data>
+      <data key="d2">Review Checklist</data>
+      <data key="d4">docs/conventions/review-checklist.md</data>
+      <data key="d7">Comprehensive checklist for code reviews in the MCP-BASE-STACK project</data>
+      <data key="d10">markdown</data>
+      <data key="d5">1744037680.670767</data>
+    </node>
+    <node id="graph_guidelines">
+      <data key="d1">file</data>
+      <data key="d2">Graph Guidelines</data>
+      <data key="d4">docs/conventions/graph-guidelines.md</data>
+      <data key="d7">Standards and best practices for working with the knowledge graph</data>
+      <data key="d10">markdown</data>
+      <data key="d5">1744037680.671035</data>
+    </node>
+    <node id="decision_conventions_creation_1744037680">
+      <data key="d1">decision</data>
+      <data key="d2">Creation of Convention Documents</data>
+      <data key="d7">Creation of style guide, coding conventions, review checklist, and graph guidelines</data>
+      <data key="d11">To establish gold standard code quality practices for the MCP-BASE-STACK project</data>
+      <data key="d12">2025-04-07T16:54:40.671284</data>
+    </node>
+    <node id="pyproject_toml">
+      <data key="d1">file</data>
+      <data key="d2">pyproject.toml</data>
+      <data key="d4">pyproject.toml</data>
+      <data key="d7">Configuration for Black and isort Python formatters</data>
+      <data key="d10">toml</data>
+      <data key="d5">1744038759.659645</data>
+    </node>
+    <node id="flake8_config">
+      <data key="d1">file</data>
+      <data key="d2">.flake8</data>
+      <data key="d4">.flake8</data>
+      <data key="d7">Configuration for flake8 Python linter</data>
+      <data key="d10">ini</data>
+      <data key="d5">1744038759.659907</data>
+    </node>
+    <node id="mypy_config">
+      <data key="d1">file</data>
+      <data key="d2">mypy.ini</data>
+      <data key="d4">mypy.ini</data>
+      <data key="d7">Configuration for mypy Python type checker</data>
+      <data key="d10">ini</data>
+      <data key="d5">1744038759.660194</data>
+    </node>
+    <node id="pylint_config">
+      <data key="d1">file</data>
+      <data key="d2">.pylintrc</data>
+      <data key="d4">.pylintrc</data>
+      <data key="d7">Configuration for pylint Python linter</data>
+      <data key="d10">ini</data>
+      <data key="d5">1744038759.660414</data>
+    </node>
+    <node id="shellcheck_config">
+      <data key="d1">file</data>
+      <data key="d2">.shellcheckrc</data>
+      <data key="d4">.shellcheckrc</data>
+      <data key="d7">Configuration for shellcheck shell script linter</data>
+      <data key="d10">ini</data>
+      <data key="d5">1744038759.660676</data>
+    </node>
+    <node id="pre_commit_config">
+      <data key="d1">file</data>
+      <data key="d2">.pre-commit-config.yaml</data>
+      <data key="d4">.pre-commit-config.yaml</data>
+      <data key="d7">Configuration for pre-commit hooks</data>
+      <data key="d10">yaml</data>
+      <data key="d5">1744038759.660927</data>
+    </node>
+    <node id="check_code_quality_script">
+      <data key="d1">file</data>
+      <data key="d2">check_code_quality.sh</data>
+      <data key="d4">check_code_quality.sh</data>
+      <data key="d7">Script to check code quality using various tools</data>
+      <data key="d10">shell</data>
+      <data key="d5">1744038759.661211</data>
+    </node>
+    <node id="fix_code_quality_script">
+      <data key="d1">file</data>
+      <data key="d2">fix_code_quality.sh</data>
+      <data key="d4">fix_code_quality.sh</data>
+      <data key="d7">Script to automatically fix code quality issues</data>
+      <data key="d10">shell</data>
+      <data key="d5">1744038759.661496</data>
+    </node>
+    <node id="install_pre_commit_hooks_script">
+      <data key="d1">file</data>
+      <data key="d2">install_pre_commit_hooks.sh</data>
+      <data key="d4">install_pre_commit_hooks.sh</data>
+      <data key="d7">Script to install pre-commit hooks for code quality checks</data>
+      <data key="d10">shell</data>
+      <data key="d5">1744038759.661784</data>
+    </node>
+    <node id="decision_code_quality_tooling_1744038759">
+      <data key="d1">decision</data>
+      <data key="d2">Implementation of Code Quality Tooling</data>
+      <data key="d7">Implementation of code quality configuration files and scripts</data>
+      <data key="d11">To enforce code quality standards and automate quality checks for the MCP-BASE-STACK project</data>
+      <data key="d12">2025-04-07T17:12:39.662019</data>
+    </node>
+    <node id="github_actions_workflow">
+      <data key="d1">file</data>
+      <data key="d2">code-quality.yml</data>
+      <data key="d4">.github/workflows/code-quality.yml</data>
+      <data key="d7">GitHub Actions workflow for automated code quality checks</data>
+      <data key="d10">yaml</data>
+      <data key="d5">1744039069.153228</data>
+    </node>
+    <node id="decision_ci_code_quality_1744039069">
+      <data key="d1">decision</data>
+      <data key="d2">Implementation of CI for Code Quality</data>
+      <data key="d7">Implementation of GitHub Actions workflow for continuous integration of code quality checks</data>
+      <data key="d11">To automate code quality checks on push and pull requests, ensuring consistent code quality standards across the project</data>
+      <data key="d12">2025-04-07T17:17:49.153515</data>
+    </node>
+    <node id="llm_server">
+      <data key="d3">deployed</data>
+      <data key="d1">component</data>
+    </node>
+    <node id="generate_quality_report">
+      <data key="d1">file</data>
+      <data key="d2">generate_quality_report.py</data>
+      <data key="d4">scripts/maintenance/generate_quality_report.py</data>
+      <data key="d7">Tool for analyzing code quality metrics and generating comprehensive reports</data>
+      <data key="d10">python</data>
+      <data key="d5">1744041639.555138</data>
+    </node>
+    <node id="automated_code_review">
+      <data key="d1">file</data>
+      <data key="d2">automated_code_review.py</data>
+      <data key="d4">scripts/maintenance/automated_code_review.py</data>
+      <data key="d7">Tool for automated code review of changes in pull requests or between git references</data>
+      <data key="d10">python</data>
+      <data key="d5">1744041639.555401</data>
+    </node>
+    <node id="code_review_config">
+      <data key="d1">file</data>
+      <data key="d2">code_review.yaml</data>
+      <data key="d4">config/code_review.yaml</data>
+      <data key="d7">Configuration file for the automated code review tool</data>
+      <data key="d10">yaml</data>
+      <data key="d5">1744041639.555616</data>
+    </node>
+    <node id="decision_advanced_code_quality_1744041639">
+      <data key="d1">decision</data>
+      <data key="d2">Implementation of Advanced Code Quality Tools</data>
+      <data key="d7">Implementation of advanced code quality monitoring and automated code review tools</data>
+      <data key="d11">To enhance code quality monitoring, provide detailed metrics, and automate code reviews for the MCP-BASE-STACK project</data>
+      <data key="d12">2025-04-07T18:00:39.555826</data>
+    </node>
+    <node id="dependency_injection">
+      <data key="d1">component</data>
+      <data key="d2">Dependency Injection</data>
+      <data key="d7">Dependency injection framework for modular and testable code</data>
+      <data key="d3">implemented</data>
+    </node>
+    <node id="di_containers">
+      <data key="d1">file</data>
+      <data key="d2">containers.py</data>
+      <data key="d4">services/mcp-server/src/di/containers.py</data>
+      <data key="d7">Dependency injection container that wires up all application dependencies</data>
+      <data key="d10">python</data>
+      <data key="d5">1744042721.229517</data>
+    </node>
+    <node id="di_providers">
+      <data key="d1">file</data>
+      <data key="d2">providers.py</data>
+      <data key="d4">services/mcp-server/src/di/providers.py</data>
+      <data key="d7">Service providers for the dependency injection container</data>
+      <data key="d10">python</data>
+      <data key="d5">1744042721.229732</data>
+    </node>
+    <node id="di_init">
+      <data key="d1">file</data>
+      <data key="d2">__init__.py</data>
+      <data key="d4">services/mcp-server/src/di/__init__.py</data>
+      <data key="d7">Dependency injection module initialization</data>
+      <data key="d10">python</data>
+      <data key="d5">1744042721.229934</data>
+    </node>
+    <node id="di_readme">
+      <data key="d1">file</data>
+      <data key="d2">README.md</data>
+      <data key="d4">services/mcp-server/src/di/README.md</data>
+      <data key="d7">Documentation for the dependency injection framework</data>
+      <data key="d10">markdown</data>
+      <data key="d5">1744042721.230138</data>
+    </node>
+    <node id="example_service">
+      <data key="d1">file</data>
+      <data key="d2">example_service.py</data>
+      <data key="d4">services/mcp-server/src/services/example_service.py</data>
+      <data key="d7">Example service that demonstrates dependency injection</data>
+      <data key="d10">python</data>
+      <data key="d5">1744042721.230333</data>
+    </node>
+    <node id="app_py">
+      <data key="d1">file</data>
+      <data key="d2">app.py</data>
+      <data key="d4">services/mcp-server/src/app.py</data>
+      <data key="d7">Main application entry point with dependency injection integration</data>
+      <data key="d10">python</data>
+      <data key="d5">1744042721.230536</data>
+    </node>
+    <node id="decision_dependency_injection_1744042721">
+      <data key="d1">decision</data>
+      <data key="d2">Implementation of Dependency Injection</data>
+      <data key="d7">Implementation of a dependency injection framework for the MCP Server</data>
+      <data key="d11">To improve modularity, testability, and maintainability of the MCP Server</data>
+      <data key="d12">2025-04-07T18:18:41.230724</data>
+    </node>
+    <node id="feature_file_cleanup">
+      <data key="d1">feature</data>
+      <data key="d2">File Cleanup Tool</data>
+      <data key="d7">Identifies and safely removes orphaned or outdated files in the project</data>
+      <data key="d8">Maintenance Team</data>
+      <data key="d3">implemented</data>
+    </node>
+    <node id="file_cleanup_component">
+      <data key="d1">component</data>
+      <data key="d2">File Cleanup Tool</data>
+      <data key="d3">implemented</data>
+    </node>
+    <node id="cleanup_script">
+      <data key="d1">file</data>
+      <data key="d4">cleanup_files.py</data>
+      <data key="d10">python</data>
+    </node>
+    <node id="cleanup_report">
+      <data key="d1">file</data>
+      <data key="d4">cleanup-report.json</data>
+      <data key="d10">json</data>
+    </node>
+    <node id="file_cleanup_guide">
+      <data key="d1">file</data>
+      <data key="d4">docs/file-cleanup-guide.md</data>
+      <data key="d10">markdown</data>
+    </node>
+    <edge source="project_root" target="nvidia_gpu">
+      <data key="d13">contains</data>
+    </edge>
+    <edge source="project_root" target="wsl2">
+      <data key="d13">contains</data>
+    </edge>
+    <edge source="project_root" target="docker">
+      <data key="d13">contains</data>
+    </edge>
+    <edge source="project_root" target="nvidia_container">
+      <data key="d13">contains</data>
+    </edge>
+    <edge source="project_root" target="librechat">
+      <data key="d13">contains</data>
+    </edge>
+    <edge source="project_root" target="mongodb">
+      <data key="d13">contains</data>
+    </edge>
+    <edge source="project_root" target="meilisearch">
+      <data key="d13">contains</data>
+    </edge>
+    <edge source="project_root" target="ollama">
+      <data key="d13">contains</data>
+    </edge>
+    <edge source="project_root" target="mistral">
+      <data key="d13">contains</data>
+    </edge>
+    <edge source="project_root" target="deepseek">
+      <data key="d13">contains</data>
+    </edge>
+    <edge source="project_root" target="mcp_server">
+      <data key="d13">contains</data>
+    </edge>
+    <edge source="project_root" target="feature_git_file_update_hooks">
+      <data key="d13">contains</data>
+    </edge>
+    <edge source="project_root" target="git_hooks">
+      <data key="d13">contains</data>
+    </edge>
+    <edge source="project_root" target="code_quality">
+      <data key="d13">contains</data>
+    </edge>
+    <edge source="project_root" target="feature_file_cleanup">
+      <data key="d13">contains</data>
+    </edge>
+    <edge source="project_root" target="file_cleanup_component">
+      <data key="d13">contains</data>
+    </edge>
+    <edge source="nvidia_gpu" target="wsl2">
+      <data key="d13">accessible_from</data>
+    </edge>
+    <edge source="docker" target="wsl2">
+      <data key="d13">runs_on</data>
+    </edge>
+    <edge source="nvidia_container" target="docker">
+      <data key="d13">extends</data>
+    </edge>
+    <edge source="nvidia_container" target="nvidia_gpu">
+      <data key="d13">enables_access</data>
+    </edge>
+    <edge source="librechat" target="docker">
+      <data key="d13">containerized_in</data>
+    </edge>
+    <edge source="librechat" target="mongodb">
+      <data key="d13">uses</data>
+    </edge>
+    <edge source="librechat" target="meilisearch">
+      <data key="d13">uses</data>
+    </edge>
+    <edge source="librechat" target="mistral">
+      <data key="d13">integrates</data>
+    </edge>
+    <edge source="librechat" target="deepseek">
+      <data key="d13">integrates</data>
+    </edge>
+    <edge source="mongodb" target="docker">
+      <data key="d13">containerized_in</data>
+    </edge>
+    <edge source="meilisearch" target="docker">
+      <data key="d13">containerized_in</data>
+    </edge>
+    <edge source="ollama" target="docker">
+      <data key="d13">containerized_in</data>
+    </edge>
+    <edge source="ollama" target="nvidia_gpu">
+      <data key="d13">uses</data>
+    </edge>
+    <edge source="mistral" target="ollama">
+      <data key="d13">served_by</data>
+    </edge>
+    <edge source="deepseek" target="ollama">
+      <data key="d13">served_by</data>
+    </edge>
+    <edge source="mcp_server" target="deepseek">
+      <data key="d13">uses</data>
+    </edge>
+    <edge source="mcp_server" target="dependency_injection">
+      <data key="d13">contains</data>
+    </edge>
+    <edge source="tests" target="tests_unit">
+      <data key="d14">contains</data>
+    </edge>
+    <edge source="tests" target="tests_integration">
+      <data key="d14">contains</data>
+    </edge>
+    <edge source="tests" target="tests_agent_tests">
+      <data key="d14">contains</data>
+    </edge>
+    <edge source="tests" target="tests_e2e">
+      <data key="d14">contains</data>
+    </edge>
+    <edge source="tests" target="tests_performance">
+      <data key="d14">contains</data>
+    </edge>
+    <edge source="tests" target="tests_regression">
+      <data key="d14">contains</data>
+    </edge>
+    <edge source="tests" target="tests_data">
+      <data key="d14">contains</data>
+    </edge>
+    <edge source="docs" target="docs_knowledge-graph">
+      <data key="d14">contains</data>
+    </edge>
+    <edge source="docs" target="docs_tutorials">
+      <data key="d14">contains</data>
+    </edge>
+    <edge source="docs" target="docs_troubleshooting">
+      <data key="d14">contains</data>
+    </edge>
+    <edge source="docs" target="docs_conventions">
+      <data key="d14">contains</data>
+    </edge>
+    <edge source="docs" target="git_hooks_kg_integration_plan">
+      <data key="d13">contains</data>
+    </edge>
+    <edge source="docs" target="file_cleanup_guide">
+      <data key="d13">contains</data>
+    </edge>
+    <edge source="docs_conventions" target="style_guide">
+      <data key="d13">contains</data>
+    </edge>
+    <edge source="docs_conventions" target="coding_conventions">
+      <data key="d13">contains</data>
+    </edge>
+    <edge source="docs_conventions" target="review_checklist">
+      <data key="d13">contains</data>
+    </edge>
+    <edge source="docs_conventions" target="graph_guidelines">
+      <data key="d13">contains</data>
+    </edge>
+    <edge source="git_hooks" target="pre_commit_hook">
+      <data key="d13">contains</data>
+    </edge>
+    <edge source="git_hooks" target="install_hooks_script">
+      <data key="d13">contains</data>
+    </edge>
+    <edge source="git_hooks" target="hooks_documentation">
+      <data key="d13">contains</data>
+    </edge>
+    <edge source="git_hooks" target="feature_git_file_update_hooks">
+      <data key="d13">implements</data>
+    </edge>
+    <edge source="git_hooks_kg_integration_plan" target="feature_git_file_update_hooks">
+      <data key="d13">documents</data>
+    </edge>
+    <edge source="code_quality" target="style_guide">
+      <data key="d13">contains</data>
+    </edge>
+    <edge source="code_quality" target="coding_conventions">
+      <data key="d13">contains</data>
+    </edge>
+    <edge source="code_quality" target="review_checklist">
+      <data key="d13">contains</data>
+    </edge>
+    <edge source="code_quality" target="graph_guidelines">
+      <data key="d13">contains</data>
+    </edge>
+    <edge source="code_quality" target="decision_conventions_creation_1744037680">
+      <data key="d13">has_decision</data>
+    </edge>
+    <edge source="code_quality" target="pyproject_toml">
+      <data key="d13">contains</data>
+    </edge>
+    <edge source="code_quality" target="flake8_config">
+      <data key="d13">contains</data>
+    </edge>
+    <edge source="code_quality" target="mypy_config">
+      <data key="d13">contains</data>
+    </edge>
+    <edge source="code_quality" target="pylint_config">
+      <data key="d13">contains</data>
+    </edge>
+    <edge source="code_quality" target="shellcheck_config">
+      <data key="d13">contains</data>
+    </edge>
+    <edge source="code_quality" target="pre_commit_config">
+      <data key="d13">contains</data>
+    </edge>
+    <edge source="code_quality" target="check_code_quality_script">
+      <data key="d13">contains</data>
+    </edge>
+    <edge source="code_quality" target="fix_code_quality_script">
+      <data key="d13">contains</data>
+    </edge>
+    <edge source="code_quality" target="install_pre_commit_hooks_script">
+      <data key="d13">contains</data>
+    </edge>
+    <edge source="code_quality" target="decision_code_quality_tooling_1744038759">
+      <data key="d13">has_decision</data>
+    </edge>
+    <edge source="code_quality" target="github_actions_workflow">
+      <data key="d13">contains</data>
+    </edge>
+    <edge source="code_quality" target="decision_ci_code_quality_1744039069">
+      <data key="d13">has_decision</data>
+    </edge>
+    <edge source="code_quality" target="generate_quality_report">
+      <data key="d13">contains</data>
+    </edge>
+    <edge source="code_quality" target="automated_code_review">
+      <data key="d13">contains</data>
+    </edge>
+    <edge source="code_quality" target="code_review_config">
+      <data key="d13">contains</data>
+    </edge>
+    <edge source="code_quality" target="decision_advanced_code_quality_1744041639">
+      <data key="d13">has_decision</data>
+    </edge>
+    <edge source="github_actions_workflow" target="decision_ci_code_quality_1744039069">
+      <data key="d13">implements</data>
+    </edge>
+    <edge source="generate_quality_report" target="decision_advanced_code_quality_1744041639">
+      <data key="d13">implements</data>
+    </edge>
+    <edge source="automated_code_review" target="decision_advanced_code_quality_1744041639">
+      <data key="d13">implements</data>
+    </edge>
+    <edge source="code_review_config" target="decision_advanced_code_quality_1744041639">
+      <data key="d13">implements</data>
+    </edge>
+    <edge source="dependency_injection" target="di_containers">
+      <data key="d13">contains</data>
+    </edge>
+    <edge source="dependency_injection" target="di_providers">
+      <data key="d13">contains</data>
+    </edge>
+    <edge source="dependency_injection" target="di_init">
+      <data key="d13">contains</data>
+    </edge>
+    <edge source="dependency_injection" target="di_readme">
+      <data key="d13">contains</data>
+    </edge>
+    <edge source="dependency_injection" target="example_service">
+      <data key="d13">contains</data>
+    </edge>
+    <edge source="dependency_injection" target="app_py">
+      <data key="d13">contains</data>
+    </edge>
+    <edge source="dependency_injection" target="decision_dependency_injection_1744042721">
+      <data key="d13">has_decision</data>
+    </edge>
+    <edge source="file_cleanup_component" target="cleanup_script">
+      <data key="d13">contains</data>
+    </edge>
+    <edge source="file_cleanup_component" target="cleanup_report">
+      <data key="d13">contains</data>
+    </edge>
+    <edge source="file_cleanup_component" target="feature_file_cleanup">
+      <data key="d13">implements</data>
+    </edge>
+    <edge source="file_cleanup_guide" target="feature_file_cleanup">
+      <data key="d13">documents</data>
+    </edge>
+    <data key="d0">MCP-BASE-STACK</data>
+  </graph>
+</graphml>

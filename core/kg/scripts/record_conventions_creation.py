@@ -9,16 +9,15 @@ knowledge graph, documenting the rationale and purpose.
 
 import os
 import sys
-import logging
 from datetime import datetime
 
-# Configure logging
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
-    datefmt="%Y-%m-%d %H:%M:%S"
-)
-logger = logging.getLogger(__name__)
+# Add the project directory to the path
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../../..")))
+
+from core.logging.config import configure_logger
+
+# Configure logger using the standardized logging system
+logger = configure_logger("core_kg_conventions")
 
 # Add the project directory to the path
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../../..")))

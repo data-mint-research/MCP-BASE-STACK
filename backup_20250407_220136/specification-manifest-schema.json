@@ -1,0 +1,420 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "MCP-BASE-STACK Specification Manifest",
+  "type": "object",
+  "required": ["specification_manifest"],
+  "properties": {
+    "specification_manifest": {
+      "type": "object",
+      "required": ["metadata", "directory_structure", "file_templates", "naming_conventions", "code_patterns", "validation_rules", "agent_integration"],
+      "properties": {
+        "metadata": {
+          "type": "object",
+          "required": ["version", "created_at", "description", "purpose"],
+          "properties": {
+            "version": { 
+              "type": "string", 
+              "pattern": "^\\d+\\.\\d+\\.\\d+$",
+              "description": "Semantic version of the manifest"
+            },
+            "created_at": { 
+              "type": "string", 
+              "format": "date",
+              "description": "Creation date of the manifest"
+            },
+            "description": { 
+              "type": "string",
+              "description": "Brief description of the manifest"
+            },
+            "purpose": { 
+              "type": "string",
+              "description": "Purpose of the manifest"
+            }
+          },
+          "additionalProperties": false
+        },
+        "directory_structure": {
+          "type": "object",
+          "patternProperties": {
+            "^[a-z][a-z0-9_/]*$": {
+              "type": "object",
+              "required": ["description"],
+              "properties": {
+                "description": { 
+                  "type": "string",
+                  "description": "Description of the directory"
+                },
+                "required_subdirectories": {
+                  "type": "array",
+                  "items": { "type": "string" },
+                  "description": "List of required subdirectories"
+                },
+                "optional_subdirectories": {
+                  "type": "array",
+                  "items": { "type": "string" },
+                  "description": "List of optional subdirectories"
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "additionalProperties": false
+        },
+        "file_templates": {
+          "type": "object",
+          "patternProperties": {
+            "^[a-z][a-z0-9_/]*$|^services/mcp-server$|^services/mcp-server/src$": {
+              "type": "object",
+              "properties": {
+                "required_files": {
+                  "type": "object",
+                  "patternProperties": {
+                    "^.*$": {
+                      "type": "object",
+                      "required": ["description"],
+                      "properties": {
+                        "description": { 
+                          "type": "string",
+                          "description": "Description of the file"
+                        },
+                        "template": { 
+                          "type": "string",
+                          "description": "Template content for the file"
+                        }
+                      },
+                      "additionalProperties": false
+                    }
+                  },
+                  "description": "Required files for the directory"
+                },
+                "optional_files": {
+                  "type": "object",
+                  "patternProperties": {
+                    "^.*$": {
+                      "type": "object",
+                      "required": ["description"],
+                      "properties": {
+                        "description": { 
+                          "type": "string",
+                          "description": "Description of the file"
+                        },
+                        "template": { 
+                          "type": "string",
+                          "description": "Template content for the file"
+                        }
+                      },
+                      "additionalProperties": false
+                    }
+                  },
+                  "description": "Optional files for the directory"
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "additionalProperties": false
+        },
+        "naming_conventions": {
+          "type": "object",
+          "patternProperties": {
+            "^[a-z][a-z0-9_]*$": {
+              "type": "object",
+              "patternProperties": {
+                "^[a-z][a-z0-9_]*$": {
+                  "type": "object",
+                  "required": ["pattern", "regex"],
+                  "properties": {
+                    "pattern": { 
+                      "type": "string",
+                      "description": "Human-readable pattern description"
+                    },
+                    "regex": { 
+                      "type": "string",
+                      "description": "Regular expression for validation"
+                    },
+                    "examples": {
+                      "type": "array",
+                      "items": { "type": "string" },
+                      "description": "Example names that follow the convention"
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "additionalProperties": false,
+              "description": "Naming conventions for a specific language or domain"
+            }
+          },
+          "additionalProperties": false
+        },
+        "code_patterns": {
+          "type": "object",
+          "patternProperties": {
+            "^[a-z][a-z0-9_]*$": {
+              "type": "object",
+              "patternProperties": {
+                "^[a-z][a-z0-9_]*$": {
+                  "type": "object",
+                  "required": ["description", "required", "template", "validation_regex"],
+                  "properties": {
+                    "description": { 
+                      "type": "string",
+                      "description": "Description of the code pattern"
+                    },
+                    "required": { 
+                      "type": "boolean",
+                      "description": "Whether the pattern is required"
+                    },
+                    "template": { 
+                      "type": "string",
+                      "description": "Template for the code pattern"
+                    },
+                    "validation_regex": { 
+                      "type": "string",
+                      "description": "Regular expression for validating the pattern"
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "additionalProperties": false,
+              "description": "Code patterns for a specific language"
+            }
+          },
+          "additionalProperties": false
+        },
+        "validation_rules": {
+          "type": "object",
+          "patternProperties": {
+            "^[a-z][a-z0-9_]*$": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": ["rule", "severity", "validation_function", "error_message"],
+                "properties": {
+                  "rule": { 
+                    "type": "string",
+                    "description": "Description of the validation rule"
+                  },
+                  "severity": { 
+                    "type": "string", 
+                    "enum": ["error", "warning", "info"],
+                    "description": "Severity level of the rule"
+                  },
+                  "validation_function": { 
+                    "type": "string",
+                    "description": "Function to use for validation"
+                  },
+                  "error_message": { 
+                    "type": "string",
+                    "description": "Error message template"
+                  }
+                },
+                "additionalProperties": false
+              },
+              "description": "Validation rules for a specific category"
+            }
+          },
+          "additionalProperties": false
+        },
+        "agent_integration": {
+          "type": "object",
+          "properties": {
+            "code_generation": {
+              "type": "object",
+              "patternProperties": {
+                "^[a-z][a-z0-9_]*$": {
+                  "type": "object",
+                  "required": ["description", "process", "example"],
+                  "properties": {
+                    "description": { 
+                      "type": "string",
+                      "description": "Description of the code generation capability"
+                    },
+                    "process": { 
+                      "type": "array",
+                      "items": { "type": "string" },
+                      "description": "Steps in the process"
+                    },
+                    "example": { 
+                      "type": "string",
+                      "description": "Example of the capability"
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "additionalProperties": false,
+              "description": "Code generation capabilities"
+            },
+            "code_analysis": {
+              "type": "object",
+              "patternProperties": {
+                "^[a-z][a-z0-9_]*$": {
+                  "type": "object",
+                  "required": ["description", "process", "example"],
+                  "properties": {
+                    "description": { 
+                      "type": "string",
+                      "description": "Description of the code analysis capability"
+                    },
+                    "process": { 
+                      "type": "array",
+                      "items": { "type": "string" },
+                      "description": "Steps in the process"
+                    },
+                    "example": { 
+                      "type": "string",
+                      "description": "Example of the capability"
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "additionalProperties": false,
+              "description": "Code analysis capabilities"
+            },
+            "code_refactoring": {
+              "type": "object",
+              "patternProperties": {
+                "^[a-z][a-z0-9_]*$": {
+                  "type": "object",
+                  "required": ["description", "process", "example"],
+                  "properties": {
+                    "description": { 
+                      "type": "string",
+                      "description": "Description of the code refactoring capability"
+                    },
+                    "process": { 
+                      "type": "array",
+                      "items": { "type": "string" },
+                      "description": "Steps in the process"
+                    },
+                    "example": { 
+                      "type": "string",
+                      "description": "Example of the capability"
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "additionalProperties": false,
+              "description": "Code refactoring capabilities"
+            },
+            "decision_making": {
+              "type": "object",
+              "patternProperties": {
+                "^[a-z][a-z0-9_]*$": {
+                  "type": "object",
+                  "required": ["description", "process", "example"],
+                  "properties": {
+                    "description": { 
+                      "type": "string",
+                      "description": "Description of the decision making capability"
+                    },
+                    "process": { 
+                      "type": "array",
+                      "items": { "type": "string" },
+                      "description": "Steps in the process"
+                    },
+                    "example": { 
+                      "type": "string",
+                      "description": "Example of the capability"
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "additionalProperties": false,
+              "description": "Decision making capabilities"
+            },
+            "contextual_understanding": {
+              "type": "object",
+              "patternProperties": {
+                "^[a-z][a-z0-9_]*$": {
+                  "type": "object",
+                  "required": ["description", "process", "example"],
+                  "properties": {
+                    "description": { 
+                      "type": "string",
+                      "description": "Description of the contextual understanding capability"
+                    },
+                    "process": { 
+                      "type": "array",
+                      "items": { "type": "string" },
+                      "description": "Steps in the process"
+                    },
+                    "example": { 
+                      "type": "string",
+                      "description": "Example of the capability"
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "additionalProperties": false,
+              "description": "Contextual understanding capabilities"
+            },
+            "interactive_guidance": {
+              "type": "object",
+              "patternProperties": {
+                "^[a-z][a-z0-9_]*$": {
+                  "type": "object",
+                  "required": ["description", "process", "example"],
+                  "properties": {
+                    "description": { 
+                      "type": "string",
+                      "description": "Description of the interactive guidance capability"
+                    },
+                    "process": { 
+                      "type": "array",
+                      "items": { "type": "string" },
+                      "description": "Steps in the process"
+                    },
+                    "example": { 
+                      "type": "string",
+                      "description": "Example of the capability"
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "additionalProperties": false,
+              "description": "Interactive guidance capabilities"
+            },
+            "continuous_improvement": {
+              "type": "object",
+              "patternProperties": {
+                "^[a-z][a-z0-9_]*$": {
+                  "type": "object",
+                  "required": ["description", "process", "example"],
+                  "properties": {
+                    "description": { 
+                      "type": "string",
+                      "description": "Description of the continuous improvement capability"
+                    },
+                    "process": { 
+                      "type": "array",
+                      "items": { "type": "string" },
+                      "description": "Steps in the process"
+                    },
+                    "example": { 
+                      "type": "string",
+                      "description": "Example of the capability"
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "additionalProperties": false,
+              "description": "Continuous improvement capabilities"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

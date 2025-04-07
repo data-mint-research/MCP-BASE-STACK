@@ -26,7 +26,6 @@ import ast
 import csv
 import datetime
 import json
-import logging
 import os
 import re
 import sqlite3
@@ -37,6 +36,11 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Set, Tuple, Union
 
+# Add the project root to the Python path to allow importing from core
+sys.path.append(str(Path(__file__).resolve().parents[2]))
+
+from core.logging.config import configure_logger
+
 import matplotlib
 matplotlib.use('Agg')  # Use non-interactive backend
 import matplotlib.pyplot as plt
@@ -46,13 +50,8 @@ from matplotlib.figure import Figure
 import base64
 from io import BytesIO
 
-# Configure logging
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
-    datefmt="%Y-%m-%d %H:%M:%S",
-)
-logger = logging.getLogger(__name__)
+# Configure logging using the standardized logging system
+logger = configure_logger("quality_report_generator")
 
 # Constants
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
@@ -581,48 +580,48 @@ class CodeQualityAnalyzer:
         for component in self.metrics.components.values():
             for file in component.files:
                 # High cyclomatic complexity
-                if file.complexity_cyclomatic > 15:
+                if file.complexity_cyclomatic > 1:
                     hotspots.append({
                         "file": file.path,
                         "component": component.name,
                         "issue": "High cyclomatic complexity",
                         "value": file.complexity_cyclomatic,
-                        "threshold": 15,
+                        "threshold": 1,
                         "severity": "high"
                     })
                 
                 # High cognitive complexity
-                if file.complexity_cognitive > 20:
+                if file.complexity_cognitive > 1:
                     hotspots.append({
                         "file": file.path,
                         "component": component.name,
                         "issue": "High cognitive complexity",
                         "value": file.complexity_cognitive,
-                        "threshold": 20,
+                        "threshold": 1,
                         "severity": "high"
                     })
                 
                 # Low type hint coverage for Python files
-                if file.language == "Python" and file.functions_count > 3 and file.type_hint_coverage < 0.5:
+                if file.language == "Python" and file.functions_count > 3 and file.type_hint_coverage < 0.99:
                     hotspots.append({
                         "file": file.path,
                         "component": component.name,
                         "issue": "Low type hint coverage",
                         "value": f"{file.type_hint_coverage:.1%}",
-                        "threshold": "50%",
+                        "threshold": "99%",
                         "severity": "medium"
                     })
                 
                 # Low documentation coverage
-                if (file.functions_count + file.classes_count > 3 and 
-                    (file.documented_functions + file.documented_classes) / 
-                    (file.functions_count + file.classes_count) < 0.7):
+                if (file.functions_count + file.classes_count > 3 and
+                    (file.documented_functions + file.documented_classes) /
+                    (file.functions_count + file.classes_count) < 0.99):
                     hotspots.append({
                         "file": file.path,
                         "component": component.name,
                         "issue": "Low documentation coverage",
                         "value": f"{(file.documented_functions + file.documented_classes) / (file.functions_count + file.classes_count):.1%}",
-                        "threshold": "70%",
+                        "threshold": "99%",
                         "severity": "medium"
                     })
                 
@@ -826,6 +825,7 @@ class DatabaseManager:
 class ReportGenerator:
     """Generator for code quality reports."""
 
+    def __init__(self, metrics, db_manager):
         """Initialize the report generator."""
         self.metrics = metrics
         self.db_manager = db_manager
