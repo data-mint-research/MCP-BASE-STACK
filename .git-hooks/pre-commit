@@ -1,20 +1,20 @@
 #!/bin/bash
 
 # ============================================================================
-# Git Pre-Commit Hook for Automatic File Updates
+# Git Pre-Commit Hook for Automatic File Updates and Code Quality Checks
 # ============================================================================
-# This script automatically updates README.md, .gitignore, and LICENSE files
-# before every commit without requiring explicit user action.
+# This script performs the following tasks before every commit:
 #
-# Updates performed:
-# 1. README.md - Adds a last updated timestamp
-# 2. .gitignore - Adds any new files that should be ignored
-# 3. LICENSE - Updates the copyright year if needed
+# 1. Updates README.md with a last updated timestamp
+# 2. Updates .gitignore with any new files that should be ignored
+# 3. Updates LICENSE with the current copyright year if needed
+# 4. Updates the Knowledge Graph
+# 5. Runs code quality checks using pre-commit hooks
 #
 # The script then stages these files so they're included in the commit.
 # ============================================================================
 
-echo "Running pre-commit file update hook..."
+echo "Running pre-commit file update and code quality hook..."
 
 # Function to check if a file exists and is tracked by git
 file_is_tracked() {
@@ -74,6 +74,15 @@ if file_is_tracked ".gitignore"; then
         # MCP-BASE-STACK specific
         "mcp_*.log.*"
         "*.health-report.txt"
+        
+        # Python specific
+        "__pycache__/"
+        "*.py[cod]"
+        "*$py.class"
+        ".pytest_cache/"
+        ".coverage"
+        "htmlcov/"
+        ".mypy_cache/"
     )
     
     # Check if each common ignore is already in .gitignore
@@ -136,5 +145,38 @@ else
     echo "Knowledge Graph update script not found, skipping"
 fi
 
-echo "Pre-commit file update hook completed"
+# ============================================================================
+# 5. Run Code Quality Checks
+# ============================================================================
+echo "Running code quality checks..."
+
+# Check if pre-commit is installed
+if command -v pre-commit &> /dev/null; then
+    # Run pre-commit hooks
+    if pre-commit run --files $(git diff --cached --name-only); then
+        echo "Code quality checks passed"
+    else
+        echo "Code quality checks failed"
+        echo "Please fix the issues or use --no-verify to bypass (not recommended)"
+        exit 1
+    fi
+else
+    echo "Warning: pre-commit is not installed, skipping code quality checks"
+    echo "Install with: pip install pre-commit && pre-commit install"
+    
+    # Run basic code quality checks using our custom script if available
+    if [ -f "check_code_quality.sh" ]; then
+        echo "Running basic code quality checks..."
+        if ./check_code_quality.sh; then
+            echo "Basic code quality checks passed"
+        else
+            echo "Basic code quality checks failed"
+            echo "Please fix the issues or use --no-verify to bypass (not recommended)"
+            echo "You can run ./fix_code_quality.sh to automatically fix some issues"
+            exit 1
+        fi
+    fi
+fi
+
+echo "Pre-commit file update and code quality hook completed"
 exit 0
