@@ -77,3 +77,10 @@ mcp_*.log.*
 *.health-report.txt
 *.tmp
 mcp_*.log.*
+mcp_*.log.*
+*.py[cod]
+*.class
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
