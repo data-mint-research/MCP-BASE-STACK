@@ -1,0 +1,30 @@
+2025-04-07 11:14:05,450 - mcp_server - INFO - MCP Server starting up
+2025-04-07 11:16:56,370 - mcp_server - INFO - Processing prompt: Hello, what can you do?...
+2025-04-07 11:16:56,370 - mcp_server - INFO - Querying DeepSeek model with prompt length: 23
+2025-04-07 11:16:58,998 - mcp_server - INFO - Got response from DeepSeek, length: 6209
+2025-04-07 11:17:17,496 - mcp_server - INFO - Processing prompt: !shell ls -la...
+2025-04-07 11:17:17,496 - mcp_server - INFO - Executing shell command: ls -la
+2025-04-07 11:17:17,498 - mcp_server - INFO - Returning shell command output, length: 882
+2025-04-07 11:20:18,170 - mcp_server - INFO - MCP Server starting up
+2025-04-07 11:21:03,054 - mcp_server - INFO - Processing prompt: Hello, what is your name?...
+2025-04-07 11:21:03,054 - mcp_server - INFO - Querying DeepSeek model with prompt length: 25
+2025-04-07 11:21:03,557 - mcp_server - INFO - Got response from DeepSeek, length: 234
+2025-04-07 11:21:12,729 - mcp_server - INFO - Processing prompt: Write a simple Python function to calculate the fa...
+2025-04-07 11:21:12,730 - mcp_server - INFO - Querying DeepSeek model with prompt length: 69
+2025-04-07 11:21:14,103 - mcp_server - INFO - Got response from DeepSeek, length: 538
+2025-04-07 11:21:26,022 - mcp_server - INFO - Processing prompt: What is 2+2?...
+2025-04-07 11:21:26,022 - mcp_server - INFO - Querying DeepSeek model with prompt length: 12
+2025-04-07 11:21:26,512 - mcp_server - INFO - Got response from DeepSeek, length: 139
+2025-04-07 11:33:05,151 - mcp_server - INFO - MCP Server starting up
+2025-04-07 12:18:47,753 - mcp_server - INFO - Processing prompt: What is 2+2?...
+2025-04-07 12:18:47,754 - mcp_server - INFO - Querying DeepSeek model with prompt length: 12
+2025-04-07 12:18:53,158 - mcp_server - INFO - Got response from DeepSeek, length: 5715
+2025-04-07 12:18:53,169 - mcp_server - INFO - Processing prompt: Write a Python function to check if a string is a ...
+2025-04-07 12:18:53,169 - mcp_server - INFO - Querying DeepSeek model with prompt length: 60
+2025-04-07 12:18:54,907 - mcp_server - INFO - Got response from DeepSeek, length: 32067
+2025-04-07 12:18:54,917 - mcp_server - INFO - Processing prompt: !shell echo Hello from MINTYcoder...
+2025-04-07 12:18:54,917 - mcp_server - INFO - Executing shell command: echo Hello from MINTYcoder
+2025-04-07 12:18:54,918 - mcp_server - INFO - Returning shell command output, length: 22
+2025-04-07 12:18:54,927 - mcp_server - INFO - Processing prompt: !shell uname -a...
+2025-04-07 12:18:54,927 - mcp_server - INFO - Executing shell command: uname -a
+2025-04-07 12:18:54,929 - mcp_server - INFO - Returning shell command output, length: 116

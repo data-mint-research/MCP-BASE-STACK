@@ -1,0 +1,400 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d12" for="edge" attr.name="relationship" attr.type="string" />
+  <key id="d11" for="edge" attr.name="relation" attr.type="string" />
+  <key id="d10" for="node" attr.name="file_count" attr.type="long" />
+  <key id="d9" for="node" attr.name="last_modified" attr.type="double" />
+  <key id="d8" for="node" attr.name="path" attr.type="string" />
+  <key id="d7" for="node" attr.name="updated_at" attr.type="string" />
+  <key id="d6" for="node" attr.name="created_at" attr.type="string" />
+  <key id="d5" for="node" attr.name="owner" attr.type="string" />
+  <key id="d4" for="node" attr.name="description" attr.type="string" />
+  <key id="d3" for="node" attr.name="status" attr.type="string" />
+  <key id="d2" for="node" attr.name="name" attr.type="string" />
+  <key id="d1" for="node" attr.name="type" attr.type="string" />
+  <key id="d0" for="graph" attr.name="name" attr.type="string" />
+  <graph edgedefault="directed">
+    <node id="project_root">
+      <data key="d1">project</data>
+      <data key="d2">MCP-BASE-STACK</data>
+    </node>
+    <node id="nvidia_gpu">
+      <data key="d1">hardware</data>
+      <data key="d2">NVIDIA RTX 4090 GPU</data>
+    </node>
+    <node id="wsl2">
+      <data key="d1">platform</data>
+      <data key="d2">Windows Subsystem for Linux 2</data>
+    </node>
+    <node id="docker">
+      <data key="d1">software</data>
+      <data key="d2">Docker Engine</data>
+    </node>
+    <node id="nvidia_container">
+      <data key="d1">software</data>
+      <data key="d2">NVIDIA Container Toolkit</data>
+      <data key="d3">configured</data>
+    </node>
+    <node id="librechat">
+      <data key="d1">software</data>
+      <data key="d2">LibreChat UI and API</data>
+      <data key="d3">deployed</data>
+    </node>
+    <node id="mongodb">
+      <data key="d1">software</data>
+      <data key="d2">MongoDB Database</data>
+    </node>
+    <node id="meilisearch">
+      <data key="d1">software</data>
+      <data key="d2">Meilisearch Engine</data>
+    </node>
+    <node id="ollama">
+      <data key="d1">software</data>
+      <data key="d2">Ollama LLM Server</data>
+      <data key="d3">deployed</data>
+    </node>
+    <node id="mistral">
+      <data key="d1">model</data>
+      <data key="d2">Mistral 7B LLM</data>
+      <data key="d3">loaded</data>
+    </node>
+    <node id="deepseek">
+      <data key="d1">model</data>
+      <data key="d2">DeepSeek Coder LLM</data>
+      <data key="d3">loaded</data>
+    </node>
+    <node id="mcp_server">
+      <data key="d1">software</data>
+      <data key="d2">MCP FastAPI Server</data>
+      <data key="d3">implemented</data>
+    </node>
+    <node id="feature_ollama_llm_server_deployment">
+      <data key="d1">feature</data>
+      <data key="d2">Ollama LLM Server Deployment</data>
+      <data key="d4">Deploy Ollama LLM server as a Docker container with GPU support</data>
+      <data key="d5">MCP-Deployment-Engineer</data>
+      <data key="d3">completed</data>
+      <data key="d6">2025-04-07T10:55:47.531466</data>
+      <data key="d7">2025-04-07T10:58:48.684326</data>
+    </node>
+    <node id="feature_load_llm_models">
+      <data key="d1">feature</data>
+      <data key="d2">Load LLM Models</data>
+      <data key="d4">Load Mistral and DeepSeek Coder models into Ollama</data>
+      <data key="d5">MCP-Deployment-Engineer</data>
+      <data key="d3">completed</data>
+      <data key="d6">2025-04-07T11:01:26.061005</data>
+      <data key="d7">2025-04-07T11:08:29.191671</data>
+    </node>
+    <node id="feature_python_dependencies">
+      <data key="d1">feature</data>
+      <data key="d2">Python Dependencies</data>
+      <data key="d4">Install FastAPI, Uvicorn, LangGraph, and other required Python packages</data>
+      <data key="d5">MCP-Deployment-Engineer</data>
+      <data key="d3">completed</data>
+      <data key="d6">2025-04-07T11:10:41.665582</data>
+      <data key="d7">2025-04-07T11:11:48.815896</data>
+    </node>
+    <node id="feature_mcp_server_implementation">
+      <data key="d1">feature</data>
+      <data key="d2">MCP Server Implementation</data>
+      <data key="d4">Implement the MCP-Server FastAPI application (Agent MINTYcoder)</data>
+      <data key="d5">MCP-Deployment-Engineer</data>
+      <data key="d3">completed</data>
+      <data key="d6">2025-04-07T11:26:15.619831</data>
+      <data key="d7">2025-04-07T11:26:20.240850</data>
+    </node>
+    <node id="feature_mcp_server_launch">
+      <data key="d1">feature</data>
+      <data key="d2">MCP Server Launch</data>
+      <data key="d4">Start the MCP server (FastAPI app) so it runs continuously in the background</data>
+      <data key="d5">MCP-Deployment-Engineer</data>
+      <data key="d3">completed</data>
+      <data key="d6">2025-04-07T11:29:18.942235</data>
+      <data key="d7">2025-04-07T11:33:30.124680</data>
+    </node>
+    <node id="feature_stack_integrity_test">
+      <data key="d1">feature</data>
+      <data key="d2">Stack Integrity Test</data>
+      <data key="d4">Verify all core containers are running and healthy</data>
+      <data key="d5">MCP-Deployment-Engineer</data>
+      <data key="d3">completed</data>
+      <data key="d6">2025-04-07T11:44:34.105034</data>
+      <data key="d7">2025-04-07T11:58:28.937422</data>
+    </node>
+    <node id="feature_mcp_agent_test">
+      <data key="d1">feature</data>
+      <data key="d2">MCP Agent Test</data>
+      <data key="d4">Test the MCP Agent MINTYcoder functionality</data>
+      <data key="d5">MCP Team</data>
+      <data key="d3">completed</data>
+      <data key="d6">2025-04-07T12:20:12.685332</data>
+      <data key="d7">2025-04-07T12:20:17.835907</data>
+    </node>
+    <node id="feature_librechat_model_integration">
+      <data key="d1">feature</data>
+      <data key="d2">LibreChat Model Integration</data>
+      <data key="d4">Verify LibreChat UI correctly displays Mistral and integrates with MCP Server</data>
+      <data key="d5">MCP-Deployment-Engineer</data>
+      <data key="d3">completed</data>
+      <data key="d6">2025-04-07T12:23:05.939576</data>
+      <data key="d7">2025-04-07T12:30:27.870481</data>
+    </node>
+    <node id="feature_maintenance_documentation">
+      <data key="d1">feature</data>
+      <data key="d2">Maintenance Documentation</data>
+      <data key="d4">Document procedures for maintaining and updating the MCP-BASE-STACK</data>
+      <data key="d5">MCP-Deployment-Engineer</data>
+      <data key="d3">completed</data>
+      <data key="d6">2025-04-07T12:39:06.975268</data>
+      <data key="d7">2025-04-07T12:39:55.436354</data>
+    </node>
+    <node id="feature_documentation_structure">
+      <data key="d1">feature</data>
+      <data key="d2">Documentation Structure</data>
+      <data key="d4">Organized documentation structure with knowledge graph, tutorials, troubleshooting, and conventions</data>
+      <data key="d5">MCP-Deployment-Engineer</data>
+      <data key="d3">completed</data>
+      <data key="d6">2025-04-07T13:05:19.015081</data>
+      <data key="d7">2025-04-07T13:05:19.715706</data>
+    </node>
+    <node id="feature_test_structure">
+      <data key="d1">feature</data>
+      <data key="d2">Test Structure</data>
+      <data key="d4">Comprehensive test structure for unit, integration, agent, e2e, performance, and regression tests</data>
+      <data key="d5">MCP-Deployment-Engineer</data>
+      <data key="d3">completed</data>
+      <data key="d6">2025-04-07T13:05:19.231581</data>
+      <data key="d7">2025-04-07T13:05:19.973618</data>
+    </node>
+    <node id="documentation">
+      <data key="d3">created</data>
+      <data key="d1">component</data>
+    </node>
+    <node id="tests">
+      <data key="d3">created</data>
+      <data key="d1">component</data>
+      <data key="d8">tests</data>
+      <data key="d9">1744023880.175151</data>
+    </node>
+    <node id="docs">
+      <data key="d1">directory</data>
+      <data key="d8">docs</data>
+      <data key="d9">1744023202.3854399</data>
+    </node>
+    <node id="docs_knowledge-graph">
+      <data key="d1">directory</data>
+      <data key="d8">docs/knowledge-graph</data>
+      <data key="d9">1744023202.3854399</data>
+      <data key="d10">4</data>
+    </node>
+    <node id="docs_tutorials">
+      <data key="d1">directory</data>
+      <data key="d8">docs/tutorials</data>
+      <data key="d9">1744023590.7863376</data>
+      <data key="d10">6</data>
+    </node>
+    <node id="docs_troubleshooting">
+      <data key="d1">directory</data>
+      <data key="d8">docs/troubleshooting</data>
+      <data key="d9">1744023618.0901837</data>
+      <data key="d10">7</data>
+    </node>
+    <node id="docs_conventions">
+      <data key="d1">directory</data>
+      <data key="d8">docs/conventions</data>
+      <data key="d9">1744023202.3854399</data>
+      <data key="d10">4</data>
+    </node>
+    <node id="tests_unit">
+      <data key="d1">directory</data>
+      <data key="d8">tests/unit</data>
+      <data key="d9">1744022989.4370184</data>
+      <data key="d10">0</data>
+    </node>
+    <node id="tests_integration">
+      <data key="d1">directory</data>
+      <data key="d8">tests/integration</data>
+      <data key="d9">1744022989.4370184</data>
+      <data key="d10">0</data>
+    </node>
+    <node id="tests_agent_tests">
+      <data key="d1">directory</data>
+      <data key="d8">tests/agent_tests</data>
+      <data key="d9">1744022989.4370184</data>
+      <data key="d10">0</data>
+    </node>
+    <node id="tests_e2e">
+      <data key="d1">directory</data>
+      <data key="d8">tests/e2e</data>
+      <data key="d9">1744022989.4370184</data>
+      <data key="d10">0</data>
+    </node>
+    <node id="tests_performance">
+      <data key="d1">directory</data>
+      <data key="d8">tests/performance</data>
+      <data key="d9">1744022989.4370184</data>
+      <data key="d10">0</data>
+    </node>
+    <node id="tests_regression">
+      <data key="d1">directory</data>
+      <data key="d8">tests/regression</data>
+      <data key="d9">1744022989.4370184</data>
+      <data key="d10">0</data>
+    </node>
+    <node id="tests_data">
+      <data key="d1">directory</data>
+      <data key="d8">tests/data</data>
+      <data key="d9">1744022989.4370184</data>
+      <data key="d10">0</data>
+    </node>
+    <edge source="project_root" target="nvidia_gpu">
+      <data key="d11">contains</data>
+    </edge>
+    <edge source="project_root" target="wsl2">
+      <data key="d11">contains</data>
+    </edge>
+    <edge source="project_root" target="docker">
+      <data key="d11">contains</data>
+    </edge>
+    <edge source="project_root" target="nvidia_container">
+      <data key="d11">contains</data>
+    </edge>
+    <edge source="project_root" target="librechat">
+      <data key="d11">contains</data>
+    </edge>
+    <edge source="project_root" target="mongodb">
+      <data key="d11">contains</data>
+    </edge>
+    <edge source="project_root" target="meilisearch">
+      <data key="d11">contains</data>
+    </edge>
+    <edge source="project_root" target="ollama">
+      <data key="d11">contains</data>
+    </edge>
+    <edge source="project_root" target="mistral">
+      <data key="d11">contains</data>
+    </edge>
+    <edge source="project_root" target="deepseek">
+      <data key="d11">contains</data>
+    </edge>
+    <edge source="project_root" target="mcp_server">
+      <data key="d11">contains</data>
+    </edge>
+    <edge source="project_root" target="feature_ollama_llm_server_deployment">
+      <data key="d11">contains</data>
+    </edge>
+    <edge source="project_root" target="feature_load_llm_models">
+      <data key="d11">contains</data>
+    </edge>
+    <edge source="project_root" target="feature_python_dependencies">
+      <data key="d11">contains</data>
+    </edge>
+    <edge source="project_root" target="feature_mcp_server_implementation">
+      <data key="d11">contains</data>
+    </edge>
+    <edge source="project_root" target="feature_mcp_server_launch">
+      <data key="d11">contains</data>
+    </edge>
+    <edge source="project_root" target="feature_stack_integrity_test">
+      <data key="d11">contains</data>
+    </edge>
+    <edge source="project_root" target="feature_mcp_agent_test">
+      <data key="d11">contains</data>
+    </edge>
+    <edge source="project_root" target="feature_librechat_model_integration">
+      <data key="d11">contains</data>
+    </edge>
+    <edge source="project_root" target="feature_maintenance_documentation">
+      <data key="d11">contains</data>
+    </edge>
+    <edge source="project_root" target="feature_documentation_structure">
+      <data key="d11">contains</data>
+    </edge>
+    <edge source="project_root" target="feature_test_structure">
+      <data key="d11">contains</data>
+    </edge>
+    <edge source="nvidia_gpu" target="wsl2">
+      <data key="d11">accessible_from</data>
+    </edge>
+    <edge source="docker" target="wsl2">
+      <data key="d11">runs_on</data>
+    </edge>
+    <edge source="nvidia_container" target="docker">
+      <data key="d11">extends</data>
+    </edge>
+    <edge source="nvidia_container" target="nvidia_gpu">
+      <data key="d11">enables_access</data>
+    </edge>
+    <edge source="librechat" target="docker">
+      <data key="d11">containerized_in</data>
+    </edge>
+    <edge source="librechat" target="mongodb">
+      <data key="d11">uses</data>
+    </edge>
+    <edge source="librechat" target="meilisearch">
+      <data key="d11">uses</data>
+    </edge>
+    <edge source="librechat" target="mistral">
+      <data key="d11">integrates</data>
+    </edge>
+    <edge source="librechat" target="deepseek">
+      <data key="d11">integrates</data>
+    </edge>
+    <edge source="mongodb" target="docker">
+      <data key="d11">containerized_in</data>
+    </edge>
+    <edge source="meilisearch" target="docker">
+      <data key="d11">containerized_in</data>
+    </edge>
+    <edge source="ollama" target="docker">
+      <data key="d11">containerized_in</data>
+    </edge>
+    <edge source="ollama" target="nvidia_gpu">
+      <data key="d11">uses</data>
+    </edge>
+    <edge source="mistral" target="ollama">
+      <data key="d11">served_by</data>
+    </edge>
+    <edge source="deepseek" target="ollama">
+      <data key="d11">served_by</data>
+    </edge>
+    <edge source="mcp_server" target="deepseek">
+      <data key="d11">uses</data>
+    </edge>
+    <edge source="tests" target="tests_unit">
+      <data key="d12">contains</data>
+    </edge>
+    <edge source="tests" target="tests_integration">
+      <data key="d12">contains</data>
+    </edge>
+    <edge source="tests" target="tests_agent_tests">
+      <data key="d12">contains</data>
+    </edge>
+    <edge source="tests" target="tests_e2e">
+      <data key="d12">contains</data>
+    </edge>
+    <edge source="tests" target="tests_performance">
+      <data key="d12">contains</data>
+    </edge>
+    <edge source="tests" target="tests_regression">
+      <data key="d12">contains</data>
+    </edge>
+    <edge source="tests" target="tests_data">
+      <data key="d12">contains</data>
+    </edge>
+    <edge source="docs" target="docs_knowledge-graph">
+      <data key="d12">contains</data>
+    </edge>
+    <edge source="docs" target="docs_tutorials">
+      <data key="d12">contains</data>
+    </edge>
+    <edge source="docs" target="docs_troubleshooting">
+      <data key="d12">contains</data>
+    </edge>
+    <edge source="docs" target="docs_conventions">
+      <data key="d12">contains</data>
+    </edge>
+    <data key="d0">MCP-BASE-STACK</data>
+  </graph>
+</graphml>

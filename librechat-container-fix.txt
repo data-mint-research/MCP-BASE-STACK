@@ -1,0 +1,32 @@
+=== Checking LibreChat container status ===
+NAME                  IMAGE                        COMMAND                  SERVICE   CREATED       STATUS       PORTS
+librechat-api-1       librechat/librechat:latest   "docker-entrypoint.s…"   api       2 hours ago   Up 2 hours   0.0.0.0:3080->3080/tcp, [::]:3080->3080/tcp
+librechat-mongodb-1   mongo:latest                 "docker-entrypoint.s…"   mongodb   2 hours ago   Up 2 hours   0.0.0.0:27017->27017/tcp, [::]:27017->27017/tcp
+
+=== Starting LibreChat containers if needed ===
+
+=== Waiting for containers to start ===
+
+=== Verifying containers are now running ===
+NAME                  IMAGE          COMMAND                  SERVICE   CREATED          STATUS          PORTS
+librechat-mongodb-1   mongo:latest   "docker-entrypoint.s…"   mongodb   28 seconds ago   Up 27 seconds   0.0.0.0:27017->27017/tcp, [::]:27017->27017/tcp
+
+=== Checking actual container names ===
+librechat-mongodb-1
+
+=== Attempting to start API container specifically ===
+
+=== Checking for existing Ollama container ===
+b9c65a51f88f   ollama/ollama:latest   "/bin/ollama serve"      About an hour ago    Up About an hour    0.0.0.0:11434->11434/tcp, [::]:11434->11434/tcp   ollama
+
+=== Starting LibreChat API with modified configuration ===
+
+=== Verifying containers are now running ===
+librechat-api-1
+librechat-mongodb-1
+
+=== Checking LibreChat API accessibility ===
+HTTP/1.1 200 OK
+
+=== Summary of LibreChat container fix ===
+The LibreChat containers are now running successfully. The API is accessible at http://localhost:3080/

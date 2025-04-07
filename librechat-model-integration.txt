@@ -1,0 +1,49 @@
+=== VERIFYING LIBRECHAT MODEL INTEGRATION ===
+Mon Apr  7 12:29:38 CEST 2025
+
+=== Checking librechat.yaml in container ===
+-rw-r--r--    1 node     node           605 Apr  7 08:52 /app/librechat.yaml
+
+=== Examining model configuration ===
+version: 1.0.3
+
+# Social login configuration is managed through environment variables
+# ALLOW_SOCIAL_LOGIN=true in .env file
+
+endpoints:
+  custom:
+    - # Using Ollama as a custom endpoint
+      baseURL: "http://ollama:11434/api"
+      models:
+        default: ["mistral", "deepseek-coder"]
+        available:
+          - id: "mistral"
+            name: "Mistral"
+            description: "Mistral AI's 7B parameter model"
+          - id: "deepseek-coder"
+            name: "DeepSeek Coder"
+            description: "Code generation and completion model"
+      titleConvo: true
+      titleModel: "mistral"
+=== Checking container logs for config loading ===
+2025-04-07 10:26:45 [32minfo[39m: [32mCustom config file loaded:[39m
+[32m    "custom": [[39m
+2025-04-07 10:26:45 [32minfo[39m: [32mCustom config file loaded:[39m
+[32m    "custom": [[39m
+
+=== Verifying Mistral configuration ===
+MISTRAL_API_KEY=
+
+=== Verifying MCP Server connectivity for DeepSeek Coder ===
+{"status":"healthy","timestamp":1744021778.9795456}
+{"status":"connected","api_status":200,"models_available":[{"name":"deepseek-coder:6.7b","model":"deepseek-coder:6.7b","modified_at":"2025-04-07T09:04:46.594069843Z","size":3827834503,"digest":"ce298d984115b93bb1b191b47fee6b39e4e9fbd5f18e651c02f9fa74e0edcd13","details":{"parent_model":"","format":"gguf","family":"llama","families":["llama"],"parameter_size":"7B","quantization_level":"Q4_0"}},{"name":"mistral:latest","model":"mistral:latest","modified_at":"2025-04-07T09:03:01.63470993Z","size":4113301824,"digest":"f974a74358d62a017b37c6f424fcdf2744ca02926c4f952513ddf474b2fa5091","details":{"parent_model":"","format":"gguf","family":"llama","families":["llama"],"parameter_size":"7.2B","quantization_level":"Q4_0"}}]}
+=== Testing LibreChat to Ollama connection (for Mistral) ===
+LibreChat can successfully connect to Ollama
+
+=== Testing LibreChat to MCP Server connection (for DeepSeek via MCP) ===
+LibreChat can successfully connect to MCP Server
+
+=== Integration Architecture Summary ===
+1. Mistral: Direct integration via Ollama
+2. DeepSeek Coder: Accessed through MCP Server, which connects to Ollama
+

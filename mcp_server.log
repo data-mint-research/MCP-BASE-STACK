@@ -1,0 +1,35 @@
+2025-04-07 11:33:05,151 - mcp_server - INFO - MCP Server starting up
+INFO:     Started server process [76063]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:58640 - "GET /debug/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36322 - "GET /debug/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57132 - "GET /debug/health HTTP/1.1" 200 OK
+2025-04-07 12:18:47,753 - mcp_server - INFO - Processing prompt: What is 2+2?...
+2025-04-07 12:18:47,754 - mcp_server - INFO - Querying DeepSeek model with prompt length: 12
+2025-04-07 12:18:53,158 - mcp_server - INFO - Got response from DeepSeek, length: 5715
+INFO:     127.0.0.1:39628 - "POST /mcp/infer HTTP/1.1" 200 OK
+2025-04-07 12:18:53,169 - mcp_server - INFO - Processing prompt: Write a Python function to check if a string is a ...
+2025-04-07 12:18:53,169 - mcp_server - INFO - Querying DeepSeek model with prompt length: 60
+2025-04-07 12:18:54,907 - mcp_server - INFO - Got response from DeepSeek, length: 32067
+INFO:     127.0.0.1:39630 - "POST /mcp/infer HTTP/1.1" 200 OK
+2025-04-07 12:18:54,917 - mcp_server - INFO - Processing prompt: !shell echo Hello from MINTYcoder...
+2025-04-07 12:18:54,917 - mcp_server - INFO - Executing shell command: echo Hello from MINTYcoder
+2025-04-07 12:18:54,918 - mcp_server - INFO - Returning shell command output, length: 22
+INFO:     127.0.0.1:39638 - "POST /mcp/infer HTTP/1.1" 200 OK
+2025-04-07 12:18:54,927 - mcp_server - INFO - Processing prompt: !shell uname -a...
+2025-04-07 12:18:54,927 - mcp_server - INFO - Executing shell command: uname -a
+2025-04-07 12:18:54,929 - mcp_server - INFO - Returning shell command output, length: 116
+INFO:     127.0.0.1:39640 - "POST /mcp/infer HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33070 - "GET /debug/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33076 - "GET /debug/ollama-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39338 - "GET /debug/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39350 - "GET /debug/ollama-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52534 - "GET /debug/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39868 - "GET /debug/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39878 - "GET /debug/ollama-status HTTP/1.1" 200 OK
+INFO:     172.18.0.4:35572 - "GET /debug/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39484 - "GET /debug/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39486 - "GET /debug/ollama-status HTTP/1.1" 200 OK
+INFO:     172.18.0.4:47928 - "GET /debug/health HTTP/1.1" 200 OK

@@ -1,0 +1,1 @@
+b9c65a51f88f   ollama/ollama:latest         "/bin/ollama serve"      8 seconds ago   Up 7 seconds   0.0.0.0:11434->11434/tcp, [::]:11434->11434/tcp   ollama
