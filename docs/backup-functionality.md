@@ -57,12 +57,3 @@ The backup functionality is integrated with the quality tools:
 
 - `scripts/utils/quality/fix_code_quality.sh` creates a git branch-based backup before applying fixes
 - `scripts/utils/quality/check_code_quality.sh` excludes backup directories from analysis
-
-## Legacy Directory-Based Backup
-
-Previously, the system used a directory-based backup approach that created directories like `backup_20250408_024358/` with copies of files. This approach has been replaced with the git branch-based backup functionality.
-
-The `cleanup_backup_dirs.sh` script can be used to remove any existing directory-based backups:
-
-```bash
-./scripts/utils/cleanup/cleanup_backup_dirs.sh
