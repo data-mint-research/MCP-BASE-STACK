@@ -1,0 +1,15 @@
+{
+  "timestamp": "2025-04-08T11:19:10.392839",
+  "total_files": 249,
+  "naming_issues": {
+    "count": 0,
+    "compliance_percentage": 100.0,
+    "issues": []
+  },
+  "directory_issues": {
+    "count": 0,
+    "compliance_percentage": 100.0,
+    "issues": []
+  },
+  "overall_compliance_percentage": 100.0
+}

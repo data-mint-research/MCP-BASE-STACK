@@ -6,6 +6,7 @@ This module provides quality checks for project structure, including:
 - File naming conventions
 - Import organization
 - Dependency management
+- File structure standardization
 
 These checks ensure that the project follows consistent structural patterns
 and organizational principles.
@@ -14,7 +15,7 @@ and organizational principles.
 import os
 import re
 from pathlib import Path
-from typing import Dict, List, Optional, Set, Tuple
+from typing import Dict, List, Optional, Set, Tuple, Any
 
 from core.quality.components.base import (
     QualityCheck,
@@ -22,6 +23,7 @@ from core.quality.components.base import (
     QualityCheckSeverity,
     QualityComponent
 )
+from core.quality.components.fixes.file_structure_validator import FileStructureValidator
 
 
 class DirectoryStructureCheck(QualityCheck):
@@ -510,6 +512,95 @@ class CircularDependencyCheck(QualityCheck):
                 if file.endswith(".py"):
                     python_files.append(os.path.join(root, file))
         return python_files
+class FileStructureCheck(QualityCheck):
+    """Check for comprehensive file structure standardization."""
+    
+    @property
+    def id(self) -> str:
+        return "file_structure"
+    
+    @property
+    def name(self) -> str:
+        return "File Structure Standardization Checker"
+    
+    @property
+    def description(self) -> str:
+        return "Checks for comprehensive file structure standardization including naming conventions and directory placement."
+    
+    def run(self, file_paths: Optional[List[str]] = None, **kwargs) -> List[QualityCheckResult]:
+        """
+        Check for file structure standardization issues.
+        
+        Args:
+            file_paths: Optional list of file paths to check.
+                If None, check all files.
+            **kwargs: Additional arguments.
+            
+        Returns:
+            List of QualityCheckResult objects.
+        """
+        results = []
+        
+        try:
+            # Run the file structure validation
+            validation_report = FileStructureValidator.validate()
+            
+            # Process naming issues
+            for issue in validation_report['naming_issues']['issues']:
+                file_path = issue['file_path']
+                suggested_name = issue.get('suggested_name', 'unknown')
+                
+                results.append(QualityCheckResult(
+                    check_id=self.id,
+                    severity=self.severity,
+                    message=f"File naming convention issue: {file_path}. Suggested name: {suggested_name}",
+                    file_path=file_path,
+                    source=self.name,
+                    fix_available=True,
+                    fix_command=f"python standardize_file_structure.py --fix-naming"
+                ))
+            
+            # Process directory issues
+            for issue in validation_report['directory_issues']['issues']:
+                file_path = issue['file_path']
+                ideal_directory = issue.get('ideal_directory', 'unknown')
+                
+                results.append(QualityCheckResult(
+                    check_id=self.id,
+                    severity=self.severity,
+                    message=f"File in non-ideal directory: {file_path}. Should be in: {ideal_directory}",
+                    file_path=file_path,
+                    source=self.name,
+                    fix_available=True,
+                    fix_command=f"python standardize_file_structure.py --relocate"
+                ))
+            
+            # Add overall compliance metric
+            if results:
+                overall_compliance = validation_report['overall_compliance_percentage']
+                results.append(QualityCheckResult(
+                    check_id=self.id,
+                    severity=QualityCheckSeverity.INFO,
+                    message=f"Overall file structure compliance: {overall_compliance:.2f}%",
+                    file_path=".",
+                    source=self.name,
+                    details={
+                        "overall_compliance": overall_compliance,
+                        "naming_compliance": validation_report['naming_issues']['compliance_percentage'],
+                        "directory_compliance": validation_report['directory_issues']['compliance_percentage']
+                    }
+                ))
+        
+        except Exception as e:
+            results.append(QualityCheckResult(
+                check_id=self.id,
+                severity=QualityCheckSeverity.ERROR,
+                message=f"Error checking file structure: {str(e)}",
+                file_path=".",
+                source=self.name
+            ))
+        
+        return results
 
 
 class StructureComponent(QualityComponent):
@@ -529,5 +620,23 @@ class StructureComponent(QualityComponent):
             DirectoryStructureCheck(),
             FileNamingCheck(),
             ImportOrganizationCheck(),
-            CircularDependencyCheck()
+            CircularDependencyCheck(),
+            FileStructureCheck()
         ]
+    
+    def get_file_structure_metrics(self) -> Dict[str, float]:
+        """
+        Get file structure compliance metrics.
+        
+        Returns:
+            Dictionary with compliance metrics
+        """
+        try:
+            return FileStructureValidator.get_compliance_metrics()
+        except Exception as e:
+            print(f"Error getting file structure metrics: {e}")
+            return {
+                'naming_compliance': 0.0,
+                'directory_compliance': 0.0,
+                'overall_compliance': 0.0
+            }

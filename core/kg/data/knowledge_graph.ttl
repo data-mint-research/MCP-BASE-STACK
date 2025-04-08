@@ -1,762 +1,230 @@
 @prefix ns1: <http://mcp-base-stack.org/> .
-@prefix ns2: <http://mcp-stack.org/ontology#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-ns1:analyze_code_script a ns1:File ;
-    ns1:description "Script to analyze code structure and patterns" ;
-    ns1:language "python" ;
-    ns1:path "scripts/utils/analysis/analyze_code.py" .
+ns1:core a ns1:Directory ;
+    ns1:contains ns1:kg ;
+    ns1:path "core" ;
+    ns1:purpose "core_functionality" .
 
-ns1:auto_fix_capabilities a ns1:Feature ;
-    ns1:category "quality" ;
-    ns1:contains ns1:code_style_fixes,
-        ns1:documentation_fixes,
-        ns1:fix_preview,
-        ns1:fix_verification,
-        ns1:interactive_fix_mode,
-        ns1:static_analysis_fixes,
-        ns1:structure_fixes ;
-    ns1:description "Capabilities for automatically fixing quality issues" ;
-    ns1:documented_by ns1:auto_fix_documentation ;
-    ns1:implementation_date "2025-04-08T05:58:03.920672" ;
-    ns1:name "Auto-fix Capabilities" ;
-    ns1:priority "high" ;
-    ns1:status "implemented" ;
-    ns1:tested_by ns1:auto_fix_tests .
+ns1:core_quality ns1:critical_count 0 ;
+    ns1:error_count 0 ;
+    ns1:info_count 0 ;
+    ns1:issues_count 0 ;
+    ns1:last_modified 1.744101e+09,
+        1.744102e+09,
+        1.744104e+09,
+        1.744104e+09 ;
+    ns1:warning_count 0 .
 
-ns1:check_kg_nodes_script a ns1:File ;
-    ns1:description "Script to check knowledge graph nodes" ;
-    ns1:language "python" ;
-    ns1:path "scripts/utils/analysis/check_kg_nodes.py" .
+ns1:docker a ns1:Component ;
+    ns1:component_type "runtime" ;
+    ns1:name "Docker" ;
+    ns1:status "planned" .
 
 ns1:docs a ns1:Directory ;
     ns1:contains ns1:docs_conventions,
         ns1:docs_knowledge-graph,
         ns1:docs_troubleshooting,
-        ns1:docs_tutorials,
-        ns1:file_cleanup_guide,
-        ns1:git_hooks_kg_integration_plan,
-        ns1:logging_system_documentation ;
-    ns1:last_modified 1.74403e+09,
-        1.744038e+09,
-        1.744074e+09,
-        1.744075e+09,
-        1.744077e+09,
-        1.744099e+09,
-        1.744099e+09 ;
-    ns1:path "docs" .
+        ns1:docs_tutorials ;
+    ns1:documents ns1:documentation_structure ;
+    ns1:last_modified 1.7441e+09,
+        1.744101e+09,
+        1.744102e+09,
+        1.744104e+09,
+        1.744104e+09 ;
+    ns1:path "docs" ;
+    ns1:purpose "documentation" .
+
+ns1:docs_quality ns1:critical_count 0 ;
+    ns1:error_count 0 ;
+    ns1:info_count 0 ;
+    ns1:issues_count 0 ;
+    ns1:last_modified 1.744101e+09,
+        1.744102e+09,
+        1.744104e+09,
+        1.744104e+09 ;
+    ns1:warning_count 0 .
 
 ns1:documentation a ns1:Component ;
-    ns1:status "created" .
+    ns1:component_type "resource" ;
+    ns1:implements ns1:documentation_structure ;
+    ns1:name "Documentation" ;
+    ns1:status "created",
+        "planned" .
 
-ns1:llm_server a ns1:Component ;
-    ns1:status "deployed" .
+ns1:kg_visualization a ns1:Feature ;
+    ns1:description "Visualize the knowledge graph" ;
+    ns1:name "Knowledge Graph Visualization" ;
+    ns1:owner "System Admin" ;
+    ns1:status "planned" .
 
-ns1:project ns1:contains ns1:deepseek,
-        ns1:docker,
-        ns1:feature_git_file_update_hooks,
-        ns1:librechat,
-        ns1:mcp_server,
-        ns1:meilisearch,
-        ns1:mistral,
-        ns1:mongodb,
-        ns1:nvidia_container,
-        ns1:nvidia_gpu,
-        ns1:ollama,
-        ns1:wsl2 .
+ns1:librechat a ns1:Component ;
+    ns1:component_type "service" ;
+    ns1:connects_to ns1:llm_server,
+        ns1:mcp_server ;
+    ns1:depends_on ns1:llm_server ;
+    ns1:name "LibreChat" ;
+    ns1:status "cloned",
+        "configured",
+        "planned" .
 
-ns1:project_root ns1:contains ns1:code_quality,
-        ns1:feature_file_cleanup,
-        ns1:file_cleanup_component,
-        ns1:git_hooks,
-        ns1:logging_system .
+ns1:nvidia_container a ns1:Component ;
+    ns1:component_type "runtime" ;
+    ns1:name "NVIDIA Container Toolkit" ;
+    ns1:status "planned" .
 
-ns1:tests a ns1:Component ;
-    ns1:contains ns1:log_directory_manager_test,
-        ns1:logging_config_test,
-        ns1:logging_integration_test,
-        ns1:tests_agent_tests,
-        ns1:tests_data,
-        ns1:tests_e2e,
-        ns1:tests_integration,
-        ns1:tests_performance,
-        ns1:tests_regression,
-        ns1:tests_unit ;
-    ns1:last_modified 1.744024e+09,
-        1.744041e+09,
-        1.744074e+09,
-        1.744084e+09,
-        1.744099e+09,
-        1.744099e+09 ;
-    ns1:path "tests" ;
-    ns1:status "created" .
+ns1:nvidia_gpu a ns1:Component ;
+    ns1:component_type "hardware" ;
+    ns1:name "NVIDIA GPU" ;
+    ns1:status "planned" .
 
-ns1:traverse_project_script a ns1:File ;
-    ns1:description "Script to traverse the project structure" ;
-    ns1:language "python" ;
-    ns1:path "scripts/utils/analysis/traverse_project.py" .
-
-ns1:validate_manifest_script a ns1:File ;
-    ns1:description "Script to validate the project manifest" ;
-    ns1:language "python" ;
-    ns1:path "scripts/utils/validation/validate-manifest.py" .
-
-ns1:verify_stack_health_script a ns1:File ;
-    ns1:description "Script to verify the health of the stack" ;
-    ns1:language "shell" ;
-    ns1:path "scripts/utils/validation/verify_stack_health.sh" .
-
-<http://mcp-stack.org/resource#DependencyAuditScript> a ns2:MaintenanceScript ;
-    rdfs:label "Dependency Audit Script" ;
-    ns2:hasCapability <http://mcp-stack.org/resource#DependencyRecommendations>,
-        <http://mcp-stack.org/resource#InconsistentDependencyDetection>,
-        <http://mcp-stack.org/resource#OutdatedDependencyDetection>,
-        <http://mcp-stack.org/resource#VulnerabilityDetection> ;
-    ns2:implementationDate "2025-04-08"^^xsd:date ;
-    ns2:integratesWith <http://mcp-stack.org/resource#QualityEnforcer> ;
-    ns2:knowledgeGraphUpdateMethod "QualityEnforcer.update_knowledge_graph" ;
-    ns2:scriptPath "scripts/utils/maintenance/audit_dependencies.py" ;
-    ns2:supportsDependencyType <http://mcp-stack.org/resource#DockerDependency>,
-        <http://mcp-stack.org/resource#JavaDependency>,
-        <http://mcp-stack.org/resource#NodeDependency>,
-        <http://mcp-stack.org/resource#PythonDependency> ;
-    ns2:updatesKnowledgeGraph true ;
-    rdfs:comment "A script that audits project dependencies for outdated versions, vulnerabilities, and inconsistencies." .
-
-ns1:app_py a ns1:File ;
-    ns1:description "Main application entry point with dependency injection integration" ;
-    ns1:language "python" ;
-    ns1:last_modified 1.744043e+09 ;
-    ns1:name "app.py" ;
-    ns1:path "services/mcp-server/src/app.py" .
-
-ns1:auto_fix_documentation a ns1:Documentation ;
-    ns1:category "quality" ;
-    ns1:description "Documentation for auto-fix capabilities" ;
-    ns1:file_path "docs/quality/auto-fix-capabilities.md" ;
-    ns1:name "Auto-fix Capabilities Documentation" ;
-    ns1:status "implemented" .
-
-ns1:auto_fix_tests a ns1:TestSuite ;
-    ns1:category "quality" ;
-    ns1:description "Unit tests for auto-fix capabilities" ;
-    ns1:file_path "tests/unit/test_auto_fix.py" ;
-    ns1:name "Auto-fix Tests" ;
-    ns1:status "implemented" .
-
-ns1:automated_code_review a ns1:File ;
-    ns1:description "Tool for automated code review of changes in pull requests or between git references" ;
-    ns1:implements ns1:decision_advanced_code_quality_1744041639 ;
-    ns1:language "python" ;
-    ns1:last_modified 1.744042e+09 ;
-    ns1:name "automated_code_review.py" ;
-    ns1:path "scripts/maintenance/automated_code_review.py" .
-
-ns1:check_code_quality_script a ns1:File ;
-    ns1:description "Script to check code quality using various tools" ;
-    ns1:language "shell" ;
-    ns1:last_modified 1.744039e+09 ;
-    ns1:name "check_code_quality.sh" ;
-    ns1:path "scripts/utils/quality/check_code_quality.sh" .
-
-ns1:cleanup_report a ns1:File ;
-    ns1:language "json" ;
-    ns1:path "data/reports/cleanup-report.json" .
-
-ns1:cleanup_script a ns1:File ;
-    ns1:language "python" ;
-    ns1:path "scripts/utils/cleanup/cleanup_files.py" .
-
-ns1:code_quality a ns1:Component ;
-    ns1:contains ns1:automated_code_review,
-        ns1:check_code_quality_script,
-        ns1:code_review_config,
-        ns1:coding_conventions,
-        ns1:fix_code_quality_script,
-        ns1:flake8_config,
-        ns1:generate_quality_report,
-        ns1:github_actions_workflow,
-        ns1:graph_guidelines,
-        ns1:install_pre_commit_hooks_script,
-        ns1:mypy_config,
-        ns1:pre_commit_config,
-        ns1:pylint_config,
-        ns1:pyproject_toml,
-        ns1:review_checklist,
-        ns1:shellcheck_config,
-        ns1:style_guide ;
-    ns1:description "Code quality standards and tools" ;
-    ns1:has_decision ns1:decision_advanced_code_quality_1744041639,
-        ns1:decision_ci_code_quality_1744039069,
-        ns1:decision_code_quality_tooling_1744038759,
-        ns1:decision_conventions_creation_1744037680,
-        ns1:decision_quality_standards_update_1744058413,
-        ns1:decision_quality_standards_update_1744059399 ;
-    ns1:name "Code Quality" ;
+ns1:quality_metrics_dashboard a ns1:Component ;
+    ns1:component_type "dashboard" ;
+    ns1:description "Centralized dashboard for quality metrics, trend analysis, and improvement tracking" ;
+    ns1:name "Quality Metrics Dashboard" ;
     ns1:status "implemented" ;
-    ns1:uses ns1:logging_system .
+    ns1:visualizes ns1:quality_metrics .
 
-ns1:code_review_config a ns1:File ;
-    ns1:description "Configuration file for the automated code review tool" ;
-    ns1:implements ns1:decision_advanced_code_quality_1744041639 ;
-    ns1:language "yaml" ;
-    ns1:last_modified 1.744042e+09 ;
-    ns1:name "code_review.yaml" ;
-    ns1:path "config/code_review.yaml" .
+ns1:tests a ns1:Component,
+        ns1:Directory ;
+    ns1:component_type "resource" ;
+    ns1:contains ns1:tests_integration,
+        ns1:tests_performance,
+        ns1:tests_unit ;
+    ns1:implements ns1:test_structure ;
+    ns1:last_modified 1.744099e+09,
+        1.744104e+09,
+        1.744104e+09 ;
+    ns1:name "Tests" ;
+    ns1:path "tests" ;
+    ns1:purpose "testing" ;
+    ns1:status "created",
+        "planned" ;
+    ns1:tests ns1:test_structure .
 
-ns1:code_style_fixes a ns1:Component ;
-    ns1:category "quality" ;
-    ns1:description "Fixes for code style issues" ;
-    ns1:file_path "core/quality/components/fixes/code_style.py" ;
-    ns1:name "Code Style Fixes" ;
-    ns1:status "implemented" .
+ns1:tests_quality ns1:critical_count 0 ;
+    ns1:error_count 0 ;
+    ns1:info_count 0 ;
+    ns1:issues_count 0 ;
+    ns1:last_modified 1.744101e+09,
+        1.744102e+09,
+        1.744104e+09,
+        1.744104e+09 ;
+    ns1:warning_count 0 .
 
-ns1:decision_code_quality_tooling_1744038759 a ns1:Decision ;
-    ns1:description "Implementation of code quality configuration files and scripts" ;
-    ns1:name "Implementation of Code Quality Tooling" ;
-    ns1:rationale "To enforce code quality standards and automate quality checks for the MCP-BASE-STACK project" ;
-    ns1:timestamp "2025-04-07T17:12:39.662154" .
-
-ns1:decision_conventions_creation_1744037680 a ns1:Decision ;
-    ns1:description "Creation of style guide, coding conventions, review checklist, and graph guidelines" ;
-    ns1:name "Creation of Convention Documents" ;
-    ns1:rationale "To establish gold standard code quality practices for the MCP-BASE-STACK project" ;
-    ns1:timestamp "2025-04-07T16:54:40.671345" .
-
-ns1:decision_dependency_injection_1744042721 a ns1:Decision ;
-    ns1:description "Implementation of a dependency injection framework for the MCP Server" ;
-    ns1:name "Implementation of Dependency Injection" ;
-    ns1:rationale "To improve modularity, testability, and maintainability of the MCP Server" ;
-    ns1:timestamp "2025-04-07T18:18:41.230787" .
-
-ns1:decision_logging_system_1744061649 a ns1:Decision ;
-    ns1:description "Implementation of a standardized logging system with consistent directory structure and naming conventions" ;
-    ns1:name "Implementation of Standardized Logging System" ;
-    ns1:rationale "To ensure consistent logging practices across the MCP-BASE-STACK project and improve debugging and monitoring capabilities" ;
-    ns1:timestamp "2025-04-07T23:34:09.863537" .
-
-ns1:decision_quality_standards_update_1744058413 a ns1:Decision ;
-    ns1:description "Changed quality thresholds to enforce stricter standards across the codebase" ;
-    ns1:name "Update of Code Quality Standards" ;
-    ns1:rationale "To enforce the highest possible quality standards across the codebase, ensuring near-perfect type hint coverage, documentation coverage, and minimal complexity in all code functions." ;
-    ns1:timestamp "2025-04-07T22:40:13.707083" .
-
-ns1:decision_quality_standards_update_1744059399 a ns1:Decision ;
-    ns1:description "Changed quality thresholds to enforce stricter standards across the codebase" ;
-    ns1:name "Update of Code Quality Standards" ;
-    ns1:rationale "To enforce the highest possible quality standards across the codebase, ensuring near-perfect type hint coverage, documentation coverage, and minimal complexity in all code functions." ;
-    ns1:timestamp "2025-04-07T22:56:39.767946" .
-
-ns1:dependency_injection a ns1:Component ;
-    ns1:contains ns1:app_py,
-        ns1:di_containers,
-        ns1:di_init,
-        ns1:di_providers,
-        ns1:di_readme,
-        ns1:example_service ;
-    ns1:description "Dependency injection framework for modular and testable code" ;
-    ns1:has_decision ns1:decision_dependency_injection_1744042721 ;
-    ns1:name "Dependency Injection" ;
-    ns1:status "implemented" .
-
-ns1:di_containers a ns1:File ;
-    ns1:description "Dependency injection container that wires up all application dependencies" ;
-    ns1:language "python" ;
-    ns1:last_modified 1.744043e+09 ;
-    ns1:name "containers.py" ;
-    ns1:path "services/mcp-server/src/di/containers.py" .
-
-ns1:di_init a ns1:File ;
-    ns1:description "Dependency injection module initialization" ;
-    ns1:language "python" ;
-    ns1:last_modified 1.744043e+09 ;
-    ns1:name "__init__.py" ;
-    ns1:path "services/mcp-server/src/di/__init__.py" .
-
-ns1:di_providers a ns1:File ;
-    ns1:description "Service providers for the dependency injection container" ;
-    ns1:language "python" ;
-    ns1:last_modified 1.744043e+09 ;
-    ns1:name "providers.py" ;
-    ns1:path "services/mcp-server/src/di/providers.py" .
-
-ns1:di_readme a ns1:File ;
-    ns1:description "Documentation for the dependency injection framework" ;
-    ns1:language "markdown" ;
-    ns1:last_modified 1.744043e+09 ;
-    ns1:name "README.md" ;
-    ns1:path "services/mcp-server/src/di/README.md" .
+ns1:deepseek a ns1:Component ;
+    ns1:component_type "model" ;
+    ns1:name "DeepSeek Coder" ;
+    ns1:status "planned" .
 
 ns1:docs_conventions a ns1:Directory ;
-    ns1:contains ns1:coding_conventions,
-        ns1:graph_guidelines,
-        ns1:review_checklist,
-        ns1:style_guide ;
     ns1:file_count 4 ;
     ns1:last_modified 1.744023e+09,
-        1.744023e+09 ;
+        1.744104e+09,
+        1.744104e+09 ;
     ns1:path "docs/conventions" .
 
 ns1:docs_knowledge-graph a ns1:Directory ;
-    ns1:file_count 4 ;
+    ns1:file_count 4,
+        5 ;
     ns1:last_modified 1.744023e+09,
-        1.744023e+09 ;
+        1.744101e+09,
+        1.744104e+09,
+        1.744104e+09 ;
     ns1:path "docs/knowledge-graph" .
 
 ns1:docs_troubleshooting a ns1:Directory ;
-    ns1:file_count 3,
-        8 ;
-    ns1:last_modified 1.74403e+09,
-        1.744056e+09,
-        1.744097e+09,
-        1.744097e+09 ;
+    ns1:file_count 3 ;
+    ns1:last_modified 1.744097e+09,
+        1.744104e+09,
+        1.744104e+09 ;
     ns1:path "docs/troubleshooting" .
 
 ns1:docs_tutorials a ns1:Directory ;
     ns1:file_count 4,
-        7,
-        9 ;
-    ns1:last_modified 1.74403e+09,
-        1.744039e+09,
-        1.744056e+09,
-        1.744097e+09,
-        1.744097e+09 ;
+        6 ;
+    ns1:last_modified 1.744097e+09,
+        1.744104e+09,
+        1.744104e+09 ;
     ns1:path "docs/tutorials" .
 
-ns1:documentation_fixes a ns1:Component ;
-    ns1:category "quality" ;
-    ns1:description "Fixes for documentation issues" ;
-    ns1:file_path "core/quality/components/fixes/documentation.py" ;
-    ns1:name "Documentation Fixes" ;
-    ns1:status "implemented" .
+ns1:file_structure_metrics a ns1:Metrics ;
+    ns1:component_type "file_structure" ;
+    ns1:description "File structure standardization metrics" ;
+    ns1:directory_compliance 1e+02 ;
+    ns1:last_modified 1.744104e+09 ;
+    ns1:name "File Structure Metrics" ;
+    ns1:naming_compliance 1e+02 ;
+    ns1:overall_compliance 1e+02 ;
+    ns1:status "created" ;
+    ns1:total_files 249 .
 
-ns1:example_service a ns1:File ;
-    ns1:description "Example service that demonstrates dependency injection" ;
-    ns1:language "python" ;
-    ns1:last_modified 1.744043e+09 ;
-    ns1:name "example_service.py" ;
-    ns1:path "services/mcp-server/src/services/example_service.py" .
+ns1:kg a ns1:Directory ;
+    ns1:path "core/kg" ;
+    ns1:purpose "knowledge_graph" .
 
-ns1:file_cleanup_component a ns1:Component ;
-    ns1:contains ns1:cleanup_report,
-        ns1:cleanup_script ;
-    ns1:implements ns1:feature_file_cleanup ;
-    ns1:name "File Cleanup Tool" ;
-    ns1:status "implemented" .
+ns1:mcp_agent_test a ns1:Feature ;
+    ns1:description "Test the MCP server's functionality" ;
+    ns1:name "MCP Agent Test" ;
+    ns1:owner "Developer" ;
+    ns1:status "planned" .
 
-ns1:file_cleanup_guide a ns1:File ;
-    ns1:documents ns1:feature_file_cleanup ;
-    ns1:language "markdown" ;
-    ns1:path "docs/file-cleanup-guide.md" .
+ns1:mcp_server a ns1:Component ;
+    ns1:component_type "service" ;
+    ns1:depends_on ns1:llm_server ;
+    ns1:implements ns1:mcp_agent_test ;
+    ns1:name "MCP Server" ;
+    ns1:status "implemented",
+        "planned" .
 
-ns1:fix_code_quality_script a ns1:File ;
-    ns1:description "Script to automatically fix code quality issues" ;
-    ns1:language "shell" ;
-    ns1:last_modified 1.744039e+09 ;
-    ns1:name "fix_code_quality.sh" ;
-    ns1:path "scripts/utils/quality/fix_code_quality.sh" .
+ns1:mistral a ns1:Component ;
+    ns1:component_type "model" ;
+    ns1:name "Mistral" ;
+    ns1:status "planned" .
 
-ns1:flake8_config a ns1:File ;
-    ns1:description "Configuration for flake8 Python linter" ;
-    ns1:language "ini" ;
-    ns1:last_modified 1.744039e+09 ;
-    ns1:name ".flake8" ;
-    ns1:path "config/linting/.flake8" .
-
-ns1:generate_quality_report a ns1:File ;
-    ns1:description "Tool for analyzing code quality metrics and generating comprehensive reports" ;
-    ns1:implements ns1:decision_advanced_code_quality_1744041639 ;
-    ns1:language "python" ;
-    ns1:last_modified 1.744042e+09 ;
-    ns1:name "generate_quality_report.py" ;
-    ns1:path "scripts/maintenance/generate_quality_report.py" .
-
-ns1:git_hooks a ns1:Component ;
-    ns1:contains ns1:hooks_documentation,
-        ns1:install_hooks_script,
-        ns1:pre_commit_hook ;
-    ns1:implements ns1:feature_git_file_update_hooks ;
-    ns1:name "Git Hooks" ;
-    ns1:status "implemented" .
-
-ns1:git_hooks_kg_integration_plan a ns1:File ;
-    ns1:documents ns1:feature_git_file_update_hooks ;
-    ns1:language "markdown" ;
-    ns1:path "docs/git-hooks-kg-integration-plan.md" .
-
-ns1:github_actions_workflow a ns1:File ;
-    ns1:description "GitHub Actions workflow for automated code quality checks" ;
-    ns1:implements ns1:decision_ci_code_quality_1744039069 ;
-    ns1:language "yaml" ;
-    ns1:last_modified 1.744039e+09 ;
-    ns1:name "code-quality.yml" ;
-    ns1:path ".github/workflows/code-quality.yml" .
-
-ns1:hooks_documentation a ns1:File ;
-    ns1:language "markdown" ;
-    ns1:path ".git-hooks/README.md" .
-
-ns1:install_hooks_script a ns1:File ;
-    ns1:language "bash" ;
-    ns1:path "scripts/utils/installation/install-file-update-hooks.sh" .
-
-ns1:install_pre_commit_hooks_script a ns1:File ;
-    ns1:description "Script to install pre-commit hooks for code quality checks" ;
-    ns1:language "shell" ;
-    ns1:last_modified 1.744039e+09 ;
-    ns1:name "install_pre_commit_hooks.sh" ;
-    ns1:path "scripts/utils/installation/install_pre_commit_hooks.sh" .
-
-ns1:interactive_fix_mode a ns1:Component ;
-    ns1:category "quality" ;
-    ns1:description "Interactive mode for fixing quality issues" ;
-    ns1:file_path "core/quality/components/interactive.py" ;
-    ns1:name "Interactive Fix Mode" ;
-    ns1:status "implemented" ;
-    ns1:uses ns1:fix_preview,
-        ns1:fix_verification .
-
-ns1:librechat a ns1:software ;
-    rdfs:label "LibreChat UI and API" ;
-    ns1:containerized_in ns1:docker ;
-    ns1:integrates ns1:deepseek,
-        ns1:mistral ;
-    ns1:status "cloned",
-        "configured" ;
-    ns1:uses ns1:meilisearch,
-        ns1:mongodb .
-
-ns1:log_directory_manager a ns1:Module ;
-    ns1:description "Manages the creation and organization of log directories and files" ;
-    ns1:language "python" ;
-    ns1:last_modified 1.744062e+09 ;
-    ns1:name "LogDirectoryManager" ;
-    ns1:path "core/logging/directory_manager.py" .
-
-ns1:log_directory_manager_test a ns1:File ;
-    ns1:description "Unit tests for the LogDirectoryManager module" ;
-    ns1:language "python" ;
-    ns1:last_modified 1.744062e+09 ;
-    ns1:name "LogDirectoryManager Unit Test" ;
-    ns1:path "tests/unit/test_log_directory_manager.py" ;
-    ns1:tests ns1:logging_system .
-
-ns1:logging_config a ns1:Module ;
-    ns1:description "Configures loggers with standardized settings and handlers" ;
-    ns1:language "python" ;
-    ns1:last_modified 1.744062e+09 ;
-    ns1:name "LoggingConfig" ;
-    ns1:path "core/logging/config.py" .
-
-ns1:logging_config_test a ns1:File ;
-    ns1:description "Unit tests for the LoggingConfig module" ;
-    ns1:language "python" ;
-    ns1:last_modified 1.744062e+09 ;
-    ns1:name "LoggingConfig Unit Test" ;
-    ns1:path "tests/unit/test_logging_config.py" ;
-    ns1:tests ns1:logging_system .
-
-ns1:logging_directory_structure a ns1:Metadata ;
-    ns1:base_directory "docs/logs" ;
-    ns1:description "Standardized directory structure for logs" ;
-    ns1:last_modified 1.744062e+09 ;
-    ns1:module_subdirectories "docs/logs/<module_name>" ;
-    ns1:name "Logging Directory Structure" .
-
-ns1:logging_integration_test a ns1:File ;
-    ns1:description "Integration tests for the standardized logging system" ;
-    ns1:language "python" ;
-    ns1:last_modified 1.744062e+09 ;
-    ns1:name "Logging Integration Test" ;
-    ns1:path "tests/integration/test_logging_integration.py" ;
-    ns1:tests ns1:logging_system .
-
-ns1:logging_naming_conventions a ns1:Metadata ;
-    ns1:description "Standardized naming conventions for log files" ;
-    ns1:file_naming_pattern "YYYY-MM-DD_module-name-log" ;
-    ns1:last_modified 1.744062e+09 ;
-    ns1:name "Logging Naming Conventions" .
-
-ns1:mcp_server a ns1:software ;
-    rdfs:label "MCP FastAPI Server" ;
-    ns1:contains ns1:dependency_injection ;
-    ns1:status "implemented" ;
-    ns1:uses ns1:deepseek,
-        ns1:logging_system .
-
-ns1:mypy_config a ns1:File ;
-    ns1:description "Configuration for mypy Python type checker" ;
-    ns1:language "ini" ;
-    ns1:last_modified 1.744039e+09 ;
-    ns1:name "mypy.ini" ;
-    ns1:path "config/linting/mypy.ini" .
-
-ns1:nvidia_container a ns1:software ;
-    rdfs:label "NVIDIA Container Toolkit" ;
-    ns1:enables_access ns1:nvidia_gpu ;
-    ns1:extends ns1:docker .
-
-ns1:pre_commit_config a ns1:File ;
-    ns1:description "Configuration for pre-commit hooks" ;
-    ns1:language "yaml" ;
-    ns1:last_modified 1.744039e+09 ;
-    ns1:name ".pre-commit-config.yaml" ;
-    ns1:path ".pre-commit-config.yaml" .
-
-ns1:pre_commit_hook a ns1:File ;
-    ns1:language "bash" ;
-    ns1:path ".git-hooks/pre-commit" .
-
-ns1:pylint_config a ns1:File ;
-    ns1:description "Configuration for pylint Python linter" ;
-    ns1:language "ini" ;
-    ns1:last_modified 1.744039e+09 ;
-    ns1:name ".pylintrc" ;
-    ns1:path ".pylintrc" .
-
-ns1:pyproject_toml a ns1:File ;
-    ns1:description "Configuration for Black and isort Python formatters" ;
-    ns1:language "toml" ;
-    ns1:last_modified 1.744039e+09 ;
-    ns1:name "pyproject.toml" ;
-    ns1:path "config/pyproject.toml" .
-
-ns1:shellcheck_config a ns1:File ;
-    ns1:description "Configuration for shellcheck shell script linter" ;
-    ns1:language "ini" ;
-    ns1:last_modified 1.744039e+09 ;
-    ns1:name ".shellcheckrc" ;
-    ns1:path ".shellcheckrc" .
-
-ns1:static_analysis_fixes a ns1:Component ;
-    ns1:category "quality" ;
-    ns1:description "Fixes for static analysis issues" ;
-    ns1:file_path "core/quality/components/fixes/static_analysis.py" ;
-    ns1:name "Static Analysis Fixes" ;
-    ns1:status "implemented" .
-
-ns1:structure_fixes a ns1:Component ;
-    ns1:category "quality" ;
-    ns1:description "Fixes for structure-related issues" ;
-    ns1:file_path "core/quality/components/fixes/structure.py" ;
-    ns1:name "Structure Fixes" ;
-    ns1:status "implemented" .
-
-ns1:tests_agent_tests a ns1:Directory ;
-    ns1:file_count 0 ;
-    ns1:last_modified 1.744023e+09 ;
-    ns1:path "tests/agent_tests" .
-
-ns1:tests_data a ns1:Directory ;
-    ns1:file_count 0,
-        1 ;
-    ns1:last_modified 1.74403e+09,
-        1.744056e+09 ;
-    ns1:path "tests/data" .
-
-ns1:tests_e2e a ns1:Directory ;
-    ns1:file_count 0 ;
-    ns1:last_modified 1.744023e+09 ;
-    ns1:path "tests/e2e" .
+ns1:quality_metrics ns1:TRACKS ns1:file_structure_metrics ;
+    ns1:last_modified 1.744101e+09,
+        1.744102e+09,
+        1.744104e+09,
+        1.744104e+09 ;
+    ns1:status "updated" .
 
 ns1:tests_integration a ns1:Directory ;
-    ns1:file_count 0,
-        2,
-        3 ;
-    ns1:last_modified 1.744023e+09,
-        1.744074e+09,
-        1.744083e+09,
-        1.744099e+09,
+    ns1:file_count 3 ;
+    ns1:last_modified 1.744099e+09,
         1.744099e+09 ;
     ns1:path "tests/integration" .
 
 ns1:tests_performance a ns1:Directory ;
-    ns1:file_count 0,
-        1 ;
-    ns1:last_modified 1.744023e+09,
-        1.744084e+09,
-        1.744097e+09,
+    ns1:file_count 1 ;
+    ns1:last_modified 1.744097e+09,
         1.744097e+09 ;
     ns1:path "tests/performance" .
 
-ns1:tests_regression a ns1:Directory ;
-    ns1:file_count 0 ;
-    ns1:last_modified 1.744023e+09 ;
-    ns1:path "tests/regression" .
-
 ns1:tests_unit a ns1:Directory ;
-    ns1:file_count 0,
-        13,
-        20 ;
-    ns1:last_modified 1.744023e+09,
-        1.744074e+09,
-        1.744084e+09,
-        1.744099e+09,
-        1.744099e+09 ;
+    ns1:file_count 20,
+        21 ;
+    ns1:last_modified 1.7441e+09,
+        1.744104e+09,
+        1.744104e+09 ;
     ns1:path "tests/unit" .
 
-<http://mcp-stack.org/resource#DependencyAuditComponent> a ns2:QualityComponent ;
-    rdfs:label "Dependency Audit Component" ;
-    rdfs:comment "A quality component that audits dependencies for issues and updates the knowledge graph." .
+ns1:documentation_structure a ns1:Feature ;
+    ns1:description "Organized documentation structure" ;
+    ns1:name "Documentation Structure" ;
+    ns1:owner "Technical Writer" ;
+    ns1:status "planned" .
 
-<http://mcp-stack.org/resource#DependencyRecommendations> a ns2:Capability ;
-    rdfs:label "Dependency Recommendations" ;
-    rdfs:comment "Provides actionable recommendations for fixing dependency issues." .
+ns1:test_structure a ns1:Feature ;
+    ns1:description "Comprehensive test structure" ;
+    ns1:name "Test Structure" ;
+    ns1:owner "QA Engineer" ;
+    ns1:status "planned" .
 
-<http://mcp-stack.org/resource#DockerDependency> a ns2:DependencyType ;
-    rdfs:label "Docker Dependency" ;
-    ns2:filePattern "Dockerfile",
-        "docker-compose.yaml",
-        "docker-compose.yml" .
-
-<http://mcp-stack.org/resource#InconsistentDependencyDetection> a ns2:Capability ;
-    rdfs:label "Inconsistent Dependency Detection" ;
-    rdfs:comment "Detects inconsistent dependency versions across different parts of the project." .
-
-<http://mcp-stack.org/resource#JavaDependency> a ns2:DependencyType ;
-    rdfs:label "Java Dependency" ;
-    ns2:filePattern "build.gradle",
-        "build.gradle.kts",
-        "pom.xml" .
-
-<http://mcp-stack.org/resource#NodeDependency> a ns2:DependencyType ;
-    rdfs:label "Node.js Dependency" ;
-    ns2:filePattern "package-lock.json",
-        "package.json",
-        "yarn.lock" .
-
-<http://mcp-stack.org/resource#OutdatedDependencyDetection> a ns2:Capability ;
-    rdfs:label "Outdated Dependency Detection" ;
-    rdfs:comment "Detects outdated dependencies by comparing current versions with latest available versions." .
-
-<http://mcp-stack.org/resource#PythonDependency> a ns2:DependencyType ;
-    rdfs:label "Python Dependency" ;
-    ns2:filePattern "Pipfile",
-        "pyproject.toml",
-        "requirements.txt",
-        "setup.py" .
-
-<http://mcp-stack.org/resource#QualityEnforcer> ns2:hasComponent <http://mcp-stack.org/resource#DependencyAuditComponent> .
-
-<http://mcp-stack.org/resource#VulnerabilityDetection> a ns2:Capability ;
-    rdfs:label "Vulnerability Detection" ;
-    rdfs:comment "Identifies known security vulnerabilities in project dependencies." .
-
-ns1:coding_conventions a ns1:File ;
-    ns1:description "Specific coding practices and patterns for the MCP-BASE-STACK project" ;
-    ns1:language "markdown" ;
-    ns1:last_modified 1.744038e+09 ;
-    ns1:name "Coding Conventions" ;
-    ns1:path "docs/conventions/coding-conventions.md" .
-
-ns1:decision_ci_code_quality_1744039069 a ns1:Decision ;
-    ns1:description "Implementation of GitHub Actions workflow for continuous integration of code quality checks" ;
-    ns1:name "Implementation of CI for Code Quality" ;
-    ns1:rationale "To automate code quality checks on push and pull requests, ensuring consistent code quality standards across the project" ;
-    ns1:timestamp "2025-04-07T17:17:49.153585" .
-
-ns1:fix_preview a ns1:Component ;
-    ns1:category "quality" ;
-    ns1:description "Preview functionality for fixes" ;
-    ns1:file_path "core/quality/components/preview.py" ;
-    ns1:name "Fix Preview" ;
-    ns1:status "implemented" .
-
-ns1:fix_verification a ns1:Component ;
-    ns1:category "quality" ;
-    ns1:description "Verification functionality for fixes" ;
-    ns1:file_path "core/quality/components/verification.py" ;
-    ns1:name "Fix Verification" ;
-    ns1:status "implemented" .
-
-ns1:graph_guidelines a ns1:File ;
-    ns1:description "Standards and best practices for working with the knowledge graph" ;
-    ns1:language "markdown" ;
-    ns1:last_modified 1.744038e+09 ;
-    ns1:name "Graph Guidelines" ;
-    ns1:path "docs/conventions/graph-guidelines.md" .
-
-ns1:logging_system_documentation a ns1:File ;
-    ns1:description "Documentation for the standardized logging system" ;
-    ns1:language "markdown" ;
-    ns1:last_modified 1.744062e+09 ;
-    ns1:name "Logging System Documentation" ;
-    ns1:path "docs/logging-system.md" .
-
-ns1:meilisearch a ns1:software ;
-    rdfs:label "Meilisearch Engine" ;
-    ns1:containerized_in ns1:docker .
-
-ns1:mistral a ns1:model ;
-    rdfs:label "Mistral 7B LLM" ;
-    ns1:served_by ns1:ollama .
-
-ns1:mongodb a ns1:software ;
-    rdfs:label "MongoDB Database" ;
-    ns1:containerized_in ns1:docker .
-
-ns1:review_checklist a ns1:File ;
-    ns1:description "Comprehensive checklist for code reviews in the MCP-BASE-STACK project" ;
-    ns1:language "markdown" ;
-    ns1:last_modified 1.744038e+09 ;
-    ns1:name "Review Checklist" ;
-    ns1:path "docs/conventions/review-checklist.md" .
-
-ns1:style_guide a ns1:File ;
-    ns1:description "Coding standards and conventions for the MCP-BASE-STACK project" ;
-    ns1:language "markdown" ;
-    ns1:last_modified 1.744038e+09 ;
-    ns1:name "Style Guide" ;
-    ns1:path "docs/conventions/style-guide.md" .
-
-ns1:deepseek a ns1:model ;
-    rdfs:label "DeepSeek Coder LLM" ;
-    ns1:served_by ns1:ollama .
-
-ns1:feature_file_cleanup a ns1:Feature ;
-    ns1:description "Identifies and safely removes orphaned or outdated files in the project" ;
-    ns1:name "File Cleanup Tool" ;
-    ns1:owner "Maintenance Team" ;
-    ns1:status "implemented" .
-
-ns1:feature_git_file_update_hooks ns1:created_at "2025-04-07T15:17:54.664243" ;
-    ns1:description "Automatically updates README.md, .gitignore, LICENSE, and Knowledge Graph before every commit" ;
-    ns1:name "Git File Update Hooks" ;
-    ns1:owner "DevOps Team" ;
-    ns1:status "planned" ;
-    ns1:type ns1:Feature .
-
-ns1:nvidia_gpu a ns1:hardware ;
-    rdfs:label "NVIDIA RTX 4090 GPU" ;
-    ns1:accessible_from ns1:wsl2 .
-
-ns1:ollama a ns1:software ;
-    rdfs:label "Ollama LLM Server" ;
-    ns1:containerized_in ns1:docker ;
-    ns1:uses ns1:nvidia_gpu .
-
-ns1:wsl2 a ns1:platform ;
-    rdfs:label "Windows Subsystem for Linux 2" .
-
-ns1:decision_advanced_code_quality_1744041639 a ns1:Decision ;
-    ns1:description "Implementation of advanced code quality monitoring and automated code review tools" ;
-    ns1:name "Implementation of Advanced Code Quality Tools" ;
-    ns1:rationale "To enhance code quality monitoring, provide detailed metrics, and automate code reviews for the MCP-BASE-STACK project" ;
-    ns1:timestamp "2025-04-07T18:00:39.555896" .
-
-ns1:docker a ns1:software ;
-    rdfs:label "Docker Engine" ;
-    ns1:runs_on ns1:wsl2 .
-
-ns1:logging_system a ns1:Component ;
-    ns1:contains ns1:log_directory_manager,
-        ns1:logging_config ;
-    ns1:description "Standardized logging system for the MCP-BASE-STACK project" ;
-    ns1:documented_by ns1:logging_system_documentation ;
-    ns1:has_decision ns1:decision_logging_system_1744061649 ;
-    ns1:has_metadata ns1:logging_directory_structure,
-        ns1:logging_naming_conventions ;
-    ns1:name "Logging System" ;
-    ns1:status "implemented" .
+ns1:llm_server a ns1:Component ;
+    ns1:component_type "service" ;
+    ns1:depends_on ns1:deepseek,
+        ns1:mistral ;
+    ns1:name "LLM Server" ;
+    ns1:status "planned" .
 

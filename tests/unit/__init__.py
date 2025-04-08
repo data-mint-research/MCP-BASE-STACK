@@ -1,5 +1,5 @@
 """
-Unit Tests Package.
+MCP Server Source Package.
 
-This package contains unit tests for the MCP-BASE-STACK components.
+This package contains the source code for the MCP Server implementation.
 """

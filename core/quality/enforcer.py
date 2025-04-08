@@ -547,14 +547,17 @@ class QualityEnforcer:
         """
         Update the knowledge graph with quality check results.
         
-        This method provides backward compatibility with the existing hooks.
+        This method exports quality check results to a JSON file that can be
+        processed by the knowledge graph update script.
         
         Args:
             results: List of QualityCheckResult objects.
         """
-        # This is a placeholder for the actual implementation
-        # The actual implementation would update the knowledge graph
-        # with the quality check results
+        import json
+        import os
+        import datetime
+        from pathlib import Path
+        
         logger.info(f"Updating knowledge graph with {len(results)} quality check results")
         
         # Group results by severity
@@ -574,6 +577,57 @@ class QualityEnforcer:
         logger.info(f"  WARNING: {len(results_by_severity[QualityCheckSeverity.WARNING])}")
         logger.info(f"  ERROR: {len(results_by_severity[QualityCheckSeverity.ERROR])}")
         logger.info(f"  CRITICAL: {len(results_by_severity[QualityCheckSeverity.CRITICAL])}")
+        
+        # Prepare data for export
+        serializable_results = []
+        for result in results:
+            serializable_result = {
+                "check_id": result.check_id,
+                "severity": result.severity.value,
+                "message": result.message,
+                "file_path": result.file_path,
+                "line_number": result.line_number,
+                "column": result.column,
+                "source": result.source,
+                "details": result.details,
+                "fix_available": result.fix_available,
+                "fix_command": result.fix_command
+            }
+            serializable_results.append(serializable_result)
+        
+        # Create report data
+        report_data = {
+            "timestamp": datetime.datetime.now().isoformat(),
+            "results": serializable_results,
+            "summary": {
+                "total_checks": len(results),
+                "passed": len([r for r in results if r.severity in [QualityCheckSeverity.INFO]]),
+                "failed": len([r for r in results if r.severity in [QualityCheckSeverity.WARNING, QualityCheckSeverity.ERROR, QualityCheckSeverity.CRITICAL]])
+            }
+        }
+        
+        # Ensure reports directory exists
+        reports_dir = Path("data/reports")
+        reports_dir.mkdir(parents=True, exist_ok=True)
+        
+        # Generate filename with timestamp
+        timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+        report_path = reports_dir / f"code_quality_report_{timestamp}.json"
+        
+        # Write report to file
+        with open(report_path, 'w') as f:
+            json.dump(report_data, f, indent=2)
+        
+        logger.info(f"Quality report written to {report_path}")
+        
+        # Trigger knowledge graph update
+        try:
+            import subprocess
+            logger.info("Triggering knowledge graph update...")
+            subprocess.run(["python", "core/kg/scripts/update_knowledge_graph.py"], check=True)
+            logger.info("Knowledge graph updated successfully")
+        except Exception as e:
+            logger.error(f"Failed to update knowledge graph: {e}")
 
 
 # Create a singleton instance

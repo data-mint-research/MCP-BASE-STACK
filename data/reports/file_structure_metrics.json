@@ -1,0 +1,11 @@
+{
+  "timestamp": "2025-04-08T10:42:13.484369",
+  "file_structure_metrics": {
+    "naming_compliance": 84.070796460177,
+    "directory_compliance": 92.47787610619469,
+    "overall_compliance": 88.27433628318585,
+    "naming_issues_count": 36,
+    "directory_issues_count": 17,
+    "total_files": 226
+  }
+}

@@ -6,6 +6,7 @@ This module provides auto-fix capabilities for structure-related issues, includi
 - File naming convention enforcement
 - Import organization
 - Circular dependency resolution
+- File structure standardization
 
 These fixes can be applied automatically or interactively.
 """
@@ -17,7 +18,7 @@ from pathlib import Path
 from typing import Dict, List, Optional, Set, Tuple, Union
 
 from core.quality.components.base import QualityCheckResult, QualityCheckSeverity
-
+from core.quality.components.fixes.file_structure_validator import FileStructureValidator
 
 class StructureFixes:
     """Provides auto-fix capabilities for structure-related issues."""
@@ -179,21 +180,49 @@ class StructureFixes:
         # Fix file naming issues
         if "file_naming" in results_by_check:
             file_naming_results = results_by_check["file_naming"]
-            for result in file_naming_results:
-                if result.file_path and "suggested name" in result.message.lower():
-                    # Extract suggested name from the message
-                    match = re.search(r"suggested name[:\s]+([^\s]+)", result.message.lower())
-                    if match:
-                        suggested_name = match.group(1)
-                        success, _, _ = StructureFixes.fix_file_naming(result.file_path, suggested_name)
-                        if success:
-                            fixed_results.append(result)
+            
+            # Use the new file structure validator for batch fixing
+            try:
+                # First try to use the new validator
+                fixed_files = FileStructureValidator.fix_naming_conventions(dry_run=False)
+                
+                # Mark results as fixed if their file paths are in the fixed files list
+                fixed_file_paths = [f['file_path'] for f in fixed_files]
+                for result in file_naming_results:
+                    if result.file_path in fixed_file_paths:
+                        fixed_results.append(result)
+                    else:
+                        # Fall back to the old method for any remaining files
+                        if result.file_path and "suggested name" in result.message.lower():
+                            match = re.search(r"suggested name[:\s]+([^\s]+)", result.message.lower())
+                            if match:
+                                suggested_name = match.group(1)
+                                success, _, _ = StructureFixes.fix_file_naming(result.file_path, suggested_name)
+                                if success:
+                                    fixed_results.append(result)
+                                else:
+                                    unfixed_results.append(result)
+                            else:
+                                unfixed_results.append(result)
+                        else:
+                            unfixed_results.append(result)
+            except Exception as e:
+                # Fall back to the old method if the new validator fails
+                print(f"Error using file structure validator: {e}. Falling back to legacy method.")
+                for result in file_naming_results:
+                    if result.file_path and "suggested name" in result.message.lower():
+                        match = re.search(r"suggested name[:\s]+([^\s]+)", result.message.lower())
+                        if match:
+                            suggested_name = match.group(1)
+                            success, _, _ = StructureFixes.fix_file_naming(result.file_path, suggested_name)
+                            if success:
+                                fixed_results.append(result)
+                            else:
+                                unfixed_results.append(result)
                         else:
                             unfixed_results.append(result)
                     else:
                         unfixed_results.append(result)
-                else:
-                    unfixed_results.append(result)
 
         # Fix import organization issues
         if "import_organization" in results_by_check:
@@ -229,13 +258,52 @@ class StructureFixes:
 
         # Handle directory structure issues
         if "directory_structure" in results_by_check:
-            # These typically require more context and are harder to auto-fix
-            # We'll just mark them as unfixed for now
-            unfixed_results.extend(results_by_check["directory_structure"])
+            directory_structure_results = results_by_check["directory_structure"]
+            
+            # Use the new file structure validator for directory relocation
+            try:
+                # First try to use the new validator
+                relocated_files = FileStructureValidator.relocate_files(dry_run=False)
+                
+                # Mark results as fixed if their file paths are in the relocated files list
+                relocated_file_paths = [f['file_path'] for f in relocated_files]
+                for result in directory_structure_results:
+                    if result.file_path in relocated_file_paths:
+                        fixed_results.append(result)
+                    else:
+                        unfixed_results.append(result)
+            except Exception as e:
+                # Fall back to marking them as unfixed if the new validator fails
+                print(f"Error using file structure validator for directory relocation: {e}")
+                unfixed_results.extend(directory_structure_results)
+        
+        # Handle file structure issues
+        if "file_structure" in results_by_check:
+            # These are handled by the file structure validator
+            file_structure_results = results_by_check["file_structure"]
+            
+            # Run validation to update metrics
+            try:
+                FileStructureValidator.validate()
+                # Mark all as fixed since we've run the validator
+                fixed_results.extend(file_structure_results)
+            except Exception as e:
+                print(f"Error validating file structure: {e}")
+                unfixed_results.extend(file_structure_results)
 
         # Handle other structure issues
         for check_id, check_results in results_by_check.items():
-            if check_id not in ["file_naming", "import_organization", "circular_dependencies", "directory_structure"]:
+            if check_id not in ["file_naming", "import_organization", "circular_dependencies", "directory_structure", "file_structure"]:
                 unfixed_results.extend(check_results)
 
         return fixed_results, unfixed_results
+        
+    @staticmethod
+    def get_file_structure_metrics() -> Dict[str, float]:
+        """
+        Get file structure compliance metrics.
+        
+        Returns:
+            Dictionary with compliance metrics
+        """
+        return FileStructureValidator.get_compliance_metrics()

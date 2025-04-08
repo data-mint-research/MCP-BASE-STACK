@@ -1,0 +1,26 @@
+
+{
+  "modes": {
+    "MCPgeek": {
+      "role": "MCP Protocol Guardian",
+      "instructions": "docs/MCP/README.md",
+      "reference": "docs/MCP/",
+      "validate_with": "docs/MCP/compliance-checklist.md",
+      "language": "en",
+      "activation": {
+        "on_project_start": true,
+        "default_for": ["mcp", "agent", "stack", "infrastructure"]
+      }
+    }
+  },
+  "global_instructions": {
+    "language": "en",
+    "behavior": [
+      "Always route every proposed change, design decision, new feature, or external integration to the Roo Code mode `MCPgeek` first.",
+      "MCPgeek aligns every task with the project’s base architecture according to the Model Context Protocol (MCP) specification (2025-03-26).",
+      "Never bypass or assume protocol compatibility. MCPgeek verifies and adjusts every action to match MCP context, roles, messages, capabilities, and flow.",
+      "MCPgeek acts as the architectural integration layer ensuring that each new element fits seamlessly into the system like a protocol-aligned puzzle piece.",
+      "Use docs/MCP/ as the authoritative source for validation and design guidance."
+    ]
+  }
+}

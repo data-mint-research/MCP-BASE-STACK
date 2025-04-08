@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quality Metrics Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Quality Metrics Dashboard</h1>
+        <div class="last-updated">Last updated: <span id="last-updated">Loading...</span></div>
+        <button id="refresh-btn">Refresh Metrics</button>
+    </header>
+    
+    <div class="dashboard-container">
+        <div class="metrics-summary">
+            <h2>Summary</h2>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <h3>Documentation Coverage</h3>
+                    <div class="metric-value" id="documentation-coverage">-</div>
+                    <div class="metric-trend" id="documentation-trend"></div>
+                </div>
+                <div class="metric-card">
+                    <h3>Type Hint Coverage</h3>
+                    <div class="metric-value" id="type-hint-coverage">-</div>
+                    <div class="metric-trend" id="type-hint-trend"></div>
+                </div>
+                <div class="metric-card">
+                    <h3>File Structure Compliance</h3>
+                    <div class="metric-value" id="file-structure-compliance">-</div>
+                    <div class="metric-trend" id="file-structure-trend"></div>
+                </div>
+                <div class="metric-card">
+                    <h3>Quality Issues</h3>
+                    <div class="metric-value" id="quality-issues">-</div>
+                    <div class="metric-trend" id="issues-trend"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="dashboard-section">
+            <h2>Trend Analysis</h2>
+            <div class="chart-container">
+                <canvas id="trends-chart"></canvas>
+            </div>
+        </div>
+        
+        <div class="dashboard-section">
+            <h2>Component Metrics</h2>
+            <div class="component-grid" id="component-grid">
+                <!-- Component cards will be added here dynamically -->
+            </div>
+        </div>
+        
+        <div class="dashboard-section">
+            <h2>Improvement Tracking</h2>
+            <div class="improvement-container">
+                <table class="improvement-table">
+                    <thead>
+                        <tr>
+                            <th>Metric</th>
+                            <th>Target</th>
+                            <th>Current</th>
+                            <th>Previous</th>
+                            <th>Change</th>
+                        </tr>
+                    </thead>
+                    <tbody id="improvement-table-body">
+                        <!-- Improvement data will be added here dynamically -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='dashboard.js') }}"></script>
+</body>
+</html>

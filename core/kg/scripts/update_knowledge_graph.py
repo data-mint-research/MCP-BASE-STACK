@@ -1,12 +1,17 @@
 import networkx as nx
 import os
 import sys
+import json
+import glob
+from datetime import datetime
 from rdflib import Graph, Namespace, Literal, URIRef
 from rdflib.namespace import RDF, RDFS
 
 # Configuration
 KG_DATA_DIR = "core/kg/data"
 PROJECT_NAME = "MCP-BASE-STACK"
+QUALITY_REPORTS_DIR = "data/reports"
+FILE_STRUCTURE_REPORT = "data/reports/file-structure-report.json"
 
 def update_knowledge_graph():
     """Update the Knowledge Graph based on current implementation status"""
@@ -22,6 +27,12 @@ def update_knowledge_graph():
     
     # Namespace for RDF
     ns = Namespace(f"http://{PROJECT_NAME.lower()}.org/")
+    
+    # Update quality metrics in the knowledge graph
+    update_quality_metrics(nx_graph, rdf_graph, ns)
+    
+    # Update file structure metrics in the knowledge graph
+    update_file_structure_metrics(nx_graph, rdf_graph, ns)
     
     # Update implementation status based on file existence
     component_checks = [
@@ -59,7 +70,6 @@ def update_knowledge_graph():
                 rdf_graph.add((ns[component_id], ns.status, Literal(status)))
                 
                 print(f"Added new component {component_id} with status '{status}'")
-    
     # Automatically detect and track docs and tests directories
     update_directory_structure(nx_graph, rdf_graph, ns)
     
@@ -67,6 +77,170 @@ def update_knowledge_graph():
     nx.write_graphml(nx_graph, f"{KG_DATA_DIR}/knowledge_graph.graphml")
     rdf_graph.serialize(destination=f"{KG_DATA_DIR}/knowledge_graph.ttl", format="turtle")
     
+    print("Knowledge Graph updated successfully.")
+
+def update_file_structure_metrics(nx_graph, rdf_graph, ns):
+    """Update file structure metrics in the knowledge graph based on latest file structure report"""
+    print("Updating file structure metrics in knowledge graph...")
+    
+    if not os.path.exists(FILE_STRUCTURE_REPORT):
+        print(f"File structure report not found at {FILE_STRUCTURE_REPORT}. Skipping file structure metrics update.")
+        return
+    
+    try:
+        # Load the file structure report
+        with open(FILE_STRUCTURE_REPORT, 'r') as f:
+            report_data = json.load(f)
+        
+        # Extract metrics
+        total_files = report_data.get("total_files", 0)
+        naming_compliance = report_data.get("naming_issues", {}).get("compliance_percentage", 0)
+        directory_compliance = report_data.get("directory_issues", {}).get("compliance_percentage", 0)
+        overall_compliance = report_data.get("overall_compliance_percentage", 0)
+        
+        # Update or create file structure metrics node
+        node_id = "file_structure_metrics"
+        if node_id in nx_graph:
+            # Update existing node
+            nx_graph.nodes[node_id]["last_modified"] = datetime.now().timestamp()
+            nx_graph.nodes[node_id]["total_files"] = total_files
+            nx_graph.nodes[node_id]["naming_compliance"] = naming_compliance
+            nx_graph.nodes[node_id]["directory_compliance"] = directory_compliance
+            nx_graph.nodes[node_id]["overall_compliance"] = overall_compliance
+            nx_graph.nodes[node_id]["status"] = "updated"
+            
+            # Update RDF
+            rdf_graph.add((ns[node_id], ns.last_modified, Literal(datetime.now().timestamp())))
+            rdf_graph.add((ns[node_id], ns.total_files, Literal(total_files)))
+            rdf_graph.add((ns[node_id], ns.naming_compliance, Literal(naming_compliance)))
+            rdf_graph.add((ns[node_id], ns.directory_compliance, Literal(directory_compliance)))
+            rdf_graph.add((ns[node_id], ns.overall_compliance, Literal(overall_compliance)))
+            rdf_graph.add((ns[node_id], ns.status, Literal("updated")))
+            
+            print(f"Updated file structure metrics: {total_files} files, {naming_compliance}% naming compliance, {directory_compliance}% directory compliance")
+        else:
+            # Add new node
+            nx_graph.add_node(
+                node_id,
+                name="File Structure Metrics",
+                type="metrics",
+                component_type="file_structure",
+                description="File structure standardization metrics",
+                last_modified=datetime.now().timestamp(),
+                total_files=total_files,
+                naming_compliance=naming_compliance,
+                directory_compliance=directory_compliance,
+                overall_compliance=overall_compliance,
+                status="created"
+            )
+            
+            # Update RDF
+            rdf_graph.add((ns[node_id], RDF.type, ns.Metrics))
+            rdf_graph.add((ns[node_id], ns.name, Literal("File Structure Metrics")))
+            rdf_graph.add((ns[node_id], ns.component_type, Literal("file_structure")))
+            rdf_graph.add((ns[node_id], ns.description, Literal("File structure standardization metrics")))
+            rdf_graph.add((ns[node_id], ns.last_modified, Literal(datetime.now().timestamp())))
+            rdf_graph.add((ns[node_id], ns.total_files, Literal(total_files)))
+            rdf_graph.add((ns[node_id], ns.naming_compliance, Literal(naming_compliance)))
+            rdf_graph.add((ns[node_id], ns.directory_compliance, Literal(directory_compliance)))
+            rdf_graph.add((ns[node_id], ns.overall_compliance, Literal(overall_compliance)))
+            rdf_graph.add((ns[node_id], ns.status, Literal("created")))
+            
+            # Create relationship with quality_metrics
+            if "quality_metrics" in nx_graph:
+                nx_graph.add_edge("quality_metrics", node_id, relationship="TRACKS")
+                rdf_graph.add((ns["quality_metrics"], ns.TRACKS, ns[node_id]))
+            
+            print(f"Added new file structure metrics: {total_files} files, {naming_compliance}% naming compliance, {directory_compliance}% directory compliance")
+    
+    except Exception as e:
+        print(f"Error updating file structure metrics: {e}")
+
+def update_quality_metrics(nx_graph, rdf_graph, ns):
+    """Update quality metrics in the knowledge graph based on latest quality reports"""
+    print("Updating quality metrics in knowledge graph...")
+    
+    # Find the latest quality report
+    report_files = glob.glob(f"{QUALITY_REPORTS_DIR}/code_quality_report_*.json")
+    if not report_files:
+        print("No quality reports found. Skipping quality metrics update.")
+        return
+    
+    # Sort by modification time to get the latest report
+    latest_report = max(report_files, key=os.path.getmtime)
+    print(f"Using latest quality report: {latest_report}")
+    
+    try:
+        # Load the quality report
+        with open(latest_report, 'r') as f:
+            report_data = json.load(f)
+        
+        # Update system-wide quality metrics node
+        if "quality_metrics" in nx_graph:
+            # Update timestamp
+            nx_graph.nodes["quality_metrics"]["last_modified"] = datetime.now().timestamp()
+            rdf_graph.add((ns["quality_metrics"], ns.last_modified, Literal(datetime.now().timestamp())))
+            
+            # Update status
+            nx_graph.nodes["quality_metrics"]["status"] = "updated"
+            rdf_graph.add((ns["quality_metrics"], ns.status, Literal("updated")))
+            
+            print("Updated quality_metrics node")
+        
+        # Process results from the report
+        if "results" in report_data:
+            # Group results by component
+            results_by_component = {}
+            
+            for result in report_data["results"]:
+                file_path = result.get("file_path", "")
+                if file_path:
+                    # Determine component from file path
+                    component = file_path.split("/")[0] if "/" in file_path else "root"
+                    
+                    if component not in results_by_component:
+                        results_by_component[component] = []
+                    
+                    results_by_component[component].append(result)
+            
+            # Update component quality metrics
+            update_component_quality_metrics(nx_graph, rdf_graph, ns, "core", results_by_component.get("core", []))
+            update_component_quality_metrics(nx_graph, rdf_graph, ns, "docs", results_by_component.get("docs", []))
+            update_component_quality_metrics(nx_graph, rdf_graph, ns, "tests", results_by_component.get("tests", []))
+        
+        # Process summary metrics if available
+        if "summary" in report_data:
+            summary = report_data["summary"]
+            print(f"Quality summary: {summary['total_checks']} checks, {summary['passed']} passed, {summary['failed']} failed")
+    
+    except Exception as e:
+        print(f"Error updating quality metrics: {e}")
+
+def update_component_quality_metrics(nx_graph, rdf_graph, ns, component_name, results):
+    """Update quality metrics for a specific component"""
+    quality_node_id = f"{component_name}_quality"
+    
+    if quality_node_id in nx_graph:
+        # Count issues by severity
+        severity_counts = {"info": 0, "warning": 0, "error": 0, "critical": 0}
+        
+        for result in results:
+            severity = result.get("severity", "info")
+            severity_counts[severity] += 1
+        
+        # Update metrics in the graph
+        nx_graph.nodes[quality_node_id]["issues_count"] = len(results)
+        rdf_graph.add((ns[quality_node_id], ns.issues_count, Literal(len(results))))
+        
+        for severity, count in severity_counts.items():
+            nx_graph.nodes[quality_node_id][f"{severity}_count"] = count
+            rdf_graph.add((ns[quality_node_id], ns[f"{severity}_count"], Literal(count)))
+        
+        # Update last modified timestamp
+        nx_graph.nodes[quality_node_id]["last_modified"] = datetime.now().timestamp()
+        rdf_graph.add((ns[quality_node_id], ns.last_modified, Literal(datetime.now().timestamp())))
+        
+        print(f"Updated quality metrics for {component_name}: {len(results)} issues")
     print("Knowledge Graph updated successfully.")
 
 def update_directory_structure(nx_graph, rdf_graph, ns):
