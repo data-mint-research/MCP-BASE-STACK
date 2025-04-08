@@ -1,0 +1,4100 @@
+{
+  "project_dir": "/home/skr/projects/MCP-BASE-STACK",
+  "timestamp": "2025-04-08T07:39:15.898640",
+  "summary": {
+    "total_iterations": 1,
+    "total_changes": 0,
+    "scripts_executed": 5,
+    "scripts_succeeded": 5,
+    "scripts_failed": 0,
+    "total_execution_time": 0.9394364356994629
+  },
+  "iterations": [
+    {
+      "iteration": 1,
+      "timestamp": "2025-04-08T07:39:15.917806",
+      "scripts": [
+        {
+          "name": "code_structure",
+          "success": true,
+          "changes_made": false,
+          "result": {
+            "success": true,
+            "execution_time": 0.39708614349365234,
+            "output": {
+              "stdout": "\u001b[0;34mLoading standards from specification manifest...\u001b[0m\n\u001b[1;33mWarning: jq is not installed. Using default standards.\u001b[0m\n\u001b[1;33mInstall jq with: sudo apt-get install jq\u001b[0m\nUsing default naming conventions:\nPython modules naming convention: \u001b[0;34msnake_case.py\u001b[0m\nShell scripts naming convention: \u001b[0;34mkebab-case.sh\u001b[0m\nMarkdown files naming convention: \u001b[0;34mkebab-case.md\u001b[0m\nYAML files naming convention: \u001b[0;34mkebab-case.yaml or kebab-case.yml\u001b[0m\n\nUsing default code patterns for validation.\n\u001b[1;33mWarning: Black is not installed. Install with: pip install black\u001b[0m\n\u001b[1;33mWarning: isort is not installed. Install with: pip install isort\u001b[0m\n\u001b[1;33mWarning: flake8 is not installed. Install with: pip install flake8\u001b[0m\n\u001b[1;33mWarning: mypy is not installed. Install with: pip install mypy\u001b[0m\n\u001b[1;33mWarning: pylint is not installed. Install with: pip install pylint\u001b[0m\n\u001b[1;33mWarning: shellcheck is not installed. Install with: sudo apt-get install shellcheck\u001b[0m\n\u001b[1;33mWarning: shfmt is not installed. Install with: go install mvdan.cc/sh/v3/cmd/shfmt@latest\u001b[0m\n\u001b[1;33mWarning: markdownlint is not installed. Install with: npm install -g markdownlint-cli\u001b[0m\n\u001b[1;33mWarning: yamllint is not installed. Install with: pip install yamllint\u001b[0m\n\u001b[1;33mWarning: prettier is not installed. Install with: npm install -g prettier\u001b[0m\n\n\u001b[0;32mReport generated at /home/skr/projects/MCP-BASE-STACK/data/reports/code_quality_report.json\u001b[0m\n\n\u001b[0;34mUpdating knowledge graph with code quality results...\u001b[0m\nCode Quality Component:\n- code_quality: Code Quality (active)\n\nConvention Document Nodes:\n\nCode Quality Relationships:\n- code_quality --has_feature-> code_quality_checks\n- code_quality --has_feature-> code_quality_fixes\n\nDocs Conventions Relationships:\n\nCode Quality Checks:\n- Last check: 2025-04-08T05:39:15Z\n- Total checks: 0\n- Passed checks: 0\n- Failed checks: 0\n\nCode Quality Fixes:\n- Last fix: 2025-04-08T05:38:56Z\n- Total issues: 0\n- Fixable issues: 0\n- Fixed issues: 0\n- Unfixed issues: 0\n\u001b[0;32mKnowledge graph updated successfully.\u001b[0m\n\n\u001b[1;33m========================================\n  All Checks Passed\n========================================\u001b[0m\n\n\u001b[0;32mAll code quality checks passed successfully!\u001b[0m\nA detailed report is available at: \u001b[0;34m/home/skr/projects/MCP-BASE-STACK/data/reports/code_quality_report.json\u001b[0m\n",
+              "stderr": "2025-04-08 07:39:16,247 - check_code_quality_nodes - INFO - Loading knowledge graph from /home/skr/projects/core/kg/data/knowledge_graph.graphml\n2025-04-08 07:39:16,288 - check_code_quality_nodes - INFO - Knowledge graph loaded with 21 nodes and 20 edges\n2025-04-08 07:39:16,289 - check_code_quality_nodes - INFO - Loading report from /home/skr/projects/MCP-BASE-STACK/data/reports/code_quality_report.json\n2025-04-08 07:39:16,289 - check_code_quality_nodes - INFO - Report loaded successfully\n2025-04-08 07:39:16,289 - check_code_quality_nodes - INFO - Updating knowledge graph with code quality check results\n2025-04-08 07:39:16,289 - check_code_quality_nodes - INFO - Knowledge graph updated with check results\n2025-04-08 07:39:16,289 - check_code_quality_nodes - INFO - Saving knowledge graph to /home/skr/projects/core/kg/data/knowledge_graph.graphml\n2025-04-08 07:39:16,290 - check_code_quality_nodes - INFO - Knowledge graph saved with 21 nodes and 20 edges\n"
+            }
+          }
+        },
+        {
+          "name": "file_cleanup",
+          "success": true,
+          "changes_made": false,
+          "result": {
+            "success": true,
+            "execution_time": 0.08430647850036621,
+            "output": {
+              "stdout": "\nSummary:\n  Total files scanned: 203\n  Orphaned files: 155\n  Outdated files: 4\n  Duplicate files: 0\n  Misplaced files: 3\n  Total files to clean up: 159\n  Total files to move: 3\n  Total size to clean up: 1.4 MB\n\nDry run mode: No files will be moved.\nCheck the report at data/reports/cleanup-report.json for details.\n\nDry run mode: No files will be deleted.\nCheck the report at data/reports/cleanup-report.json for details.\n",
+              "stderr": "2025-04-08 07:39:16,343 - INFO - Warning: Could not load data/reports/code-analysis-report.json: [Errno 2] No such file or directory: '/home/skr/projects/MCP-BASE-STACK/data/reports/code-analysis-report.json'\n2025-04-08 07:39:16,344 - INFO - Error loading QualityEnforcer: No module named 'core'\n2025-04-08 07:39:16,344 - INFO - Scanning files in directory: /home/skr/projects/MCP-BASE-STACK\n2025-04-08 07:39:16,357 - INFO - Scanned 203 files\n2025-04-08 07:39:16,357 - INFO - Loading knowledge graph...\n2025-04-08 07:39:16,357 - INFO - Found knowledge graph file: /home/skr/projects/MCP-BASE-STACK/core/kg/data/knowledge_graph.graphml\n2025-04-08 07:39:16,358 - INFO - Extracted 0 file references from knowledge graph\n2025-04-08 07:39:16,358 - INFO - Found knowledge graph file: /home/skr/projects/MCP-BASE-STACK/core/kg/data/knowledge_graph.ttl\n2025-04-08 07:39:16,359 - INFO - Extracted 0 file references from knowledge graph\n2025-04-08 07:39:16,359 - INFO - Collecting expected files from manifest...\n2025-04-08 07:39:16,359 - INFO - Collected 13 expected files from manifest\n2025-04-08 07:39:16,359 - INFO - Determined ideal locations for 10 files\n2025-04-08 07:39:16,359 - INFO - Scanning files for references...\n2025-04-08 07:39:16,386 - INFO - Found 1080 file references\n2025-04-08 07:39:16,386 - INFO - Identifying orphaned files...\n2025-04-08 07:39:16,388 - INFO - Identified 155 orphaned files\n2025-04-08 07:39:16,388 - INFO - Identifying outdated files...\n2025-04-08 07:39:16,390 - INFO - Identified 4 outdated files\n2025-04-08 07:39:16,390 - INFO - Identifying duplicate files...\n2025-04-08 07:39:16,390 - INFO - Identified 0 duplicate files\n2025-04-08 07:39:16,390 - INFO - Identifying misplaced files...\n2025-04-08 07:39:16,391 - INFO - Identified 3 misplaced files\n2025-04-08 07:39:16,393 - INFO - Saved report to data/reports/cleanup-report.json\n"
+            }
+          }
+        },
+        {
+          "name": "essential_files",
+          "success": true,
+          "changes_made": false,
+          "result": {
+            "success": true,
+            "execution_time": 0.06359624862670898,
+            "output": {
+              "stdout": "\nSummary:\n  Files checked: 3\n  Files up-to-date: 2\n  Files updated: 1\n  Files created: 0\n  Files backed up: 0\n  Errors: 0\n\nDry run mode: No files were modified.\nCheck the report at data/reports/essential-files-report.json for details.\n",
+              "stderr": "2025-04-08 07:39:16,442 - INFO - Loading configuration for environment: dev\n2025-04-08 07:39:16,444 - INFO - Loaded configuration from file: config/environments/dev.yaml\n2025-04-08 07:39:16,445 - INFO - Successfully loaded QualityEnforcer\n2025-04-08 07:39:16,445 - INFO - Starting essential files update...\n2025-04-08 07:39:16,445 - INFO - Updating README.md...\n2025-04-08 07:39:16,445 - INFO - Updating .gitignore...\n2025-04-08 07:39:16,445 - INFO - Updating requirements.txt...\n2025-04-08 07:39:16,445 - INFO - Generating requirements.txt content...\n2025-04-08 07:39:16,456 - INFO - [DRY RUN] Would backup file: requirements.txt\n2025-04-08 07:39:16,456 - INFO - [DRY RUN] Would write to file: requirements.txt\n2025-04-08 07:39:16,456 - INFO - Saved report to data/reports/essential-files-report.json\n"
+            }
+          }
+        },
+        {
+          "name": "code_formatting",
+          "success": true,
+          "changes_made": false,
+          "result": {
+            "success": true,
+            "execution_time": 0.3309061527252197,
+            "output": {
+              "stdout": "\u001b[0;34mLoading standards from specification manifest...\u001b[0m\n\u001b[1;33mWarning: jq is not installed. Using default standards.\u001b[0m\n\u001b[1;33mInstall jq with: sudo apt-get install jq\u001b[0m\nUsing default naming conventions:\nPython modules naming convention: \u001b[0;34msnake_case.py\u001b[0m\nShell scripts naming convention: \u001b[0;34mkebab-case.sh\u001b[0m\nMarkdown files naming convention: \u001b[0;34mkebab-case.md\u001b[0m\nYAML files naming convention: \u001b[0;34mkebab-case.yaml or kebab-case.yml\u001b[0m\n\nUsing default code patterns for applying fixes.\n\u001b[1;33mWarning: isort is not installed. Install with: pip install isort\u001b[0m\n\u001b[1;33mWarning: Black is not installed. Install with: pip install black\u001b[0m\n\u001b[1;33mWarning: autopep8 is not installed. Install with: pip install autopep8\u001b[0m\n\u001b[1;33mWarning: autoflake is not installed. Install with: pip install autoflake\u001b[0m\n\u001b[1;33mWarning: shfmt is not installed. Install with: go install mvdan.cc/sh/v3/cmd/shfmt@latest\u001b[0m\n\u001b[1;33mWarning: prettier is not installed. Install with: npm install -g prettier\u001b[0m\n\n\u001b[0;32mFix report generated at /home/skr/projects/MCP-BASE-STACK/data/reports/code_quality_fixes_report.json\u001b[0m\n\n\u001b[0;34mUpdating knowledge graph with code quality fixes...\u001b[0m\nCode Quality Component:\n- code_quality: Code Quality (active)\n\nConvention Document Nodes:\n\nCode Quality Relationships:\n- code_quality --has_feature-> code_quality_checks\n- code_quality --has_feature-> code_quality_fixes\n\nDocs Conventions Relationships:\n\nCode Quality Checks:\n- Last check: 2025-04-08T05:39:15Z\n- Total checks: 0\n- Passed checks: 0\n- Failed checks: 0\n\nCode Quality Fixes:\n- Last fix: 2025-04-08T05:39:16Z\n- Total issues: 0\n- Fixable issues: 0\n- Fixed issues: 0\n- Unfixed issues: 0\n\u001b[0;32mKnowledge graph updated successfully.\u001b[0m\n\n\u001b[1;33m========================================\n  Fix Complete\n========================================\u001b[0m\n\n\u001b[0;32mAutomatic fixes have been applied.\u001b[0m\nRun \u001b[1;33m./scripts/utils/quality/check_code_quality.sh\u001b[0m to verify all issues are fixed.\nFor more granular control, run:\n\u001b[1;33m  python3 ./scripts/utils/quality/enforce_code_standards.py --check\u001b[0m\nSome issues may require manual fixes, especially for mypy, pylint, and shellcheck.\nA detailed report of applied fixes is available at: \u001b[0;34m/home/skr/projects/MCP-BASE-STACK/data/reports/code_quality_fixes_report.json\u001b[0m\n",
+              "stderr": "2025-04-08 07:39:16,724 - check_code_quality_nodes - INFO - Loading knowledge graph from /home/skr/projects/core/kg/data/knowledge_graph.graphml\n2025-04-08 07:39:16,766 - check_code_quality_nodes - INFO - Knowledge graph loaded with 21 nodes and 20 edges\n2025-04-08 07:39:16,766 - check_code_quality_nodes - INFO - Loading report from /home/skr/projects/MCP-BASE-STACK/data/reports/code_quality_fixes_report.json\n2025-04-08 07:39:16,766 - check_code_quality_nodes - INFO - Report loaded successfully\n2025-04-08 07:39:16,766 - check_code_quality_nodes - INFO - Updating knowledge graph with code quality fix results\n2025-04-08 07:39:16,766 - check_code_quality_nodes - INFO - Knowledge graph updated with fix results\n2025-04-08 07:39:16,766 - check_code_quality_nodes - INFO - Saving knowledge graph to /home/skr/projects/core/kg/data/knowledge_graph.graphml\n2025-04-08 07:39:16,767 - check_code_quality_nodes - INFO - Knowledge graph saved with 21 nodes and 20 edges\n"
+            }
+          }
+        },
+        {
+          "name": "dependency_audit",
+          "success": true,
+          "changes_made": false,
+          "result": {
+            "success": true,
+            "execution_time": 0.06160235404968262,
+            "output": {
+              "stdout": "\nDependency Audit Summary:\n  Dependency files scanned: 10\n  Dependencies checked: 0\n  Outdated dependencies: 0\n  Vulnerable dependencies: 0\n  Inconsistent dependencies: 6\n  Errors: 0\n\nDry run mode: No changes were made to the knowledge graph.\n",
+              "stderr": "2025-04-08 07:39:16,838 - INFO - Loading configuration for environment: dev\n2025-04-08 07:39:16,839 - INFO - Loaded configuration from file: config/environments/dev.yaml\n2025-04-08 07:39:16,839 - INFO - Successfully loaded QualityEnforcer\n2025-04-08 07:39:16,840 - INFO - Starting dependency audit...\n2025-04-08 07:39:16,840 - INFO - Scanning for dependency declaration files...\n2025-04-08 07:39:16,840 - INFO - Found dependency file: requirements.txt (python)\n2025-04-08 07:39:16,843 - INFO - Found dependency file: data/backup/essential_files_20250408_065516/requirements.txt (python)\n2025-04-08 07:39:16,843 - INFO - Found dependency file: data/backup/essential_files_20250408_065324/requirements.txt (python)\n2025-04-08 07:39:16,844 - INFO - Found dependency file: data/backup/essential_files_20250408_065402/requirements.txt (python)\n2025-04-08 07:39:16,844 - INFO - Found dependency file: LibreChat/docker-compose.yml (docker)\n2025-04-08 07:39:16,844 - INFO - Found dependency file: deploy/docker-compose.yml (docker)\n2025-04-08 07:39:16,845 - INFO - Found dependency file: services/llm-server/docker-compose.yml (docker)\n2025-04-08 07:39:16,845 - INFO - Found dependency file: services/librechat/docker-compose.yml (docker)\n2025-04-08 07:39:16,845 - INFO - Found dependency file: services/mcp-server/docker-compose.yml (docker)\n2025-04-08 07:39:16,847 - INFO - Found dependency file: config/pyproject.toml (python)\n2025-04-08 07:39:16,847 - INFO - Checking Python dependencies in requirements.txt...\n2025-04-08 07:39:16,847 - INFO - pip-audit not found, skipping vulnerability check for Python dependencies\n2025-04-08 07:39:16,848 - INFO - Checking Python dependencies in data/backup/essential_files_20250408_065516/requirements.txt...\n2025-04-08 07:39:16,848 - INFO - pip-audit not found, skipping vulnerability check for Python dependencies\n2025-04-08 07:39:16,848 - INFO - Checking Python dependencies in data/backup/essential_files_20250408_065324/requirements.txt...\n2025-04-08 07:39:16,848 - INFO - pip-audit not found, skipping vulnerability check for Python dependencies\n2025-04-08 07:39:16,848 - INFO - Checking Python dependencies in data/backup/essential_files_20250408_065402/requirements.txt...\n2025-04-08 07:39:16,848 - INFO - pip-audit not found, skipping vulnerability check for Python dependencies\n2025-04-08 07:39:16,848 - INFO - Checking Docker dependencies in LibreChat/docker-compose.yml is not yet implemented\n2025-04-08 07:39:16,848 - INFO - Checking Docker dependencies in deploy/docker-compose.yml is not yet implemented\n2025-04-08 07:39:16,848 - INFO - Checking Docker dependencies in services/llm-server/docker-compose.yml is not yet implemented\n2025-04-08 07:39:16,848 - INFO - Checking Docker dependencies in services/librechat/docker-compose.yml is not yet implemented\n2025-04-08 07:39:16,848 - INFO - Checking Docker dependencies in services/mcp-server/docker-compose.yml is not yet implemented\n2025-04-08 07:39:16,848 - INFO - Checking Python dependencies in config/pyproject.toml...\n2025-04-08 07:39:16,848 - INFO - Parsing config/pyproject.toml is not yet supported\n2025-04-08 07:39:16,849 - INFO - Detecting inconsistent dependency versions...\n2025-04-08 07:39:16,849 - INFO - Inconsistent dependency: dependency_injector has multiple versions across the project\n2025-04-08 07:39:16,849 - INFO - Inconsistent dependency: hypothesis has multiple versions across the project\n2025-04-08 07:39:16,849 - INFO - Inconsistent dependency: matplotlib has multiple versions across the project\n2025-04-08 07:39:16,849 - INFO - Inconsistent dependency: numpy has multiple versions across the project\n2025-04-08 07:39:16,849 - INFO - Inconsistent dependency: pandas has multiple versions across the project\n2025-04-08 07:39:16,849 - INFO - Inconsistent dependency: requests has multiple versions across the project\n2025-04-08 07:39:16,849 - INFO - Generating recommendations...\n2025-04-08 07:39:16,850 - INFO - Saved report to /home/skr/projects/MCP-BASE-STACK/data/reports/dependency-audit-report.json\n"
+            }
+          }
+        }
+      ],
+      "changes_made": false,
+      "execution_time": 0.9394364356994629
+    }
+  ],
+  "final_state": {
+    "code_quality": {
+      "timestamp": "2025-04-08T05:39:15Z",
+      "results": [
+        {
+          "tool": "Black (Python formatter)",
+          "category": "python",
+          "status": "skipped",
+          "output": "Not installed",
+          "file_pattern": "*.py"
+        },
+        {
+          "tool": "isort (Python import sorter)",
+          "category": "python",
+          "status": "skipped",
+          "output": "Not installed",
+          "file_pattern": "*.py"
+        },
+        {
+          "tool": "flake8 (Python linter)",
+          "category": "python",
+          "status": "skipped",
+          "output": "Not installed",
+          "file_pattern": "*.py"
+        },
+        {
+          "tool": "mypy (Python type checker)",
+          "category": "python",
+          "status": "skipped",
+          "output": "Not installed",
+          "file_pattern": "*.py"
+        },
+        {
+          "tool": "pylint (Python linter)",
+          "category": "python",
+          "status": "skipped",
+          "output": "Not installed",
+          "file_pattern": "*.py"
+        },
+        {
+          "tool": "shellcheck (Shell script linter)",
+          "category": "shell",
+          "status": "skipped",
+          "output": "Not installed",
+          "file_pattern": "*.sh"
+        },
+        {
+          "tool": "shfmt (Shell script formatter)",
+          "category": "shell",
+          "status": "skipped",
+          "output": "Not installed",
+          "file_pattern": "*.sh"
+        },
+        {
+          "tool": "markdownlint (Markdown linter)",
+          "category": "markdown",
+          "status": "skipped",
+          "output": "Not installed",
+          "file_pattern": "*.md"
+        },
+        {
+          "tool": "yamllint (YAML linter)",
+          "category": "yaml",
+          "status": "skipped",
+          "output": "Not installed",
+          "file_pattern": "*.yml,*.yaml"
+        },
+        {
+          "tool": "prettier",
+          "category": "general",
+          "status": "skipped",
+          "output": "Not installed",
+          "file_pattern": "multiple"
+        }
+      ],
+      "summary": {
+        "total_checks": 0,
+        "passed": 0,
+        "failed": 0,
+        "categories": {
+          "shell": 0,
+          "json": 0,
+          "python": 0,
+          "yaml": 0,
+          "markdown": 0,
+          "general": 0
+        }
+      }
+    },
+    "file_structure": {
+      "project_dir": "/home/skr/projects/MCP-BASE-STACK",
+      "timestamp": null,
+      "summary": {
+        "total_directories": 286,
+        "total_files": 538,
+        "compliant_directories": 36,
+        "compliant_files": 10,
+        "directory_issues": 0,
+        "file_issues": 0,
+        "naming_issues": 29,
+        "location_issues": 56,
+        "compliance_percentage": 89.68
+      },
+      "directory_structure": {
+        "expected": {
+          "root": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/root",
+            "subdirectories": [
+              "docs",
+              "config",
+              "core",
+              "services",
+              "scripts",
+              "tests"
+            ]
+          },
+          "docs": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/docs",
+            "subdirectories": [
+              "conventions",
+              "knowledge-graph",
+              "tutorials",
+              "troubleshooting"
+            ]
+          },
+          "config": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/config",
+            "subdirectories": [
+              "environments"
+            ]
+          },
+          "core": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/core",
+            "subdirectories": [
+              "kg"
+            ]
+          },
+          "services": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/services",
+            "subdirectories": [
+              "mcp-server"
+            ]
+          },
+          "scripts": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/scripts",
+            "subdirectories": [
+              "deployment",
+              "maintenance",
+              "setup"
+            ]
+          },
+          "tests": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/tests",
+            "subdirectories": [
+              "unit",
+              "integration",
+              "data"
+            ]
+          },
+          "docs/conventions": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/docs/conventions",
+            "subdirectories": []
+          },
+          "docs/knowledge-graph": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/docs/knowledge-graph",
+            "subdirectories": []
+          },
+          "docs/tutorials": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/docs/tutorials",
+            "subdirectories": []
+          },
+          "docs/troubleshooting": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/docs/troubleshooting",
+            "subdirectories": []
+          },
+          "config/environments": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/config/environments",
+            "subdirectories": []
+          },
+          "core/kg": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/core/kg",
+            "subdirectories": [
+              "data",
+              "scripts"
+            ]
+          },
+          "core/kg/data": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/core/kg/data",
+            "subdirectories": []
+          },
+          "core/kg/scripts": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/core/kg/scripts",
+            "subdirectories": []
+          },
+          "services/mcp-server": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/services/mcp-server",
+            "subdirectories": [
+              "src",
+              "config"
+            ]
+          },
+          "services/mcp-server/src": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/services/mcp-server/src",
+            "subdirectories": [
+              "di",
+              "services",
+              "tools"
+            ]
+          },
+          "services/mcp-server/config": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/services/mcp-server/config",
+            "subdirectories": []
+          },
+          "services/mcp-server/src/di": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/services/mcp-server/src/di",
+            "subdirectories": []
+          },
+          "services/mcp-server/src/services": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/services/mcp-server/src/services",
+            "subdirectories": []
+          },
+          "services/mcp-server/src/tools": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/services/mcp-server/src/tools",
+            "subdirectories": []
+          },
+          "scripts/deployment": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/scripts/deployment",
+            "subdirectories": []
+          },
+          "scripts/maintenance": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/scripts/maintenance",
+            "subdirectories": []
+          },
+          "scripts/setup": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/scripts/setup",
+            "subdirectories": []
+          },
+          "tests/unit": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/tests/unit",
+            "subdirectories": []
+          },
+          "tests/integration": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/tests/integration",
+            "subdirectories": []
+          },
+          "tests/data": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/tests/data",
+            "subdirectories": []
+          }
+        },
+        "actual": {
+          "root": {
+            "path": "/home/skr/projects/MCP-BASE-STACK",
+            "subdirectories": [
+              "scripts",
+              "config",
+              "LibreChat",
+              "services",
+              "backup_20250407_220136",
+              "backup_20250407_215945",
+              "backup_20250407_221515",
+              "tests",
+              ".git",
+              "deploy",
+              ".github",
+              ".git-hooks",
+              "core",
+              "docs",
+              "temp",
+              "__pycache__",
+              "data"
+            ]
+          },
+          ".git/objects": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects",
+            "subdirectories": [
+              "43",
+              "f8",
+              "97",
+              "c9",
+              "82",
+              "a9",
+              "ac",
+              "fc",
+              "ff",
+              "b8",
+              "77",
+              "c3",
+              "79",
+              "0d",
+              "14",
+              "18",
+              "d8",
+              "89",
+              "5c",
+              "5a",
+              "73",
+              "d7",
+              "b3",
+              "bf",
+              "a6",
+              "12",
+              "c5",
+              "5d",
+              "f6",
+              "6e",
+              "44",
+              "8e",
+              "ed",
+              "53",
+              "a7",
+              "95",
+              "ef",
+              "52",
+              "f4",
+              "cf",
+              "de",
+              "fd",
+              "5f",
+              "13",
+              "pack",
+              "ee",
+              "ba",
+              "72",
+              "f1",
+              "e1",
+              "16",
+              "d9",
+              "57",
+              "f2",
+              "42",
+              "f0",
+              "2f",
+              "c0",
+              "75",
+              "91",
+              "b0",
+              "81",
+              "6a",
+              "1d",
+              "3b",
+              "a3",
+              "74",
+              "fe",
+              "7a",
+              "67",
+              "69",
+              "93",
+              "ae",
+              "04",
+              "8c",
+              "3c",
+              "36",
+              "92",
+              "f7",
+              "b2",
+              "3a",
+              "bb",
+              "61",
+              "54",
+              "info",
+              "08",
+              "7b",
+              "5b",
+              "b4",
+              "ea",
+              "15",
+              "6f",
+              "10",
+              "5e",
+              "ce",
+              "cb",
+              "d0",
+              "84",
+              "4f",
+              "eb",
+              "21",
+              "1f",
+              "94",
+              "50",
+              "be",
+              "8d",
+              "e4",
+              "e3",
+              "30",
+              "cc",
+              "2d",
+              "40",
+              "cd",
+              "51",
+              "07",
+              "68",
+              "4a",
+              "f9",
+              "d3",
+              "ec",
+              "4d",
+              "1c",
+              "ca",
+              "d6",
+              "2c",
+              "32",
+              "85",
+              "2a",
+              "fb",
+              "24",
+              "c2",
+              "09",
+              "33",
+              "19",
+              "9a",
+              "da",
+              "b6",
+              "26",
+              "9f",
+              "88",
+              "dc",
+              "e0",
+              "2e",
+              "e6",
+              "c1",
+              "ab",
+              "8b",
+              "aa",
+              "48",
+              "c4",
+              "0e",
+              "3f",
+              "e8",
+              "a1",
+              "41",
+              "46",
+              "a5",
+              "98",
+              "59",
+              "58",
+              "d5",
+              "56",
+              "bd",
+              "71",
+              "df",
+              "47",
+              "76",
+              "4b",
+              "1b",
+              "e7",
+              "db",
+              "7d",
+              "9c",
+              "4e",
+              "c8",
+              "2b",
+              "a0",
+              "17",
+              "23",
+              "87",
+              "39",
+              "34",
+              "28",
+              "01",
+              "dd",
+              "86",
+              "9d"
+            ]
+          },
+          ".git/objects/43": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/43",
+            "subdirectories": []
+          },
+          ".git/objects/f8": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/f8",
+            "subdirectories": []
+          },
+          ".git/objects/97": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/97",
+            "subdirectories": []
+          },
+          ".git/objects/c9": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/c9",
+            "subdirectories": []
+          },
+          "backup_20250407_220136/docs": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/backup_20250407_220136/docs",
+            "subdirectories": [
+              "tutorials",
+              "troubleshooting",
+              "backlog"
+            ]
+          },
+          "backup_20250407_220136/docs/tutorials": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/backup_20250407_220136/docs/tutorials",
+            "subdirectories": []
+          },
+          "scripts": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/scripts",
+            "subdirectories": [
+              "deployment",
+              "maintenance",
+              "setup"
+            ]
+          },
+          "backup_20250407_220136": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/backup_20250407_220136",
+            "subdirectories": [
+              "temp",
+              "config",
+              "docs",
+              "tests",
+              "services",
+              "core",
+              "data",
+              ".git-hooks"
+            ]
+          },
+          "backup_20250407_220136/temp": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/backup_20250407_220136/temp",
+            "subdirectories": []
+          },
+          ".git/objects/82": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/82",
+            "subdirectories": []
+          },
+          ".git/objects/a9": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/a9",
+            "subdirectories": []
+          },
+          ".git/objects/ac": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/ac",
+            "subdirectories": []
+          },
+          ".git/objects/fc": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/fc",
+            "subdirectories": []
+          },
+          ".git/objects/ff": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/ff",
+            "subdirectories": []
+          },
+          "config": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/config",
+            "subdirectories": [
+              "environments",
+              "models"
+            ]
+          },
+          ".git/objects/b8": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/b8",
+            "subdirectories": []
+          },
+          ".git/logs": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/logs",
+            "subdirectories": [
+              "refs"
+            ]
+          },
+          ".git/logs/refs": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/logs/refs",
+            "subdirectories": [
+              "heads",
+              "remotes"
+            ]
+          },
+          ".git/objects/77": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/77",
+            "subdirectories": []
+          },
+          "backup_20250407_215945/docs": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/backup_20250407_215945/docs",
+            "subdirectories": [
+              "troubleshooting",
+              "tutorials"
+            ]
+          },
+          "backup_20250407_215945/docs/troubleshooting": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/backup_20250407_215945/docs/troubleshooting",
+            "subdirectories": []
+          },
+          ".git/objects/c3": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/c3",
+            "subdirectories": []
+          },
+          "backup_20250407_220136/core/kg": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/backup_20250407_220136/core/kg",
+            "subdirectories": [
+              "data",
+              "docs"
+            ]
+          },
+          "backup_20250407_220136/core/kg/data": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/backup_20250407_220136/core/kg/data",
+            "subdirectories": []
+          },
+          "core/kg/scripts": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/core/kg/scripts",
+            "subdirectories": [
+              "__pycache__"
+            ]
+          },
+          "core/kg/scripts/__pycache__": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/core/kg/scripts/__pycache__",
+            "subdirectories": []
+          },
+          "services/llm-server": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/services/llm-server",
+            "subdirectories": [
+              "config"
+            ]
+          },
+          "services/llm-server/config": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/services/llm-server/config",
+            "subdirectories": []
+          },
+          ".git/objects/79": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/79",
+            "subdirectories": []
+          },
+          ".git/objects/0d": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/0d",
+            "subdirectories": []
+          },
+          ".git/objects/14": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/14",
+            "subdirectories": []
+          },
+          "tests": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/tests",
+            "subdirectories": [
+              "data",
+              "unit",
+              "integration"
+            ]
+          },
+          "tests/data": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/tests/data",
+            "subdirectories": []
+          },
+          ".git/objects/18": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/18",
+            "subdirectories": []
+          },
+          ".git/objects/d8": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/d8",
+            "subdirectories": []
+          },
+          ".git/objects/89": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/89",
+            "subdirectories": []
+          },
+          "backup_20250407_215945/services/mcp-server/src": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/backup_20250407_215945/services/mcp-server/src",
+            "subdirectories": [
+              "tools"
+            ]
+          },
+          "backup_20250407_215945/services/mcp-server/src/tools": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/backup_20250407_215945/services/mcp-server/src/tools",
+            "subdirectories": [
+              "shell"
+            ]
+          },
+          "core/kg": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/core/kg",
+            "subdirectories": [
+              "docs",
+              "data",
+              "scripts"
+            ]
+          },
+          "core/kg/docs": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/core/kg/docs",
+            "subdirectories": []
+          },
+          ".git/objects/5c": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/5c",
+            "subdirectories": []
+          },
+          ".git/objects/5a": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/5a",
+            "subdirectories": []
+          },
+          ".git/objects/73": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/73",
+            "subdirectories": []
+          },
+          "backup_20250407_220136/docs/troubleshooting": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/backup_20250407_220136/docs/troubleshooting",
+            "subdirectories": []
+          },
+          ".git/refs": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/refs",
+            "subdirectories": [
+              "remotes",
+              "tags",
+              "heads"
+            ]
+          },
+          ".git/refs/remotes": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/refs/remotes",
+            "subdirectories": [
+              "origin"
+            ]
+          },
+          ".git/objects/d7": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/d7",
+            "subdirectories": []
+          },
+          "backup_20250407_220136/config": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/backup_20250407_220136/config",
+            "subdirectories": [
+              "environments",
+              "models"
+            ]
+          },
+          "backup_20250407_221515": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/backup_20250407_221515",
+            "subdirectories": [
+              "core",
+              ".git-hooks"
+            ]
+          },
+          "backup_20250407_221515/core": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/backup_20250407_221515/core",
+            "subdirectories": [
+              "kg"
+            ]
+          },
+          ".git/objects/b3": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/b3",
+            "subdirectories": []
+          },
+          ".git/objects/bf": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/bf",
+            "subdirectories": []
+          },
+          ".git/objects/a6": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/a6",
+            "subdirectories": []
+          },
+          ".git/objects/12": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/12",
+            "subdirectories": []
+          },
+          ".git/objects/c5": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/c5",
+            "subdirectories": []
+          },
+          ".git/objects/5d": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/5d",
+            "subdirectories": []
+          },
+          ".git/objects/f6": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/f6",
+            "subdirectories": []
+          },
+          "LibreChat": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/LibreChat",
+            "subdirectories": []
+          },
+          ".git/objects/6e": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/6e",
+            "subdirectories": []
+          },
+          "services": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/services",
+            "subdirectories": [
+              "librechat",
+              "llm-server",
+              "mcp-server"
+            ]
+          },
+          ".git/objects/44": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/44",
+            "subdirectories": []
+          },
+          "core/kg/data": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/core/kg/data",
+            "subdirectories": []
+          },
+          ".git/objects/8e": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/8e",
+            "subdirectories": []
+          },
+          ".git/objects/ed": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/ed",
+            "subdirectories": []
+          },
+          ".git/objects/53": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/53",
+            "subdirectories": []
+          },
+          "config/environments": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/config/environments",
+            "subdirectories": []
+          },
+          ".git/objects/a7": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/a7",
+            "subdirectories": []
+          },
+          ".git/objects/95": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/95",
+            "subdirectories": []
+          },
+          ".git/objects/ef": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/ef",
+            "subdirectories": []
+          },
+          ".git/objects/52": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/52",
+            "subdirectories": []
+          },
+          ".git/objects/f4": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/f4",
+            "subdirectories": []
+          },
+          "backup_20250407_215945": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/backup_20250407_215945",
+            "subdirectories": [
+              "services",
+              "docs",
+              "LibreChat"
+            ]
+          },
+          "backup_20250407_215945/services": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/backup_20250407_215945/services",
+            "subdirectories": [
+              "mcp-server",
+              "librechat"
+            ]
+          },
+          ".git/objects/cf": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/cf",
+            "subdirectories": []
+          },
+          ".git/logs/refs/heads": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/logs/refs/heads",
+            "subdirectories": []
+          },
+          ".git/objects/de": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/de",
+            "subdirectories": []
+          },
+          ".git/objects/fd": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/fd",
+            "subdirectories": []
+          },
+          ".git/objects/5f": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/5f",
+            "subdirectories": []
+          },
+          ".git/objects/13": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/13",
+            "subdirectories": []
+          },
+          "services/mcp-server/src": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/services/mcp-server/src",
+            "subdirectories": [
+              "tools",
+              "di",
+              "services"
+            ]
+          },
+          "services/mcp-server/src/tools": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/services/mcp-server/src/tools",
+            "subdirectories": [
+              "shell"
+            ]
+          },
+          ".git/objects/pack": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/pack",
+            "subdirectories": []
+          },
+          ".git/objects/ee": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/ee",
+            "subdirectories": []
+          },
+          "backup_20250407_220136/tests": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/backup_20250407_220136/tests",
+            "subdirectories": [
+              "data"
+            ]
+          },
+          ".git/objects/ba": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/ba",
+            "subdirectories": []
+          },
+          "services/mcp-server": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/services/mcp-server",
+            "subdirectories": [
+              "config",
+              "src"
+            ]
+          },
+          "services/mcp-server/config": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/services/mcp-server/config",
+            "subdirectories": []
+          },
+          ".git/objects/72": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/72",
+            "subdirectories": []
+          },
+          ".git/objects/f1": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/f1",
+            "subdirectories": []
+          },
+          ".git/objects/e1": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/e1",
+            "subdirectories": []
+          },
+          ".git/objects/16": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/16",
+            "subdirectories": []
+          },
+          ".git/objects/d9": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/d9",
+            "subdirectories": []
+          },
+          "backup_20250407_220136/services": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/backup_20250407_220136/services",
+            "subdirectories": [
+              "mcp-server",
+              "librechat"
+            ]
+          },
+          ".git/objects/57": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/57",
+            "subdirectories": []
+          },
+          ".git/objects/f2": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/f2",
+            "subdirectories": []
+          },
+          ".git/objects/42": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/42",
+            "subdirectories": []
+          },
+          ".git/objects/f0": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/f0",
+            "subdirectories": []
+          },
+          ".git/objects/2f": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/2f",
+            "subdirectories": []
+          },
+          ".git/objects/c0": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/c0",
+            "subdirectories": []
+          },
+          ".git/objects/75": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/75",
+            "subdirectories": []
+          },
+          ".git/objects/91": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/91",
+            "subdirectories": []
+          },
+          "deploy": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/deploy",
+            "subdirectories": [
+              "volumes"
+            ]
+          },
+          "deploy/volumes": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/deploy/volumes",
+            "subdirectories": []
+          },
+          "backup_20250407_220136/core": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/backup_20250407_220136/core",
+            "subdirectories": [
+              "kg"
+            ]
+          },
+          ".git/objects/b0": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/b0",
+            "subdirectories": []
+          },
+          ".git/objects/81": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/81",
+            "subdirectories": []
+          },
+          "backup_20250407_220136/data": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/backup_20250407_220136/data",
+            "subdirectories": [
+              "logs"
+            ]
+          },
+          "backup_20250407_220136/data/logs": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/backup_20250407_220136/data/logs",
+            "subdirectories": []
+          },
+          ".git/objects/6a": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/6a",
+            "subdirectories": []
+          },
+          ".git/objects/1d": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/1d",
+            "subdirectories": []
+          },
+          ".git/objects/3b": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/3b",
+            "subdirectories": []
+          },
+          ".git/objects/a3": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/a3",
+            "subdirectories": []
+          },
+          "docs": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/docs",
+            "subdirectories": [
+              "conventions",
+              "knowledge-graph",
+              "backlog",
+              "troubleshooting",
+              "tutorials"
+            ]
+          },
+          "docs/conventions": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/docs/conventions",
+            "subdirectories": []
+          },
+          "core": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/core",
+            "subdirectories": [
+              "kg"
+            ]
+          },
+          ".git/objects/74": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/74",
+            "subdirectories": []
+          },
+          ".git/objects/fe": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/fe",
+            "subdirectories": []
+          },
+          ".git/objects/7a": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/7a",
+            "subdirectories": []
+          },
+          "services/mcp-server/src/di": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/services/mcp-server/src/di",
+            "subdirectories": []
+          },
+          "backup_20250407_215945/services/librechat": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/backup_20250407_215945/services/librechat",
+            "subdirectories": [
+              "config"
+            ]
+          },
+          "backup_20250407_215945/services/librechat/config": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/backup_20250407_215945/services/librechat/config",
+            "subdirectories": []
+          },
+          ".git/objects/67": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/67",
+            "subdirectories": []
+          },
+          ".git/objects/69": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/69",
+            "subdirectories": []
+          },
+          ".git": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git",
+            "subdirectories": [
+              "refs",
+              "hooks",
+              "logs",
+              "branches",
+              "objects",
+              "info"
+            ]
+          },
+          ".git/objects/93": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/93",
+            "subdirectories": []
+          },
+          "backup_20250407_220136/config/environments": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/backup_20250407_220136/config/environments",
+            "subdirectories": []
+          },
+          ".git/objects/ae": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/ae",
+            "subdirectories": []
+          },
+          "backup_20250407_215945/services/mcp-server": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/backup_20250407_215945/services/mcp-server",
+            "subdirectories": [
+              "src"
+            ]
+          },
+          ".git/objects/04": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/04",
+            "subdirectories": []
+          },
+          ".git/logs/refs/remotes": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/logs/refs/remotes",
+            "subdirectories": [
+              "origin"
+            ]
+          },
+          ".git/objects/8c": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/8c",
+            "subdirectories": []
+          },
+          ".git/objects/3c": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/3c",
+            "subdirectories": []
+          },
+          ".git/objects/36": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/36",
+            "subdirectories": []
+          },
+          "docs/knowledge-graph": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/docs/knowledge-graph",
+            "subdirectories": []
+          },
+          "backup_20250407_215945/docs/tutorials": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/backup_20250407_215945/docs/tutorials",
+            "subdirectories": []
+          },
+          ".git/objects/92": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/92",
+            "subdirectories": []
+          },
+          ".git/objects/f7": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/f7",
+            "subdirectories": []
+          },
+          ".git/objects/b2": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/b2",
+            "subdirectories": []
+          },
+          ".git/objects/3a": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/3a",
+            "subdirectories": []
+          },
+          ".git/objects/bb": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/bb",
+            "subdirectories": []
+          },
+          ".git/objects/61": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/61",
+            "subdirectories": []
+          },
+          ".git/objects/54": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/54",
+            "subdirectories": []
+          },
+          "services/librechat": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/services/librechat",
+            "subdirectories": [
+              "config"
+            ]
+          },
+          "services/librechat/config": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/services/librechat/config",
+            "subdirectories": []
+          },
+          ".git/objects/info": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/info",
+            "subdirectories": []
+          },
+          ".git/objects/08": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/08",
+            "subdirectories": []
+          },
+          ".git/objects/7b": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/7b",
+            "subdirectories": []
+          },
+          ".git/objects/5b": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/5b",
+            "subdirectories": []
+          },
+          ".git/objects/b4": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/b4",
+            "subdirectories": []
+          },
+          "backup_20250407_220136/services/mcp-server": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/backup_20250407_220136/services/mcp-server",
+            "subdirectories": []
+          },
+          ".git/objects/ea": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/ea",
+            "subdirectories": []
+          },
+          ".git/objects/15": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/15",
+            "subdirectories": []
+          },
+          ".git/objects/6f": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/6f",
+            "subdirectories": []
+          },
+          ".git/objects/10": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/10",
+            "subdirectories": []
+          },
+          ".git/objects/5e": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/5e",
+            "subdirectories": []
+          },
+          "backup_20250407_220136/tests/data": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/backup_20250407_220136/tests/data",
+            "subdirectories": []
+          },
+          "backup_20250407_221515/core/kg": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/backup_20250407_221515/core/kg",
+            "subdirectories": [
+              "data"
+            ]
+          },
+          ".git/objects/ce": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/ce",
+            "subdirectories": []
+          },
+          ".git/objects/cb": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/cb",
+            "subdirectories": []
+          },
+          "scripts/deployment": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/scripts/deployment",
+            "subdirectories": []
+          },
+          ".git/objects/d0": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/d0",
+            "subdirectories": []
+          },
+          ".git/objects/84": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/84",
+            "subdirectories": []
+          },
+          ".git/objects/4f": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/4f",
+            "subdirectories": []
+          },
+          "backup_20250407_215945/services/mcp-server/src/tools/shell": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/backup_20250407_215945/services/mcp-server/src/tools/shell",
+            "subdirectories": []
+          },
+          ".git/objects/eb": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/eb",
+            "subdirectories": []
+          },
+          ".git/objects/21": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/21",
+            "subdirectories": []
+          },
+          ".git/objects/1f": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/1f",
+            "subdirectories": []
+          },
+          ".git/objects/94": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/94",
+            "subdirectories": []
+          },
+          ".git/objects/50": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/50",
+            "subdirectories": []
+          },
+          ".git/objects/be": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/be",
+            "subdirectories": []
+          },
+          ".git/objects/8d": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/8d",
+            "subdirectories": []
+          },
+          ".git/objects/e4": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/e4",
+            "subdirectories": []
+          },
+          ".git/objects/e3": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/e3",
+            "subdirectories": []
+          },
+          ".git/objects/30": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/30",
+            "subdirectories": []
+          },
+          ".git/objects/cc": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/cc",
+            "subdirectories": []
+          },
+          ".git/objects/2d": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/2d",
+            "subdirectories": []
+          },
+          ".git/objects/40": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/40",
+            "subdirectories": []
+          },
+          "data": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/data",
+            "subdirectories": [
+              "logs"
+            ]
+          },
+          "data/logs": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/data/logs",
+            "subdirectories": []
+          },
+          ".git/objects/cd": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/cd",
+            "subdirectories": []
+          },
+          ".git/objects/51": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/51",
+            "subdirectories": []
+          },
+          ".git/objects/07": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/07",
+            "subdirectories": []
+          },
+          "services/mcp-server/src/tools/shell": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/services/mcp-server/src/tools/shell",
+            "subdirectories": []
+          },
+          "scripts/maintenance": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/scripts/maintenance",
+            "subdirectories": []
+          },
+          "backup_20250407_220136/docs/backlog": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/backup_20250407_220136/docs/backlog",
+            "subdirectories": []
+          },
+          ".git/hooks": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/hooks",
+            "subdirectories": []
+          },
+          ".git/objects/68": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/68",
+            "subdirectories": []
+          },
+          "tests/unit": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/tests/unit",
+            "subdirectories": []
+          },
+          ".git/objects/4a": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/4a",
+            "subdirectories": []
+          },
+          ".git/objects/f9": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/f9",
+            "subdirectories": []
+          },
+          ".git/objects/d3": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/d3",
+            "subdirectories": []
+          },
+          ".git/objects/ec": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/ec",
+            "subdirectories": []
+          },
+          "docs/backlog": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/docs/backlog",
+            "subdirectories": []
+          },
+          ".git/refs/tags": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/refs/tags",
+            "subdirectories": []
+          },
+          ".github": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.github",
+            "subdirectories": [
+              "workflows"
+            ]
+          },
+          ".git-hooks": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git-hooks",
+            "subdirectories": []
+          },
+          ".git/objects/4d": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/4d",
+            "subdirectories": []
+          },
+          ".git/objects/1c": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/1c",
+            "subdirectories": []
+          },
+          ".git/objects/ca": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/ca",
+            "subdirectories": []
+          },
+          ".git/refs/remotes/origin": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/refs/remotes/origin",
+            "subdirectories": []
+          },
+          ".git/objects/d6": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/d6",
+            "subdirectories": []
+          },
+          ".git/objects/2c": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/2c",
+            "subdirectories": []
+          },
+          ".git/objects/32": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/32",
+            "subdirectories": []
+          },
+          ".git/objects/85": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/85",
+            "subdirectories": []
+          },
+          ".git/objects/2a": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/2a",
+            "subdirectories": []
+          },
+          "config/models": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/config/models",
+            "subdirectories": []
+          },
+          ".git/objects/fb": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/fb",
+            "subdirectories": []
+          },
+          ".git/objects/24": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/24",
+            "subdirectories": []
+          },
+          "tests/integration": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/tests/integration",
+            "subdirectories": []
+          },
+          ".git/objects/c2": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/c2",
+            "subdirectories": []
+          },
+          ".git/objects/09": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/09",
+            "subdirectories": []
+          },
+          ".git/objects/33": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/33",
+            "subdirectories": []
+          },
+          ".git/objects/19": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/19",
+            "subdirectories": []
+          },
+          ".git/objects/9a": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/9a",
+            "subdirectories": []
+          },
+          ".git/objects/da": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/da",
+            "subdirectories": []
+          },
+          "temp": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/temp",
+            "subdirectories": []
+          },
+          ".git/objects/b6": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/b6",
+            "subdirectories": []
+          },
+          ".git/objects/26": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/26",
+            "subdirectories": []
+          },
+          ".git/objects/9f": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/9f",
+            "subdirectories": []
+          },
+          ".git/objects/88": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/88",
+            "subdirectories": []
+          },
+          "docs/troubleshooting": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/docs/troubleshooting",
+            "subdirectories": []
+          },
+          "backup_20250407_215945/LibreChat": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/backup_20250407_215945/LibreChat",
+            "subdirectories": []
+          },
+          "services/mcp-server/src/services": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/services/mcp-server/src/services",
+            "subdirectories": []
+          },
+          ".git/objects/dc": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/dc",
+            "subdirectories": []
+          },
+          ".git/objects/e0": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/e0",
+            "subdirectories": []
+          },
+          ".git/objects/2e": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/2e",
+            "subdirectories": []
+          },
+          ".git/branches": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/branches",
+            "subdirectories": []
+          },
+          "docs/tutorials": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/docs/tutorials",
+            "subdirectories": []
+          },
+          ".git/objects/e6": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/e6",
+            "subdirectories": []
+          },
+          ".git/objects/c1": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/c1",
+            "subdirectories": []
+          },
+          ".git/objects/ab": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/ab",
+            "subdirectories": []
+          },
+          ".git/info": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/info",
+            "subdirectories": []
+          },
+          ".git/objects/8b": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/8b",
+            "subdirectories": []
+          },
+          ".git/objects/aa": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/aa",
+            "subdirectories": []
+          },
+          ".git/objects/48": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/48",
+            "subdirectories": []
+          },
+          ".git/objects/c4": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/c4",
+            "subdirectories": []
+          },
+          "__pycache__": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/__pycache__",
+            "subdirectories": []
+          },
+          "backup_20250407_220136/services/librechat": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/backup_20250407_220136/services/librechat",
+            "subdirectories": []
+          },
+          "scripts/setup": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/scripts/setup",
+            "subdirectories": []
+          },
+          ".git/objects/0e": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/0e",
+            "subdirectories": []
+          },
+          ".git/objects/3f": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/3f",
+            "subdirectories": []
+          },
+          ".git/objects/e8": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/e8",
+            "subdirectories": []
+          },
+          "backup_20250407_220136/.git-hooks": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/backup_20250407_220136/.git-hooks",
+            "subdirectories": []
+          },
+          ".git/refs/heads": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/refs/heads",
+            "subdirectories": []
+          },
+          ".git/objects/a1": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/a1",
+            "subdirectories": []
+          },
+          ".git/objects/41": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/41",
+            "subdirectories": []
+          },
+          ".git/objects/46": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/46",
+            "subdirectories": []
+          },
+          ".github/workflows": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.github/workflows",
+            "subdirectories": []
+          },
+          ".git/objects/a5": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/a5",
+            "subdirectories": []
+          },
+          ".git/objects/98": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/98",
+            "subdirectories": []
+          },
+          ".git/objects/59": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/59",
+            "subdirectories": []
+          },
+          ".git/objects/58": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/58",
+            "subdirectories": []
+          },
+          ".git/objects/d5": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/d5",
+            "subdirectories": []
+          },
+          ".git/objects/56": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/56",
+            "subdirectories": []
+          },
+          ".git/objects/bd": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/bd",
+            "subdirectories": []
+          },
+          ".git/objects/71": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/71",
+            "subdirectories": []
+          },
+          ".git/objects/df": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/df",
+            "subdirectories": []
+          },
+          ".git/objects/47": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/47",
+            "subdirectories": []
+          },
+          ".git/objects/76": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/76",
+            "subdirectories": []
+          },
+          ".git/objects/4b": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/4b",
+            "subdirectories": []
+          },
+          ".git/objects/1b": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/1b",
+            "subdirectories": []
+          },
+          ".git/objects/e7": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/e7",
+            "subdirectories": []
+          },
+          ".git/objects/db": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/db",
+            "subdirectories": []
+          },
+          ".git/objects/7d": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/7d",
+            "subdirectories": []
+          },
+          "backup_20250407_221515/core/kg/data": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/backup_20250407_221515/core/kg/data",
+            "subdirectories": []
+          },
+          ".git/objects/9c": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/9c",
+            "subdirectories": []
+          },
+          ".git/objects/4e": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/4e",
+            "subdirectories": []
+          },
+          ".git/objects/c8": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/c8",
+            "subdirectories": []
+          },
+          "backup_20250407_220136/core/kg/docs": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/backup_20250407_220136/core/kg/docs",
+            "subdirectories": []
+          },
+          ".git/objects/2b": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/2b",
+            "subdirectories": []
+          },
+          "backup_20250407_221515/.git-hooks": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/backup_20250407_221515/.git-hooks",
+            "subdirectories": []
+          },
+          ".git/objects/a0": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/a0",
+            "subdirectories": []
+          },
+          "backup_20250407_220136/config/models": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/backup_20250407_220136/config/models",
+            "subdirectories": []
+          },
+          ".git/objects/17": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/17",
+            "subdirectories": []
+          },
+          ".git/objects/23": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/23",
+            "subdirectories": []
+          },
+          ".git/objects/87": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/87",
+            "subdirectories": []
+          },
+          ".git/objects/39": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/39",
+            "subdirectories": []
+          },
+          ".git/objects/34": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/34",
+            "subdirectories": []
+          },
+          ".git/objects/28": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/28",
+            "subdirectories": []
+          },
+          ".git/logs/refs/remotes/origin": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/logs/refs/remotes/origin",
+            "subdirectories": []
+          },
+          ".git/objects/01": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/01",
+            "subdirectories": []
+          },
+          ".git/objects/dd": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/dd",
+            "subdirectories": []
+          },
+          ".git/objects/86": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/86",
+            "subdirectories": []
+          },
+          ".git/objects/9d": {
+            "path": "/home/skr/projects/MCP-BASE-STACK/.git/objects/9d",
+            "subdirectories": []
+          }
+        },
+        "issues": []
+      },
+      "file_presence": {
+        "expected": {
+          "root": [
+            "README.md",
+            "LICENSE",
+            ".gitignore"
+          ],
+          "docs": [
+            "README.md"
+          ],
+          "core/kg/scripts": [
+            "__init__.py",
+            "update_knowledge_graph.py"
+          ],
+          "services/mcp-server/src": [
+            "__init__.py",
+            "app.py"
+          ],
+          "tests/unit": [
+            "__init__.py",
+            "test_example.py"
+          ]
+        },
+        "actual": {
+          ".git/objects/86": [
+            "5089b6299b694c4ed13ec6634741bccba22eea",
+            "6ecd2a10d7dbec7e6a58d77c89296488d99439"
+          ],
+          ".git/refs/heads": [
+            "backup-20250407-155124",
+            "dev",
+            "backup-20250407-155857",
+            "backup-20250407-162629",
+            "backup-20250407-162113",
+            "backup-20250407-160818",
+            "backup-20250407-161555",
+            "main",
+            "backup-20250407-161159"
+          ],
+          ".git/objects/34": [
+            "81574e350770e391d21e25df260daf997fb119"
+          ],
+          ".git/objects/42": [
+            "3739033c397993b708c3bdf938669cd7932da3",
+            "7c442dfad9d548e6cc2ac3954e7fc848b0e722"
+          ],
+          ".git/objects/44": [
+            "a3e9e7e659d4c56dec4029c95fa1f8ab1a6747"
+          ],
+          ".git/objects/41": [
+            "dfba486a4425db896f15ab237a250c7f5dac87"
+          ],
+          ".git/objects/7a": [
+            "33d70884c0cd40312c4194a605ce30e8d1e094",
+            "4104038d640919f253343430dcbeace281afeb",
+            "5d27a737db08eab15b31904b6aed4f40fed1b5"
+          ],
+          "services/llm-server/config": [
+            "server.yaml"
+          ],
+          "services/mcp-server/src": [
+            "app.py",
+            "mcp_server.py",
+            "__init__.py"
+          ],
+          "scripts": [
+            "README.md"
+          ],
+          ".git/logs/refs/remotes/origin": [
+            "main",
+            "dev"
+          ],
+          ".git/objects/3c": [
+            "2bd1626de829bf250e9d34064dce8ec3421d35",
+            "1a77929ac9b5109d64cc9a15321837e05569be",
+            "697847577c12234e64bb5354d28d7d2657c3f4",
+            "02b185c534ca00720f7e8465e61e2c59c4d05a"
+          ],
+          ".git/hooks": [
+            "pre-rebase.sample",
+            "post-update.sample",
+            "prepare-commit-msg.sample",
+            "push-to-checkout.sample",
+            "update.sample",
+            "pre-merge-commit.sample",
+            "pre-commit.sample",
+            "commit-msg.sample",
+            "post-merge",
+            "pre-push.sample",
+            "fsmonitor-watchman.sample",
+            "applypatch-msg.sample",
+            "pre-applypatch.sample",
+            "pre-commit",
+            "pre-receive.sample"
+          ],
+          ".git/objects/bd": [
+            "21b3f87cf725cef3d294ced4b585dbaa7ef410",
+            "d4f112204626745557ec76f2843bb15de0f106"
+          ],
+          ".git/objects/e6": [
+            "9de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+            "813eb216f3f440349b28299b3e6fba91fa8eae",
+            "b55883c95070152ed6fe304cde50c23d758a7d"
+          ],
+          ".git/objects/40": [
+            "2d5f8de2631ed88767d140b9c604298fb75941"
+          ],
+          ".git/objects/d8": [
+            "db14e86bda8902deaf752796e5ca18c5a7a520",
+            "8f7d2aaecd57c380e04a8778c52fb291b49e26"
+          ],
+          "services/mcp-server/src/di": [
+            "containers.py",
+            "providers.py",
+            "__init__.py",
+            "README.md"
+          ],
+          ".git/objects/cb": [
+            "06ac6afc598d39a7e169a6322b66a3d852ed6e",
+            "3f9cf843feb611e5059d0571952bacefbf2611",
+            "d2f4126de17ac408edb540b2ff93582c5290ec",
+            "7274c4c5d72de1a6ac873b083bfe1e90a98083"
+          ],
+          "root": [
+            "install-file-update-hooks.sh",
+            "specification-manifest-README.md",
+            "mcp.sh",
+            ".gitignore",
+            "mypy.ini",
+            "check_code_quality_nodes.py",
+            "cleanup-report.json",
+            "pyproject.toml",
+            "analyze_code.py",
+            "create_backup_branch.sh",
+            "project-structure-report.json",
+            "fix_code_quality.sh",
+            "specification-manifest.json",
+            "code_review_report.md",
+            ".flake8",
+            "cleanup_files.log",
+            "check_code_quality.sh",
+            "verify_stack_health.sh",
+            "check_kg_nodes.py",
+            "install_pre_commit_hooks.sh",
+            "cleanup_files.py",
+            "traverse_project.py",
+            "LICENSE",
+            "validate-manifest.py",
+            "README.md"
+          ],
+          ".git/objects/e7": [
+            "e512eaedfe1c89ea3aaf25fc69def321d93a3c",
+            "82ed63b3b4756ef63a000480830305b72e662f",
+            "af99ae0006a126a6045fe1194910d3020a8f7a"
+          ],
+          ".git/objects/50": [
+            "c1b742d3a65b6d5bb62dc0d1ddfe6b27e4cd24"
+          ],
+          ".git/objects/48": [
+            "58e8e3604116b3e64ba151128b4cc20959e4fa",
+            "7207c8956189016bd09ba9380115dc2b6c2162"
+          ],
+          ".git/refs": [
+            "stash"
+          ],
+          ".git/objects/8d": [
+            "fc072358de277249d4b801bfb4e62e00d9282a",
+            "a5602adf7d0849ba42a851b022240e287e58b9",
+            "a395b4ecdc790d712f714930eb43d7341d503c"
+          ],
+          ".git/objects/e3": [
+            "b1947283903d3f646c0f678c2c767528da1c3d"
+          ],
+          ".git/objects/92": [
+            "9bab7034ab3ca74b32b0c4632adb79a2a2668b"
+          ],
+          ".git/objects/56": [
+            "6d7815de9fd1736b8fff3db943d571d4ca2230",
+            "4f4d0424324f6daceed356fcdcc89249e88f91"
+          ],
+          ".git/objects/3a": [
+            "76ecb0f31986fe0d0d438d3635641ffb9929ca"
+          ],
+          ".git-hooks": [
+            "pre-commit",
+            "README.md"
+          ],
+          ".git/objects/87": [
+            "4ce2edeb362324f8b0bf3b6ba8069c3eef04b6",
+            "76423215188a4866e99f3e87a7ef559ebf0905",
+            "9e0df9849c5b9de6833c1167a24324d3fc5d59",
+            "366b95cf0d0dc2fba1947ca33ac7f283282ed4"
+          ],
+          ".git/objects/0d": [
+            "4cdc3165bbf215c3b3540ee1c2426bc59f2307",
+            "859f28e85495a7ebcd6db6d366e04ca4f8ddc6"
+          ],
+          ".git/objects/c3": [
+            "a578f98d8db924a41c283cf6cf38e1b8406a9b",
+            "3a462893b167319b14df8469af39bd057caae0"
+          ],
+          ".git/objects/08": [
+            "2366bc07a9d25035c7768ceeed5e472a9727da"
+          ],
+          ".git/logs/refs/heads": [
+            "backup-20250407-155124",
+            "backup-20250407-160818",
+            "dev",
+            "backup-20250407-162629",
+            "main",
+            "backup-20250407-161159",
+            "backup-20250407-162113",
+            "backup-20250407-155857",
+            "backup-20250407-161555"
+          ],
+          "backup_20250407_220136": [
+            "cleanup_files.py",
+            "specification-manifest-schema.json",
+            ".shellcheckrc",
+            ".pylintrc",
+            ".last_backup_branch",
+            ".pre-commit-config.yaml",
+            ".roocodes",
+            "project-report.json",
+            "specification-manifest.json",
+            "code-analysis-report.json",
+            "project-structure-report.json"
+          ],
+          "backup_20250407_215945/services/librechat/config": [
+            ".env"
+          ],
+          ".git/objects/a0": [
+            "2b16b0f0f8b9d2f283e091b3f7645666689e61",
+            "b566307c1257dd56b28cfb103ee6896a9c2f5b"
+          ],
+          ".git/objects/5a": [
+            "0bcfcea13a1c2e34ac07b16814fcd68265b14e"
+          ],
+          ".git/objects/dd": [
+            "b7f8ad9addd33bdd18923f8f65eef643326911"
+          ],
+          ".git/objects/ab": [
+            "e242e31fa35fcce61aec7fbbfb6a4a72267549",
+            "a1fcf0c90e8c63da9acb350874fbd966770e1e",
+            "8f589d824893691d797d0f3853df50ab34c908"
+          ],
+          "docs/tutorials": [
+            "data-backup.md",
+            "setup_environment.md",
+            "update-components.md",
+            "code_quality_guide.md"
+          ],
+          ".git/objects/8e": [
+            "dd2f3c62848e90087973043347f8a1d17ee0a0"
+          ],
+          ".git/objects/07": [
+            "c5dbf57530d7e42afd03390539d15a998bec19",
+            "e09d9820942a27af4c657b76ecf0a791a3d07a"
+          ],
+          ".git/objects/3f": [
+            "f0e14878f2d41149dc54d314ef1d2eabf95434",
+            "d19e49ec2fc4d01743bac2213e21bdfe78444f",
+            "9fd3bb8537407680f033479c37d539e5f92be0",
+            "63ac05145ff974a8cc934f29e1f620f6f09880"
+          ],
+          ".git/objects/26": [
+            "a389b9998f0adf483a0762c46260b08ead9ab8",
+            "dba71a9eb0b448334589bbbe7e1b61a532d998",
+            "04bd0b937fb3bdd63cc2df18b1ac203c39c149",
+            "c259c8b9bad80a88724e4ad6d13e4d7bfd9629"
+          ],
+          ".git/objects/16": [
+            "8b830fcab3bad9f19a3d59a9c934bc3beedb08"
+          ],
+          ".git/objects/94": [
+            "607fa34d4e9718c5d85a12aeec4199cdad24e9",
+            "66cf55149008dca4747f59628cbef6b1399285"
+          ],
+          ".git/objects/da": [
+            "f4b0dba909cd472c929d79f855ffbef5ad0024",
+            "2eed747485d80d786728cc22011a09e7a77f13",
+            "f1671e10ed3c6027d653c662e493944464bf3a",
+            "e6ba23e5e682de9b2e6537f82d69baca915816",
+            "5b879de09924589b80f9e9cb0d87aee4f63a72"
+          ],
+          ".git/objects/18": [
+            "8e0b3289f76ca16dfd02088a3509e2640ffab3",
+            "79bc8c283ddf7e0fa2ad0c2ac7363cc20c8d4d",
+            "587db0cc198565c11a781035863942dcedfcd2"
+          ],
+          ".git/objects/7d": [
+            "09902749a0f576f40992cb1839ff03f0dbc6de",
+            "9a213f884c41a8030bd90490eb4a5f549b7b6f"
+          ],
+          ".git/objects/30": [
+            "1920c0ac6f118e93c94e690a7eaf4aaac8efd6",
+            "7f75cb1e4f9c0688acc97344a414aa7e505d21"
+          ],
+          ".git/objects/9c": [
+            "809dc044a1816bd7282f145f27fb299a0925ca"
+          ],
+          ".git/objects/04": [
+            "7bb3c6a60424dc8dab8a56c95ae654b3f7fc30"
+          ],
+          ".git/objects/09": [
+            "0bd50c6d693fa2c396f49bcc67e7e69fd5d4ff",
+            "e22e70e9b972fe66cfa67c432ece51dac73214"
+          ],
+          ".git/objects/1b": [
+            "6e2d3b6a65c0fdffecab305953060861562d89",
+            "ded2936971fcc32c9c4030aa16f1f551b53914",
+            "a4100c99944788e5720d28c20f3e03fe0477b0"
+          ],
+          ".git/objects/ac": [
+            "688170c3cf0cc3f0221f58dd74d47f3db9444d"
+          ],
+          ".git/objects/f6": [
+            "a31cf5795c138ffc99168c46237afc8035bf91",
+            "e28ec9edf34bcfcf2e9c6bd71fd7fc00aabc07",
+            "8fc679e0d069d388f3a034c30453f393ef180f"
+          ],
+          ".git/objects/ed": [
+            "7994de51dac4fadb66cabfa0ff431c06a2f5d2",
+            "17161c0ab3b0ec2f7687cf60db721b4af27e4f",
+            "f7854219bab5b88bf27b50f78da3b23a4d20c4"
+          ],
+          ".git/objects/e1": [
+            "ed5b969df4565fecfcc6f09e0e58673d5a8fa5",
+            "acbd0a7e4d0386359b4756e4f8b121507c25e8",
+            "4ac15cf9cc4da780b1b54bb7f9c44fd8f85872"
+          ],
+          ".git/objects/d5": [
+            "23c3a1caf2fe69d367c6789b8812fc4da2c205"
+          ],
+          "services/llm-server": [
+            "docker-compose.yml"
+          ],
+          "backup_20250407_221515": [
+            "specification-manifest.json",
+            "cleanup_files.py"
+          ],
+          "backup_20250407_220136/config": [
+            "code_review.yaml"
+          ],
+          ".git/objects/89": [
+            "2ff17894400d4a1ccbf4943133482d99ca2671",
+            "bc9e9b88a6480d96d7578cf801350585bd9331",
+            "2356df7f1ac896a6fa16069e4209cd19187acf"
+          ],
+          ".git/objects/13": [
+            "d64b92287b77f44ba0607e8334cd0055cd0cb1",
+            "1676eccb65b28d85ae80088b5519def58e147a"
+          ],
+          ".git/objects/6e": [
+            "686ffa9a591785ffc25a4e6c526919f3688aea",
+            "8fb5249c17a3f8fe0c9af0cff14206e8f73b7c"
+          ],
+          ".git/logs/refs": [
+            "stash"
+          ],
+          ".git/objects/75": [
+            "ec2fd5830f0b668621a702cbe3fa24d2fe6699"
+          ],
+          ".git/objects/b8": [
+            "f9fa197c38a5633b1c7f454d01855d2190860c"
+          ],
+          ".git/objects/47": [
+            "b325759e84bb13f02754230f292cd6cab46526",
+            "dd01be2e9e04eb0858521ca4d9546737f19c1b",
+            "9f671529c5cca4bd7175f0e728da094d829248"
+          ],
+          ".git/objects/54": [
+            "d354ac36bf9c6377588e83f8a5072c85bff55a"
+          ],
+          ".git/objects/8c": [
+            "b14c334ddee86df971aad0345be4a98ff1fec9"
+          ],
+          ".git/objects/15": [
+            "ef0b734b16079b912b717a1ab23149562aa1ad",
+            "f282df0dc9aa17a0da0033882d276a549dbffe"
+          ],
+          "backup_20250407_215945/docs/troubleshooting": [
+            "agent-misbehavior.md",
+            "code-not-updating.md",
+            "broken-links.md",
+            "ollama-errors.md"
+          ],
+          ".git/objects/a9": [
+            "3ee3426ee91eb259d641430d6f8050971e7d15",
+            "c541e0a0ea63440cbd5a0b34165abab096e7c0",
+            "f818fc6783f5fa9d1b7095108e1936ae49b10a"
+          ],
+          ".git/objects/ef": [
+            "4ee8c6b7e1fd5a5838ec07d5d6f7af6e82dae6",
+            "4cea041c15791be7a772c0d232c81c5614f33e",
+            "143f66dff26564c01275c93404f29d0cc41051"
+          ],
+          ".git/objects/e8": [
+            "32c3dfcf8f9e98489a85b1e7c9fee4636b2a86"
+          ],
+          ".git/objects/2f": [
+            "d7c183c9aea3d835793f37bf4b81401a8d0504"
+          ],
+          ".git/objects/c0": [
+            "a3d78712f05904d74eec0157e064c015721764",
+            "766621f3694ed18989b00425b11f9034fa2a9e",
+            "9297384399f7b060fc2d0549eb99c862534bbf"
+          ],
+          ".git/objects/9a": [
+            "742b16f91ea38e33e57007f3e06f925f430407",
+            "12fa0c7a1a87e9e9185b07896ada2624453b5d",
+            "752770c34f3fe2a1498256488cd0e63970cc44",
+            "ef25614b6c7b24fed1cd7830f827d06715fae7"
+          ],
+          "core/kg/scripts": [
+            "record_conventions_creation.py",
+            "update_knowledge_graph.py",
+            "update_feature.py",
+            "record_github_actions_workflow.py",
+            "register_feature.py",
+            "register_file_cleanup.py",
+            "record_advanced_code_quality_tools.py",
+            "add_git_hooks_to_kg.py",
+            "record_dependency_injection.py",
+            "setup_knowledge_graph.py",
+            "install_hooks.sh",
+            "__init__.py",
+            "record_code_quality_tooling.py"
+          ],
+          ".git/objects/e0": [
+            "8c64132335d23bb3f2ae71f7499bf9cda6423c"
+          ],
+          ".git/objects/fe": [
+            "6713b5a1478f0b55229898815238680124aaa5",
+            "686632f7a8c9e737f32fa2b207d1aaf11d2054",
+            "5673d4de648ecff1857982421311c0688b6011"
+          ],
+          ".git/objects/0e": [
+            "5c1137d46758ac23c1ae420676af70e37d6dde",
+            "6ba6c66a8ee0b50f2e768e2d035b15864edf17"
+          ],
+          ".git/objects/4e": [
+            "2c80a1a62e3d57492f67218e0139d98d58fb4e"
+          ],
+          "services/mcp-server": [
+            "docker-compose.yml"
+          ],
+          ".git/objects/d6": [
+            "daa57923328f654a0e8a4b447523b10a082bc2"
+          ],
+          ".git/objects/ae": [
+            "a0fa146845cd77cb30efcca8d002cb60cb678f",
+            "a080733101ad3e315223e485163848ff6633c0",
+            "ab94ec29e2329762a10ac14f0d9fca6cd1008c"
+          ],
+          ".git/objects/4a": [
+            "a421976a00b80e61b2f53b7b81c7331b8cabbd",
+            "6f2ea89405e4c18178de471115b7e4702cd22c",
+            "68ac3869bd1d6877cbcffda5e6ded06e3c7d8c"
+          ],
+          "backup_20250407_220136/tests/data": [
+            "mcp-agent-test.txt"
+          ],
+          "backup_20250407_221515/core/kg/data": [
+            "knowledge_graph.graphml",
+            "knowledge_graph.ttl"
+          ],
+          ".git/objects/82": [
+            "a5f151b7f1b7d6d9cd4b0ffd8230e719659f0d",
+            "4e60f01c610ad72c0066b60e3002d611766510"
+          ],
+          "backup_20250407_215945/services/mcp-server/src": [
+            "__init__.py"
+          ],
+          ".git/objects/85": [
+            "158069d9b872eb997f8415a4b682b1c4105afa"
+          ],
+          ".git/objects/e4": [
+            "fc19263bb4fd0c9fcdc8e12e57e2336ecb90b4"
+          ],
+          "LibreChat": [
+            "docker-compose.yml",
+            "librechat.yaml",
+            "docker-compose.temp.yml"
+          ],
+          ".git/objects/d7": [
+            "ec42fd8b42efd5359747d77d46231b60285ed0"
+          ],
+          "core/kg/data": [
+            "knowledge_graph.graphml",
+            "knowledge_graph.ttl"
+          ],
+          ".git/objects/ca": [
+            "2a24d3c34a3638ecfbea1661a3b66590f57bff",
+            "d230ba77fa89855c5900745a078dad36051a1b"
+          ],
+          "backup_20250407_220136/docs": [
+            "git-hooks-kg-integration-plan.md",
+            "specification-manifest-plan.md"
+          ],
+          ".git/objects/10": [
+            "802daa4986fd84a25fa5ffb491ca0ec9620dfd",
+            "38f8809da71b51299c84247f99d1d26eb35b70"
+          ],
+          ".git/objects/ce": [
+            "17d67f84773a7d409de696a7d70c77c0794ec6"
+          ],
+          ".git/objects/a1": [
+            "12cb821c33a95b0cb6af3bc55a8a1807027be8"
+          ],
+          ".git/objects/7b": [
+            "896d9bba5238b542163c1c113be586a680ac52"
+          ],
+          ".git/objects/a7": [
+            "d1f1d818e2101ef586384734ee4637a594cd3e"
+          ],
+          ".git/objects/95": [
+            "befa2b1346b6107f11126cd290d150e26d9d41"
+          ],
+          "backup_20250407_215945/docs/tutorials": [
+            "generate-code.md",
+            "create-agent.md",
+            "add-function.md",
+            "run-end-to-end.md"
+          ],
+          ".git/objects/69": [
+            "94b47dc2687ebc8a22322a7448beae92d63e69"
+          ],
+          ".git/objects/79": [
+            "831030ef2241d2ebfe38d5de702f78b3b9aff4",
+            "ead529f34082c57026f743bc9579c3f71c07a8"
+          ],
+          ".git/objects/93": [
+            "34e3aeb5e07425e58c002ccc9a928674f7f59f"
+          ],
+          ".git/objects/fb": [
+            "b6a1efe082a3b64f8bd2e50af3c01da1f8b9a0",
+            "040d6a9f194966c1c3bb39888e4524efd31023"
+          ],
+          ".git/objects/ea": [
+            "ebe542a201cd3aa3b04998bff3aaf3dcc6b261"
+          ],
+          "services/mcp-server/src/tools/shell": [
+            "command.py"
+          ],
+          "backup_20250407_215945/LibreChat": [
+            ".env"
+          ],
+          "config": [
+            "README.md"
+          ],
+          ".git/objects/32": [
+            "6689c17037b4a9ecc9b0b2289dc825242af15e",
+            "3843a04cb91800b4d331a364fce06c25028f7f"
+          ],
+          ".git/objects/8b": [
+            "941dc7e582313704fdba781c37f747a0eaa1c1",
+            "5b1a0343edb7a74109dfc6f2032ef154fee514",
+            "87b207129b789e96fb78548a234e0967c230ba",
+            "fbe8b3c8187350b669b51313275a6fcb0b8203"
+          ],
+          ".git/objects/4f": [
+            "caf3bb42c4fe05f8cd511a94421bc1dd836149"
+          ],
+          ".git": [
+            "description",
+            "ORIG_HEAD",
+            "config",
+            "COMMIT_EDITMSG",
+            "index",
+            "packed-refs",
+            "HEAD"
+          ],
+          ".git/objects/b6": [
+            "d6b38db40ec776e020c7cca63247cb11583532",
+            "75734906578e6fc052ce62e871d8af429f1c8f"
+          ],
+          ".git/objects/d9": [
+            "824ad6f76e1caa78d25849b4054e14d5ad8f38",
+            "abf958f6e3bd6bf2ecc6ff6bcbfe2eddfb6fca"
+          ],
+          ".git/objects/88": [
+            "9f194742c43f2be5d37845ab4a708f1a271129"
+          ],
+          "deploy": [
+            "docker-compose.yml",
+            "docker-compose.dev.yml",
+            "README.md"
+          ],
+          "backup_20250407_215945/services/mcp-server/src/tools": [
+            "__init__.py"
+          ],
+          ".git/objects/21": [
+            "acf0438550f0e16483a8d6fe0e5ea66fc75c6c"
+          ],
+          ".git/objects/68": [
+            "0de402cf0e673f8b66580a7ad7e3ed4e84151c",
+            "9ede39a0095f02db5776430c180fc734a22fe3"
+          ],
+          ".git/objects/71": [
+            "a62001d75da342971a1b50901e4f03e4cfe8c3"
+          ],
+          ".git/objects/6a": [
+            "9beaa9c6ab4ab69d656272e31255aee3441eb5"
+          ],
+          ".git/objects/f2": [
+            "57920860612bc017b2041cc015986f4f71b1dc"
+          ],
+          ".github/workflows": [
+            "code-quality.yml"
+          ],
+          ".git/objects/01": [
+            "5fe70529958bb8a640f86b46470615b480ceea",
+            "53fbc18531deb10565d3d428ed974527db9427",
+            "500b76c74cda70844c0211383dfbba58949d07"
+          ],
+          ".git/objects/28": [
+            "9d1b33275a38ebc09ff5d7946c7d80e9a0b72c",
+            "145bd4691bb916606bcb208afc60f09e4774af",
+            "cd9596c5e681ee5c3ff1eb26ed7134188bf105"
+          ],
+          ".git/objects/fd": [
+            "c2e6c3ac4a24dc225e528453f22d85e61939ba",
+            "2bc3012e978daf8efde0aecf9c1ddda6b170d1",
+            "efe8fd1a8b176bb56d787d0401150764379d87"
+          ],
+          "backup_20250407_220136/docs/troubleshooting": [
+            "librechat-fixes.md"
+          ],
+          ".git/objects/58": [
+            "620d8e275badda5b9b88cf7f3cd652a7d2e83c",
+            "37c7aa500604a32dbb262a451052b25e04c663"
+          ],
+          ".git/objects/9f": [
+            "4c4d80c1f6ad449d7aa8c4b6c44b0884cf722b",
+            "dca9657ab4c4e3ebc931fce1b038ed4d65c3cb",
+            "762131b3809d6a1a1f671a561e03c1409ff75f"
+          ],
+          ".git/objects/4d": [
+            "cdcd87e3eaff7e55d348dd8852c77095e9c266"
+          ],
+          ".git/objects/73": [
+            "af247c6750579f0af0d64c583c47c5cbf83b18"
+          ],
+          "services/librechat/config": [
+            "librechat.yaml"
+          ],
+          "docs/knowledge-graph": [
+            "schema.md",
+            "examples.md",
+            "usage-guide.md",
+            "code-generation.md"
+          ],
+          ".git/logs": [
+            "HEAD"
+          ],
+          "tests/unit": [
+            "__init__.py",
+            "test_example.py",
+            "README.md"
+          ],
+          ".git/objects/51": [
+            "7e26b9d76af467233f8e4cc85d07ee333ac635"
+          ],
+          ".git/objects/12": [
+            "31bd2f7f0686443f71f6260703e4f89267d688",
+            "dbfcf3c42eb472cc30343bc71b4bc99c04a410"
+          ],
+          ".git/objects/46": [
+            "3a72e84a3245f55edb38787b0928517680d71d",
+            "4a08e0fd33c6eb34b1b78a860ca2013aca2864"
+          ],
+          ".git/objects/97": [
+            "a02f1e37b2e0ee74a42fa0394f573d7d17b44d",
+            "9b5689c94cc90bd860d94bd0d03987b0a01483",
+            "aa1882f0600500b7328c4b704c8e013686f4cb"
+          ],
+          "scripts/maintenance": [
+            "verify_kg_migration.py",
+            "automated_code_review.py",
+            "verify_stack_health.sh",
+            "generate_quality_report.py",
+            "verify_librechat_integration.sh",
+            "test_mcp_agent.sh"
+          ],
+          ".git/objects/c5": [
+            "8d94af48f5ab1284031606ac674df5bf87ba85",
+            "ae2c2e8eca94e35ea36c415d0a83bdabe12899",
+            "4e619085d56b40544206c044520910939effdf"
+          ],
+          ".git/objects/19": [
+            "69c94ac5ac37761448eb92355fb1261a92c7f4",
+            "2c87d4bdb6373f5386442303b010cd7804baa3",
+            "d09e7e85431e027b125ce4a2a77e477c3ffc95"
+          ],
+          ".git/objects/43": [
+            "40685b16a1957005f330c8254f21500aded5d7",
+            "dde687f4c2e9f6e1eb89396492eb6df284fcb5"
+          ],
+          ".git/objects/be": [
+            "061b4f9ffae8792c334ffc2869af987b577970",
+            "0f69e69e68a42b75239f63ccbfe1b5559226c4"
+          ],
+          ".git/info": [
+            "exclude"
+          ],
+          "backup_20250407_220136/core/kg/data": [
+            "knowledge_graph.graphml",
+            "knowledge_graph.ttl"
+          ],
+          "backup_20250407_220136/data/logs": [
+            "ollama-status.txt",
+            "librechat-status.txt",
+            "mcp-server-status.txt",
+            "ollama-models-list.txt",
+            "llm-server-status.txt",
+            "llm-server-models-list.txt",
+            "nvidia-container-output.txt"
+          ],
+          "docs": [
+            "file-cleanup-guide.md",
+            "mcp_maintenance_guide.md",
+            "maintenance_guide.md",
+            "README.md"
+          ],
+          "docs/troubleshooting": [
+            "resource-management.md",
+            "common-issues.md",
+            "monitoring-and-logging.md"
+          ],
+          ".git/objects/de": [
+            "fcd255dd9a342b76d1db468c6064e1deb8de49",
+            "c4df3ccf6e04a9e4591124021859db36225cb9"
+          ],
+          ".git/objects/aa": [
+            "73fdd13a38e8245d3220632fb8116fe15a53ea",
+            "28a88c7d628ca504c06a47732f7a0e60f2af4e",
+            "0fca399fd7130b9d0f1acead6c5581cbdbf873"
+          ],
+          ".git/objects/53": [
+            "8ab3f0fbab144f499e7b1a199ffa69ee5fc444"
+          ],
+          ".git/objects/57": [
+            "ab5562931035517c23aecebda590c955d6d631"
+          ],
+          ".git/objects/df": [
+            "034775d01c93b5b7636879a1bcc666fea890de"
+          ],
+          "docs/conventions": [
+            "coding-conventions.md",
+            "graph-guidelines.md",
+            "style-guide.md",
+            "review-checklist.md"
+          ],
+          "services/mcp-server/config": [
+            "README.md"
+          ],
+          ".git/objects/f0": [
+            "36056880fcf85f78f5e4f72a612062469c2f6f",
+            "697416846ef4c5434184701bc71b7edff2d287"
+          ],
+          ".git/objects/72": [
+            "e5db24ff634c7ee36dbd1092ff0426027aeb36"
+          ],
+          ".git/objects/17": [
+            "bbcc982474048999684b6a99a8fa2738dc240c",
+            "49bd2d1e4dec7d0a515f5ada3e95c549786c8e"
+          ],
+          "backup_20250407_220136/config/models": [
+            "registry.yaml"
+          ],
+          "backup_20250407_221515/.git-hooks": [
+            "pre-commit"
+          ],
+          ".git/objects/24": [
+            "f7b52ff3f22bc0c426a4d6ca835c9153126eb4",
+            "149e64d04efea3ea0bea185827283ac42838e9"
+          ],
+          ".git/objects/1f": [
+            "ed8207a7d929716feee429a3a9c9e0b525beae"
+          ],
+          ".git/objects/eb": [
+            "56167f8edc84de4d9df5cb54b0960e11b33b21",
+            "e255849fc9ffb2282cbf47435d42e6043b3235",
+            "7fb2c6000586ebcfb2a7be9bc90a9eb12c6fd0"
+          ],
+          ".git/objects/f4": [
+            "ee477d642a72ebefa6f87824ffe3dafbd7e03a"
+          ],
+          ".git/objects/f1": [
+            "10c1faeccc5b92a39ce34d7dc1fa048327e562"
+          ],
+          "scripts/deployment": [
+            "restart_stack.sh",
+            "update_ollama_references.sh",
+            "update_kg_deployment.py",
+            "start_mcp_server.sh",
+            "update_kg_root.py",
+            "register_new_features.sh"
+          ],
+          "backup_20250407_220136/services/mcp-server": [
+            "requirements.txt",
+            "Dockerfile"
+          ],
+          ".git/objects/b3": [
+            "659555283e1a38b6edcedb4ac2e9704541d2fb"
+          ],
+          ".git/objects/dc": [
+            "cc230bdd7356e717a4772fe48ebfc1aa64c044"
+          ],
+          ".git/objects/cc": [
+            "aed398456fc3df020eab614d30db0bce2c7c20",
+            "1560d867cd0da0627e4e094f7daa0fa08761d5"
+          ],
+          ".git/objects/36": [
+            "4015e27e341236c0324a3bfc3e7221228b6a5d"
+          ],
+          ".git/objects/23": [
+            "8c3f5d2ebd6a25f506ddd603e15ce8d41228f0"
+          ],
+          ".git/objects/1c": [
+            "05fdcaa01f2af0c67047a400677ff41090b735"
+          ],
+          ".git/objects/84": [
+            "7f3e26d43f13339dd6aa90066629228a97c299"
+          ],
+          ".git/objects/b0": [
+            "f002fccb2dbebae04f3ddb326ccd0f54302d6c"
+          ],
+          "scripts/setup": [
+            "README.md"
+          ],
+          ".git/objects/db": [
+            "c497d5cee829bab5f9fab5bf862916567b8c06"
+          ],
+          ".git/objects/a6": [
+            "6d1f05d827335ddb8dc4d39519c285f23d7e05"
+          ],
+          "backup_20250407_220136/docs/tutorials": [
+            "model-integration.md"
+          ],
+          ".git/objects/5b": [
+            "5afd9bb239955219b69be3cbc24dc54d7e04b2"
+          ],
+          ".git/objects/9d": [
+            "abf9091c16d4289f6e4bb4754e0bf913ea8e92"
+          ],
+          ".git/objects/b4": [
+            "640261e79558d6f4061048b29015631ada00a7",
+            "7a76947eb40760ae07583f9e7e0ac1da7d7fe2",
+            "9f524ab447c2110a576cb7cb79511ade92cb1c"
+          ],
+          ".git/objects/59": [
+            "7ee2c1ad64358ca4a671e51e5538505dfe3745"
+          ],
+          ".git/objects/76": [
+            "66e87f3dec6a92be6be7b34bd8aed0fcebb3c1"
+          ],
+          ".git/objects/c9": [
+            "55c4f8aa8c5f15d1b9fb4feb8510f980f806e0",
+            "b79bf4ab59832892e9762e1b5899c9e8a65ecc"
+          ],
+          "services/mcp-server/src/services": [
+            "example_service.py",
+            "prompt_processor.py",
+            "__init__.py"
+          ],
+          ".git/refs/remotes/origin": [
+            "main",
+            "dev"
+          ],
+          ".git/objects/c1": [
+            "f5e5c5ba9606302a594b7c4fd28deaac5f30a7",
+            "eb4fd5a741ae3cf5c3ba1b05466dd2f402015b",
+            "2e3d0bbb5f0224b8b754c54061d51bafb17b1d"
+          ],
+          ".git/objects/1d": [
+            "3ef435e706aadea726f93f7da623d08c3d2afc",
+            "92e77a895f00ffdbf341b8f18608fe1cb2565c"
+          ],
+          ".git/objects/bf": [
+            "700f5b742e8742b1a73d5790d0c2dc47847c7c",
+            "2817e8527b25acab8baabb5044f21e2bee6f50"
+          ],
+          "backup_20250407_220136/services/librechat": [
+            ".env"
+          ],
+          ".git/objects/2a": [
+            "4aec736326f6339d37d5453366fc1d23e62873"
+          ],
+          "backup_20250407_220136/core/kg/docs": [
+            "graph_stats.txt",
+            "graph_visualization.png"
+          ],
+          ".git/objects/d3": [
+            "b102378b8575202d3c783dfa9d287667c8e15c",
+            "2730d55980ca3a5f7a6dd1013c7d8b467e100d"
+          ],
+          ".git/objects/2e": [
+            "ad7939e95c54e20a02ce7dd1c8a010c71d5ddc",
+            "cea450b9155ddf9c8767b9d5f27a985fffaf55"
+          ],
+          ".git/objects/67": [
+            "94cf81a3849d131f2f53fd1fb6492dcff01a01"
+          ],
+          ".git/objects/cf": [
+            "d7bad479f065b0f4af05a14528007a2b9b3c19"
+          ],
+          "core/kg/scripts/__pycache__": [
+            "register_feature.cpython-310.pyc"
+          ],
+          "deploy/volumes": [
+            "model-volumes.yml"
+          ],
+          ".git/objects/d0": [
+            "19bdccc0b678ed0602d78a6ab249f9deb856ed",
+            "51be612808fd8f24d019d04de6797b5f9dafdb"
+          ],
+          "tests": [
+            "README.md",
+            "test_code_review.py"
+          ],
+          ".git/objects/77": [
+            "40f92a34475f6c60121b07b125a509e4c09184",
+            "8ac9fc36d00956d2efaa0bb1c975522bf57b8b"
+          ],
+          ".git/objects/33": [
+            "e88b98af62c4bae8341a2139a80d3f6f1983e7",
+            "0ec7abe2f34711b1283729ce5f13f0f0bad7a6"
+          ],
+          "temp": [
+            "dependency-injection.md"
+          ],
+          ".git/objects/74": [
+            "5aa5d67aa4be51b77d8912253d0bb6c21e39ec"
+          ],
+          "backup_20250407_220136/temp": [
+            "dependency-injection.md:Zone.Identifier"
+          ],
+          ".git/objects/52": [
+            "bd76ac0ad662ec9201a929f71f758ff50b611b",
+            "ddc2395e419c36fba80acb8979e4f25cd56294"
+          ],
+          ".git/objects/5e": [
+            "a8618b4bb277a6a1b1bf9ef00e4a17252308ae"
+          ],
+          ".git/objects/5f": [
+            "1db5ff8d79fe1c07e3fc03b163c37cbf55f011"
+          ],
+          ".git/objects/81": [
+            "3e8675bbab1d90e13d1ed52482cbdb86c3cae2"
+          ],
+          ".git/objects/c4": [
+            "a526026161e6654a75c8c7d974810373d87e9a",
+            "1cab60b543e0e5c7fa83b382d9def27fafa629"
+          ],
+          ".git/objects/5d": [
+            "39bead7f29a22573f631e7e3af1bf818c2ca43"
+          ],
+          "backup_20250407_215945": [
+            "cleanup-report.json",
+            "restore_from_backup.sh"
+          ],
+          ".git/objects/39": [
+            "1e764acdc7146ab840cf6d230dda0be165d361"
+          ],
+          ".git/objects/f7": [
+            "2182e3e7b73997bc66fd84e1b669e4f56db5b0"
+          ],
+          "backup_20250407_220136/config/environments": [
+            "production.yaml",
+            "development.yaml"
+          ],
+          "backup_20250407_220136/docs/backlog": [
+            "quality.md"
+          ],
+          ".git/objects/98": [
+            "0f14c0733c1c019cb5723c0bdfd51e18d3ba46",
+            "8cc0f1fc9587e1ec4eb1b49ef3ad916454e995",
+            "40a48c23196d62606c4e9910241c926a571475",
+            "d45186260a8f0eff46f26723602c6702115d14"
+          ],
+          "backup_20250407_220136/.git-hooks": [
+            "pre-commit"
+          ],
+          ".git/objects/bb": [
+            "dbf4fc6b3e7b4aa1ca195a9ab4046d115d7ac4"
+          ],
+          ".git/objects/3b": [
+            "e5b438267159e312564bf1de419220fc8dd94f",
+            "230635ad9ff9413bf69d262148d78f8fe70a0f"
+          ],
+          ".git/objects/2d": [
+            "3eb9ed3d231fdc9beb68ef9c25cc5f55dcdcd0"
+          ],
+          ".git/objects/2c": [
+            "25df9c95b33cce929f12d46429272727611064"
+          ],
+          ".git/objects/c8": [
+            "9ca9d6e8d31def3d08db797ce7f501c59bdda0"
+          ],
+          "tests/integration": [
+            "README.md"
+          ],
+          ".git/objects/c2": [
+            "316e4cfc4226a0b0c106fdc533dde0689070b2"
+          ],
+          ".git/objects/a3": [
+            "bba47385bdd6fce7c20f8bed759f6817964ee7"
+          ],
+          ".git/objects/ec": [
+            "a996a9d99088be9c100e2bc1b805405203a184"
+          ],
+          "backup_20250407_215945/services/mcp-server/src/tools/shell": [
+            "__init__.py"
+          ],
+          ".git/objects/cd": [
+            "e6001194b81cce34aacbdefe248480da4cef38"
+          ],
+          ".git/objects/a5": [
+            "402bebc57ccec8dd5f0e8385b5130cf733e173"
+          ],
+          "services/librechat": [
+            "docker-compose.yml",
+            "docker-compose.temp.yml"
+          ],
+          ".git/objects/6f": [
+            "0c4e028d8d0b3d913fc9a136eb1d17e7d9e406"
+          ],
+          ".git/objects/ba": [
+            "8ceebc2fc2f3a0f1689a9159807f1fe134c1cb"
+          ],
+          ".git/objects/b2": [
+            "a8f8b17f6e34ce2448b5418f5c43ea852f52b6",
+            "e80a03d21b465de1b9625f147f3a40029db359"
+          ],
+          ".git/objects/ff": [
+            "ad889be9ee6bd35db9d09ad9f1d81ad665b92f",
+            "98c3af6e7eae45c32d0354f85166a2a2ec8397"
+          ],
+          ".git/objects/4b": [
+            "995fe97fa2a29b1446207b69a21e916fa1b6dc"
+          ],
+          ".git/objects/14": [
+            "54c1ea1b9e5f4549decd72e9ff63d81daaf661"
+          ],
+          ".git/objects/f8": [
+            "d91b09e14d3737a0bf00f07882f5e9f63c4cd5"
+          ],
+          ".git/objects/ee": [
+            "250ed71942888785941360b99f969f720385ef"
+          ],
+          "__pycache__": [
+            "mcp_server.cpython-310.pyc"
+          ],
+          ".git/objects/61": [
+            "97c84506125a33718f9a486bd77950f750f4c1"
+          ],
+          ".git/objects/2b": [
+            "76bdb61f367773e18e5a404cc92baf8e8b2888"
+          ],
+          ".git/objects/91": [
+            "d5965abb3b2e86199397ab77b2e8855e89769c",
+            "f2d80fcc5b16fae46e6fe32dec1ad326e06b21"
+          ],
+          ".git/objects/fc": [
+            "03c8a5937e8ee08a4dfa4d8f8c1dedf0491d25"
+          ],
+          ".git/objects/f9": [
+            "b53508e629c5b4e384d98c405898a53a8ae465"
+          ],
+          ".git/objects/5c": [
+            "aee51675aa8c37cbd7eb6e78cdf8b9632e2ceb"
+          ]
+        },
+        "issues": []
+      },
+      "naming_conventions": {
+        "issues": [
+          {
+            "type": "invalid_python_module_name",
+            "path": "validate-manifest.py",
+            "name": "validate-manifest.py",
+            "pattern": "snake_case.py",
+            "severity": "error",
+            "message": "Python module name 'validate-manifest.py' does not follow the required pattern 'snake_case.py'"
+          },
+          {
+            "type": "invalid_python_module_name",
+            "path": "tests/unit/__init__.py",
+            "name": "__init__.py",
+            "pattern": "snake_case.py",
+            "severity": "error",
+            "message": "Python module name '__init__.py' does not follow the required pattern 'snake_case.py'"
+          },
+          {
+            "type": "invalid_python_module_name",
+            "path": "services/mcp-server/src/__init__.py",
+            "name": "__init__.py",
+            "pattern": "snake_case.py",
+            "severity": "error",
+            "message": "Python module name '__init__.py' does not follow the required pattern 'snake_case.py'"
+          },
+          {
+            "type": "invalid_python_module_name",
+            "path": "services/mcp-server/src/services/__init__.py",
+            "name": "__init__.py",
+            "pattern": "snake_case.py",
+            "severity": "error",
+            "message": "Python module name '__init__.py' does not follow the required pattern 'snake_case.py'"
+          },
+          {
+            "type": "invalid_python_module_name",
+            "path": "services/mcp-server/src/di/__init__.py",
+            "name": "__init__.py",
+            "pattern": "snake_case.py",
+            "severity": "error",
+            "message": "Python module name '__init__.py' does not follow the required pattern 'snake_case.py'"
+          },
+          {
+            "type": "invalid_python_module_name",
+            "path": "core/kg/scripts/__init__.py",
+            "name": "__init__.py",
+            "pattern": "snake_case.py",
+            "severity": "error",
+            "message": "Python module name '__init__.py' does not follow the required pattern 'snake_case.py'"
+          },
+          {
+            "type": "invalid_python_module_name",
+            "path": "backup_20250407_215945/services/mcp-server/src/__init__.py",
+            "name": "__init__.py",
+            "pattern": "snake_case.py",
+            "severity": "error",
+            "message": "Python module name '__init__.py' does not follow the required pattern 'snake_case.py'"
+          },
+          {
+            "type": "invalid_python_module_name",
+            "path": "backup_20250407_215945/services/mcp-server/src/tools/__init__.py",
+            "name": "__init__.py",
+            "pattern": "snake_case.py",
+            "severity": "error",
+            "message": "Python module name '__init__.py' does not follow the required pattern 'snake_case.py'"
+          },
+          {
+            "type": "invalid_python_module_name",
+            "path": "backup_20250407_215945/services/mcp-server/src/tools/shell/__init__.py",
+            "name": "__init__.py",
+            "pattern": "snake_case.py",
+            "severity": "error",
+            "message": "Python module name '__init__.py' does not follow the required pattern 'snake_case.py'"
+          },
+          {
+            "type": "invalid_shell_script_name",
+            "path": "verify_stack_health.sh",
+            "name": "verify_stack_health.sh",
+            "pattern": "kebab-case.sh",
+            "severity": "error",
+            "message": "Shell script name 'verify_stack_health.sh' does not follow the required pattern 'kebab-case.sh'"
+          },
+          {
+            "type": "invalid_shell_script_name",
+            "path": "fix_code_quality.sh",
+            "name": "fix_code_quality.sh",
+            "pattern": "kebab-case.sh",
+            "severity": "error",
+            "message": "Shell script name 'fix_code_quality.sh' does not follow the required pattern 'kebab-case.sh'"
+          },
+          {
+            "type": "invalid_shell_script_name",
+            "path": "create_backup_branch.sh",
+            "name": "create_backup_branch.sh",
+            "pattern": "kebab-case.sh",
+            "severity": "error",
+            "message": "Shell script name 'create_backup_branch.sh' does not follow the required pattern 'kebab-case.sh'"
+          },
+          {
+            "type": "invalid_shell_script_name",
+            "path": "install_pre_commit_hooks.sh",
+            "name": "install_pre_commit_hooks.sh",
+            "pattern": "kebab-case.sh",
+            "severity": "error",
+            "message": "Shell script name 'install_pre_commit_hooks.sh' does not follow the required pattern 'kebab-case.sh'"
+          },
+          {
+            "type": "invalid_shell_script_name",
+            "path": "check_code_quality.sh",
+            "name": "check_code_quality.sh",
+            "pattern": "kebab-case.sh",
+            "severity": "error",
+            "message": "Shell script name 'check_code_quality.sh' does not follow the required pattern 'kebab-case.sh'"
+          },
+          {
+            "type": "invalid_shell_script_name",
+            "path": "core/kg/scripts/install_hooks.sh",
+            "name": "install_hooks.sh",
+            "pattern": "kebab-case.sh",
+            "severity": "error",
+            "message": "Shell script name 'install_hooks.sh' does not follow the required pattern 'kebab-case.sh'"
+          },
+          {
+            "type": "invalid_shell_script_name",
+            "path": "scripts/maintenance/test_mcp_agent.sh",
+            "name": "test_mcp_agent.sh",
+            "pattern": "kebab-case.sh",
+            "severity": "error",
+            "message": "Shell script name 'test_mcp_agent.sh' does not follow the required pattern 'kebab-case.sh'"
+          },
+          {
+            "type": "invalid_shell_script_name",
+            "path": "scripts/maintenance/verify_stack_health.sh",
+            "name": "verify_stack_health.sh",
+            "pattern": "kebab-case.sh",
+            "severity": "error",
+            "message": "Shell script name 'verify_stack_health.sh' does not follow the required pattern 'kebab-case.sh'"
+          },
+          {
+            "type": "invalid_shell_script_name",
+            "path": "scripts/maintenance/verify_librechat_integration.sh",
+            "name": "verify_librechat_integration.sh",
+            "pattern": "kebab-case.sh",
+            "severity": "error",
+            "message": "Shell script name 'verify_librechat_integration.sh' does not follow the required pattern 'kebab-case.sh'"
+          },
+          {
+            "type": "invalid_shell_script_name",
+            "path": "scripts/deployment/start_mcp_server.sh",
+            "name": "start_mcp_server.sh",
+            "pattern": "kebab-case.sh",
+            "severity": "error",
+            "message": "Shell script name 'start_mcp_server.sh' does not follow the required pattern 'kebab-case.sh'"
+          },
+          {
+            "type": "invalid_shell_script_name",
+            "path": "scripts/deployment/restart_stack.sh",
+            "name": "restart_stack.sh",
+            "pattern": "kebab-case.sh",
+            "severity": "error",
+            "message": "Shell script name 'restart_stack.sh' does not follow the required pattern 'kebab-case.sh'"
+          },
+          {
+            "type": "invalid_shell_script_name",
+            "path": "scripts/deployment/register_new_features.sh",
+            "name": "register_new_features.sh",
+            "pattern": "kebab-case.sh",
+            "severity": "error",
+            "message": "Shell script name 'register_new_features.sh' does not follow the required pattern 'kebab-case.sh'"
+          },
+          {
+            "type": "invalid_shell_script_name",
+            "path": "scripts/deployment/update_ollama_references.sh",
+            "name": "update_ollama_references.sh",
+            "pattern": "kebab-case.sh",
+            "severity": "error",
+            "message": "Shell script name 'update_ollama_references.sh' does not follow the required pattern 'kebab-case.sh'"
+          },
+          {
+            "type": "invalid_shell_script_name",
+            "path": "backup_20250407_215945/restore_from_backup.sh",
+            "name": "restore_from_backup.sh",
+            "pattern": "kebab-case.sh",
+            "severity": "error",
+            "message": "Shell script name 'restore_from_backup.sh' does not follow the required pattern 'kebab-case.sh'"
+          },
+          {
+            "type": "invalid_markdown_file_name",
+            "path": "code_review_report.md",
+            "name": "code_review_report.md",
+            "pattern": "kebab-case.md",
+            "severity": "error",
+            "message": "Markdown file name 'code_review_report.md' does not follow the required pattern 'kebab-case.md'"
+          },
+          {
+            "type": "invalid_markdown_file_name",
+            "path": "specification-manifest-README.md",
+            "name": "specification-manifest-README.md",
+            "pattern": "kebab-case.md",
+            "severity": "error",
+            "message": "Markdown file name 'specification-manifest-README.md' does not follow the required pattern 'kebab-case.md'"
+          },
+          {
+            "type": "invalid_markdown_file_name",
+            "path": "docs/mcp_maintenance_guide.md",
+            "name": "mcp_maintenance_guide.md",
+            "pattern": "kebab-case.md",
+            "severity": "error",
+            "message": "Markdown file name 'mcp_maintenance_guide.md' does not follow the required pattern 'kebab-case.md'"
+          },
+          {
+            "type": "invalid_markdown_file_name",
+            "path": "docs/maintenance_guide.md",
+            "name": "maintenance_guide.md",
+            "pattern": "kebab-case.md",
+            "severity": "error",
+            "message": "Markdown file name 'maintenance_guide.md' does not follow the required pattern 'kebab-case.md'"
+          },
+          {
+            "type": "invalid_markdown_file_name",
+            "path": "docs/tutorials/setup_environment.md",
+            "name": "setup_environment.md",
+            "pattern": "kebab-case.md",
+            "severity": "error",
+            "message": "Markdown file name 'setup_environment.md' does not follow the required pattern 'kebab-case.md'"
+          },
+          {
+            "type": "invalid_markdown_file_name",
+            "path": "docs/tutorials/code_quality_guide.md",
+            "name": "code_quality_guide.md",
+            "pattern": "kebab-case.md",
+            "severity": "error",
+            "message": "Markdown file name 'code_quality_guide.md' does not follow the required pattern 'kebab-case.md'"
+          }
+        ]
+      },
+      "location_analysis": {
+        "issues": [
+          {
+            "type": "non_ideal_location",
+            "path": "backup_20250407_221515/cleanup_files.py",
+            "name": "cleanup_files.py",
+            "extension": ".py",
+            "ideal_directories": [
+              "core",
+              "services",
+              "scripts",
+              "tests"
+            ],
+            "severity": "warning",
+            "message": "File 'backup_20250407_221515/cleanup_files.py' with extension '.py' is not in an ideal directory. Consider moving to one of: core, services, scripts, tests"
+          },
+          {
+            "type": "non_ideal_location",
+            "path": "backup_20250407_221515/specification-manifest.json",
+            "name": "specification-manifest.json",
+            "extension": ".json",
+            "ideal_directories": [
+              "config"
+            ],
+            "severity": "warning",
+            "message": "File 'backup_20250407_221515/specification-manifest.json' with extension '.json' is not in an ideal directory. Consider moving to one of: config"
+          },
+          {
+            "type": "non_ideal_location",
+            "path": "LibreChat/librechat.yaml",
+            "name": "librechat.yaml",
+            "extension": ".yaml",
+            "ideal_directories": [
+              "config"
+            ],
+            "severity": "warning",
+            "message": "File 'LibreChat/librechat.yaml' with extension '.yaml' is not in an ideal directory. Consider moving to one of: config"
+          },
+          {
+            "type": "non_ideal_location",
+            "path": "LibreChat/docker-compose.yml",
+            "name": "docker-compose.yml",
+            "extension": ".yml",
+            "ideal_directories": [
+              "config"
+            ],
+            "severity": "warning",
+            "message": "File 'LibreChat/docker-compose.yml' with extension '.yml' is not in an ideal directory. Consider moving to one of: config"
+          },
+          {
+            "type": "non_ideal_location",
+            "path": "LibreChat/docker-compose.temp.yml",
+            "name": "docker-compose.temp.yml",
+            "extension": ".yml",
+            "ideal_directories": [
+              "config"
+            ],
+            "severity": "warning",
+            "message": "File 'LibreChat/docker-compose.temp.yml' with extension '.yml' is not in an ideal directory. Consider moving to one of: config"
+          },
+          {
+            "type": "non_ideal_location",
+            "path": "deploy/README.md",
+            "name": "README.md",
+            "extension": ".md",
+            "ideal_directories": [
+              "docs"
+            ],
+            "severity": "warning",
+            "message": "File 'deploy/README.md' with extension '.md' is not in an ideal directory. Consider moving to one of: docs"
+          },
+          {
+            "type": "non_ideal_location",
+            "path": "deploy/docker-compose.yml",
+            "name": "docker-compose.yml",
+            "extension": ".yml",
+            "ideal_directories": [
+              "config"
+            ],
+            "severity": "warning",
+            "message": "File 'deploy/docker-compose.yml' with extension '.yml' is not in an ideal directory. Consider moving to one of: config"
+          },
+          {
+            "type": "non_ideal_location",
+            "path": "deploy/docker-compose.dev.yml",
+            "name": "docker-compose.dev.yml",
+            "extension": ".yml",
+            "ideal_directories": [
+              "config"
+            ],
+            "severity": "warning",
+            "message": "File 'deploy/docker-compose.dev.yml' with extension '.yml' is not in an ideal directory. Consider moving to one of: config"
+          },
+          {
+            "type": "non_ideal_location",
+            "path": "deploy/volumes/model-volumes.yml",
+            "name": "model-volumes.yml",
+            "extension": ".yml",
+            "ideal_directories": [
+              "config"
+            ],
+            "severity": "warning",
+            "message": "File 'deploy/volumes/model-volumes.yml' with extension '.yml' is not in an ideal directory. Consider moving to one of: config"
+          },
+          {
+            "type": "non_ideal_location",
+            "path": "tests/README.md",
+            "name": "README.md",
+            "extension": ".md",
+            "ideal_directories": [
+              "docs"
+            ],
+            "severity": "warning",
+            "message": "File 'tests/README.md' with extension '.md' is not in an ideal directory. Consider moving to one of: docs"
+          },
+          {
+            "type": "non_ideal_location",
+            "path": "tests/unit/README.md",
+            "name": "README.md",
+            "extension": ".md",
+            "ideal_directories": [
+              "docs"
+            ],
+            "severity": "warning",
+            "message": "File 'tests/unit/README.md' with extension '.md' is not in an ideal directory. Consider moving to one of: docs"
+          },
+          {
+            "type": "non_ideal_location",
+            "path": "tests/integration/README.md",
+            "name": "README.md",
+            "extension": ".md",
+            "ideal_directories": [
+              "docs"
+            ],
+            "severity": "warning",
+            "message": "File 'tests/integration/README.md' with extension '.md' is not in an ideal directory. Consider moving to one of: docs"
+          },
+          {
+            "type": "non_ideal_location",
+            "path": "services/llm-server/docker-compose.yml",
+            "name": "docker-compose.yml",
+            "extension": ".yml",
+            "ideal_directories": [
+              "config"
+            ],
+            "severity": "warning",
+            "message": "File 'services/llm-server/docker-compose.yml' with extension '.yml' is not in an ideal directory. Consider moving to one of: config"
+          },
+          {
+            "type": "non_ideal_location",
+            "path": "services/llm-server/config/server.yaml",
+            "name": "server.yaml",
+            "extension": ".yaml",
+            "ideal_directories": [
+              "config"
+            ],
+            "severity": "warning",
+            "message": "File 'services/llm-server/config/server.yaml' with extension '.yaml' is not in an ideal directory. Consider moving to one of: config"
+          },
+          {
+            "type": "non_ideal_location",
+            "path": "services/librechat/docker-compose.yml",
+            "name": "docker-compose.yml",
+            "extension": ".yml",
+            "ideal_directories": [
+              "config"
+            ],
+            "severity": "warning",
+            "message": "File 'services/librechat/docker-compose.yml' with extension '.yml' is not in an ideal directory. Consider moving to one of: config"
+          },
+          {
+            "type": "non_ideal_location",
+            "path": "services/librechat/docker-compose.temp.yml",
+            "name": "docker-compose.temp.yml",
+            "extension": ".yml",
+            "ideal_directories": [
+              "config"
+            ],
+            "severity": "warning",
+            "message": "File 'services/librechat/docker-compose.temp.yml' with extension '.yml' is not in an ideal directory. Consider moving to one of: config"
+          },
+          {
+            "type": "non_ideal_location",
+            "path": "services/librechat/config/librechat.yaml",
+            "name": "librechat.yaml",
+            "extension": ".yaml",
+            "ideal_directories": [
+              "config"
+            ],
+            "severity": "warning",
+            "message": "File 'services/librechat/config/librechat.yaml' with extension '.yaml' is not in an ideal directory. Consider moving to one of: config"
+          },
+          {
+            "type": "non_ideal_location",
+            "path": "services/mcp-server/docker-compose.yml",
+            "name": "docker-compose.yml",
+            "extension": ".yml",
+            "ideal_directories": [
+              "config"
+            ],
+            "severity": "warning",
+            "message": "File 'services/mcp-server/docker-compose.yml' with extension '.yml' is not in an ideal directory. Consider moving to one of: config"
+          },
+          {
+            "type": "non_ideal_location",
+            "path": "services/mcp-server/config/README.md",
+            "name": "README.md",
+            "extension": ".md",
+            "ideal_directories": [
+              "docs"
+            ],
+            "severity": "warning",
+            "message": "File 'services/mcp-server/config/README.md' with extension '.md' is not in an ideal directory. Consider moving to one of: docs"
+          },
+          {
+            "type": "non_ideal_location",
+            "path": "services/mcp-server/src/di/README.md",
+            "name": "README.md",
+            "extension": ".md",
+            "ideal_directories": [
+              "docs"
+            ],
+            "severity": "warning",
+            "message": "File 'services/mcp-server/src/di/README.md' with extension '.md' is not in an ideal directory. Consider moving to one of: docs"
+          },
+          {
+            "type": "non_ideal_location",
+            "path": ".git-hooks/README.md",
+            "name": "README.md",
+            "extension": ".md",
+            "ideal_directories": [
+              "docs"
+            ],
+            "severity": "warning",
+            "message": "File '.git-hooks/README.md' with extension '.md' is not in an ideal directory. Consider moving to one of: docs"
+          },
+          {
+            "type": "non_ideal_location",
+            "path": "core/kg/scripts/install_hooks.sh",
+            "name": "install_hooks.sh",
+            "extension": ".sh",
+            "ideal_directories": [
+              "scripts"
+            ],
+            "severity": "warning",
+            "message": "File 'core/kg/scripts/install_hooks.sh' with extension '.sh' is not in an ideal directory. Consider moving to one of: scripts"
+          },
+          {
+            "type": "non_ideal_location",
+            "path": "scripts/README.md",
+            "name": "README.md",
+            "extension": ".md",
+            "ideal_directories": [
+              "docs"
+            ],
+            "severity": "warning",
+            "message": "File 'scripts/README.md' with extension '.md' is not in an ideal directory. Consider moving to one of: docs"
+          },
+          {
+            "type": "non_ideal_location",
+            "path": "scripts/setup/README.md",
+            "name": "README.md",
+            "extension": ".md",
+            "ideal_directories": [
+              "docs"
+            ],
+            "severity": "warning",
+            "message": "File 'scripts/setup/README.md' with extension '.md' is not in an ideal directory. Consider moving to one of: docs"
+          },
+          {
+            "type": "non_ideal_location",
+            "path": ".github/workflows/code-quality.yml",
+            "name": "code-quality.yml",
+            "extension": ".yml",
+            "ideal_directories": [
+              "config"
+            ],
+            "severity": "warning",
+            "message": "File '.github/workflows/code-quality.yml' with extension '.yml' is not in an ideal directory. Consider moving to one of: config"
+          },
+          {
+            "type": "non_ideal_location",
+            "path": "config/README.md",
+            "name": "README.md",
+            "extension": ".md",
+            "ideal_directories": [
+              "docs"
+            ],
+            "severity": "warning",
+            "message": "File 'config/README.md' with extension '.md' is not in an ideal directory. Consider moving to one of: docs"
+          },
+          {
+            "type": "non_ideal_location",
+            "path": "backup_20250407_220136/cleanup_files.py",
+            "name": "cleanup_files.py",
+            "extension": ".py",
+            "ideal_directories": [
+              "core",
+              "services",
+              "scripts",
+              "tests"
+            ],
+            "severity": "warning",
+            "message": "File 'backup_20250407_220136/cleanup_files.py' with extension '.py' is not in an ideal directory. Consider moving to one of: core, services, scripts, tests"
+          },
+          {
+            "type": "non_ideal_location",
+            "path": "backup_20250407_220136/specification-manifest.json",
+            "name": "specification-manifest.json",
+            "extension": ".json",
+            "ideal_directories": [
+              "config"
+            ],
+            "severity": "warning",
+            "message": "File 'backup_20250407_220136/specification-manifest.json' with extension '.json' is not in an ideal directory. Consider moving to one of: config"
+          },
+          {
+            "type": "non_ideal_location",
+            "path": "backup_20250407_220136/project-structure-report.json",
+            "name": "project-structure-report.json",
+            "extension": ".json",
+            "ideal_directories": [
+              "config"
+            ],
+            "severity": "warning",
+            "message": "File 'backup_20250407_220136/project-structure-report.json' with extension '.json' is not in an ideal directory. Consider moving to one of: config"
+          },
+          {
+            "type": "non_ideal_location",
+            "path": "backup_20250407_220136/.pre-commit-config.yaml",
+            "name": ".pre-commit-config.yaml",
+            "extension": ".yaml",
+            "ideal_directories": [
+              "config"
+            ],
+            "severity": "warning",
+            "message": "File 'backup_20250407_220136/.pre-commit-config.yaml' with extension '.yaml' is not in an ideal directory. Consider moving to one of: config"
+          },
+          {
+            "type": "non_ideal_location",
+            "path": "backup_20250407_220136/project-report.json",
+            "name": "project-report.json",
+            "extension": ".json",
+            "ideal_directories": [
+              "config"
+            ],
+            "severity": "warning",
+            "message": "File 'backup_20250407_220136/project-report.json' with extension '.json' is not in an ideal directory. Consider moving to one of: config"
+          },
+          {
+            "type": "non_ideal_location",
+            "path": "backup_20250407_220136/code-analysis-report.json",
+            "name": "code-analysis-report.json",
+            "extension": ".json",
+            "ideal_directories": [
+              "config"
+            ],
+            "severity": "warning",
+            "message": "File 'backup_20250407_220136/code-analysis-report.json' with extension '.json' is not in an ideal directory. Consider moving to one of: config"
+          },
+          {
+            "type": "non_ideal_location",
+            "path": "backup_20250407_220136/specification-manifest-schema.json",
+            "name": "specification-manifest-schema.json",
+            "extension": ".json",
+            "ideal_directories": [
+              "config"
+            ],
+            "severity": "warning",
+            "message": "File 'backup_20250407_220136/specification-manifest-schema.json' with extension '.json' is not in an ideal directory. Consider moving to one of: config"
+          },
+          {
+            "type": "non_ideal_location",
+            "path": "backup_20250407_220136/docs/git-hooks-kg-integration-plan.md",
+            "name": "git-hooks-kg-integration-plan.md",
+            "extension": ".md",
+            "ideal_directories": [
+              "docs"
+            ],
+            "severity": "warning",
+            "message": "File 'backup_20250407_220136/docs/git-hooks-kg-integration-plan.md' with extension '.md' is not in an ideal directory. Consider moving to one of: docs"
+          },
+          {
+            "type": "non_ideal_location",
+            "path": "backup_20250407_220136/docs/specification-manifest-plan.md",
+            "name": "specification-manifest-plan.md",
+            "extension": ".md",
+            "ideal_directories": [
+              "docs"
+            ],
+            "severity": "warning",
+            "message": "File 'backup_20250407_220136/docs/specification-manifest-plan.md' with extension '.md' is not in an ideal directory. Consider moving to one of: docs"
+          },
+          {
+            "type": "non_ideal_location",
+            "path": "backup_20250407_220136/docs/backlog/quality.md",
+            "name": "quality.md",
+            "extension": ".md",
+            "ideal_directories": [
+              "docs"
+            ],
+            "severity": "warning",
+            "message": "File 'backup_20250407_220136/docs/backlog/quality.md' with extension '.md' is not in an ideal directory. Consider moving to one of: docs"
+          },
+          {
+            "type": "non_ideal_location",
+            "path": "backup_20250407_220136/docs/troubleshooting/librechat-fixes.md",
+            "name": "librechat-fixes.md",
+            "extension": ".md",
+            "ideal_directories": [
+              "docs"
+            ],
+            "severity": "warning",
+            "message": "File 'backup_20250407_220136/docs/troubleshooting/librechat-fixes.md' with extension '.md' is not in an ideal directory. Consider moving to one of: docs"
+          },
+          {
+            "type": "non_ideal_location",
+            "path": "backup_20250407_220136/docs/tutorials/model-integration.md",
+            "name": "model-integration.md",
+            "extension": ".md",
+            "ideal_directories": [
+              "docs"
+            ],
+            "severity": "warning",
+            "message": "File 'backup_20250407_220136/docs/tutorials/model-integration.md' with extension '.md' is not in an ideal directory. Consider moving to one of: docs"
+          },
+          {
+            "type": "non_ideal_location",
+            "path": "backup_20250407_220136/config/code_review.yaml",
+            "name": "code_review.yaml",
+            "extension": ".yaml",
+            "ideal_directories": [
+              "config"
+            ],
+            "severity": "warning",
+            "message": "File 'backup_20250407_220136/config/code_review.yaml' with extension '.yaml' is not in an ideal directory. Consider moving to one of: config"
+          },
+          {
+            "type": "non_ideal_location",
+            "path": "backup_20250407_220136/config/models/registry.yaml",
+            "name": "registry.yaml",
+            "extension": ".yaml",
+            "ideal_directories": [
+              "config"
+            ],
+            "severity": "warning",
+            "message": "File 'backup_20250407_220136/config/models/registry.yaml' with extension '.yaml' is not in an ideal directory. Consider moving to one of: config"
+          },
+          {
+            "type": "non_ideal_location",
+            "path": "backup_20250407_220136/config/environments/development.yaml",
+            "name": "development.yaml",
+            "extension": ".yaml",
+            "ideal_directories": [
+              "config"
+            ],
+            "severity": "warning",
+            "message": "File 'backup_20250407_220136/config/environments/development.yaml' with extension '.yaml' is not in an ideal directory. Consider moving to one of: config"
+          },
+          {
+            "type": "non_ideal_location",
+            "path": "backup_20250407_220136/config/environments/production.yaml",
+            "name": "production.yaml",
+            "extension": ".yaml",
+            "ideal_directories": [
+              "config"
+            ],
+            "severity": "warning",
+            "message": "File 'backup_20250407_220136/config/environments/production.yaml' with extension '.yaml' is not in an ideal directory. Consider moving to one of: config"
+          },
+          {
+            "type": "non_ideal_location",
+            "path": "temp/dependency-injection.md",
+            "name": "dependency-injection.md",
+            "extension": ".md",
+            "ideal_directories": [
+              "docs"
+            ],
+            "severity": "warning",
+            "message": "File 'temp/dependency-injection.md' with extension '.md' is not in an ideal directory. Consider moving to one of: docs"
+          },
+          {
+            "type": "non_ideal_location",
+            "path": "backup_20250407_215945/restore_from_backup.sh",
+            "name": "restore_from_backup.sh",
+            "extension": ".sh",
+            "ideal_directories": [
+              "scripts"
+            ],
+            "severity": "warning",
+            "message": "File 'backup_20250407_215945/restore_from_backup.sh' with extension '.sh' is not in an ideal directory. Consider moving to one of: scripts"
+          },
+          {
+            "type": "non_ideal_location",
+            "path": "backup_20250407_215945/cleanup-report.json",
+            "name": "cleanup-report.json",
+            "extension": ".json",
+            "ideal_directories": [
+              "config"
+            ],
+            "severity": "warning",
+            "message": "File 'backup_20250407_215945/cleanup-report.json' with extension '.json' is not in an ideal directory. Consider moving to one of: config"
+          },
+          {
+            "type": "non_ideal_location",
+            "path": "backup_20250407_215945/docs/troubleshooting/code-not-updating.md",
+            "name": "code-not-updating.md",
+            "extension": ".md",
+            "ideal_directories": [
+              "docs"
+            ],
+            "severity": "warning",
+            "message": "File 'backup_20250407_215945/docs/troubleshooting/code-not-updating.md' with extension '.md' is not in an ideal directory. Consider moving to one of: docs"
+          },
+          {
+            "type": "non_ideal_location",
+            "path": "backup_20250407_215945/docs/troubleshooting/broken-links.md",
+            "name": "broken-links.md",
+            "extension": ".md",
+            "ideal_directories": [
+              "docs"
+            ],
+            "severity": "warning",
+            "message": "File 'backup_20250407_215945/docs/troubleshooting/broken-links.md' with extension '.md' is not in an ideal directory. Consider moving to one of: docs"
+          },
+          {
+            "type": "non_ideal_location",
+            "path": "backup_20250407_215945/docs/troubleshooting/ollama-errors.md",
+            "name": "ollama-errors.md",
+            "extension": ".md",
+            "ideal_directories": [
+              "docs"
+            ],
+            "severity": "warning",
+            "message": "File 'backup_20250407_215945/docs/troubleshooting/ollama-errors.md' with extension '.md' is not in an ideal directory. Consider moving to one of: docs"
+          },
+          {
+            "type": "non_ideal_location",
+            "path": "backup_20250407_215945/docs/troubleshooting/agent-misbehavior.md",
+            "name": "agent-misbehavior.md",
+            "extension": ".md",
+            "ideal_directories": [
+              "docs"
+            ],
+            "severity": "warning",
+            "message": "File 'backup_20250407_215945/docs/troubleshooting/agent-misbehavior.md' with extension '.md' is not in an ideal directory. Consider moving to one of: docs"
+          },
+          {
+            "type": "non_ideal_location",
+            "path": "backup_20250407_215945/docs/tutorials/create-agent.md",
+            "name": "create-agent.md",
+            "extension": ".md",
+            "ideal_directories": [
+              "docs"
+            ],
+            "severity": "warning",
+            "message": "File 'backup_20250407_215945/docs/tutorials/create-agent.md' with extension '.md' is not in an ideal directory. Consider moving to one of: docs"
+          },
+          {
+            "type": "non_ideal_location",
+            "path": "backup_20250407_215945/docs/tutorials/generate-code.md",
+            "name": "generate-code.md",
+            "extension": ".md",
+            "ideal_directories": [
+              "docs"
+            ],
+            "severity": "warning",
+            "message": "File 'backup_20250407_215945/docs/tutorials/generate-code.md' with extension '.md' is not in an ideal directory. Consider moving to one of: docs"
+          },
+          {
+            "type": "non_ideal_location",
+            "path": "backup_20250407_215945/docs/tutorials/run-end-to-end.md",
+            "name": "run-end-to-end.md",
+            "extension": ".md",
+            "ideal_directories": [
+              "docs"
+            ],
+            "severity": "warning",
+            "message": "File 'backup_20250407_215945/docs/tutorials/run-end-to-end.md' with extension '.md' is not in an ideal directory. Consider moving to one of: docs"
+          },
+          {
+            "type": "non_ideal_location",
+            "path": "backup_20250407_215945/docs/tutorials/add-function.md",
+            "name": "add-function.md",
+            "extension": ".md",
+            "ideal_directories": [
+              "docs"
+            ],
+            "severity": "warning",
+            "message": "File 'backup_20250407_215945/docs/tutorials/add-function.md' with extension '.md' is not in an ideal directory. Consider moving to one of: docs"
+          },
+          {
+            "type": "non_ideal_location",
+            "path": "backup_20250407_215945/services/mcp-server/src/__init__.py",
+            "name": "__init__.py",
+            "extension": ".py",
+            "ideal_directories": [
+              "core",
+              "services",
+              "scripts",
+              "tests"
+            ],
+            "severity": "warning",
+            "message": "File 'backup_20250407_215945/services/mcp-server/src/__init__.py' with extension '.py' is not in an ideal directory. Consider moving to one of: core, services, scripts, tests"
+          },
+          {
+            "type": "non_ideal_location",
+            "path": "backup_20250407_215945/services/mcp-server/src/tools/__init__.py",
+            "name": "__init__.py",
+            "extension": ".py",
+            "ideal_directories": [
+              "core",
+              "services",
+              "scripts",
+              "tests"
+            ],
+            "severity": "warning",
+            "message": "File 'backup_20250407_215945/services/mcp-server/src/tools/__init__.py' with extension '.py' is not in an ideal directory. Consider moving to one of: core, services, scripts, tests"
+          },
+          {
+            "type": "non_ideal_location",
+            "path": "backup_20250407_215945/services/mcp-server/src/tools/shell/__init__.py",
+            "name": "__init__.py",
+            "extension": ".py",
+            "ideal_directories": [
+              "core",
+              "services",
+              "scripts",
+              "tests"
+            ],
+            "severity": "warning",
+            "message": "File 'backup_20250407_215945/services/mcp-server/src/tools/shell/__init__.py' with extension '.py' is not in an ideal directory. Consider moving to one of: core, services, scripts, tests"
+          }
+        ]
+      }
+    },
+    "essential_files": {
+      "project_dir": "/home/skr/projects/MCP-BASE-STACK",
+      "timestamp": "2025-04-08T07:39:16.425675",
+      "summary": {
+        "files_checked": 3,
+        "files_up_to_date": 2,
+        "files_updated": 1,
+        "files_created": 0,
+        "files_backed_up": 0,
+        "errors": 0
+      },
+      "files": [
+        {
+          "path": "README.md",
+          "status": "up_to_date",
+          "reason": "Content matches template"
+        },
+        {
+          "path": ".gitignore",
+          "status": "up_to_date",
+          "reason": "Content matches template"
+        },
+        {
+          "path": "requirements.txt",
+          "status": "updated",
+          "reason": "Content did not match generated dependencies"
+        }
+      ],
+      "actions_taken": [],
+      "rollback_info": {
+        "backup_dir": "/home/skr/projects/MCP-BASE-STACK/data/backup/essential_files_20250408_073916",
+        "files_backed_up": []
+      }
+    },
+    "dependencies": {
+      "project_dir": "/home/skr/projects/MCP-BASE-STACK",
+      "timestamp": "2025-04-08T07:39:16.822344",
+      "summary": {
+        "dependency_files_scanned": 10,
+        "dependencies_checked": 0,
+        "outdated_dependencies": 0,
+        "vulnerable_dependencies": 0,
+        "inconsistent_dependencies": 6,
+        "errors": 0
+      },
+      "dependency_files": [
+        {
+          "path": "requirements.txt",
+          "manager": "python",
+          "type": "requirements.txt"
+        },
+        {
+          "path": "data/backup/essential_files_20250408_065516/requirements.txt",
+          "manager": "python",
+          "type": "requirements.txt"
+        },
+        {
+          "path": "data/backup/essential_files_20250408_065324/requirements.txt",
+          "manager": "python",
+          "type": "requirements.txt"
+        },
+        {
+          "path": "data/backup/essential_files_20250408_065402/requirements.txt",
+          "manager": "python",
+          "type": "requirements.txt"
+        },
+        {
+          "path": "LibreChat/docker-compose.yml",
+          "manager": "docker",
+          "type": "docker-compose.yml"
+        },
+        {
+          "path": "deploy/docker-compose.yml",
+          "manager": "docker",
+          "type": "docker-compose.yml"
+        },
+        {
+          "path": "services/llm-server/docker-compose.yml",
+          "manager": "docker",
+          "type": "docker-compose.yml"
+        },
+        {
+          "path": "services/librechat/docker-compose.yml",
+          "manager": "docker",
+          "type": "docker-compose.yml"
+        },
+        {
+          "path": "services/mcp-server/docker-compose.yml",
+          "manager": "docker",
+          "type": "docker-compose.yml"
+        },
+        {
+          "path": "config/pyproject.toml",
+          "manager": "python",
+          "type": "pyproject.toml"
+        }
+      ],
+      "outdated_dependencies": [],
+      "vulnerable_dependencies": [],
+      "inconsistent_dependencies": [
+        {
+          "name": "dependency_injector",
+          "manager": "python",
+          "versions": [
+            {
+              "version_spec": ">=4.40.0",
+              "file_path": "requirements.txt"
+            },
+            {
+              "version_spec": ">=0.0.0",
+              "file_path": "data/backup/essential_files_20250408_065516/requirements.txt"
+            },
+            {
+              "version_spec": ">=0.0.0",
+              "file_path": "data/backup/essential_files_20250408_065324/requirements.txt"
+            },
+            {
+              "version_spec": ">=0.0.0",
+              "file_path": "data/backup/essential_files_20250408_065402/requirements.txt"
+            }
+          ]
+        },
+        {
+          "name": "hypothesis",
+          "manager": "python",
+          "versions": [
+            {
+              "version_spec": ">=6.0.0",
+              "file_path": "requirements.txt"
+            },
+            {
+              "version_spec": ">=0.0.0",
+              "file_path": "data/backup/essential_files_20250408_065516/requirements.txt"
+            },
+            {
+              "version_spec": ">=0.0.0",
+              "file_path": "data/backup/essential_files_20250408_065324/requirements.txt"
+            },
+            {
+              "version_spec": ">=0.0.0",
+              "file_path": "data/backup/essential_files_20250408_065402/requirements.txt"
+            }
+          ]
+        },
+        {
+          "name": "matplotlib",
+          "manager": "python",
+          "versions": [
+            {
+              "version_spec": ">=3.4.0",
+              "file_path": "requirements.txt"
+            },
+            {
+              "version_spec": ">=0.0.0",
+              "file_path": "data/backup/essential_files_20250408_065516/requirements.txt"
+            },
+            {
+              "version_spec": ">=0.0.0",
+              "file_path": "data/backup/essential_files_20250408_065324/requirements.txt"
+            },
+            {
+              "version_spec": ">=0.0.0",
+              "file_path": "data/backup/essential_files_20250408_065402/requirements.txt"
+            }
+          ]
+        },
+        {
+          "name": "numpy",
+          "manager": "python",
+          "versions": [
+            {
+              "version_spec": ">=1.20.0",
+              "file_path": "requirements.txt"
+            },
+            {
+              "version_spec": ">=0.0.0",
+              "file_path": "data/backup/essential_files_20250408_065516/requirements.txt"
+            },
+            {
+              "version_spec": ">=0.0.0",
+              "file_path": "data/backup/essential_files_20250408_065324/requirements.txt"
+            },
+            {
+              "version_spec": ">=0.0.0",
+              "file_path": "data/backup/essential_files_20250408_065402/requirements.txt"
+            }
+          ]
+        },
+        {
+          "name": "pandas",
+          "manager": "python",
+          "versions": [
+            {
+              "version_spec": ">=1.3.0",
+              "file_path": "requirements.txt"
+            },
+            {
+              "version_spec": ">=0.0.0",
+              "file_path": "data/backup/essential_files_20250408_065516/requirements.txt"
+            },
+            {
+              "version_spec": ">=0.0.0",
+              "file_path": "data/backup/essential_files_20250408_065324/requirements.txt"
+            },
+            {
+              "version_spec": ">=0.0.0",
+              "file_path": "data/backup/essential_files_20250408_065402/requirements.txt"
+            }
+          ]
+        },
+        {
+          "name": "requests",
+          "manager": "python",
+          "versions": [
+            {
+              "version_spec": ">=2.25.0",
+              "file_path": "requirements.txt"
+            },
+            {
+              "version_spec": ">=0.0.0",
+              "file_path": "data/backup/essential_files_20250408_065516/requirements.txt"
+            },
+            {
+              "version_spec": ">=0.0.0",
+              "file_path": "data/backup/essential_files_20250408_065324/requirements.txt"
+            },
+            {
+              "version_spec": ">=0.0.0",
+              "file_path": "data/backup/essential_files_20250408_065402/requirements.txt"
+            }
+          ]
+        }
+      ],
+      "recommendations": [
+        {
+          "type": "consistency",
+          "name": "dependency_injector",
+          "versions": [
+            ">=4.40.0",
+            ">=0.0.0",
+            ">=0.0.0",
+            ">=0.0.0"
+          ],
+          "file_paths": [
+            "requirements.txt",
+            "data/backup/essential_files_20250408_065516/requirements.txt",
+            "data/backup/essential_files_20250408_065324/requirements.txt",
+            "data/backup/essential_files_20250408_065402/requirements.txt"
+          ],
+          "message": "Standardize dependency_injector version across the project: >=4.40.0, >=0.0.0, >=0.0.0, >=0.0.0"
+        },
+        {
+          "type": "consistency",
+          "name": "hypothesis",
+          "versions": [
+            ">=6.0.0",
+            ">=0.0.0",
+            ">=0.0.0",
+            ">=0.0.0"
+          ],
+          "file_paths": [
+            "requirements.txt",
+            "data/backup/essential_files_20250408_065516/requirements.txt",
+            "data/backup/essential_files_20250408_065324/requirements.txt",
+            "data/backup/essential_files_20250408_065402/requirements.txt"
+          ],
+          "message": "Standardize hypothesis version across the project: >=6.0.0, >=0.0.0, >=0.0.0, >=0.0.0"
+        },
+        {
+          "type": "consistency",
+          "name": "matplotlib",
+          "versions": [
+            ">=3.4.0",
+            ">=0.0.0",
+            ">=0.0.0",
+            ">=0.0.0"
+          ],
+          "file_paths": [
+            "requirements.txt",
+            "data/backup/essential_files_20250408_065516/requirements.txt",
+            "data/backup/essential_files_20250408_065324/requirements.txt",
+            "data/backup/essential_files_20250408_065402/requirements.txt"
+          ],
+          "message": "Standardize matplotlib version across the project: >=3.4.0, >=0.0.0, >=0.0.0, >=0.0.0"
+        },
+        {
+          "type": "consistency",
+          "name": "numpy",
+          "versions": [
+            ">=1.20.0",
+            ">=0.0.0",
+            ">=0.0.0",
+            ">=0.0.0"
+          ],
+          "file_paths": [
+            "requirements.txt",
+            "data/backup/essential_files_20250408_065516/requirements.txt",
+            "data/backup/essential_files_20250408_065324/requirements.txt",
+            "data/backup/essential_files_20250408_065402/requirements.txt"
+          ],
+          "message": "Standardize numpy version across the project: >=1.20.0, >=0.0.0, >=0.0.0, >=0.0.0"
+        },
+        {
+          "type": "consistency",
+          "name": "pandas",
+          "versions": [
+            ">=1.3.0",
+            ">=0.0.0",
+            ">=0.0.0",
+            ">=0.0.0"
+          ],
+          "file_paths": [
+            "requirements.txt",
+            "data/backup/essential_files_20250408_065516/requirements.txt",
+            "data/backup/essential_files_20250408_065324/requirements.txt",
+            "data/backup/essential_files_20250408_065402/requirements.txt"
+          ],
+          "message": "Standardize pandas version across the project: >=1.3.0, >=0.0.0, >=0.0.0, >=0.0.0"
+        },
+        {
+          "type": "consistency",
+          "name": "requests",
+          "versions": [
+            ">=2.25.0",
+            ">=0.0.0",
+            ">=0.0.0",
+            ">=0.0.0"
+          ],
+          "file_paths": [
+            "requirements.txt",
+            "data/backup/essential_files_20250408_065516/requirements.txt",
+            "data/backup/essential_files_20250408_065324/requirements.txt",
+            "data/backup/essential_files_20250408_065402/requirements.txt"
+          ],
+          "message": "Standardize requests version across the project: >=2.25.0, >=0.0.0, >=0.0.0, >=0.0.0"
+        }
+      ]
+    }
+  }
+}

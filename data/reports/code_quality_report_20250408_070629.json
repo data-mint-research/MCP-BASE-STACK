@@ -1,0 +1,94 @@
+{
+  "timestamp": "2025-04-08T05:06:29.833138",
+  "results": [
+    {
+      "check_id": "shellcheck",
+      "severity": "error",
+      "message": "Error running check: [Errno 2] No such file or directory: 'shellcheck'",
+      "file_path": null,
+      "line_number": null,
+      "column": null,
+      "source": "Static Analysis",
+      "details": {},
+      "fix_available": false,
+      "fix_command": null
+    },
+    {
+      "check_id": "doc_coverage",
+      "severity": "warning",
+      "message": "Missing documentation for code directory",
+      "file_path": "./core/kg/scripts",
+      "line_number": null,
+      "column": null,
+      "source": "Documentation Coverage Checker",
+      "details": {},
+      "fix_available": false,
+      "fix_command": null
+    },
+    {
+      "check_id": "doc_coverage",
+      "severity": "warning",
+      "message": "Missing documentation for code directory",
+      "file_path": "./scripts/utils/cleanup",
+      "line_number": null,
+      "column": null,
+      "source": "Documentation Coverage Checker",
+      "details": {},
+      "fix_available": false,
+      "fix_command": null
+    },
+    {
+      "check_id": "doc_coverage",
+      "severity": "warning",
+      "message": "Missing documentation for code directory",
+      "file_path": "./scripts/utils/quality",
+      "line_number": null,
+      "column": null,
+      "source": "Documentation Coverage Checker",
+      "details": {},
+      "fix_available": false,
+      "fix_command": null
+    },
+    {
+      "check_id": "doc_coverage",
+      "severity": "warning",
+      "message": "Missing documentation for code directory",
+      "file_path": "./scripts/maintenance",
+      "line_number": null,
+      "column": null,
+      "source": "Documentation Coverage Checker",
+      "details": {},
+      "fix_available": false,
+      "fix_command": null
+    },
+    {
+      "check_id": "doc_coverage",
+      "severity": "warning",
+      "message": "Missing documentation for code directory",
+      "file_path": "./scripts/utils/validation",
+      "line_number": null,
+      "column": null,
+      "source": "Documentation Coverage Checker",
+      "details": {},
+      "fix_available": false,
+      "fix_command": null
+    },
+    {
+      "check_id": "doc_coverage",
+      "severity": "warning",
+      "message": "Missing documentation for code directory",
+      "file_path": "./scripts/deployment",
+      "line_number": null,
+      "column": null,
+      "source": "Documentation Coverage Checker",
+      "details": {},
+      "fix_available": false,
+      "fix_command": null
+    }
+  ],
+  "summary": {
+    "total_checks": 7,
+    "passed": 7,
+    "failed": 0
+  }
+}

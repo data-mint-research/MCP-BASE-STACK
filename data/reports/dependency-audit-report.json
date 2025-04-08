@@ -1,0 +1,304 @@
+{
+  "project_dir": "/home/skr/projects/MCP-BASE-STACK",
+  "timestamp": "2025-04-08T07:39:16.822344",
+  "summary": {
+    "dependency_files_scanned": 10,
+    "dependencies_checked": 0,
+    "outdated_dependencies": 0,
+    "vulnerable_dependencies": 0,
+    "inconsistent_dependencies": 6,
+    "errors": 0
+  },
+  "dependency_files": [
+    {
+      "path": "requirements.txt",
+      "manager": "python",
+      "type": "requirements.txt"
+    },
+    {
+      "path": "data/backup/essential_files_20250408_065516/requirements.txt",
+      "manager": "python",
+      "type": "requirements.txt"
+    },
+    {
+      "path": "data/backup/essential_files_20250408_065324/requirements.txt",
+      "manager": "python",
+      "type": "requirements.txt"
+    },
+    {
+      "path": "data/backup/essential_files_20250408_065402/requirements.txt",
+      "manager": "python",
+      "type": "requirements.txt"
+    },
+    {
+      "path": "LibreChat/docker-compose.yml",
+      "manager": "docker",
+      "type": "docker-compose.yml"
+    },
+    {
+      "path": "deploy/docker-compose.yml",
+      "manager": "docker",
+      "type": "docker-compose.yml"
+    },
+    {
+      "path": "services/llm-server/docker-compose.yml",
+      "manager": "docker",
+      "type": "docker-compose.yml"
+    },
+    {
+      "path": "services/librechat/docker-compose.yml",
+      "manager": "docker",
+      "type": "docker-compose.yml"
+    },
+    {
+      "path": "services/mcp-server/docker-compose.yml",
+      "manager": "docker",
+      "type": "docker-compose.yml"
+    },
+    {
+      "path": "config/pyproject.toml",
+      "manager": "python",
+      "type": "pyproject.toml"
+    }
+  ],
+  "outdated_dependencies": [],
+  "vulnerable_dependencies": [],
+  "inconsistent_dependencies": [
+    {
+      "name": "dependency_injector",
+      "manager": "python",
+      "versions": [
+        {
+          "version_spec": ">=4.40.0",
+          "file_path": "requirements.txt"
+        },
+        {
+          "version_spec": ">=0.0.0",
+          "file_path": "data/backup/essential_files_20250408_065516/requirements.txt"
+        },
+        {
+          "version_spec": ">=0.0.0",
+          "file_path": "data/backup/essential_files_20250408_065324/requirements.txt"
+        },
+        {
+          "version_spec": ">=0.0.0",
+          "file_path": "data/backup/essential_files_20250408_065402/requirements.txt"
+        }
+      ]
+    },
+    {
+      "name": "hypothesis",
+      "manager": "python",
+      "versions": [
+        {
+          "version_spec": ">=6.0.0",
+          "file_path": "requirements.txt"
+        },
+        {
+          "version_spec": ">=0.0.0",
+          "file_path": "data/backup/essential_files_20250408_065516/requirements.txt"
+        },
+        {
+          "version_spec": ">=0.0.0",
+          "file_path": "data/backup/essential_files_20250408_065324/requirements.txt"
+        },
+        {
+          "version_spec": ">=0.0.0",
+          "file_path": "data/backup/essential_files_20250408_065402/requirements.txt"
+        }
+      ]
+    },
+    {
+      "name": "matplotlib",
+      "manager": "python",
+      "versions": [
+        {
+          "version_spec": ">=3.4.0",
+          "file_path": "requirements.txt"
+        },
+        {
+          "version_spec": ">=0.0.0",
+          "file_path": "data/backup/essential_files_20250408_065516/requirements.txt"
+        },
+        {
+          "version_spec": ">=0.0.0",
+          "file_path": "data/backup/essential_files_20250408_065324/requirements.txt"
+        },
+        {
+          "version_spec": ">=0.0.0",
+          "file_path": "data/backup/essential_files_20250408_065402/requirements.txt"
+        }
+      ]
+    },
+    {
+      "name": "numpy",
+      "manager": "python",
+      "versions": [
+        {
+          "version_spec": ">=1.20.0",
+          "file_path": "requirements.txt"
+        },
+        {
+          "version_spec": ">=0.0.0",
+          "file_path": "data/backup/essential_files_20250408_065516/requirements.txt"
+        },
+        {
+          "version_spec": ">=0.0.0",
+          "file_path": "data/backup/essential_files_20250408_065324/requirements.txt"
+        },
+        {
+          "version_spec": ">=0.0.0",
+          "file_path": "data/backup/essential_files_20250408_065402/requirements.txt"
+        }
+      ]
+    },
+    {
+      "name": "pandas",
+      "manager": "python",
+      "versions": [
+        {
+          "version_spec": ">=1.3.0",
+          "file_path": "requirements.txt"
+        },
+        {
+          "version_spec": ">=0.0.0",
+          "file_path": "data/backup/essential_files_20250408_065516/requirements.txt"
+        },
+        {
+          "version_spec": ">=0.0.0",
+          "file_path": "data/backup/essential_files_20250408_065324/requirements.txt"
+        },
+        {
+          "version_spec": ">=0.0.0",
+          "file_path": "data/backup/essential_files_20250408_065402/requirements.txt"
+        }
+      ]
+    },
+    {
+      "name": "requests",
+      "manager": "python",
+      "versions": [
+        {
+          "version_spec": ">=2.25.0",
+          "file_path": "requirements.txt"
+        },
+        {
+          "version_spec": ">=0.0.0",
+          "file_path": "data/backup/essential_files_20250408_065516/requirements.txt"
+        },
+        {
+          "version_spec": ">=0.0.0",
+          "file_path": "data/backup/essential_files_20250408_065324/requirements.txt"
+        },
+        {
+          "version_spec": ">=0.0.0",
+          "file_path": "data/backup/essential_files_20250408_065402/requirements.txt"
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    {
+      "type": "consistency",
+      "name": "dependency_injector",
+      "versions": [
+        ">=4.40.0",
+        ">=0.0.0",
+        ">=0.0.0",
+        ">=0.0.0"
+      ],
+      "file_paths": [
+        "requirements.txt",
+        "data/backup/essential_files_20250408_065516/requirements.txt",
+        "data/backup/essential_files_20250408_065324/requirements.txt",
+        "data/backup/essential_files_20250408_065402/requirements.txt"
+      ],
+      "message": "Standardize dependency_injector version across the project: >=4.40.0, >=0.0.0, >=0.0.0, >=0.0.0"
+    },
+    {
+      "type": "consistency",
+      "name": "hypothesis",
+      "versions": [
+        ">=6.0.0",
+        ">=0.0.0",
+        ">=0.0.0",
+        ">=0.0.0"
+      ],
+      "file_paths": [
+        "requirements.txt",
+        "data/backup/essential_files_20250408_065516/requirements.txt",
+        "data/backup/essential_files_20250408_065324/requirements.txt",
+        "data/backup/essential_files_20250408_065402/requirements.txt"
+      ],
+      "message": "Standardize hypothesis version across the project: >=6.0.0, >=0.0.0, >=0.0.0, >=0.0.0"
+    },
+    {
+      "type": "consistency",
+      "name": "matplotlib",
+      "versions": [
+        ">=3.4.0",
+        ">=0.0.0",
+        ">=0.0.0",
+        ">=0.0.0"
+      ],
+      "file_paths": [
+        "requirements.txt",
+        "data/backup/essential_files_20250408_065516/requirements.txt",
+        "data/backup/essential_files_20250408_065324/requirements.txt",
+        "data/backup/essential_files_20250408_065402/requirements.txt"
+      ],
+      "message": "Standardize matplotlib version across the project: >=3.4.0, >=0.0.0, >=0.0.0, >=0.0.0"
+    },
+    {
+      "type": "consistency",
+      "name": "numpy",
+      "versions": [
+        ">=1.20.0",
+        ">=0.0.0",
+        ">=0.0.0",
+        ">=0.0.0"
+      ],
+      "file_paths": [
+        "requirements.txt",
+        "data/backup/essential_files_20250408_065516/requirements.txt",
+        "data/backup/essential_files_20250408_065324/requirements.txt",
+        "data/backup/essential_files_20250408_065402/requirements.txt"
+      ],
+      "message": "Standardize numpy version across the project: >=1.20.0, >=0.0.0, >=0.0.0, >=0.0.0"
+    },
+    {
+      "type": "consistency",
+      "name": "pandas",
+      "versions": [
+        ">=1.3.0",
+        ">=0.0.0",
+        ">=0.0.0",
+        ">=0.0.0"
+      ],
+      "file_paths": [
+        "requirements.txt",
+        "data/backup/essential_files_20250408_065516/requirements.txt",
+        "data/backup/essential_files_20250408_065324/requirements.txt",
+        "data/backup/essential_files_20250408_065402/requirements.txt"
+      ],
+      "message": "Standardize pandas version across the project: >=1.3.0, >=0.0.0, >=0.0.0, >=0.0.0"
+    },
+    {
+      "type": "consistency",
+      "name": "requests",
+      "versions": [
+        ">=2.25.0",
+        ">=0.0.0",
+        ">=0.0.0",
+        ">=0.0.0"
+      ],
+      "file_paths": [
+        "requirements.txt",
+        "data/backup/essential_files_20250408_065516/requirements.txt",
+        "data/backup/essential_files_20250408_065324/requirements.txt",
+        "data/backup/essential_files_20250408_065402/requirements.txt"
+      ],
+      "message": "Standardize requests version across the project: >=2.25.0, >=0.0.0, >=0.0.0, >=0.0.0"
+    }
+  ]
+}

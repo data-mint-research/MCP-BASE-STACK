@@ -1,16 +1,23 @@
 <?xml version='1.0' encoding='utf-8'?>
 <graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
-  <key id="d23" for="edge" attr.name="relationship" attr.type="string" />
-  <key id="d22" for="edge" attr.name="relation" attr.type="string" />
-  <key id="d21" for="node" attr.name="file_path" attr.type="string" />
-  <key id="d20" for="node" attr.name="priority" attr.type="string" />
-  <key id="d19" for="node" attr.name="category" attr.type="string" />
-  <key id="d18" for="node" attr.name="implementation_date" attr.type="string" />
-  <key id="d17" for="node" attr.name="unit" attr.type="string" />
-  <key id="d16" for="node" attr.name="value" attr.type="string" />
-  <key id="d15" for="node" attr.name="file_naming_pattern" attr.type="string" />
-  <key id="d14" for="node" attr.name="module_subdirectories" attr.type="string" />
-  <key id="d13" for="node" attr.name="base_directory" attr.type="string" />
+  <key id="d30" for="edge" attr.name="relationship" attr.type="string" />
+  <key id="d29" for="edge" attr.name="relation" attr.type="string" />
+  <key id="d28" for="node" attr.name="supports_iterative_execution" attr.type="boolean" />
+  <key id="d27" for="node" attr.name="integrates_with_quality_enforcer" attr.type="boolean" />
+  <key id="d26" for="node" attr.name="version" attr.type="string" />
+  <key id="d25" for="node" attr.name="updated_at" attr.type="string" />
+  <key id="d24" for="node" attr.name="file_path" attr.type="string" />
+  <key id="d23" for="node" attr.name="priority" attr.type="string" />
+  <key id="d22" for="node" attr.name="category" attr.type="string" />
+  <key id="d21" for="node" attr.name="implementation_date" attr.type="string" />
+  <key id="d20" for="node" attr.name="unit" attr.type="string" />
+  <key id="d19" for="node" attr.name="value" attr.type="string" />
+  <key id="d18" for="node" attr.name="file_naming_pattern" attr.type="string" />
+  <key id="d17" for="node" attr.name="module_subdirectories" attr.type="string" />
+  <key id="d16" for="node" attr.name="base_directory" attr.type="string" />
+  <key id="d15" for="node" attr.name="updates_kg" attr.type="boolean" />
+  <key id="d14" for="node" attr.name="generates_report" attr.type="boolean" />
+  <key id="d13" for="node" attr.name="supports_standards" attr.type="boolean" />
   <key id="d12" for="node" attr.name="timestamp" attr.type="string" />
   <key id="d11" for="node" attr.name="rationale" attr.type="string" />
   <key id="d10" for="node" attr.name="language" attr.type="string" />
@@ -283,20 +290,26 @@
       <data key="d5">1744038759.660927</data>
     </node>
     <node id="check_code_quality_script">
-      <data key="d1">file</data>
-      <data key="d2">check_code_quality.sh</data>
+      <data key="d1">script</data>
+      <data key="d2">Check Code Quality Script</data>
       <data key="d4">scripts/utils/quality/check_code_quality.sh</data>
-      <data key="d7">Script to check code quality using various tools</data>
+      <data key="d7">Enhanced script to check code quality based on standards from the specification manifest</data>
       <data key="d10">shell</data>
       <data key="d5">1744038759.661211</data>
+      <data key="d13">True</data>
+      <data key="d14">True</data>
+      <data key="d15">True</data>
     </node>
     <node id="fix_code_quality_script">
-      <data key="d1">file</data>
-      <data key="d2">fix_code_quality.sh</data>
+      <data key="d1">script</data>
+      <data key="d2">Fix Code Quality Script</data>
       <data key="d4">scripts/utils/quality/fix_code_quality.sh</data>
-      <data key="d7">Script to automatically fix code quality issues</data>
+      <data key="d7">Enhanced script to fix code quality issues based on standards from the specification manifest</data>
       <data key="d10">shell</data>
       <data key="d5">1744038759.661496</data>
+      <data key="d13">True</data>
+      <data key="d14">True</data>
+      <data key="d15">True</data>
     </node>
     <node id="install_pre_commit_hooks_script">
       <data key="d1">file</data>
@@ -553,15 +566,15 @@
       <data key="d1">metadata</data>
       <data key="d2">Logging Directory Structure</data>
       <data key="d7">Standardized directory structure for logs</data>
-      <data key="d13">docs/logs</data>
-      <data key="d14">docs/logs/&lt;module_name&gt;</data>
+      <data key="d16">docs/logs</data>
+      <data key="d17">docs/logs/&lt;module_name&gt;</data>
       <data key="d5">1744061649.86296</data>
     </node>
     <node id="logging_naming_conventions">
       <data key="d1">metadata</data>
       <data key="d2">Logging Naming Conventions</data>
       <data key="d7">Standardized naming conventions for log files</data>
-      <data key="d15">YYYY-MM-DD_module-name-log</data>
+      <data key="d18">YYYY-MM-DD_module-name-log</data>
       <data key="d5">1744061649.863158</data>
     </node>
     <node id="decision_logging_system_1744061649">
@@ -807,8 +820,8 @@
     <node id="test_coverage_metric">
       <data key="d2">Test Coverage</data>
       <data key="d1">metric</data>
-      <data key="d16">85.0</data>
-      <data key="d17">percent</data>
+      <data key="d19">85.0</data>
+      <data key="d20">percent</data>
     </node>
     <node id="advanced_testing_capabilities">
       <data key="d2">Advanced Testing Capabilities</data>
@@ -903,704 +916,1020 @@
     <node id="advanced_test_coverage_metric">
       <data key="d2">Advanced Test Coverage</data>
       <data key="d1">metric</data>
-      <data key="d16">92.0</data>
-      <data key="d17">percent</data>
+      <data key="d19">92.0</data>
+      <data key="d20">percent</data>
     </node>
     <node id="performance_metric">
       <data key="d2">Performance</data>
       <data key="d1">metric</data>
-      <data key="d16">85.0</data>
-      <data key="d17">percent</data>
+      <data key="d19">85.0</data>
+      <data key="d20">percent</data>
     </node>
     <node id="resilience_metric">
       <data key="d2">Resilience</data>
       <data key="d1">metric</data>
-      <data key="d16">90.0</data>
-      <data key="d17">percent</data>
+      <data key="d19">90.0</data>
+      <data key="d20">percent</data>
     </node>
     <node id="auto_fix_capabilities">
       <data key="d1">feature</data>
       <data key="d2">Auto-fix Capabilities</data>
       <data key="d7">Capabilities for automatically fixing quality issues</data>
       <data key="d3">implemented</data>
-      <data key="d18">2025-04-08T05:58:03.920554</data>
-      <data key="d19">quality</data>
-      <data key="d20">high</data>
+      <data key="d21">2025-04-08T05:58:03.920554</data>
+      <data key="d22">quality</data>
+      <data key="d23">high</data>
     </node>
     <node id="code_style_fixes">
       <data key="d1">component</data>
       <data key="d2">Code Style Fixes</data>
       <data key="d7">Fixes for code style issues</data>
-      <data key="d21">core/quality/components/fixes/code_style.py</data>
-      <data key="d19">quality</data>
+      <data key="d24">core/quality/components/fixes/code_style.py</data>
+      <data key="d22">quality</data>
       <data key="d3">implemented</data>
     </node>
     <node id="documentation_fixes">
       <data key="d1">component</data>
       <data key="d2">Documentation Fixes</data>
       <data key="d7">Fixes for documentation issues</data>
-      <data key="d21">core/quality/components/fixes/documentation.py</data>
-      <data key="d19">quality</data>
+      <data key="d24">core/quality/components/fixes/documentation.py</data>
+      <data key="d22">quality</data>
       <data key="d3">implemented</data>
     </node>
     <node id="structure_fixes">
       <data key="d1">component</data>
       <data key="d2">Structure Fixes</data>
       <data key="d7">Fixes for structure-related issues</data>
-      <data key="d21">core/quality/components/fixes/structure.py</data>
-      <data key="d19">quality</data>
+      <data key="d24">core/quality/components/fixes/structure.py</data>
+      <data key="d22">quality</data>
       <data key="d3">implemented</data>
     </node>
     <node id="static_analysis_fixes">
       <data key="d1">component</data>
       <data key="d2">Static Analysis Fixes</data>
       <data key="d7">Fixes for static analysis issues</data>
-      <data key="d21">core/quality/components/fixes/static_analysis.py</data>
-      <data key="d19">quality</data>
+      <data key="d24">core/quality/components/fixes/static_analysis.py</data>
+      <data key="d22">quality</data>
       <data key="d3">implemented</data>
     </node>
     <node id="interactive_fix_mode">
       <data key="d1">component</data>
       <data key="d2">Interactive Fix Mode</data>
       <data key="d7">Interactive mode for fixing quality issues</data>
-      <data key="d21">core/quality/components/interactive.py</data>
-      <data key="d19">quality</data>
+      <data key="d24">core/quality/components/interactive.py</data>
+      <data key="d22">quality</data>
       <data key="d3">implemented</data>
     </node>
     <node id="fix_preview">
       <data key="d1">component</data>
       <data key="d2">Fix Preview</data>
       <data key="d7">Preview functionality for fixes</data>
-      <data key="d21">core/quality/components/preview.py</data>
-      <data key="d19">quality</data>
+      <data key="d24">core/quality/components/preview.py</data>
+      <data key="d22">quality</data>
       <data key="d3">implemented</data>
     </node>
     <node id="fix_verification">
       <data key="d1">component</data>
       <data key="d2">Fix Verification</data>
       <data key="d7">Verification functionality for fixes</data>
-      <data key="d21">core/quality/components/verification.py</data>
-      <data key="d19">quality</data>
+      <data key="d24">core/quality/components/verification.py</data>
+      <data key="d22">quality</data>
       <data key="d3">implemented</data>
     </node>
     <node id="auto_fix_documentation">
       <data key="d1">documentation</data>
       <data key="d2">Auto-fix Capabilities Documentation</data>
       <data key="d7">Documentation for auto-fix capabilities</data>
-      <data key="d21">docs/quality/auto-fix-capabilities.md</data>
-      <data key="d19">quality</data>
+      <data key="d24">docs/quality/auto-fix-capabilities.md</data>
+      <data key="d22">quality</data>
       <data key="d3">implemented</data>
     </node>
     <node id="auto_fix_tests">
       <data key="d1">test_suite</data>
       <data key="d2">Auto-fix Tests</data>
       <data key="d7">Unit tests for auto-fix capabilities</data>
-      <data key="d21">tests/unit/test_auto_fix.py</data>
-      <data key="d19">quality</data>
+      <data key="d24">tests/unit/test_auto_fix.py</data>
+      <data key="d22">quality</data>
       <data key="d3">implemented</data>
     </node>
+    <node id="code_quality_enforcement">
+      <data key="d2">Code Quality Enforcement</data>
+      <data key="d1">feature</data>
+      <data key="d3">active</data>
+      <data key="d7">Comprehensive code quality enforcement system</data>
+      <data key="d9">2025-04-08T05:01:59.723415</data>
+      <data key="d25">2025-04-08T05:06:43.490205</data>
+      <data key="d26">1.0.0</data>
+    </node>
+    <node id="enforce_code_standards_script">
+      <data key="d2">Enforce Code Standards Script</data>
+      <data key="d4">scripts/utils/quality/enforce_code_standards.py</data>
+      <data key="d1">script</data>
+      <data key="d7">Python wrapper script providing a unified interface to check and fix code quality issues</data>
+      <data key="d13">True</data>
+      <data key="d14">True</data>
+      <data key="d15">True</data>
+      <data key="d27">True</data>
+    </node>
+    <node id="check_code_quality_nodes_script">
+      <data key="d2">Check Code Quality Nodes Script</data>
+      <data key="d4">scripts/utils/quality/check_code_quality_nodes.py</data>
+      <data key="d1">script</data>
+      <data key="d7">Script to update the knowledge graph with code quality check and fix results</data>
+      <data key="d15">True</data>
+    </node>
+    <node id="tool_black">
+      <data key="d2">Black</data>
+      <data key="d1">tool</data>
+      <data key="d22">python</data>
+      <data key="d7">Python code formatter</data>
+    </node>
+    <node id="tool_isort">
+      <data key="d2">isort</data>
+      <data key="d1">tool</data>
+      <data key="d22">python</data>
+      <data key="d7">Python import sorter</data>
+    </node>
+    <node id="tool_flake8">
+      <data key="d2">flake8</data>
+      <data key="d1">tool</data>
+      <data key="d22">python</data>
+      <data key="d7">Python linter</data>
+    </node>
+    <node id="tool_mypy">
+      <data key="d2">mypy</data>
+      <data key="d1">tool</data>
+      <data key="d22">python</data>
+      <data key="d7">Python type checker</data>
+    </node>
+    <node id="tool_pylint">
+      <data key="d2">pylint</data>
+      <data key="d1">tool</data>
+      <data key="d22">python</data>
+      <data key="d7">Python linter</data>
+    </node>
+    <node id="tool_autopep8">
+      <data key="d2">autopep8</data>
+      <data key="d1">tool</data>
+      <data key="d22">python</data>
+      <data key="d7">Python code fixer for flake8 issues</data>
+    </node>
+    <node id="tool_autoflake">
+      <data key="d2">autoflake</data>
+      <data key="d1">tool</data>
+      <data key="d22">python</data>
+      <data key="d7">Python unused imports and variables remover</data>
+    </node>
+    <node id="tool_shellcheck">
+      <data key="d2">shellcheck</data>
+      <data key="d1">tool</data>
+      <data key="d22">shell</data>
+      <data key="d7">Shell script linter</data>
+    </node>
+    <node id="tool_shfmt">
+      <data key="d2">shfmt</data>
+      <data key="d1">tool</data>
+      <data key="d22">shell</data>
+      <data key="d7">Shell script formatter</data>
+    </node>
+    <node id="tool_markdownlint">
+      <data key="d2">markdownlint</data>
+      <data key="d1">tool</data>
+      <data key="d22">markdown</data>
+      <data key="d7">Markdown linter</data>
+    </node>
+    <node id="tool_yamllint">
+      <data key="d2">yamllint</data>
+      <data key="d1">tool</data>
+      <data key="d22">yaml</data>
+      <data key="d7">YAML linter</data>
+    </node>
+    <node id="tool_prettier">
+      <data key="d2">prettier</data>
+      <data key="d1">tool</data>
+      <data key="d22">general</data>
+      <data key="d7">Code formatter for JavaScript, TypeScript, JSON, CSS, YAML, and Markdown</data>
+    </node>
+    <node id="category_python">
+      <data key="d2">Python</data>
+      <data key="d1">category</data>
+      <data key="d7">Python code quality standards</data>
+    </node>
+    <node id="category_shell">
+      <data key="d2">Shell</data>
+      <data key="d1">category</data>
+      <data key="d7">Shell script code quality standards</data>
+    </node>
+    <node id="category_markdown">
+      <data key="d2">Markdown</data>
+      <data key="d1">category</data>
+      <data key="d7">Markdown code quality standards</data>
+    </node>
+    <node id="category_yaml">
+      <data key="d2">YAML</data>
+      <data key="d1">category</data>
+      <data key="d7">YAML code quality standards</data>
+    </node>
+    <node id="category_json">
+      <data key="d2">JSON</data>
+      <data key="d1">category</data>
+      <data key="d7">JSON code quality standards</data>
+    </node>
+    <node id="category_javascript">
+      <data key="d2">JavaScript</data>
+      <data key="d1">category</data>
+      <data key="d7">JavaScript code quality standards</data>
+    </node>
+    <node id="category_typescript">
+      <data key="d2">TypeScript</data>
+      <data key="d1">category</data>
+      <data key="d7">TypeScript code quality standards</data>
+    </node>
+    <node id="category_css">
+      <data key="d2">CSS</data>
+      <data key="d1">category</data>
+      <data key="d7">CSS code quality standards</data>
+    </node>
+    <node id="quality_standards_enforcer">
+      <data key="d2">Quality Standards Enforcer</data>
+      <data key="d1">feature</data>
+      <data key="d3">active</data>
+      <data key="d7">Master script that orchestrates the execution of all quality enforcement scripts in an iterative cycle</data>
+      <data key="d9">2025-04-08T05:38:51.200075</data>
+      <data key="d25">2025-04-08T05:39:40.188176</data>
+      <data key="d26">1.0.0</data>
+    </node>
+    <node id="enforce_quality_standards_script">
+      <data key="d2">Enforce Quality Standards Script</data>
+      <data key="d4">enforce_quality_standards.py</data>
+      <data key="d1">script</data>
+      <data key="d7">Master script that orchestrates the execution of all quality enforcement scripts in an iterative cycle</data>
+      <data key="d28">True</data>
+      <data key="d14">True</data>
+      <data key="d15">True</data>
+      <data key="d25">2025-04-08T05:39:40.188186</data>
+      <data key="d26">1.0.0</data>
+    </node>
+    <node id="capability_iterative_execution">
+      <data key="d2">Iterative Execution</data>
+      <data key="d1">capability</data>
+      <data key="d7">Executes quality enforcement scripts in an iterative cycle until no further changes are needed</data>
+    </node>
+    <node id="capability_comprehensive_reporting">
+      <data key="d2">Comprehensive Reporting</data>
+      <data key="d1">capability</data>
+      <data key="d7">Generates a comprehensive final report of the quality enforcement process</data>
+    </node>
+    <node id="capability_kg_integration">
+      <data key="d2">Knowledge Graph Integration</data>
+      <data key="d1">capability</data>
+      <data key="d7">Updates the knowledge graph with the final state of the quality enforcement process</data>
+    </node>
+    <node id="capability_error_handling">
+      <data key="d2">Error Handling</data>
+      <data key="d1">capability</data>
+      <data key="d7">Handles errors gracefully and provides detailed logging of the process</data>
+    </node>
     <edge source="project_root" target="nvidia_gpu">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="project_root" target="wsl2">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="project_root" target="docker">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="project_root" target="nvidia_container">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="project_root" target="librechat">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="project_root" target="mongodb">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="project_root" target="meilisearch">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="project_root" target="ollama">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="project_root" target="mistral">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="project_root" target="deepseek">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="project_root" target="mcp_server">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="project_root" target="feature_git_file_update_hooks">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="project_root" target="git_hooks">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="project_root" target="code_quality">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="project_root" target="feature_file_cleanup">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="project_root" target="file_cleanup_component">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="project_root" target="logging_system">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="nvidia_gpu" target="wsl2">
-      <data key="d22">accessible_from</data>
+      <data key="d29">accessible_from</data>
     </edge>
     <edge source="docker" target="wsl2">
-      <data key="d22">runs_on</data>
+      <data key="d29">runs_on</data>
     </edge>
     <edge source="nvidia_container" target="docker">
-      <data key="d22">extends</data>
+      <data key="d29">extends</data>
     </edge>
     <edge source="nvidia_container" target="nvidia_gpu">
-      <data key="d22">enables_access</data>
+      <data key="d29">enables_access</data>
     </edge>
     <edge source="librechat" target="docker">
-      <data key="d22">containerized_in</data>
+      <data key="d29">containerized_in</data>
     </edge>
     <edge source="librechat" target="mongodb">
-      <data key="d22">uses</data>
+      <data key="d29">uses</data>
     </edge>
     <edge source="librechat" target="meilisearch">
-      <data key="d22">uses</data>
+      <data key="d29">uses</data>
     </edge>
     <edge source="librechat" target="mistral">
-      <data key="d22">integrates</data>
+      <data key="d29">integrates</data>
     </edge>
     <edge source="librechat" target="deepseek">
-      <data key="d22">integrates</data>
+      <data key="d29">integrates</data>
     </edge>
     <edge source="mongodb" target="docker">
-      <data key="d22">containerized_in</data>
+      <data key="d29">containerized_in</data>
     </edge>
     <edge source="meilisearch" target="docker">
-      <data key="d22">containerized_in</data>
+      <data key="d29">containerized_in</data>
     </edge>
     <edge source="ollama" target="docker">
-      <data key="d22">containerized_in</data>
+      <data key="d29">containerized_in</data>
     </edge>
     <edge source="ollama" target="nvidia_gpu">
-      <data key="d22">uses</data>
+      <data key="d29">uses</data>
     </edge>
     <edge source="mistral" target="ollama">
-      <data key="d22">served_by</data>
+      <data key="d29">served_by</data>
     </edge>
     <edge source="deepseek" target="ollama">
-      <data key="d22">served_by</data>
+      <data key="d29">served_by</data>
     </edge>
     <edge source="mcp_server" target="deepseek">
-      <data key="d22">uses</data>
+      <data key="d29">uses</data>
     </edge>
     <edge source="mcp_server" target="dependency_injection">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="mcp_server" target="logging_system">
-      <data key="d22">uses</data>
+      <data key="d29">uses</data>
     </edge>
     <edge source="tests" target="tests_unit">
-      <data key="d23">contains</data>
+      <data key="d30">contains</data>
     </edge>
     <edge source="tests" target="tests_integration">
-      <data key="d23">contains</data>
+      <data key="d30">contains</data>
     </edge>
     <edge source="tests" target="tests_agent_tests">
-      <data key="d23">contains</data>
+      <data key="d30">contains</data>
     </edge>
     <edge source="tests" target="tests_e2e">
-      <data key="d23">contains</data>
+      <data key="d30">contains</data>
     </edge>
     <edge source="tests" target="tests_performance">
-      <data key="d23">contains</data>
+      <data key="d30">contains</data>
     </edge>
     <edge source="tests" target="tests_regression">
-      <data key="d23">contains</data>
+      <data key="d30">contains</data>
     </edge>
     <edge source="tests" target="tests_data">
-      <data key="d23">contains</data>
+      <data key="d30">contains</data>
     </edge>
     <edge source="tests" target="logging_integration_test">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="tests" target="log_directory_manager_test">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="tests" target="logging_config_test">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="docs" target="docs_knowledge-graph">
-      <data key="d23">contains</data>
+      <data key="d30">contains</data>
     </edge>
     <edge source="docs" target="docs_tutorials">
-      <data key="d23">contains</data>
+      <data key="d30">contains</data>
     </edge>
     <edge source="docs" target="docs_troubleshooting">
-      <data key="d23">contains</data>
+      <data key="d30">contains</data>
     </edge>
     <edge source="docs" target="docs_conventions">
-      <data key="d23">contains</data>
+      <data key="d30">contains</data>
     </edge>
     <edge source="docs" target="git_hooks_kg_integration_plan">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="docs" target="file_cleanup_guide">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="docs" target="logging_system_documentation">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="docs_conventions" target="style_guide">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="docs_conventions" target="coding_conventions">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="docs_conventions" target="review_checklist">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="docs_conventions" target="graph_guidelines">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="git_hooks" target="pre_commit_hook">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="git_hooks" target="install_hooks_script">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="git_hooks" target="hooks_documentation">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="git_hooks" target="feature_git_file_update_hooks">
-      <data key="d22">implements</data>
+      <data key="d29">implements</data>
     </edge>
     <edge source="git_hooks_kg_integration_plan" target="feature_git_file_update_hooks">
-      <data key="d22">documents</data>
+      <data key="d29">documents</data>
     </edge>
     <edge source="code_quality" target="style_guide">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="code_quality" target="coding_conventions">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="code_quality" target="review_checklist">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="code_quality" target="graph_guidelines">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="code_quality" target="decision_conventions_creation_1744037680">
-      <data key="d22">has_decision</data>
+      <data key="d29">has_decision</data>
     </edge>
     <edge source="code_quality" target="pyproject_toml">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="code_quality" target="flake8_config">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="code_quality" target="mypy_config">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="code_quality" target="pylint_config">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="code_quality" target="shellcheck_config">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="code_quality" target="pre_commit_config">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="code_quality" target="check_code_quality_script">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="code_quality" target="fix_code_quality_script">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="code_quality" target="install_pre_commit_hooks_script">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="code_quality" target="decision_code_quality_tooling_1744038759">
-      <data key="d22">has_decision</data>
+      <data key="d29">has_decision</data>
     </edge>
     <edge source="code_quality" target="github_actions_workflow">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="code_quality" target="decision_ci_code_quality_1744039069">
-      <data key="d22">has_decision</data>
+      <data key="d29">has_decision</data>
     </edge>
     <edge source="code_quality" target="generate_quality_report">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="code_quality" target="automated_code_review">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="code_quality" target="code_review_config">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="code_quality" target="decision_advanced_code_quality_1744041639">
-      <data key="d22">has_decision</data>
+      <data key="d29">has_decision</data>
     </edge>
     <edge source="code_quality" target="decision_quality_standards_update_1744058413">
-      <data key="d22">has_decision</data>
+      <data key="d29">has_decision</data>
     </edge>
     <edge source="code_quality" target="decision_quality_standards_update_1744059399">
-      <data key="d22">has_decision</data>
+      <data key="d29">has_decision</data>
     </edge>
     <edge source="code_quality" target="logging_system">
-      <data key="d22">uses</data>
+      <data key="d29">uses</data>
     </edge>
     <edge source="code_quality" target="quality_modules">
-      <data key="d22">implements</data>
+      <data key="d29">implements</data>
+    </edge>
+    <edge source="code_quality" target="code_quality_enforcement">
+      <data key="d29">has_feature</data>
+    </edge>
+    <edge source="code_quality" target="quality_standards_enforcer">
+      <data key="d29">has_feature</data>
     </edge>
     <edge source="github_actions_workflow" target="decision_ci_code_quality_1744039069">
-      <data key="d22">implements</data>
+      <data key="d29">implements</data>
     </edge>
     <edge source="generate_quality_report" target="decision_advanced_code_quality_1744041639">
-      <data key="d22">implements</data>
+      <data key="d29">implements</data>
     </edge>
     <edge source="automated_code_review" target="decision_advanced_code_quality_1744041639">
-      <data key="d22">implements</data>
+      <data key="d29">implements</data>
     </edge>
     <edge source="code_review_config" target="decision_advanced_code_quality_1744041639">
-      <data key="d22">implements</data>
+      <data key="d29">implements</data>
     </edge>
     <edge source="dependency_injection" target="di_containers">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="dependency_injection" target="di_providers">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="dependency_injection" target="di_init">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="dependency_injection" target="di_readme">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="dependency_injection" target="example_service">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="dependency_injection" target="app_py">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="dependency_injection" target="decision_dependency_injection_1744042721">
-      <data key="d22">has_decision</data>
+      <data key="d29">has_decision</data>
     </edge>
     <edge source="file_cleanup_component" target="cleanup_script">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="file_cleanup_component" target="cleanup_report">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="file_cleanup_component" target="feature_file_cleanup">
-      <data key="d22">implements</data>
+      <data key="d29">implements</data>
     </edge>
     <edge source="file_cleanup_guide" target="feature_file_cleanup">
-      <data key="d22">documents</data>
+      <data key="d29">documents</data>
     </edge>
     <edge source="logging_system" target="log_directory_manager">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="logging_system" target="logging_config">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="logging_system" target="logging_system_documentation">
-      <data key="d22">documented_by</data>
+      <data key="d29">documented_by</data>
     </edge>
     <edge source="logging_system" target="logging_directory_structure">
-      <data key="d22">has_metadata</data>
+      <data key="d29">has_metadata</data>
     </edge>
     <edge source="logging_system" target="logging_naming_conventions">
-      <data key="d22">has_metadata</data>
+      <data key="d29">has_metadata</data>
     </edge>
     <edge source="logging_system" target="decision_logging_system_1744061649">
-      <data key="d22">has_decision</data>
+      <data key="d29">has_decision</data>
     </edge>
     <edge source="logging_integration_test" target="logging_system">
-      <data key="d22">tests</data>
+      <data key="d29">tests</data>
     </edge>
     <edge source="log_directory_manager_test" target="logging_system">
-      <data key="d22">tests</data>
+      <data key="d29">tests</data>
     </edge>
     <edge source="logging_config_test" target="logging_system">
-      <data key="d22">tests</data>
+      <data key="d29">tests</data>
     </edge>
     <edge source="quality_modules" target="quality_base">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="quality_modules" target="quality_code_style">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="quality_modules" target="quality_static_analysis">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="quality_modules" target="quality_documentation">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="quality_modules" target="quality_structure">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="quality_modules" target="quality_init_file">
-      <data key="d22">implemented_in</data>
+      <data key="d29">implemented_in</data>
     </edge>
     <edge source="quality_modules" target="testing_framework">
-      <data key="d22">uses</data>
+      <data key="d29">uses</data>
     </edge>
     <edge source="quality_modules" target="advanced_testing_capabilities">
-      <data key="d22">has_feature</data>
+      <data key="d29">has_feature</data>
     </edge>
     <edge source="quality_base" target="quality_plugin_system">
-      <data key="d22">implements</data>
+      <data key="d29">implements</data>
     </edge>
     <edge source="quality_base" target="quality_base_file">
-      <data key="d22">implemented_in</data>
+      <data key="d29">implemented_in</data>
     </edge>
     <edge source="quality_code_style" target="quality_code_style_file">
-      <data key="d22">implemented_in</data>
+      <data key="d29">implemented_in</data>
     </edge>
     <edge source="quality_static_analysis" target="quality_static_analysis_file">
-      <data key="d22">implemented_in</data>
+      <data key="d29">implemented_in</data>
     </edge>
     <edge source="quality_documentation" target="quality_documentation_file">
-      <data key="d22">implemented_in</data>
+      <data key="d29">implemented_in</data>
     </edge>
     <edge source="quality_structure" target="quality_structure_file">
-      <data key="d22">implemented_in</data>
+      <data key="d29">implemented_in</data>
     </edge>
     <edge source="quality_enforcer" target="quality_base">
-      <data key="d22">uses</data>
+      <data key="d29">uses</data>
     </edge>
     <edge source="quality_enforcer" target="quality_code_style">
-      <data key="d22">uses</data>
+      <data key="d29">uses</data>
     </edge>
     <edge source="quality_enforcer" target="quality_static_analysis">
-      <data key="d22">uses</data>
+      <data key="d29">uses</data>
     </edge>
     <edge source="quality_enforcer" target="quality_documentation">
-      <data key="d22">uses</data>
+      <data key="d29">uses</data>
     </edge>
     <edge source="quality_enforcer" target="quality_structure">
-      <data key="d22">uses</data>
+      <data key="d29">uses</data>
     </edge>
     <edge source="quality_enforcer" target="quality_plugin_system">
-      <data key="d22">uses</data>
+      <data key="d29">uses</data>
     </edge>
     <edge source="quality_enforcer" target="quality_hooks_compatibility">
-      <data key="d22">provides</data>
+      <data key="d29">provides</data>
     </edge>
     <edge source="quality_enforcer" target="quality_enforcer_file">
-      <data key="d22">implemented_in</data>
+      <data key="d29">implemented_in</data>
     </edge>
     <edge source="quality_hooks_compatibility" target="quality_hooks_init_file">
-      <data key="d22">implemented_in</data>
+      <data key="d29">implemented_in</data>
     </edge>
     <edge source="testing_framework" target="test_utils">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="testing_framework" target="pre_commit_hooks_tests">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="testing_framework" target="kg_integration_tests">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="testing_framework" target="log_manager_tests">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="testing_framework" target="documentation_generator_tests">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="testing_framework" target="quality_workflow_tests">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="testing_framework" target="pytest_config">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="testing_framework" target="testing_framework_doc_file">
-      <data key="d22">implemented_in</data>
+      <data key="d29">implemented_in</data>
     </edge>
     <edge source="testing_framework" target="test_coverage_metric">
-      <data key="d22">has_metric</data>
+      <data key="d29">has_metric</data>
     </edge>
     <edge source="testing_framework" target="advanced_testing_capabilities">
-      <data key="d22">extends</data>
+      <data key="d29">extends</data>
     </edge>
     <edge source="test_utils" target="test_utils_init_file">
-      <data key="d22">implemented_in</data>
+      <data key="d29">implemented_in</data>
     </edge>
     <edge source="test_utils" target="test_utils_fixtures_file">
-      <data key="d22">implemented_in</data>
+      <data key="d29">implemented_in</data>
     </edge>
     <edge source="test_utils" target="test_utils_mocks_file">
-      <data key="d22">implemented_in</data>
+      <data key="d29">implemented_in</data>
     </edge>
     <edge source="test_utils" target="test_utils_helpers_file">
-      <data key="d22">implemented_in</data>
+      <data key="d29">implemented_in</data>
     </edge>
     <edge source="test_utils" target="pre_commit_hooks_tests">
-      <data key="d22">used_by</data>
+      <data key="d29">used_by</data>
     </edge>
     <edge source="test_utils" target="kg_integration_tests">
-      <data key="d22">used_by</data>
+      <data key="d29">used_by</data>
     </edge>
     <edge source="test_utils" target="log_manager_tests">
-      <data key="d22">used_by</data>
+      <data key="d29">used_by</data>
     </edge>
     <edge source="test_utils" target="documentation_generator_tests">
-      <data key="d22">used_by</data>
+      <data key="d29">used_by</data>
     </edge>
     <edge source="test_utils" target="quality_workflow_tests">
-      <data key="d22">used_by</data>
+      <data key="d29">used_by</data>
     </edge>
     <edge source="test_utils" target="pytest_config">
-      <data key="d22">used_by</data>
+      <data key="d29">used_by</data>
     </edge>
     <edge source="pre_commit_hooks_tests" target="pre_commit_hooks_tests_file">
-      <data key="d22">implemented_in</data>
+      <data key="d29">implemented_in</data>
     </edge>
     <edge source="pre_commit_hooks_tests" target="quality_hooks_compatibility">
-      <data key="d22">tests</data>
+      <data key="d29">tests</data>
     </edge>
     <edge source="kg_integration_tests" target="kg_integration_tests_file">
-      <data key="d22">implemented_in</data>
+      <data key="d29">implemented_in</data>
     </edge>
     <edge source="kg_integration_tests" target="quality_modules">
-      <data key="d22">tests</data>
+      <data key="d29">tests</data>
     </edge>
     <edge source="log_manager_tests" target="log_manager_tests_file">
-      <data key="d22">implemented_in</data>
+      <data key="d29">implemented_in</data>
     </edge>
     <edge source="documentation_generator_tests" target="documentation_generator_tests_file">
-      <data key="d22">implemented_in</data>
+      <data key="d29">implemented_in</data>
     </edge>
     <edge source="quality_workflow_tests" target="quality_workflow_tests_file">
-      <data key="d22">implemented_in</data>
+      <data key="d29">implemented_in</data>
     </edge>
     <edge source="quality_workflow_tests" target="quality_enforcer">
-      <data key="d22">tests</data>
+      <data key="d29">tests</data>
     </edge>
     <edge source="pytest_config" target="pytest_config_file">
-      <data key="d22">implemented_in</data>
+      <data key="d29">implemented_in</data>
     </edge>
     <edge source="advanced_testing_capabilities" target="property_testing">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="advanced_testing_capabilities" target="chaos_testing">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="advanced_testing_capabilities" target="performance_benchmarks">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="advanced_testing_capabilities" target="comprehensive_integration_tests">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="advanced_testing_capabilities" target="test_data_generators">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="advanced_testing_capabilities" target="test_reporting">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="advanced_testing_capabilities" target="advanced_testing_doc_file">
-      <data key="d22">implemented_in</data>
+      <data key="d29">implemented_in</data>
     </edge>
     <edge source="advanced_testing_capabilities" target="advanced_test_coverage_metric">
-      <data key="d22">has_metric</data>
+      <data key="d29">has_metric</data>
     </edge>
     <edge source="property_testing" target="property_testing_file">
-      <data key="d22">implemented_in</data>
+      <data key="d29">implemented_in</data>
     </edge>
     <edge source="property_testing" target="quality_modules">
-      <data key="d22">tests</data>
+      <data key="d29">tests</data>
     </edge>
     <edge source="chaos_testing" target="chaos_testing_file">
-      <data key="d22">implemented_in</data>
+      <data key="d29">implemented_in</data>
     </edge>
     <edge source="chaos_testing" target="quality_modules">
-      <data key="d22">tests</data>
+      <data key="d29">tests</data>
     </edge>
     <edge source="chaos_testing" target="resilience_metric">
-      <data key="d22">has_metric</data>
+      <data key="d29">has_metric</data>
     </edge>
     <edge source="performance_benchmarks" target="performance_benchmarks_file">
-      <data key="d22">implemented_in</data>
+      <data key="d29">implemented_in</data>
     </edge>
     <edge source="performance_benchmarks" target="quality_modules">
-      <data key="d22">tests</data>
+      <data key="d29">tests</data>
     </edge>
     <edge source="performance_benchmarks" target="performance_metric">
-      <data key="d22">has_metric</data>
+      <data key="d29">has_metric</data>
     </edge>
     <edge source="comprehensive_integration_tests" target="enhanced_integration_tests_file">
-      <data key="d22">implemented_in</data>
+      <data key="d29">implemented_in</data>
     </edge>
     <edge source="comprehensive_integration_tests" target="quality_modules">
-      <data key="d22">tests</data>
+      <data key="d29">tests</data>
     </edge>
     <edge source="test_data_generators" target="test_data_generators_file">
-      <data key="d22">implemented_in</data>
+      <data key="d29">implemented_in</data>
     </edge>
     <edge source="test_data_generators" target="property_testing">
-      <data key="d22">supports</data>
+      <data key="d29">supports</data>
     </edge>
     <edge source="test_data_generators" target="chaos_testing">
-      <data key="d22">supports</data>
+      <data key="d29">supports</data>
     </edge>
     <edge source="test_data_generators" target="performance_benchmarks">
-      <data key="d22">supports</data>
+      <data key="d29">supports</data>
     </edge>
     <edge source="test_data_generators" target="comprehensive_integration_tests">
-      <data key="d22">supports</data>
+      <data key="d29">supports</data>
     </edge>
     <edge source="test_reporting" target="test_reporting_file">
-      <data key="d22">implemented_in</data>
+      <data key="d29">implemented_in</data>
     </edge>
     <edge source="test_reporting" target="property_testing">
-      <data key="d22">supports</data>
+      <data key="d29">supports</data>
     </edge>
     <edge source="test_reporting" target="chaos_testing">
-      <data key="d22">supports</data>
+      <data key="d29">supports</data>
     </edge>
     <edge source="test_reporting" target="performance_benchmarks">
-      <data key="d22">supports</data>
+      <data key="d29">supports</data>
     </edge>
     <edge source="test_reporting" target="comprehensive_integration_tests">
-      <data key="d22">supports</data>
+      <data key="d29">supports</data>
     </edge>
     <edge source="auto_fix_capabilities" target="code_style_fixes">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="auto_fix_capabilities" target="documentation_fixes">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="auto_fix_capabilities" target="structure_fixes">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="auto_fix_capabilities" target="static_analysis_fixes">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="auto_fix_capabilities" target="interactive_fix_mode">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="auto_fix_capabilities" target="fix_preview">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="auto_fix_capabilities" target="fix_verification">
-      <data key="d22">contains</data>
+      <data key="d29">contains</data>
     </edge>
     <edge source="auto_fix_capabilities" target="auto_fix_documentation">
-      <data key="d22">documented_by</data>
+      <data key="d29">documented_by</data>
     </edge>
     <edge source="auto_fix_capabilities" target="auto_fix_tests">
-      <data key="d22">tested_by</data>
+      <data key="d29">tested_by</data>
     </edge>
     <edge source="interactive_fix_mode" target="fix_preview">
-      <data key="d22">uses</data>
+      <data key="d29">uses</data>
     </edge>
     <edge source="interactive_fix_mode" target="fix_verification">
-      <data key="d22">uses</data>
+      <data key="d29">uses</data>
+    </edge>
+    <edge source="code_quality_enforcement" target="enforce_code_standards_script">
+      <data key="d29">implements</data>
+    </edge>
+    <edge source="code_quality_enforcement" target="check_code_quality_nodes_script">
+      <data key="d29">implements</data>
+    </edge>
+    <edge source="code_quality_enforcement" target="tool_black">
+      <data key="d29">uses</data>
+    </edge>
+    <edge source="code_quality_enforcement" target="tool_isort">
+      <data key="d29">uses</data>
+    </edge>
+    <edge source="code_quality_enforcement" target="tool_flake8">
+      <data key="d29">uses</data>
+    </edge>
+    <edge source="code_quality_enforcement" target="tool_mypy">
+      <data key="d29">uses</data>
+    </edge>
+    <edge source="code_quality_enforcement" target="tool_pylint">
+      <data key="d29">uses</data>
+    </edge>
+    <edge source="code_quality_enforcement" target="tool_autopep8">
+      <data key="d29">uses</data>
+    </edge>
+    <edge source="code_quality_enforcement" target="tool_autoflake">
+      <data key="d29">uses</data>
+    </edge>
+    <edge source="code_quality_enforcement" target="tool_shellcheck">
+      <data key="d29">uses</data>
+    </edge>
+    <edge source="code_quality_enforcement" target="tool_shfmt">
+      <data key="d29">uses</data>
+    </edge>
+    <edge source="code_quality_enforcement" target="tool_markdownlint">
+      <data key="d29">uses</data>
+    </edge>
+    <edge source="code_quality_enforcement" target="tool_yamllint">
+      <data key="d29">uses</data>
+    </edge>
+    <edge source="code_quality_enforcement" target="tool_prettier">
+      <data key="d29">uses</data>
+    </edge>
+    <edge source="code_quality_enforcement" target="category_python">
+      <data key="d29">supports</data>
+    </edge>
+    <edge source="code_quality_enforcement" target="category_shell">
+      <data key="d29">supports</data>
+    </edge>
+    <edge source="code_quality_enforcement" target="category_markdown">
+      <data key="d29">supports</data>
+    </edge>
+    <edge source="code_quality_enforcement" target="category_yaml">
+      <data key="d29">supports</data>
+    </edge>
+    <edge source="code_quality_enforcement" target="category_json">
+      <data key="d29">supports</data>
+    </edge>
+    <edge source="code_quality_enforcement" target="category_javascript">
+      <data key="d29">supports</data>
+    </edge>
+    <edge source="code_quality_enforcement" target="category_typescript">
+      <data key="d29">supports</data>
+    </edge>
+    <edge source="code_quality_enforcement" target="category_css">
+      <data key="d29">supports</data>
+    </edge>
+    <edge source="enforce_code_standards_script" target="quality_enforcer">
+      <data key="d29">integrates_with</data>
+    </edge>
+    <edge source="tool_black" target="category_python">
+      <data key="d29">applies_to</data>
+    </edge>
+    <edge source="tool_isort" target="category_python">
+      <data key="d29">applies_to</data>
+    </edge>
+    <edge source="tool_flake8" target="category_python">
+      <data key="d29">applies_to</data>
+    </edge>
+    <edge source="tool_mypy" target="category_python">
+      <data key="d29">applies_to</data>
+    </edge>
+    <edge source="tool_pylint" target="category_python">
+      <data key="d29">applies_to</data>
+    </edge>
+    <edge source="tool_autopep8" target="category_python">
+      <data key="d29">applies_to</data>
+    </edge>
+    <edge source="tool_autoflake" target="category_python">
+      <data key="d29">applies_to</data>
+    </edge>
+    <edge source="tool_shellcheck" target="category_shell">
+      <data key="d29">applies_to</data>
+    </edge>
+    <edge source="tool_shfmt" target="category_shell">
+      <data key="d29">applies_to</data>
+    </edge>
+    <edge source="tool_markdownlint" target="category_markdown">
+      <data key="d29">applies_to</data>
+    </edge>
+    <edge source="tool_yamllint" target="category_yaml">
+      <data key="d29">applies_to</data>
+    </edge>
+    <edge source="tool_prettier" target="category_markdown">
+      <data key="d29">applies_to</data>
+    </edge>
+    <edge source="quality_standards_enforcer" target="enforce_quality_standards_script">
+      <data key="d29">implements</data>
+    </edge>
+    <edge source="quality_standards_enforcer" target="capability_iterative_execution">
+      <data key="d29">has_capability</data>
+    </edge>
+    <edge source="quality_standards_enforcer" target="capability_comprehensive_reporting">
+      <data key="d29">has_capability</data>
+    </edge>
+    <edge source="quality_standards_enforcer" target="capability_kg_integration">
+      <data key="d29">has_capability</data>
+    </edge>
+    <edge source="quality_standards_enforcer" target="capability_error_handling">
+      <data key="d29">has_capability</data>
+    </edge>
+    <edge source="enforce_quality_standards_script" target="check_code_quality_script">
+      <data key="d29">executes</data>
+    </edge>
+    <edge source="enforce_quality_standards_script" target="fix_code_quality_script">
+      <data key="d29">executes</data>
+    </edge>
+    <edge source="enforce_quality_standards_script" target="cleanup_script">
+      <data key="d29">executes</data>
+    </edge>
+    <edge source="enforce_quality_standards_script" target="quality_enforcer">
+      <data key="d29">integrates_with</data>
     </edge>
     <data key="d0">MCP-BASE-STACK</data>
   </graph>

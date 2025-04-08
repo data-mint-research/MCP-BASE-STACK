@@ -1,20 +1,24 @@
 #!/usr/bin/env python3
 """
-File cleanup script that identifies and safely removes orphaned or outdated files.
+File cleanup script that identifies and safely removes orphaned or outdated files,
+and ensures files are in their ideal locations according to the specification manifest.
 
 This script provides functionality to:
 1. Load the specification manifest
 2. Use results from traverse_project.py and analyze_code.py to identify files that need cleanup
 3. Identify orphaned files (files not referenced by any other file or not in the knowledge graph)
 4. Identify outdated files (old migration files, duplicate files, outdated versions)
-5. Generate a detailed report of files to be cleaned up
-6. Safely remove or archive these files based on user confirmation
+5. Identify files in incorrect locations based on the specification manifest
+6. Generate a detailed report of files to be cleaned up or moved
+7. Safely remove, archive, or move these files based on user confirmation
+8. Update the knowledge graph with changes made
 
 The script implements safety measures:
-- Never delete files without explicit confirmation
-- Create backups of files before deletion
+- Never delete or move files without explicit confirmation
+- Create backups of files before deletion or movement
 - Log all actions taken
-- Provide a rollback mechanism
+- Provide a rollback mechanism for all operations
+- Update the knowledge graph to reflect changes
 
 Usage:
     python cleanup_files.py --project-dir /path/to/project --manifest /path/to/manifest.json --output /path/to/report.json
@@ -22,6 +26,7 @@ Usage:
     python cleanup_files.py --project-dir /path/to/project --dry-run
     python cleanup_files.py --project-dir /path/to/project --interactive
     python cleanup_files.py --project-dir /path/to/project --batch
+    python cleanup_files.py --project-dir /path/to/project --move-only  # Only move files to correct locations
 """
 
 import argparse
@@ -33,7 +38,8 @@ import re
 import shutil
 import sys
 from pathlib import Path
-from typing import Dict, List, Optional, Any, Tuple, Set, Union
+from typing import Dict, List, Optional, Any, Tuple, Set, Union, Callable
+import importlib.util
 
 # Initialize logging
 logging.basicConfig(
@@ -49,10 +55,10 @@ logger = logging.getLogger(__name__)
 
 class FileCleanup:
     """
-    Class to identify and safely remove orphaned or outdated files.
+    Class to identify and safely remove orphaned or outdated files, and ensure files are in their ideal locations.
     
-    This class provides methods to identify files that need cleanup,
-    generate a detailed report, and safely remove or archive these files
+    This class provides methods to identify files that need cleanup or relocation,
+    generate a detailed report, and safely remove, archive, or move these files
     based on user confirmation.
     
     Attributes:
@@ -60,19 +66,21 @@ class FileCleanup:
         manifest: The specification manifest
         verbose: Whether to enable verbose logging
         dry_run: Whether to run in dry-run mode (only report issues without making changes)
-        interactive: Whether to run in interactive mode (confirm each deletion)
+        interactive: Whether to run in interactive mode (confirm each operation)
         batch: Whether to run in batch mode (apply all changes at once with a single confirmation)
-        backup_dir: Directory to store backups of files before deletion
+        move_only: Whether to only move files to correct locations (no deletion)
+        backup_dir: Directory to store backups of files before deletion or movement
     """
     
     def __init__(
-        self, 
-        project_dir: str, 
-        manifest: Dict[str, Any], 
-        verbose: bool = False, 
+        self,
+        project_dir: str,
+        manifest: Dict[str, Any],
+        verbose: bool = False,
         dry_run: bool = False,
         interactive: bool = False,
         batch: bool = False,
+        move_only: bool = False,
         backup_dir: str = None
     ):
         """
@@ -83,9 +91,10 @@ class FileCleanup:
             manifest: The specification manifest
             verbose: Whether to enable verbose logging
             dry_run: Whether to run in dry-run mode (only report issues without making changes)
-            interactive: Whether to run in interactive mode (confirm each deletion)
+            interactive: Whether to run in interactive mode (confirm each operation)
             batch: Whether to run in batch mode (apply all changes at once with a single confirmation)
-            backup_dir: Directory to store backups of files before deletion
+            move_only: Whether to only move files to correct locations (no deletion)
+            backup_dir: Directory to store backups of files before deletion or movement
         """
         self.project_dir = os.path.abspath(project_dir)
         self.manifest = manifest
@@ -93,6 +102,7 @@ class FileCleanup:
         self.dry_run = dry_run
         self.interactive = interactive
         self.batch = batch
+        self.move_only = move_only
         
         # Set up backup directory
         if backup_dir:
@@ -109,6 +119,7 @@ class FileCleanup:
         # Extract relevant sections from the manifest
         self.dir_structure = manifest["specification_manifest"]["directory_structure"]
         self.file_templates = manifest["specification_manifest"]["file_templates"]
+        self.naming_conventions = manifest["specification_manifest"]["naming_conventions"]
         
         # Initialize report data structure
         self.report = {
@@ -119,15 +130,19 @@ class FileCleanup:
                 "orphaned_files": 0,
                 "outdated_files": 0,
                 "duplicate_files": 0,
+                "misplaced_files": 0,
                 "total_files_to_cleanup": 0,
+                "total_files_to_move": 0,
                 "total_size_to_cleanup": 0,
                 "files_backed_up": 0,
                 "files_removed": 0,
-                "files_archived": 0
+                "files_archived": 0,
+                "files_moved": 0
             },
             "orphaned_files": [],
             "outdated_files": [],
             "duplicate_files": [],
+            "misplaced_files": [],
             "actions_taken": [],
             "rollback_info": {
                 "backup_dir": self.backup_dir,
@@ -141,10 +156,14 @@ class FileCleanup:
         self.knowledge_graph_files = set()
         self.expected_files = set()
         self.file_hashes = {}  # For duplicate detection
+        self.ideal_locations = {}  # Mapping of files to their ideal locations
         
         # Load project structure and code analysis reports if available
         self.project_structure_report = self._load_report("data/reports/project-structure-report.json")
         self.code_analysis_report = self._load_report("data/reports/code-analysis-report.json")
+        
+        # Try to load the QualityEnforcer for integration
+        self.quality_enforcer = self._load_quality_enforcer()
     
     def log(self, message: str) -> None:
         """
@@ -171,6 +190,31 @@ class FileCleanup:
                 return json.load(f)
         except (FileNotFoundError, json.JSONDecodeError) as e:
             self.log(f"Warning: Could not load {report_path}: {e}")
+            return None
+    
+    def _load_quality_enforcer(self) -> Optional[Any]:
+        """
+        Load the QualityEnforcer class if available.
+        
+        Returns:
+            The QualityEnforcer instance, or None if not available
+        """
+        try:
+            # Try to import the QualityEnforcer
+            spec = importlib.util.spec_from_file_location(
+                "enforcer",
+                os.path.join(self.project_dir, "core/quality/enforcer.py")
+            )
+            if spec and spec.loader:
+                module = importlib.util.module_from_spec(spec)
+                spec.loader.exec_module(module)
+                if hasattr(module, "enforcer"):
+                    self.log("Successfully loaded QualityEnforcer")
+                    return module.enforcer
+            self.log("QualityEnforcer not found, continuing without integration")
+            return None
+        except Exception as e:
+            self.log(f"Error loading QualityEnforcer: {e}")
             return None
     
     def _scan_files(self) -> None:
@@ -303,7 +347,7 @@ class FileCleanup:
         Collect the list of files that are expected to exist based on the manifest.
         
         This method extracts the list of required and optional files from the
-        specification manifest.
+        specification manifest and determines their ideal locations.
         """
         self.log("Collecting expected files from manifest...")
         
@@ -315,17 +359,22 @@ class FileCleanup:
             
             # Add required files
             if "required_files" in dir_info:
-                for file_name in dir_info["required_files"]:
+                for file_name, file_info in dir_info["required_files"].items():
                     file_path = os.path.join(base_path, file_name)
                     self.expected_files.add(file_path)
+                    # Store the ideal location
+                    self.ideal_locations[file_name] = file_path
             
             # Add optional files
             if "optional_files" in dir_info:
-                for file_name in dir_info["optional_files"]:
+                for file_name, file_info in dir_info["optional_files"].items():
                     file_path = os.path.join(base_path, file_name)
                     self.expected_files.add(file_path)
+                    # Store the ideal location
+                    self.ideal_locations[file_name] = file_path
         
         self.log(f"Collected {len(self.expected_files)} expected files from manifest")
+        self.log(f"Determined ideal locations for {len(self.ideal_locations)} files")
     
     def _scan_file_references(self) -> None:
         """
@@ -594,6 +643,53 @@ class FileCleanup:
         
         self.log(f"Identified {self.report['summary']['duplicate_files']} duplicate files")
     
+    def _identify_misplaced_files(self) -> None:
+        """
+        Identify files that are in incorrect locations.
+        
+        Misplaced files are files that exist but are not in their ideal location
+        according to the specification manifest.
+        """
+        self.log("Identifying misplaced files...")
+        
+        # Check each file against its ideal location
+        for file_path in self.all_files:
+            file_name = os.path.basename(file_path)
+            
+            # Skip if the file is already marked for cleanup
+            if any(item["path"] == file_path for item in self.report["orphaned_files"] +
+                   self.report["outdated_files"] + self.report["duplicate_files"]):
+                continue
+            
+            # Check if we know the ideal location for this file
+            if file_name in self.ideal_locations:
+                ideal_path = self.ideal_locations[file_name]
+                
+                # If the file is not in its ideal location, mark it as misplaced
+                if file_path != ideal_path and os.path.exists(os.path.join(self.project_dir, file_path)):
+                    abs_path = os.path.join(self.project_dir, file_path)
+                    
+                    try:
+                        file_size = os.path.getsize(abs_path)
+                        file_mtime = os.path.getmtime(abs_path)
+                        file_mtime_str = datetime.datetime.fromtimestamp(file_mtime).isoformat()
+                        
+                        self.report["misplaced_files"].append({
+                            "path": file_path,
+                            "size": file_size,
+                            "last_modified": file_mtime_str,
+                            "ideal_path": ideal_path,
+                            "reason": f"File is not in its ideal location according to the specification manifest"
+                        })
+                        
+                        self.report["summary"]["misplaced_files"] += 1
+                        self.report["summary"]["total_files_to_move"] += 1
+                    
+                    except (IOError, OSError) as e:
+                        logger.error(f"Error getting info for misplaced file {file_path}: {e}")
+        
+        self.log(f"Identified {self.report['summary']['misplaced_files']} misplaced files")
+    
     def _backup_file(self, file_path: str) -> bool:
         """
         Create a backup of a file before deletion.
@@ -708,6 +804,47 @@ class FileCleanup:
             logger.error(f"Error archiving file {file_path}: {e}")
             return False
     
+    def _move_file(self, file_path: str, target_path: str) -> bool:
+        """
+        Move a file to a new location.
+        
+        Args:
+            file_path: Path to the file to move
+            target_path: Path to move the file to
+            
+        Returns:
+            True if the move was successful, False otherwise
+        """
+        if self.dry_run:
+            self.log(f"[DRY RUN] Would move file: {file_path} to {target_path}")
+            return True
+        
+        abs_path = os.path.join(self.project_dir, file_path)
+        abs_target_path = os.path.join(self.project_dir, target_path)
+        
+        try:
+            # Create directory structure for target path
+            os.makedirs(os.path.dirname(abs_target_path), exist_ok=True)
+            
+            # Move the file
+            shutil.move(abs_path, abs_target_path)
+            
+            # Add to report
+            self.report["actions_taken"].append({
+                "action": "move",
+                "path": file_path,
+                "target_path": target_path,
+                "timestamp": datetime.datetime.now().isoformat()
+            })
+            
+            self.report["summary"]["files_moved"] += 1
+            self.log(f"Moved file: {file_path} to {target_path}")
+            return True
+        
+        except (IOError, OSError) as e:
+            logger.error(f"Error moving file {file_path} to {target_path}: {e}")
+            return False
+    
     def _rollback(self) -> bool:
         """
         Rollback changes by restoring files from backups.
@@ -738,8 +875,199 @@ class FileCleanup:
             except (IOError, OSError) as e:
                 logger.error(f"Error restoring file {original_path}: {e}")
                 success = False
+        return success
+    
+    def move_files(self) -> bool:
+        """
+        Move files to their ideal locations based on the analysis.
+        
+        This method moves files that have been identified as being in incorrect
+        locations to their ideal locations based on the specification manifest.
+        
+        Returns:
+            True if the move operation was successful, False otherwise
+        """
+        self.log("Starting file movement...")
+        
+        # Check if there are files to move
+        if self.report["summary"]["total_files_to_move"] == 0:
+            logger.info("No files to move.")
+            return True
+        
+        # Get files to move
+        files_to_move = []
+        files_to_move.extend([file_info for file_info in self.report["misplaced_files"]])
+        
+        # Sort files by path for better readability
+        files_to_move.sort(key=lambda x: x["path"])
+        
+        # Print files to move
+        if len(files_to_move) > 0:
+            logger.info(f"Found {len(files_to_move)} files to move:")
+            for file_info in files_to_move:
+                logger.info(f"  {file_info['path']} -> {file_info['ideal_path']}")
+        
+        # Confirm movement
+        if not self.batch:
+            if self.interactive:
+                # Interactive mode: confirm each file
+                success = True
+                for file_info in files_to_move:
+                    file_path = file_info["path"]
+                    ideal_path = file_info["ideal_path"]
+                    abs_path = os.path.join(self.project_dir, file_path)
+                    file_size = os.path.getsize(abs_path)
+                    file_size_str = self._format_size(file_size)
+                    
+                    # Ask for confirmation
+                    print(f"\nFile: {file_path}")
+                    print(f"Size: {file_size_str}")
+                    print(f"Ideal location: {ideal_path}")
+                    print(f"Reason: {file_info['reason']}")
+                    print("\nOptions:")
+                    print("  [m] Move file to ideal location")
+                    print("  [s] Skip file")
+                    print("  [q] Quit")
+                    
+                    while True:
+                        choice = input("Enter choice [m/s/q]: ").lower()
+                        if choice in ["m", "s", "q"]:
+                            break
+                        print("Invalid choice. Please try again.")
+                    
+                    if choice == "q":
+                        logger.info("File movement aborted by user.")
+                        return False
+                    elif choice == "s":
+                        logger.info(f"Skipped file: {file_path}")
+                        continue
+                    elif choice == "m":
+                        # Backup and move file
+                        if self._backup_file(file_path):
+                            if self._move_file(file_path, ideal_path):
+                                logger.info(f"Moved file: {file_path} -> {ideal_path}")
+                            else:
+                                success = False
+                        else:
+                            success = False
+                
+                # Update knowledge graph
+                if success:
+                    self._update_knowledge_graph()
+                
+                return success
+            else:
+                # Batch mode with confirmation
+                print(f"\nFound {len(files_to_move)} files to move:")
+                for file_info in files_to_move[:10]:  # Show first 10 files
+                    print(f"  {file_info['path']} -> {file_info['ideal_path']}")
+                
+                if len(files_to_move) > 10:
+                    print(f"  ... and {len(files_to_move) - 10} more files")
+                
+                print("\nOptions:")
+                print("  [m] Move all files to ideal locations")
+                print("  [q] Quit")
+                
+                while True:
+                    choice = input("Enter choice [m/q]: ").lower()
+                    if choice in ["m", "q"]:
+                        break
+                    print("Invalid choice. Please try again.")
+                
+                if choice == "q":
+                    logger.info("File movement aborted by user.")
+                    return False
+        else:
+            # Batch mode without confirmation
+            choice = "m"  # Default to move
+        
+        # Perform file movement
+        success = True
+        for file_info in files_to_move:
+            file_path = file_info["path"]
+            ideal_path = file_info["ideal_path"]
+            
+            # Backup file first
+            if self._backup_file(file_path):
+                # Move file
+                if not self._move_file(file_path, ideal_path):
+                    success = False
+            else:
+                success = False
+        
+        # Update knowledge graph
+        if success:
+            self._update_knowledge_graph()
         
         return success
+    
+    def _update_knowledge_graph(self) -> bool:
+        """
+        Update the knowledge graph with the changes made.
+        
+        Returns:
+            True if the update was successful, False otherwise
+        """
+        if self.dry_run:
+            self.log("[DRY RUN] Would update knowledge graph")
+            return True
+        
+        try:
+            # Use the QualityEnforcer if available
+            if self.quality_enforcer:
+                self.log("Updating knowledge graph via QualityEnforcer...")
+                # Create QualityCheckResult objects for the changes
+                results = []
+                
+                # Add results for moved files
+                for action in self.report["actions_taken"]:
+                    if action["action"] == "move":
+                        results.append({
+                            "check_id": "file_location",
+                            "severity": "info",
+                            "message": f"File moved from {action['path']} to {action['target_path']}",
+                            "file_path": action["target_path"],
+                            "source": "FileCleanup"
+                        })
+                
+                # Add results for removed files
+                for action in self.report["actions_taken"]:
+                    if action["action"] == "remove":
+                        results.append({
+                            "check_id": "file_cleanup",
+                            "severity": "info",
+                            "message": f"File removed: {action['path']}",
+                            "file_path": action["path"],
+                            "source": "FileCleanup"
+                        })
+                
+                # Update the knowledge graph
+                if results:
+                    self.quality_enforcer.update_knowledge_graph(results)
+                    self.log(f"Updated knowledge graph with {len(results)} changes")
+                
+                return True
+            else:
+                # Try to run the register_file_cleanup.py script
+                register_script = os.path.join(self.project_dir, "core/kg/scripts/register_file_cleanup.py")
+                if os.path.exists(register_script):
+                    self.log("Updating knowledge graph via register_file_cleanup.py...")
+                    import subprocess
+                    result = subprocess.run(["python", register_script], cwd=self.project_dir)
+                    if result.returncode == 0:
+                        self.log("Successfully updated knowledge graph")
+                        return True
+                    else:
+                        logger.error("Failed to update knowledge graph")
+                        return False
+                else:
+                    self.log("No knowledge graph update mechanism found")
+                    return False
+        except Exception as e:
+            logger.error(f"Error updating knowledge graph: {e}")
+            return False
+    
     
     def cleanup(self) -> bool:
         """
@@ -915,6 +1243,9 @@ class FileCleanup:
         
         # Identify duplicate files
         self._identify_duplicate_files()
+        
+        # Identify misplaced files
+        self._identify_misplaced_files()
     
     def save_report(self, output_path: str) -> bool:
         """Save the report to a file."""
@@ -947,9 +1278,10 @@ def main():
     parser.add_argument("--output", default="data/reports/cleanup-report.json", help="Path to the output report file")
     parser.add_argument("--verbose", action="store_true", help="Enable verbose logging")
     parser.add_argument("--dry-run", action="store_true", help="Run in dry-run mode (don't actually delete files)")
-    parser.add_argument("--interactive", action="store_true", help="Run in interactive mode (confirm each deletion)")
+    parser.add_argument("--interactive", action="store_true", help="Run in interactive mode (confirm each operation)")
     parser.add_argument("--batch", action="store_true", help="Run in batch mode (apply all changes at once)")
-    parser.add_argument("--backup-dir", help="Directory to store backups of files before deletion")
+    parser.add_argument("--move-only", action="store_true", help="Only move files to correct locations (no deletion)")
+    parser.add_argument("--backup-dir", help="Directory to store backups of files before deletion or movement")
     
     args = parser.parse_args()
     
@@ -964,6 +1296,7 @@ def main():
         dry_run=args.dry_run,
         interactive=args.interactive,
         batch=args.batch,
+        move_only=args.move_only,
         backup_dir=args.backup_dir
     )
     
@@ -979,11 +1312,27 @@ def main():
     print(f"  Orphaned files: {cleanup.report['summary']['orphaned_files']}")
     print(f"  Outdated files: {cleanup.report['summary']['outdated_files']}")
     print(f"  Duplicate files: {cleanup.report['summary']['duplicate_files']}")
+    print(f"  Misplaced files: {cleanup.report['summary']['misplaced_files']}")
     print(f"  Total files to clean up: {cleanup.report['summary']['total_files_to_cleanup']}")
+    print(f"  Total files to move: {cleanup.report['summary']['total_files_to_move']}")
     print(f"  Total size to clean up: {cleanup._format_size(cleanup.report['summary']['total_size_to_cleanup'])}")
     
-    # Perform cleanup if there are files to clean up
-    if cleanup.report["summary"]["total_files_to_cleanup"] > 0:
+    # Handle file movement if there are misplaced files
+    if cleanup.report["summary"]["total_files_to_move"] > 0:
+        if args.dry_run:
+            print("\nDry run mode: No files will be moved.")
+            print(f"Check the report at {args.output} for details.")
+        else:
+            print("\nStarting file movement...")
+            if cleanup.move_files():
+                print("\nFile movement completed successfully.")
+                print(f"  Files backed up: {cleanup.report['summary']['files_backed_up']}")
+                print(f"  Files moved: {cleanup.report['summary']['files_moved']}")
+            else:
+                print("\nFile movement completed with errors. Check the log for details.")
+    
+    # Perform cleanup if there are files to clean up and not in move-only mode
+    if cleanup.report["summary"]["total_files_to_cleanup"] > 0 and not args.move_only:
         if args.dry_run:
             print("\nDry run mode: No files will be deleted.")
             print(f"Check the report at {args.output} for details.")
@@ -996,8 +1345,11 @@ def main():
                 print(f"  Files archived: {cleanup.report['summary']['files_archived']}")
             else:
                 print("\nCleanup completed with errors. Check the log for details.")
-    else:
-        print("\nNo files to clean up.")
+    elif cleanup.report["summary"]["total_files_to_cleanup"] > 0 and args.move_only:
+        print("\nSkipping file deletion due to --move-only flag.")
+        print(f"Found {cleanup.report['summary']['total_files_to_cleanup']} files that could be cleaned up.")
+    elif cleanup.report["summary"]["total_files_to_cleanup"] == 0 and cleanup.report["summary"]["total_files_to_move"] == 0:
+        print("\nNo files to clean up or move.")
 
 
 if __name__ == "__main__":

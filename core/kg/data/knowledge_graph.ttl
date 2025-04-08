@@ -1,4 +1,5 @@
 @prefix ns1: <http://mcp-base-stack.org/> .
+@prefix ns2: <http://mcp-stack.org/ontology#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -101,6 +102,23 @@ ns1:verify_stack_health_script a ns1:File ;
     ns1:description "Script to verify the health of the stack" ;
     ns1:language "shell" ;
     ns1:path "scripts/utils/validation/verify_stack_health.sh" .
+
+<http://mcp-stack.org/resource#DependencyAuditScript> a ns2:MaintenanceScript ;
+    rdfs:label "Dependency Audit Script" ;
+    ns2:hasCapability <http://mcp-stack.org/resource#DependencyRecommendations>,
+        <http://mcp-stack.org/resource#InconsistentDependencyDetection>,
+        <http://mcp-stack.org/resource#OutdatedDependencyDetection>,
+        <http://mcp-stack.org/resource#VulnerabilityDetection> ;
+    ns2:implementationDate "2025-04-08"^^xsd:date ;
+    ns2:integratesWith <http://mcp-stack.org/resource#QualityEnforcer> ;
+    ns2:knowledgeGraphUpdateMethod "QualityEnforcer.update_knowledge_graph" ;
+    ns2:scriptPath "scripts/utils/maintenance/audit_dependencies.py" ;
+    ns2:supportsDependencyType <http://mcp-stack.org/resource#DockerDependency>,
+        <http://mcp-stack.org/resource#JavaDependency>,
+        <http://mcp-stack.org/resource#NodeDependency>,
+        <http://mcp-stack.org/resource#PythonDependency> ;
+    ns2:updatesKnowledgeGraph true ;
+    rdfs:comment "A script that audits project dependencies for outdated versions, vulnerabilities, and inconsistencies." .
 
 ns1:app_py a ns1:File ;
     ns1:description "Main application entry point with dependency injection integration" ;
@@ -272,21 +290,18 @@ ns1:docs_conventions a ns1:Directory ;
         ns1:review_checklist,
         ns1:style_guide ;
     ns1:file_count 4 ;
-    ns1:last_modified 1.744023e+09,
-        1.744023e+09 ;
+    ns1:last_modified 1.744023e+09 ;
     ns1:path "docs/conventions" .
 
 ns1:docs_knowledge-graph a ns1:Directory ;
     ns1:file_count 4 ;
-    ns1:last_modified 1.744023e+09,
-        1.744023e+09 ;
+    ns1:last_modified 1.744023e+09 ;
     ns1:path "docs/knowledge-graph" .
 
 ns1:docs_troubleshooting a ns1:Directory ;
     ns1:file_count 3,
         8 ;
     ns1:last_modified 1.74403e+09,
-        1.744056e+09,
         1.744056e+09 ;
     ns1:path "docs/troubleshooting" .
 
@@ -296,7 +311,6 @@ ns1:docs_tutorials a ns1:Directory ;
         9 ;
     ns1:last_modified 1.74403e+09,
         1.744039e+09,
-        1.744056e+09,
         1.744056e+09 ;
     ns1:path "docs/tutorials" .
 
@@ -528,7 +542,6 @@ ns1:tests_data a ns1:Directory ;
     ns1:file_count 0,
         1 ;
     ns1:last_modified 1.74403e+09,
-        1.744056e+09,
         1.744056e+09 ;
     ns1:path "tests/data" .
 
@@ -566,6 +579,53 @@ ns1:tests_unit a ns1:Directory ;
         1.744074e+09,
         1.744084e+09 ;
     ns1:path "tests/unit" .
+
+<http://mcp-stack.org/resource#DependencyAuditComponent> a ns2:QualityComponent ;
+    rdfs:label "Dependency Audit Component" ;
+    rdfs:comment "A quality component that audits dependencies for issues and updates the knowledge graph." .
+
+<http://mcp-stack.org/resource#DependencyRecommendations> a ns2:Capability ;
+    rdfs:label "Dependency Recommendations" ;
+    rdfs:comment "Provides actionable recommendations for fixing dependency issues." .
+
+<http://mcp-stack.org/resource#DockerDependency> a ns2:DependencyType ;
+    rdfs:label "Docker Dependency" ;
+    ns2:filePattern "Dockerfile",
+        "docker-compose.yaml",
+        "docker-compose.yml" .
+
+<http://mcp-stack.org/resource#InconsistentDependencyDetection> a ns2:Capability ;
+    rdfs:label "Inconsistent Dependency Detection" ;
+    rdfs:comment "Detects inconsistent dependency versions across different parts of the project." .
+
+<http://mcp-stack.org/resource#JavaDependency> a ns2:DependencyType ;
+    rdfs:label "Java Dependency" ;
+    ns2:filePattern "build.gradle",
+        "build.gradle.kts",
+        "pom.xml" .
+
+<http://mcp-stack.org/resource#NodeDependency> a ns2:DependencyType ;
+    rdfs:label "Node.js Dependency" ;
+    ns2:filePattern "package-lock.json",
+        "package.json",
+        "yarn.lock" .
+
+<http://mcp-stack.org/resource#OutdatedDependencyDetection> a ns2:Capability ;
+    rdfs:label "Outdated Dependency Detection" ;
+    rdfs:comment "Detects outdated dependencies by comparing current versions with latest available versions." .
+
+<http://mcp-stack.org/resource#PythonDependency> a ns2:DependencyType ;
+    rdfs:label "Python Dependency" ;
+    ns2:filePattern "Pipfile",
+        "pyproject.toml",
+        "requirements.txt",
+        "setup.py" .
+
+<http://mcp-stack.org/resource#QualityEnforcer> ns2:hasComponent <http://mcp-stack.org/resource#DependencyAuditComponent> .
+
+<http://mcp-stack.org/resource#VulnerabilityDetection> a ns2:Capability ;
+    rdfs:label "Vulnerability Detection" ;
+    rdfs:comment "Identifies known security vulnerabilities in project dependencies." .
 
 ns1:coding_conventions a ns1:File ;
     ns1:description "Specific coding practices and patterns for the MCP-BASE-STACK project" ;
