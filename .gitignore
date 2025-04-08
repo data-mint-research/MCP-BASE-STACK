@@ -84,3 +84,6 @@ mcp_*.log.*
 .coverage
 htmlcov/
 .mypy_cache/
+*.tmp
+mcp_*.log.*
+*.py[cod]
