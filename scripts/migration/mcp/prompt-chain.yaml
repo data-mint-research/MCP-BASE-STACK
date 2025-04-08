@@ -1,0 +1,261 @@
+# MCP Migration Prompt Chain Definition
+# This file defines the prompts used in the MCP migration workflow
+
+version: "1.0"
+description: "Prompt chain for MCP migration process"
+
+# Workflow metadata
+workflow:
+  name: "MCP Migration"
+  description: "A workflow to migrate existing code to MCP-compliant architecture"
+  version: "1.0.0"
+  author: "MCP-BASE-STACK Team"
+
+# Prompt chain definition
+prompts:
+  - id: "analyze_current_structure"
+    name: "Analyze Current Structure"
+    description: "Analyze the current codebase structure and identify components that need to be migrated to MCP architecture"
+    purpose: "To understand the existing codebase and identify components that need migration"
+    inputs:
+      - name: "codebase_path"
+        description: "Path to the codebase to be analyzed"
+        type: "string"
+        required: true
+      - name: "target_structure_path"
+        description: "Path to the target structure definition file"
+        type: "string"
+        required: true
+        default: "scripts/migration/mcp/structure.yaml"
+    outputs:
+      - name: "analysis_report"
+        description: "Report of the current structure analysis"
+        type: "object"
+        properties:
+          - name: "components"
+            description: "List of components identified in the codebase"
+            type: "array"
+          - name: "migration_candidates"
+            description: "List of components that are candidates for migration"
+            type: "array"
+          - name: "missing_components"
+            description: "List of components that are missing from the codebase"
+            type: "array"
+    validation:
+      - criteria: "All components in the codebase are identified"
+        description: "Ensure that all components in the codebase are identified and categorized"
+      - criteria: "Migration candidates are correctly identified"
+        description: "Ensure that components that need migration are correctly identified"
+      - criteria: "Missing components are correctly identified"
+        description: "Ensure that components that are missing from the codebase are correctly identified"
+
+  - id: "design_mcp_architecture"
+    name: "Design MCP Architecture"
+    description: "Design the MCP architecture based on the analysis of the current structure"
+    purpose: "To create a detailed design for the MCP architecture that will replace the current structure"
+    inputs:
+      - name: "analysis_report"
+        description: "Report of the current structure analysis"
+        type: "object"
+        required: true
+      - name: "target_structure_path"
+        description: "Path to the target structure definition file"
+        type: "string"
+        required: true
+        default: "scripts/migration/mcp/structure.yaml"
+    outputs:
+      - name: "architecture_design"
+        description: "Detailed design of the MCP architecture"
+        type: "object"
+        properties:
+          - name: "components"
+            description: "List of components in the MCP architecture"
+            type: "array"
+          - name: "interfaces"
+            description: "List of interfaces between components"
+            type: "array"
+          - name: "data_flows"
+            description: "Description of data flows between components"
+            type: "array"
+    validation:
+      - criteria: "Architecture follows MCP principles"
+        description: "Ensure that the architecture follows MCP principles (Host-Client-Server)"
+      - criteria: "All required components are included"
+        description: "Ensure that all required components from the target structure are included"
+      - criteria: "Interfaces are well-defined"
+        description: "Ensure that interfaces between components are well-defined"
+      - criteria: "Data flows are clear"
+        description: "Ensure that data flows between components are clearly described"
+
+  - id: "create_migration_plan"
+    name: "Create Migration Plan"
+    description: "Create a detailed migration plan based on the architecture design"
+    purpose: "To create a step-by-step plan for migrating from the current structure to the MCP architecture"
+    inputs:
+      - name: "architecture_design"
+        description: "Detailed design of the MCP architecture"
+        type: "object"
+        required: true
+      - name: "analysis_report"
+        description: "Report of the current structure analysis"
+        type: "object"
+        required: true
+    outputs:
+      - name: "migration_plan"
+        description: "Detailed migration plan"
+        type: "object"
+        properties:
+          - name: "phases"
+            description: "List of migration phases"
+            type: "array"
+          - name: "tasks"
+            description: "List of migration tasks"
+            type: "array"
+          - name: "dependencies"
+            description: "Dependencies between tasks"
+            type: "array"
+          - name: "timeline"
+            description: "Estimated timeline for migration"
+            type: "object"
+    validation:
+      - criteria: "Plan is comprehensive"
+        description: "Ensure that the plan covers all aspects of the migration"
+      - criteria: "Tasks are well-defined"
+        description: "Ensure that tasks are well-defined and actionable"
+      - criteria: "Dependencies are correctly identified"
+        description: "Ensure that dependencies between tasks are correctly identified"
+      - criteria: "Timeline is realistic"
+        description: "Ensure that the timeline for migration is realistic"
+
+  - id: "implement_host_component"
+    name: "Implement Host Component"
+    description: "Implement the MCP Host component based on the architecture design"
+    purpose: "To create the MCP Host component that will coordinate clients and servers"
+    inputs:
+      - name: "architecture_design"
+        description: "Detailed design of the MCP architecture"
+        type: "object"
+        required: true
+      - name: "migration_plan"
+        description: "Detailed migration plan"
+        type: "object"
+        required: true
+    outputs:
+      - name: "host_implementation"
+        description: "Implementation of the MCP Host component"
+        type: "object"
+        properties:
+          - name: "files"
+            description: "List of files created or modified"
+            type: "array"
+          - name: "classes"
+            description: "List of classes implemented"
+            type: "array"
+          - name: "interfaces"
+            description: "List of interfaces implemented"
+            type: "array"
+    validation:
+      - criteria: "Host follows MCP principles"
+        description: "Ensure that the Host component follows MCP principles"
+      - criteria: "Host implements required interfaces"
+        description: "Ensure that the Host component implements all required interfaces"
+      - criteria: "Host passes conformance tests"
+        description: "Ensure that the Host component passes all conformance tests"
+      - criteria: "Code quality is high"
+        description: "Ensure that the code quality of the Host component is high"
+
+  - id: "implement_client_component"
+    name: "Implement Client Component"
+    description: "Implement the MCP Client component based on the architecture design"
+    purpose: "To create the MCP Client component that will route JSON-RPC and handle subscriptions"
+    inputs:
+      - name: "architecture_design"
+        description: "Detailed design of the MCP architecture"
+        type: "object"
+        required: true
+      - name: "migration_plan"
+        description: "Detailed migration plan"
+        type: "object"
+        required: true
+      - name: "host_implementation"
+        description: "Implementation of the MCP Host component"
+        type: "object"
+        required: true
+    outputs:
+      - name: "client_implementation"
+        description: "Implementation of the MCP Client component"
+        type: "object"
+        properties:
+          - name: "files"
+            description: "List of files created or modified"
+            type: "array"
+          - name: "classes"
+            description: "List of classes implemented"
+            type: "array"
+          - name: "interfaces"
+            description: "List of interfaces implemented"
+            type: "array"
+    validation:
+      - criteria: "Client follows MCP principles"
+        description: "Ensure that the Client component follows MCP principles"
+      - criteria: "Client implements required interfaces"
+        description: "Ensure that the Client component implements all required interfaces"
+      - criteria: "Client passes conformance tests"
+        description: "Ensure that the Client component passes all conformance tests"
+      - criteria: "Code quality is high"
+        description: "Ensure that the code quality of the Client component is high"
+
+  - id: "implement_server_component"
+    name: "Implement Server Component"
+    description: "Implement the MCP Server component based on the architecture design"
+    purpose: "To create the MCP Server component that will provide stateless capabilities"
+    inputs:
+      - name: "architecture_design"
+        description: "Detailed design of the MCP architecture"
+        type: "object"
+        required: true
+      - name: "migration_plan"
+        description: "Detailed migration plan"
+        type: "object"
+        required: true
+      - name: "host_implementation"
+        description: "Implementation of the MCP Host component"
+        type: "object"
+        required: true
+      - name: "client_implementation"
+        description: "Implementation of the MCP Client component"
+        type: "object"
+        required: true
+    outputs:
+      - name: "server_implementation"
+        description: "Implementation of the MCP Server component"
+        type: "object"
+        properties:
+          - name: "files"
+            description: "List of files created or modified"
+            type: "array"
+          - name: "classes"
+            description: "List of classes implemented"
+            type: "array"
+          - name: "interfaces"
+            description: "List of interfaces implemented"
+            type: "array"
+          - name: "tools"
+            description: "List of tools implemented"
+            type: "array"
+          - name: "resources"
+            description: "List of resources implemented"
+            type: "array"
+    validation:
+      - criteria: "Server follows MCP principles"
+        description: "Ensure that the Server component follows MCP principles"
+      - criteria: "Server implements required interfaces"
+        description: "Ensure that the Server component implements all required interfaces"
+      - criteria: "Server passes conformance tests"
+        description: "Ensure that the Server component passes all conformance tests"
+      - criteria: "Code quality is high"
+        description: "Ensure that the code quality of the Server component is high"
+      - criteria: "Tools are properly implemented"
+        description: "Ensure that all tools are properly implemented and registered"
+      - criteria: "Resources are properly implemented"
+        description: "Ensure that all resources are properly implemented and registered"

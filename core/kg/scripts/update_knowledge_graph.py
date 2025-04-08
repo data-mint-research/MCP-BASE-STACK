@@ -356,6 +356,35 @@ def register_feature(nx_graph, rdf_graph, ns, feature_id, name, description, own
         rdf_graph.add((ns[feature_id], ns.status, Literal(status)))
         
         print(f"Added new feature {feature_id}")
+def update_component_status(nx_graph, rdf_graph, ns, component_id, status):
+    """
+    Update the status of a component in the knowledge graph.
+    
+    Args:
+        nx_graph: NetworkX graph
+        rdf_graph: RDF graph
+        ns: Namespace
+        component_id: Component ID
+        status: New status
+    """
+    if component_id in nx_graph:
+        # Update existing component
+        nx_graph.nodes[component_id]['status'] = status
+        
+        # Update RDF
+        rdf_graph.add((ns[component_id], ns.status, Literal(status)))
+        
+        print(f"Updated {component_id} status to '{status}'")
+    else:
+        # Add new component if it doesn't exist
+        nx_graph.add_node(component_id, status=status, type="component")
+        
+        # Update RDF
+        rdf_graph.add((ns[component_id], RDF.type, ns.Component))
+        rdf_graph.add((ns[component_id], ns.status, Literal(status)))
+        
+        print(f"Added new component {component_id} with status '{status}'")
 
 if __name__ == "__main__":
+    update_knowledge_graph()
     update_knowledge_graph()

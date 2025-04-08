@@ -21,6 +21,10 @@ LOG_LEVELS: Dict[str, int] = {
     "CRITICAL": logging.CRITICAL
 }
 
+# Default log format and date format
+DEFAULT_LOG_FORMAT = "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+DEFAULT_DATE_FORMAT = "%Y-%m-%d %H:%M:%S"
+
 
 def configure_logger(module_name: str, level: str = None) -> logging.Logger:
     """
@@ -91,8 +95,8 @@ def get_file_handler(module_name: str) -> logging.FileHandler:
         file_handler = logging.FileHandler(log_file_path)
         # Get logging configuration
         config = get_logging_config()
-        log_format = config.get("format", "%(asctime)s - %(name)s - %(levelname)s - %(message)s")
-        date_format = config.get("date_format", "%Y-%m-%d %H:%M:%S")
+        log_format = config.get("format", DEFAULT_LOG_FORMAT)
+        date_format = config.get("date_format", DEFAULT_DATE_FORMAT)
         
         # Create formatter
         formatter = logging.Formatter(log_format, date_format)
@@ -116,8 +120,8 @@ def get_console_handler() -> logging.StreamHandler:
     # Create a console handler
     # Get logging configuration
     config = get_logging_config()
-    log_format = config.get("format", "%(asctime)s - %(name)s - %(levelname)s - %(message)s")
-    date_format = config.get("date_format", "%Y-%m-%d %H:%M:%S")
+    log_format = config.get("format", DEFAULT_LOG_FORMAT)
+    date_format = config.get("date_format", DEFAULT_DATE_FORMAT)
     
     # Create console handler and formatter
     console_handler = logging.StreamHandler()
@@ -127,12 +131,11 @@ def get_console_handler() -> logging.StreamHandler:
     return console_handler
 
 
-# This function is no longer needed as formatters are created inline
-# def _get_formatter() -> logging.Formatter:
-#     """
-#     Helper function to create a standardized log formatter.
-#
-#     Returns:
-#         A configured Formatter instance.
-#     """
-#     return logging.Formatter(DEFAULT_LOG_FORMAT, DEFAULT_DATE_FORMAT)
+def _get_formatter() -> logging.Formatter:
+    """
+    Helper function to create a standardized log formatter.
+
+    Returns:
+        A configured Formatter instance.
+    """
+    return logging.Formatter(DEFAULT_LOG_FORMAT, DEFAULT_DATE_FORMAT)

@@ -226,13 +226,17 @@ class QualityEnforcer:
             Tuple of (fixed_results, unfixed_results)
         """
         if component_name == "code_style":
-            return CodeStyleFixes.apply_fixes(results)
+            fixed, unfixed = CodeStyleFixes.apply_fixes(results)
+            return fixed, unfixed
         elif component_name == "documentation":
-            return DocumentationFixes.apply_fixes(results)
+            fixed, unfixed = DocumentationFixes.apply_fixes(results)
+            return fixed, unfixed
         elif component_name == "structure":
-            return StructureFixes.apply_fixes(results)
+            fixed, unfixed = StructureFixes.apply_fixes(results)
+            return fixed, unfixed
         elif component_name == "static_analysis":
-            return StaticAnalysisFixes.apply_fixes(results)
+            fixed, unfixed = StaticAnalysisFixes.apply_fixes(results)
+            return fixed, unfixed
         else:
             # Fallback to the component's fix_issues method
             component = self._components.get(component_name)
@@ -542,6 +546,142 @@ class QualityEnforcer:
         unfixed_count = len(unfixed_results) + (len(results) - len(fixable_results))
         
         return fixed_count, unfixed_count
+    
+    def run_external_tool(self, tool_name: str, file_paths: Optional[List[str]] = None) -> List[QualityCheckResult]:
+        """
+        Run an external quality tool.
+        
+        Args:
+            tool_name: The name of the external tool to run (e.g., "black", "mypy", "pylint", "flake8")
+            file_paths: Optional list of file paths to check. If None, check all relevant files.
+            
+        Returns:
+            List of QualityCheckResult objects.
+        """
+        import subprocess
+        import shlex
+        
+        logger.info(f"Running external tool: {tool_name}")
+        
+        # Prepare file paths argument
+        files_arg = " ".join(file_paths) if file_paths else "."
+        
+        # Map tool names to commands
+        tool_commands = {
+            "black": f"black --check {files_arg}",
+            "mypy": f"mypy {files_arg}",
+            "pylint": f"pylint {files_arg}",
+            "flake8": f"flake8 {files_arg}"
+        }
+        
+        if tool_name not in tool_commands:
+            logger.warning(f"Unknown external tool: {tool_name}")
+            return []
+        
+        command = tool_commands[tool_name]
+        logger.info(f"Running command: {command}")
+        
+        try:
+            # Run the command
+            process = subprocess.run(
+                shlex.split(command),
+                capture_output=True,
+                text=True,
+                check=False
+            )
+            
+            # Parse the output
+            results = []
+            if process.returncode != 0:
+                # Tool found issues
+                output_lines = process.stdout.splitlines() + process.stderr.splitlines()
+                
+                for line in output_lines:
+                    # Parse the line based on the tool
+                    if tool_name == "black":
+                        if "would reformat" in line:
+                            file_path = line.split("would reformat")[1].strip()
+                            results.append(QualityCheckResult(
+                                check_id="black",
+                                severity=QualityCheckSeverity.WARNING,
+                                message="Black formatting issue",
+                                file_path=file_path,
+                                fix_available=True,
+                                fix_command=f"black {file_path}"
+                            ))
+                    elif tool_name == "mypy":
+                        if ":" in line and "error:" in line:
+                            parts = line.split(":", 2)
+                            if len(parts) >= 3:
+                                file_path = parts[0]
+                                try:
+                                    line_number = int(parts[1])
+                                    message = parts[2].strip()
+                                    results.append(QualityCheckResult(
+                                        check_id="mypy",
+                                        severity=QualityCheckSeverity.ERROR,
+                                        message=message,
+                                        file_path=file_path,
+                                        line_number=line_number
+                                    ))
+                                except ValueError:
+                                    pass
+                    elif tool_name == "pylint":
+                        if ":" in line and any(level in line for level in ["C:", "W:", "E:", "F:"]):
+                            parts = line.split(":", 2)
+                            if len(parts) >= 3:
+                                file_path = parts[0]
+                                try:
+                                    line_number = int(parts[1])
+                                    message = parts[2].strip()
+                                    severity = QualityCheckSeverity.INFO
+                                    if "C:" in message:
+                                        severity = QualityCheckSeverity.INFO
+                                    elif "W:" in message:
+                                        severity = QualityCheckSeverity.WARNING
+                                    elif "E:" in message:
+                                        severity = QualityCheckSeverity.ERROR
+                                    elif "F:" in message:
+                                        severity = QualityCheckSeverity.CRITICAL
+                                    results.append(QualityCheckResult(
+                                        check_id="pylint",
+                                        severity=severity,
+                                        message=message,
+                                        file_path=file_path,
+                                        line_number=line_number
+                                    ))
+                                except ValueError:
+                                    pass
+                    elif tool_name == "flake8":
+                        if ":" in line:
+                            parts = line.split(":", 3)
+                            if len(parts) >= 4:
+                                file_path = parts[0]
+                                try:
+                                    line_number = int(parts[1])
+                                    column = int(parts[2])
+                                    message = parts[3].strip()
+                                    results.append(QualityCheckResult(
+                                        check_id="flake8",
+                                        severity=QualityCheckSeverity.WARNING,
+                                        message=message,
+                                        file_path=file_path,
+                                        line_number=line_number,
+                                        column=column
+                                    ))
+                                except ValueError:
+                                    pass
+            
+            logger.info(f"External tool {tool_name} found {len(results)} issues")
+            return results
+        
+        except Exception as e:
+            logger.error(f"Error running external tool {tool_name}: {e}")
+            return [QualityCheckResult(
+                check_id=tool_name,
+                severity=QualityCheckSeverity.ERROR,
+                message=f"Error running tool: {str(e)}"
+            )]
     
     def update_knowledge_graph(self, results: List[QualityCheckResult]) -> None:
         """

@@ -87,7 +87,7 @@
       <data key="d3">created</data>
       <data key="d4">tests</data>
       <data key="d5">testing</data>
-      <data key="d6">1744103863.7900004</data>
+      <data key="d6">1744105113.686417</data>
     </node>
     <node id="kg_visualization">
       <data key="d0">Knowledge Graph Visualization</data>
@@ -121,7 +121,7 @@
       <data key="d1">directory</data>
       <data key="d4">docs</data>
       <data key="d5">documentation</data>
-      <data key="d6">1744103893.958945</data>
+      <data key="d6">1744105113.6954172</data>
     </node>
     <node id="core">
       <data key="d1">directory</data>
@@ -136,38 +136,38 @@
     <node id="docs_knowledge-graph">
       <data key="d1">directory</data>
       <data key="d4">docs/knowledge-graph</data>
-      <data key="d6">1744103893.958945</data>
+      <data key="d6">1744105113.686417</data>
       <data key="d9">5</data>
     </node>
     <node id="docs_tutorials">
       <data key="d1">directory</data>
       <data key="d4">docs/tutorials</data>
-      <data key="d6">1744103893.958945</data>
+      <data key="d6">1744105113.6954172</data>
       <data key="d9">6</data>
     </node>
     <node id="docs_troubleshooting">
       <data key="d1">directory</data>
       <data key="d4">docs/troubleshooting</data>
-      <data key="d6">1744103893.958945</data>
+      <data key="d6">1744105113.686417</data>
       <data key="d9">3</data>
     </node>
     <node id="docs_conventions">
       <data key="d1">directory</data>
       <data key="d4">docs/conventions</data>
-      <data key="d6">1744103893.958945</data>
+      <data key="d6">1744105113.686417</data>
       <data key="d9">4</data>
     </node>
     <node id="tests_unit">
       <data key="d1">directory</data>
       <data key="d4">tests/unit</data>
-      <data key="d6">1744103863.7900004</data>
-      <data key="d9">21</data>
+      <data key="d6">1744126171.2160826</data>
+      <data key="d9">31</data>
     </node>
     <node id="tests_integration">
       <data key="d1">directory</data>
       <data key="d4">tests/integration</data>
-      <data key="d6">1744098822.2391272</data>
-      <data key="d9">3</data>
+      <data key="d6">1744124465.8906662</data>
+      <data key="d9">4</data>
     </node>
     <node id="tests_performance">
       <data key="d1">directory</data>
@@ -181,7 +181,7 @@
       <data key="d2">metrics</data>
       <data key="d3">updated</data>
       <data key="d7">System-wide quality metrics tracking</data>
-      <data key="d6">1744104066.435331</data>
+      <data key="d6">1744126171.441715</data>
     </node>
     <node id="core_quality">
       <data key="d0">Core Quality</data>
@@ -197,7 +197,7 @@
       <data key="d17">0</data>
       <data key="d18">0</data>
       <data key="d19">0</data>
-      <data key="d6">1744104066.435574</data>
+      <data key="d6">1744126171.441912</data>
     </node>
     <node id="docs_quality">
       <data key="d0">Documentation Quality</data>
@@ -213,7 +213,7 @@
       <data key="d17">0</data>
       <data key="d18">0</data>
       <data key="d19">0</data>
-      <data key="d6">1744104066.435758</data>
+      <data key="d6">1744126171.442072</data>
     </node>
     <node id="tests_quality">
       <data key="d0">Tests Quality</data>
@@ -229,7 +229,7 @@
       <data key="d17">0</data>
       <data key="d18">0</data>
       <data key="d19">0</data>
-      <data key="d6">1744104066.435937</data>
+      <data key="d6">1744126171.4422</data>
     </node>
     <node id="quality_metrics_dashboard">
       <data key="d0">Quality Metrics Dashboard</data>
@@ -243,12 +243,12 @@
       <data key="d1">metrics</data>
       <data key="d2">file_structure</data>
       <data key="d7">File structure standardization metrics</data>
-      <data key="d6">1744104066.436116</data>
-      <data key="d20">249</data>
-      <data key="d21">100.0</data>
-      <data key="d22">100.0</data>
-      <data key="d23">100.0</data>
-      <data key="d3">created</data>
+      <data key="d6">1744126171.442335</data>
+      <data key="d20">355</data>
+      <data key="d21">95.77464788732394</data>
+      <data key="d22">97.74647887323944</data>
+      <data key="d23">96.7605633802817</data>
+      <data key="d3">updated</data>
     </node>
     <edge source="librechat" target="llm_server">
       <data key="d24">CONNECTS_TO</data>

@@ -11,10 +11,15 @@ from .providers import (
     ConfigProvider,
     LoggingProvider,
     LLMClientProvider,
-    ToolProvider
+    ToolProvider,
+    ResourceProvider,
+    MCPComponentProvider
 )
 from services.prompt_processor import PromptProcessor
 from services.example_service import ExampleService
+from host.host import MCPHost
+from client.client import MCPClient
+from server.server import MCPServer
 
 
 class Container(containers.DeclarativeContainer):
@@ -38,8 +43,14 @@ class Container(containers.DeclarativeContainer):
     )
     
     # Tools
-    shell_command_executor = providers.Singleton(
-        ToolProvider.get_shell_command_executor,
+    shell_command_tool = providers.Singleton(
+        ToolProvider.get_shell_command_tool
+    )
+    
+    # Resources
+    file_resource_provider = providers.Singleton(
+        ResourceProvider.get_file_resource_provider,
+        config=config,
         logger=logger
     )
     
@@ -50,11 +61,33 @@ class Container(containers.DeclarativeContainer):
         logger=logger
     )
     
+    # MCP Components
+    mcp_host = providers.Singleton(
+        MCPComponentProvider.get_host,
+        logger=logger,
+        config=config
+    )
+    
+    mcp_client = providers.Singleton(
+        MCPComponentProvider.get_client,
+        logger=logger,
+        config=config,
+        host=mcp_host
+    )
+    
+    mcp_server = providers.Singleton(
+        MCPComponentProvider.get_server,
+        server_id=config.provided.mcp.server_id,
+        config=config,
+        logger=logger,
+        host=mcp_host
+    )
+    
     # Services
     prompt_processor = providers.Singleton(
         PromptProcessor,
         logger=logger,
-        shell_command_executor=shell_command_executor
+        shell_command_executor=shell_command_tool
     )
     
     # Example service

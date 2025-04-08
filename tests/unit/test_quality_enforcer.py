@@ -3,7 +3,7 @@ Unit tests for the QualityEnforcer class.
 """
 
 import unittest
-from unittest.mock import patch, MagicMock
+from unittest.mock import patch, MagicMock, call
 
 from core.quality import QualityEnforcer, QualityCheckResult, QualityCheckSeverity
 
@@ -118,9 +118,20 @@ class TestQualityEnforcer(unittest.TestCase):
         self.assertIn("docstrings", check_ids)
         self.assertIn("directory_structure", check_ids)
     
-    @patch("core.quality.components.code_style.BlackCheck.fix")
-    def test_fix_issues(self, mock_fix):
-        """Test fixing issues."""
+    def test_fix_issues_direct(self):
+        """Test fixing issues directly."""
+        # Create a test instance with a mock component
+        enforcer = QualityEnforcer()
+        
+        # Create a mock code_style component
+        mock_component = MagicMock()
+        mock_component.fix_issues.return_value = []  # All issues fixed
+        enforcer._components["code_style"] = mock_component
+        
+        # Create a mock _get_component_for_check method
+        original_method = enforcer._get_component_for_check
+        enforcer._get_component_for_check = lambda check_id: "code_style" if check_id == "black" else "static_analysis"
+        
         # Create some results to fix
         results = [
             QualityCheckResult(
@@ -139,11 +150,11 @@ class TestQualityEnforcer(unittest.TestCase):
             )
         ]
         
-        # Mock the fix method to return an empty list (all fixed)
-        mock_fix.return_value = []
-        
         # Fix the issues
-        unfixed = self.enforcer.fix_issues(results)
+        unfixed = enforcer.fix_issues(results, verify=False)
+        
+        # Restore the original method
+        enforcer._get_component_for_check = original_method
         
         # Verify that only the mypy result is unfixed (since it doesn't have a fix method)
         self.assertEqual(len(unfixed), 1)

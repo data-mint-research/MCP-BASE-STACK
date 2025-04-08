@@ -140,26 +140,35 @@ class QualityCheck(abc.ABC):
 class QualityComponent(abc.ABC):
     """Base class for quality components."""
     
-    def __init__(self):
-        """Initialize the component."""
+    def __init__(self, name: str = None, config: Optional[Dict[str, Any]] = None):
+        """
+        Initialize the component.
+        
+        Args:
+            name: Optional name for the component
+            config: Optional configuration for the component
+        """
+        self._name = name
+        self._config = config or {}
         self._checks: List[QualityCheck] = []
         self._initialize_checks()
     
     @property
-    @abc.abstractmethod
     def name(self) -> str:
         """Name of the component."""
-        pass
+        if self._name:
+            return self._name
+        return self.__class__.__name__.lower()
     
     @property
-    @abc.abstractmethod
     def description(self) -> str:
         """Description of the component."""
-        pass
+        return f"Quality component for {self.name}"
     
-    @abc.abstractmethod
     def _initialize_checks(self) -> None:
         """Initialize the checks for this component."""
+        # This is a base implementation that does nothing
+        # Subclasses should override this method to add checks
         pass
     
     @property

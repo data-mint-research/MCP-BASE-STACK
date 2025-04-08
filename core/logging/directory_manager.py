@@ -16,6 +16,10 @@ from core.config import get_logging_config
 # Configure logging for the module itself
 logger = logging.getLogger(__name__)
 
+# Get log directory from configuration
+config = get_logging_config()
+LOG_BASE_DIR = config.get("directory", os.path.join("data", "logs"))
+
 
 class LogDirectoryManager:
     """

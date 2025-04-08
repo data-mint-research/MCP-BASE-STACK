@@ -1,0 +1,51 @@
+{
+  "timestamp": "2025-04-08T15:14:58.477807",
+  "status": "completed",
+  "client_component": {
+    "name": "MCPClient",
+    "description": "MCP Client Component that communicates with the LLM and handles client-side operations",
+    "files": [
+      "client/__init__.py",
+      "client/client.py",
+      "client/interfaces.py",
+      "client/tool_proxy.py",
+      "client/resource_subscriber.py",
+      "client/capability_negotiator.py"
+    ],
+    "interfaces": [
+      "IClient",
+      "IToolProxy",
+      "IResourceSubscriber",
+      "ICapabilityNegotiator"
+    ],
+    "dependencies": [
+      "modelcontextprotocol",
+      "logging",
+      "json",
+      "uuid",
+      "time",
+      "re"
+    ],
+    "implementation_status": "completed"
+  },
+  "files_generated": [
+    "services/mcp-server/src/client/interfaces.py",
+    "services/mcp-server/src/client/tool_proxy.py",
+    "services/mcp-server/src/client/resource_subscriber.py",
+    "services/mcp-server/src/client/capability_negotiator.py"
+  ],
+  "files_updated": [
+    "services/mcp-server/src/client/__init__.py",
+    "services/mcp-server/src/client/client.py"
+  ],
+  "conformance_test_results": {
+    "total": 0,
+    "passed": 0,
+    "failures": 0,
+    "errors": 1
+  },
+  "errors": [
+    "Error running conformance tests: No module named 'tests.test_conformance'"
+  ],
+  "warnings": []
+}

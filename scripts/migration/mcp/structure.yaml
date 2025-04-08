@@ -1,0 +1,153 @@
+# MCP Target Structure Definition
+# This file defines the target structure for MCP-optimized components
+
+version: "1.0"
+description: "Target structure for MCP migration"
+
+# Root structure for MCP components
+structure:
+  services:
+    mcp-server:
+      description: "Core MCP server implementation"
+      components:
+        host:
+          description: "Coordinates multiple clients, manages consent, and context"
+          required_files:
+            - src/host/host.py
+            - src/host/__init__.py
+            - src/host/consent_manager.py
+            - src/host/context_manager.py
+            - src/host/server_registry.py
+            - src/host/client_registry.py
+          
+        client:
+          description: "One per server, routes JSON-RPC, handles subscriptions"
+          required_files:
+            - src/client/client.py
+            - src/client/__init__.py
+            - src/client/subscription_manager.py
+            - src/client/request_handler.py
+            - src/client/response_handler.py
+          
+        server:
+          description: "Stateless capability providers"
+          required_files:
+            - src/server/__init__.py
+            - src/server/server.py
+            - src/server/capability_manager.py
+          components:
+            tools:
+              description: "Tool implementations for server capabilities"
+              required_files:
+                - src/server/tools/__init__.py
+                - src/server/tools/registry.py
+              components:
+                shell:
+                  description: "Shell command execution tools"
+                  required_files:
+                    - src/server/tools/shell/__init__.py
+                    - src/server/tools/shell/command.py
+                file:
+                  description: "File operation tools"
+                  required_files:
+                    - src/server/tools/file/__init__.py
+                    - src/server/tools/file/operations.py
+            
+            resources:
+              description: "Resource implementations for server capabilities"
+              required_files:
+                - src/server/resources/__init__.py
+                - src/server/resources/registry.py
+              components:
+                file:
+                  description: "File resources"
+                  required_files:
+                    - src/server/resources/file/__init__.py
+                    - src/server/resources/file/provider.py
+                system:
+                  description: "System resources"
+                  required_files:
+                    - src/server/resources/system/__init__.py
+                    - src/server/resources/system/provider.py
+        
+        di:
+          description: "Dependency injection container"
+          required_files:
+            - src/di/__init__.py
+            - src/di/containers.py
+            - src/di/providers.py
+        
+        tests:
+          description: "Test suite for MCP components"
+          required_files:
+            - src/tests/__init__.py
+            - src/tests/test_host.py
+            - src/tests/test_client.py
+            - src/tests/test_server.py
+            - src/tests/test_tools.py
+            - src/tests/test_resources.py
+            - src/tests/test_conformance.py
+        
+        examples:
+          description: "Example implementations and usage"
+          required_files:
+            - src/examples/__init__.py
+            - src/examples/host_example.py
+            - src/examples/client_example.py
+            - src/examples/server_example.py
+            - src/examples/tool_example.py
+            - src/examples/resource_example.py
+
+  # Configuration for MCP components
+  config:
+    mcp:
+      description: "Configuration for MCP components"
+      required_files:
+        - config/mcp/host.yaml
+        - config/mcp/client.yaml
+        - config/mcp/server.yaml
+        - config/mcp/tools.yaml
+        - config/mcp/resources.yaml
+
+  # Scripts for MCP operations
+  scripts:
+    mcp:
+      description: "Scripts for MCP operations"
+      required_files:
+        - scripts/run_mcp_host.sh
+        - scripts/run_mcp_server.sh
+        - scripts/run_conformance_tests.sh
+    migration:
+      mcp:
+        description: "Scripts for MCP migration"
+        required_files:
+          - scripts/migration/mcp/run_mcp_migration.sh
+          - scripts/migration/mcp/structure.yaml
+          - scripts/migration/mcp/prompt-chain.yaml
+
+  # Documentation for MCP components
+  docs:
+    MCP:
+      description: "Documentation for MCP components"
+      required_files:
+        - docs/MCP/README.md
+        - docs/MCP/architecture.md
+        - docs/MCP/protocol.md
+        - docs/MCP/tools.md
+        - docs/MCP/resources.md
+        - docs/MCP/client-implementation.md
+        - docs/MCP/host-implementation.md
+        - docs/MCP/server-implementation.md
+        - docs/MCP/compliance-checklist.md
+        - docs/MCP/technical-debt.md
+        - docs/MCP/migration-guide.md
+
+  # Examples for MCP usage
+  examples:
+    description: "Examples for MCP usage"
+    required_files:
+      - examples/mcp_client_example.py
+      - examples/mcp_host_example.py
+      - examples/mcp_server_example.py
+      - examples/mcp_tool_example.py
+      - examples/mcp_resource_example.py

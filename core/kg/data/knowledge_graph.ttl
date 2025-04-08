@@ -13,7 +13,8 @@ ns1:core_quality ns1:critical_count 0 ;
     ns1:last_modified 1.744101e+09,
         1.744102e+09,
         1.744104e+09,
-        1.744104e+09 ;
+        1.744126e+09,
+        1.744126e+09 ;
     ns1:warning_count 0 .
 
 ns1:docker a ns1:Component ;
@@ -31,7 +32,8 @@ ns1:docs a ns1:Directory ;
         1.744101e+09,
         1.744102e+09,
         1.744104e+09,
-        1.744104e+09 ;
+        1.744105e+09,
+        1.744105e+09 ;
     ns1:path "docs" ;
     ns1:purpose "documentation" .
 
@@ -42,7 +44,8 @@ ns1:docs_quality ns1:critical_count 0 ;
     ns1:last_modified 1.744101e+09,
         1.744102e+09,
         1.744104e+09,
-        1.744104e+09 ;
+        1.744126e+09,
+        1.744126e+09 ;
     ns1:warning_count 0 .
 
 ns1:documentation a ns1:Component ;
@@ -94,7 +97,8 @@ ns1:tests a ns1:Component,
     ns1:implements ns1:test_structure ;
     ns1:last_modified 1.744099e+09,
         1.744104e+09,
-        1.744104e+09 ;
+        1.744105e+09,
+        1.744105e+09 ;
     ns1:name "Tests" ;
     ns1:path "tests" ;
     ns1:purpose "testing" ;
@@ -109,7 +113,8 @@ ns1:tests_quality ns1:critical_count 0 ;
     ns1:last_modified 1.744101e+09,
         1.744102e+09,
         1.744104e+09,
-        1.744104e+09 ;
+        1.744126e+09,
+        1.744126e+09 ;
     ns1:warning_count 0 .
 
 ns1:deepseek a ns1:Component ;
@@ -121,7 +126,8 @@ ns1:docs_conventions a ns1:Directory ;
     ns1:file_count 4 ;
     ns1:last_modified 1.744023e+09,
         1.744104e+09,
-        1.744104e+09 ;
+        1.744105e+09,
+        1.744105e+09 ;
     ns1:path "docs/conventions" .
 
 ns1:docs_knowledge-graph a ns1:Directory ;
@@ -130,14 +136,16 @@ ns1:docs_knowledge-graph a ns1:Directory ;
     ns1:last_modified 1.744023e+09,
         1.744101e+09,
         1.744104e+09,
-        1.744104e+09 ;
+        1.744105e+09,
+        1.744105e+09 ;
     ns1:path "docs/knowledge-graph" .
 
 ns1:docs_troubleshooting a ns1:Directory ;
     ns1:file_count 3 ;
     ns1:last_modified 1.744097e+09,
         1.744104e+09,
-        1.744104e+09 ;
+        1.744105e+09,
+        1.744105e+09 ;
     ns1:path "docs/troubleshooting" .
 
 ns1:docs_tutorials a ns1:Directory ;
@@ -145,19 +153,30 @@ ns1:docs_tutorials a ns1:Directory ;
         6 ;
     ns1:last_modified 1.744097e+09,
         1.744104e+09,
-        1.744104e+09 ;
+        1.744105e+09,
+        1.744105e+09 ;
     ns1:path "docs/tutorials" .
 
 ns1:file_structure_metrics a ns1:Metrics ;
     ns1:component_type "file_structure" ;
     ns1:description "File structure standardization metrics" ;
-    ns1:directory_compliance 1e+02 ;
-    ns1:last_modified 1.744104e+09 ;
+    ns1:directory_compliance 9.774648e+01,
+        9.774648e+01,
+        1e+02 ;
+    ns1:last_modified 1.744104e+09,
+        1.744126e+09,
+        1.744126e+09 ;
     ns1:name "File Structure Metrics" ;
-    ns1:naming_compliance 1e+02 ;
-    ns1:overall_compliance 1e+02 ;
-    ns1:status "created" ;
-    ns1:total_files 249 .
+    ns1:naming_compliance 9.577465e+01,
+        9.577465e+01,
+        1e+02 ;
+    ns1:overall_compliance 9.676056e+01,
+        9.676056e+01,
+        1e+02 ;
+    ns1:status "created",
+        "updated" ;
+    ns1:total_files 249,
+        355 .
 
 ns1:kg a ns1:Directory ;
     ns1:path "core/kg" ;
@@ -186,13 +205,16 @@ ns1:quality_metrics ns1:TRACKS ns1:file_structure_metrics ;
     ns1:last_modified 1.744101e+09,
         1.744102e+09,
         1.744104e+09,
-        1.744104e+09 ;
+        1.744126e+09,
+        1.744126e+09 ;
     ns1:status "updated" .
 
 ns1:tests_integration a ns1:Directory ;
-    ns1:file_count 3 ;
+    ns1:file_count 3,
+        4 ;
     ns1:last_modified 1.744099e+09,
-        1.744099e+09 ;
+        1.744124e+09,
+        1.744124e+09 ;
     ns1:path "tests/integration" .
 
 ns1:tests_performance a ns1:Directory ;
@@ -203,10 +225,13 @@ ns1:tests_performance a ns1:Directory ;
 
 ns1:tests_unit a ns1:Directory ;
     ns1:file_count 20,
-        21 ;
+        21,
+        27,
+        31 ;
     ns1:last_modified 1.7441e+09,
         1.744104e+09,
-        1.744104e+09 ;
+        1.744125e+09,
+        1.744126e+09 ;
     ns1:path "tests/unit" .
 
 ns1:documentation_structure a ns1:Feature ;
