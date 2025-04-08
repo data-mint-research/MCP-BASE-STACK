@@ -1,0 +1,18 @@
+# Configuration version (required)
+version: 1.2.1
+
+# Cache settings: Set to true to enable caching
+cache: true
+
+# Endpoints configuration
+endpoints:
+  # Custom endpoints configuration
+  custom:
+    - name: "Ollama"
+      apiKey: ""  # No API key needed for Ollama
+      baseURL: "http://host.docker.internal:11434"
+      models:
+        default: ["deepseek-coder:6.7b", "mistral:7b"]
+        fetch: true  # Fetch available models from Ollama
+      titleConvo: true
+      titleModel: "mistral:7b"

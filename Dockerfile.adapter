@@ -1,0 +1,15 @@
+FROM python:3.10-slim
+
+WORKDIR /app
+
+# Install dependencies
+RUN pip install --no-cache-dir fastapi uvicorn pydantic requests
+
+# Copy the adapter code
+COPY librechat_mcp_adapter.py /app/
+
+# Expose the port
+EXPOSE 8001
+
+# Run the adapter
+CMD ["python", "librechat_mcp_adapter.py"]

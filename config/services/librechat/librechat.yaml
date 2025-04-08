@@ -8,13 +8,50 @@ endpoints:
     - # Using LLM Server as a custom endpoint
       baseURL: "http://llm-server:11434/api"
       models:
-        default: ["mistral", "deepseek-coder"]
+        default: ["mistral:7b"]
         available:
-          - id: "mistral"
+          - id: "mistral:7b"
             name: "Mistral"
             description: "Mistral AI's 7B parameter model"
-          - id: "deepseek-coder"
+          - id: "deepseek-coder:6.7b"
             name: "DeepSeek Coder"
             description: "Code generation and completion model"
+          - id: "command-rp:latest"
+            name: "Command-RP"
+            description: "Command execution and reasoning model"
       titleConvo: true
-      titleModel: "mistral"
+      titleModel: "mistral:7b"
+
+  agents:
+    - name: "SERJ"
+      description: "Specialized Expert Reasoning JSON agent"
+      iconURL: "/images/serj-icon.png"
+      provider: "custom"
+      tools:
+        - "mintycoder"
+        - "code_analyzer"
+        - "shell_command"
+
+plugins:
+  - name: "MCP Tools"
+    url: "http://mcp-adapter:8001"
+    description: "Access to MCP tools and resources"
+    logo: "/plugins/mcp-logo.png"
+    contact: "admin@example.com"
+    tools:
+      - name: "mintycoder"
+        description: "Generate code using the MINTYcoder agent"
+        isAuth: false
+      - name: "code_analyzer"
+        description: "Analyze code for quality and issues"
+        isAuth: false
+      - name: "shell_command"
+        description: "Execute a shell command"
+        isAuth: false
+
+# Custom LLM Manager configuration
+llmManager:
+  enabled: true
+  path: "/app/llm_manager.js"
+  defaultModel: "mistral:7b"
+  agentModel: "agent-SERJ"

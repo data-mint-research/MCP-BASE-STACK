@@ -1,0 +1,93 @@
+version: "3.8"
+
+services:
+  mcp-server:
+    build:
+      context: .
+      dockerfile: Dockerfile.mcp
+    restart: always
+    ports:
+      - "8000:8000"
+    environment:
+      - LOG_LEVEL=INFO
+      - SERVER_HOST=0.0.0.0
+      - SERVER_PORT=8000
+      - MCP_SERVER_ID=serj-agent
+    volumes:
+      - ./mcp_server.py:/app/mcp_server.py
+    networks:
+      - mcp-network
+      - librechat-network
+
+  mcp-adapter:
+    build:
+      context: .
+      dockerfile: Dockerfile.adapter
+    restart: always
+    ports:
+      - "8001:8001"
+    environment:
+      - MCP_SERVER_URL=http://mcp-server:8000
+    volumes:
+      - ./librechat_mcp_adapter.py:/app/librechat_mcp_adapter.py
+    depends_on:
+      - mcp-server
+    networks:
+      - mcp-network
+      - librechat-network
+
+  librechat:
+    image: librechat/librechat:latest
+    restart: always
+    depends_on:
+      - mongodb
+      - mcp-server
+      - mcp-adapter
+      - ollama
+    environment:
+      - OLLAMA_API_HOST=http://ollama:11434
+      - MCP_ADAPTER_URL=http://mcp-adapter:8001
+    volumes:
+      - ./config/services/librechat/librechat.yaml:/app/librechat.yaml
+      - ./services/librechat/llm_manager.js:/app/llm_manager.js
+    ports:
+      - "3080:3080"
+    networks:
+      - librechat-network
+
+  mongodb:
+    image: mongo:latest
+    restart: always
+    volumes:
+      - mongodb_data:/data/db
+    ports:
+      - "27017:27017"
+    networks:
+      - librechat-network
+
+  ollama:
+    image: ollama/ollama:latest
+    restart: always
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    networks:
+      - librechat-network
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+
+networks:
+  mcp-network:
+    driver: bridge
+  librechat-network:
+    driver: bridge
+
+volumes:
+  mongodb_data:
+  ollama_data:
