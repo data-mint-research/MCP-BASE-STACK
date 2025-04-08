@@ -6,7 +6,7 @@ from mcp import tool
 logger = logging.getLogger("mcp_server.tools.shell")
 
 @tool(
-    name="shell_command",
+    name="execute_shell_command",
     description="Execute a shell command on the server",
     inputSchema={
         "type": "object",
@@ -23,7 +23,8 @@ logger = logging.getLogger("mcp_server.tools.shell")
         },
         "required": ["command"]
     },
-    dangerous=True
+    dangerous=True,
+    readOnly=False
 )
 def execute_shell_command(command: str, timeout: int = 60) -> Dict[str, Any]:
     """

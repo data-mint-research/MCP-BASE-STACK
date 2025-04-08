@@ -9,12 +9,14 @@ The file structure standardization system ensures that all files in the project 
 ## Current Status
 
 As of the latest validation (April 8, 2025):
-- Total files in the project: 249
-- Naming convention compliance: 100%
+- Total files in the project: 486
+- Naming convention compliance: 97.53%
 - Directory structure compliance: 100%
-- Overall compliance: 100%
+- Overall compliance: 98.77%
 
-The project has achieved full compliance with file structure standards after fixing 34 files with naming convention issues (primarily markdown files) and relocating 5 files to their ideal directories.
+The project has 12 files with naming convention issues (primarily markdown files) and no directory structure issues. The system now provides automated suggestions for improvement and enhanced reporting capabilities.
+
+For details on the recent enhancements to the file structure standardization system, see [File Structure Enhancements](./File-Structure-Enhancements.md).
 
 ## Key Features
 
@@ -43,6 +45,18 @@ The project has achieved full compliance with file structure standards after fix
    - `__init__.py` files are preserved with their exact naming (not subject to renaming)
    - `README.md` files are kept in their original directories (not subject to relocation)
 
+5. **Automated Suggestions**: Generates automated suggestions for improving file structure based on detected patterns:
+   - Suggestions for standardizing file naming
+   - Recommendations for directory organization
+   - Integration with CI/CD pipeline suggestions
+   - Documentation recommendations
+
+6. **Enhanced Reporting**: Provides detailed reports on file structure issues:
+   - Comprehensive JSON reports with detailed issue information
+   - Metrics tracking for compliance percentages
+   - Historical tracking of compliance over time
+   - Debug information for troubleshooting
+
 ## Usage
 
 ### Manual Standardization
@@ -65,6 +79,21 @@ python standardize_file_structure.py --dry-run
 # Do all of the above
 python standardize_file_structure.py
 ```
+
+### Report Validation and Updates
+
+You can validate and update the file structure reports using the `validate_report.py` script:
+
+```bash
+# Validate and update file structure reports
+python validate_report.py
+```
+
+This script will:
+- Ensure the file-structure-report.json file has all required fields
+- Add automated suggestions if they're missing
+- Update the file_structure_metrics.json file with the latest metrics
+- Provide a summary of the current file structure compliance
 
 ### Automated Validation
 
@@ -97,9 +126,12 @@ The file structure standardization system is integrated with the knowledge graph
 The file structure standardization system consists of the following components:
 
 1. **standardize_file_structure.py**: Main script for standardizing file structure
-2. **core/quality/components/fixes/file_structure_validator.py**: Integration with the quality enforcement system
-3. **core/quality/components/structure.py**: File structure quality checks
-4. **core/quality/components/fixes/structure.py**: Auto-fix capabilities for structure issues
+2. **validate_report.py**: Script for validating and updating file structure reports
+3. **core/quality/components/fixes/file_structure_validator.py**: Integration with the quality enforcement system
+4. **core/quality/components/structure.py**: File structure quality checks
+5. **core/quality/components/fixes/structure.py**: Auto-fix capabilities for structure issues
+6. **data/reports/file-structure-report.json**: Detailed report on file structure issues
+7. **data/reports/file_structure_metrics.json**: Metrics tracking for file structure compliance
 
 ## Best Practices
 
@@ -116,3 +148,6 @@ If you encounter issues with the file structure standardization system:
 2. **Validate manually**: Run the validation script manually to identify issues
 3. **Use dry run**: Use the `--dry-run` option to see what changes would be made without actually making them
 4. **Check reports**: Review the reports in `data/reports/` for detailed information on file structure issues
+5. **Validate reports**: Run the `validate_report.py` script to ensure the reports are properly structured
+6. **Check debug info**: Review the `debug_info` field in the file-structure-report.json file for troubleshooting information
+7. **Review suggestions**: Check the automated suggestions in the report for potential improvements

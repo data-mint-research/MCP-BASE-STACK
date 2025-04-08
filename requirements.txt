@@ -12,8 +12,8 @@ matplotlib==3.4.0
 modelcontextprotocol==0.1.0
 mypy==0.910
 networkx==2.5
-numpy>=1.22.0  # Updated for Python 3.10 compatibility
-pandas>=1.4.0  # Updated for compatibility with newer numpy
+numpy==1.22.0  # Updated for Python 3.10 compatibility
+pandas==1.4.0  # Updated for compatibility with newer numpy
 pre-commit==2.15.0
 pydantic==1.8.2
 pylint==2.11.1

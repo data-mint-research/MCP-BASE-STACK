@@ -11,7 +11,7 @@ import shutil
 from typing import Dict, List, Optional, Tuple, Any, Generator
 import pytest
 
-from core.quality import QualityCheckResult, QualityCheckSeverity
+from core.quality.components.base import QualityCheckResult, QualityCheckSeverity
 
 
 @pytest.fixture

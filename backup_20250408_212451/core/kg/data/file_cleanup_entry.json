@@ -1,0 +1,96 @@
+{
+  "node_type": "Task",
+  "id": "file_cleanup_task",
+  "name": "File Cleanup Implementation",
+  "description": "Implementation of file cleanup for the MCP-BASE-STACK project",
+  "status": "completed",
+  "completion_date": "2025-04-08",
+  "properties": {
+    "priority": "low",
+    "task_type": "maintenance",
+    "effort": "medium",
+    "impact": "high"
+  },
+  "metrics": {
+    "total_files_scanned": 372,
+    "orphaned_files": 261,
+    "outdated_files": 4,
+    "duplicate_files": 38,
+    "misplaced_files": 11,
+    "total_files_cleaned": 303,
+    "total_files_moved": 11,
+    "naming_compliance_before": 92.47,
+    "naming_compliance_after": 97.53,
+    "directory_compliance_before": 95.68,
+    "directory_compliance_after": 100.0,
+    "overall_compliance_before": 94.08,
+    "overall_compliance_after": 98.77
+  },
+  "subtasks": [
+    {
+      "id": "create_cleanup_plan",
+      "name": "Create Cleanup Implementation Plan",
+      "status": "completed",
+      "description": "Created a plan for implementing file cleanup based on previous identification tasks"
+    },
+    {
+      "id": "run_cleanup_script",
+      "name": "Run Cleanup Script",
+      "status": "completed",
+      "description": "Ran cleanup_files.py in interactive mode to clean up identified files"
+    },
+    {
+      "id": "document_cleanup",
+      "name": "Document Cleanup Actions",
+      "status": "completed",
+      "description": "Documented all cleanup actions taken in file_cleanup_results_final.md"
+    },
+    {
+      "id": "verify_functionality",
+      "name": "Verify Functionality",
+      "status": "completed",
+      "description": "Verified no functionality was broken after cleanup by running tests"
+    },
+    {
+      "id": "update_knowledge_graph",
+      "name": "Update Knowledge Graph",
+      "status": "completed",
+      "description": "Updated the knowledge graph with the cleanup results"
+    }
+  ],
+  "related_components": [
+    "documentation",
+    "tests",
+    "core",
+    "mcp_server"
+  ],
+  "artifacts": [
+    {
+      "type": "document",
+      "path": "file_cleanup_results_final.md",
+      "description": "Final report of file cleanup results"
+    },
+    {
+      "type": "code",
+      "path": "standardize_file_structure.py",
+      "description": "Script for standardizing file structure with fixed indentation"
+    },
+    {
+      "type": "data",
+      "path": "data/reports/file-structure-report.json",
+      "description": "Report of file structure metrics after cleanup"
+    }
+  ],
+  "issues_fixed": [
+    {
+      "id": "indentation_issue",
+      "description": "Fixed indentation issues in standardize_file_structure.py",
+      "severity": "medium"
+    },
+    {
+      "id": "duplicate_code",
+      "description": "Removed duplicate target_files = {} line in relocate_files function",
+      "severity": "low"
+    }
+  ]
+}

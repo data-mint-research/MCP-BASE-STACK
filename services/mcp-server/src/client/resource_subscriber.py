@@ -9,6 +9,7 @@ import logging
 import json
 import uuid
 import time
+import re
 from typing import Dict, Any, List, Optional, Callable, Union
 
 from mcp import JsonRpc, JsonRpcRequest, JsonRpcResponse, Resource
@@ -42,10 +43,46 @@ class ResourceSubscriberManager(IResourceSubscriber):
         except Exception as e:
             # Fall back to custom implementation if SDK component is not available
             pass
+            
+        # Compile regex for resource URI validation
+        self.resource_uri_pattern = re.compile(r'^resource://([^/]+)(/.*)?$')
+        
+    def validate_resource_uri(self, uri: str) -> bool:
+        """
+        Validate a resource URI according to the MCP specification.
+        
+        Args:
+            uri: The URI to validate
+            
+        Returns:
+            bool: True if the URI is valid, False otherwise
+        """
+        # Use SDK's JsonRpc.validate_resource_uri if available
+        if hasattr(JsonRpc, "validate_resource_uri"):
+            return JsonRpc.validate_resource_uri(uri)
+            
+        # Fall back to our own validation
+        if not isinstance(uri, str):
+            return False
+            
+        # Check for resource:// scheme
+        if not uri.startswith("resource://"):
+            return False
+            
+        # Check for provider
+        match = self.resource_uri_pattern.match(uri)
+        if not match or not match.group(1):
+            return False
+            
+        return True
     
     def subscribe(self, server_id: str, uri: str, callback: Callable[[Dict[str, Any]], None]) -> str:
         """
         Subscribe to updates for a resource using the SDK's JsonRpc class.
+        
+        This method ensures that capability negotiation occurs before resource subscription.
+        It checks if capabilities have been negotiated with the server, and if not,
+        it negotiates them first.
         
         Args:
             server_id: The ID of the server
@@ -59,10 +96,10 @@ class ResourceSubscriberManager(IResourceSubscriber):
             ValidationError: If the server_id, uri, or callback is invalid
             ResourceError: If there's an error subscribing to the resource
             NetworkError: If there's a network error
-            MCPError: For other errors
+            MCPError: If capability negotiation fails or the server doesn't support resources or subscriptions
         """
         # Import here to avoid circular imports
-        from .error_handler import ValidationError, ResourceError
+        from .error_handler import ValidationError, ResourceError, MCPError, ErrorCode
         
         # Validate parameters
         if not server_id:
@@ -76,12 +113,22 @@ class ResourceSubscriberManager(IResourceSubscriber):
                 message="URI cannot be empty",
                 field_errors={"uri": ["URI cannot be empty"]}
             )
+            
+        # Validate resource URI format
+        if not self.validate_resource_uri(uri):
+            raise ValidationError(
+                message=f"Invalid resource URI format: {uri}. Must follow 'resource://provider/path' format.",
+                field_errors={"uri": [f"Invalid resource URI format: {uri}. Must follow 'resource://provider/path' format."]}
+            )
         
         if not callback or not callable(callback):
             raise ValidationError(
                 message="Callback must be a callable function",
                 field_errors={"callback": ["Callback must be a callable function"]}
             )
+            
+        # Ensure capability negotiation has occurred
+        self._ensure_capability_negotiation(server_id)
         
         # Generate a subscription ID
         subscription_id = str(uuid.uuid4())
@@ -282,3 +329,55 @@ class ResourceSubscriberManager(IResourceSubscriber):
                 data={"subscription_id": subscription_id},
                 original_exception=e
             )
+            
+    def _ensure_capability_negotiation(self, server_id: str) -> None:
+        """
+        Ensure that capability negotiation has occurred with the server.
+        
+        Args:
+            server_id: The ID of the server
+            
+        Raises:
+            MCPError: If capability negotiation fails or the server doesn't support resources or subscriptions
+        """
+        # Import here to avoid circular imports
+        from .error_handler import MCPError, ErrorCode
+        
+        # Check if capabilities have been negotiated
+        if server_id not in self.client.capability_negotiator.negotiated_capabilities:
+            self.client.logger.info(f"Negotiating capabilities with server {server_id} before resource operation")
+            
+            try:
+                # Get client capabilities
+                client_capabilities = self.client.capability_negotiator.get_client_capabilities()
+                
+                # Negotiate capabilities
+                negotiated = self.client.capability_negotiator.negotiate(server_id, client_capabilities)
+                
+                # Check if the server supports resources
+                if not negotiated.get("resources", False):
+                    raise MCPError(
+                        error_code=ErrorCode.CAPABILITY_NOT_SUPPORTED,
+                        message=f"Server {server_id} does not support resources",
+                        data={"server_id": server_id, "capability": "resources"}
+                    )
+                    
+                # Check if the server supports subscriptions
+                if not negotiated.get("subscriptions", False):
+                    raise MCPError(
+                        error_code=ErrorCode.CAPABILITY_NOT_SUPPORTED,
+                        message=f"Server {server_id} does not support subscriptions",
+                        data={"server_id": server_id, "capability": "subscriptions"}
+                    )
+            except Exception as e:
+                # If it's already an MCPError, re-raise it
+                if isinstance(e, MCPError):
+                    raise
+                
+                # Wrap the exception in an MCPError
+                raise MCPError(
+                    error_code=ErrorCode.INTERNAL_ERROR,
+                    message=f"Failed to negotiate capabilities with server {server_id}: {str(e)}",
+                    data={"server_id": server_id},
+                    original_exception=e
+                )

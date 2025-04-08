@@ -114,9 +114,9 @@ structure:
     mcp:
       description: "Scripts for MCP operations"
       required_files:
-        - scripts/run_mcp_host.sh
+        - scripts/run-mcp-host.sh
         - scripts/run_mcp_server.sh
-        - scripts/run_conformance_tests.sh
+        - scripts/run-conformance-tests.sh
     migration:
       mcp:
         description: "Scripts for MCP migration"

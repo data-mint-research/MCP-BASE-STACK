@@ -1,9 +1,9 @@
 {
   "project_dir": "/home/skr/projects/MCP-BASE-STACK",
-  "timestamp": "2025-04-08T10:44:46.500862",
+  "timestamp": "2025-04-08T20:53:08.016304",
   "summary": {
-    "dependency_files_scanned": 5,
-    "dependencies_checked": 0,
+    "dependency_files_scanned": 9,
+    "dependencies_checked": 23,
     "outdated_dependencies": 0,
     "vulnerable_dependencies": 0,
     "inconsistent_dependencies": 0,
@@ -34,10 +34,150 @@
       "path": "services/mcp-server/docker-compose.yml",
       "manager": "docker",
       "type": "docker-compose.yml"
+    },
+    {
+      "path": "config/deploy/docker-compose.yml",
+      "manager": "docker",
+      "type": "docker-compose.yml"
+    },
+    {
+      "path": "config/services/llm-server/docker-compose.yml",
+      "manager": "docker",
+      "type": "docker-compose.yml"
+    },
+    {
+      "path": "config/services/librechat/docker-compose.yml",
+      "manager": "docker",
+      "type": "docker-compose.yml"
+    },
+    {
+      "path": "config/services/mcp-server/docker-compose.yml",
+      "manager": "docker",
+      "type": "docker-compose.yml"
+    }
+  ],
+  "dependencies": [
+    {
+      "file_path": "deploy/docker-compose.yml",
+      "manager": "docker",
+      "dependencies": []
+    },
+    {
+      "file_path": "services/llm-server/docker-compose.yml",
+      "manager": "docker",
+      "dependencies": [
+        {
+          "name": "ollama/ollama",
+          "version": "0.1.27",
+          "service": "llm-server",
+          "file_path": "services/llm-server/docker-compose.yml"
+        }
+      ]
+    },
+    {
+      "file_path": "services/librechat/docker-compose.yml",
+      "manager": "docker",
+      "dependencies": [
+        {
+          "name": "librechat/librechat",
+          "version": "0.6.9",
+          "service": "api",
+          "file_path": "services/librechat/docker-compose.yml"
+        },
+        {
+          "name": "ollama/ollama",
+          "version": "0.1.27",
+          "service": "llm-server",
+          "file_path": "services/librechat/docker-compose.yml"
+        },
+        {
+          "name": "mongo",
+          "version": "6.0.12",
+          "service": "mongodb",
+          "file_path": "services/librechat/docker-compose.yml"
+        }
+      ]
+    },
+    {
+      "file_path": "services/mcp-server/docker-compose.yml",
+      "manager": "docker",
+      "dependencies": []
+    },
+    {
+      "file_path": "config/deploy/docker-compose.yml",
+      "manager": "docker",
+      "dependencies": []
+    },
+    {
+      "file_path": "config/services/llm-server/docker-compose.yml",
+      "manager": "docker",
+      "dependencies": [
+        {
+          "name": "ollama/ollama",
+          "version": "0.1.27",
+          "service": "llm-server",
+          "file_path": "config/services/llm-server/docker-compose.yml"
+        }
+      ]
+    },
+    {
+      "file_path": "config/services/librechat/docker-compose.yml",
+      "manager": "docker",
+      "dependencies": [
+        {
+          "name": "librechat/librechat",
+          "version": "0.6.9",
+          "service": "api",
+          "file_path": "config/services/librechat/docker-compose.yml"
+        },
+        {
+          "name": "ollama/ollama",
+          "version": "0.1.27",
+          "service": "llm-server",
+          "file_path": "config/services/librechat/docker-compose.yml"
+        },
+        {
+          "name": "mongo",
+          "version": "6.0.12",
+          "service": "mongodb",
+          "file_path": "config/services/librechat/docker-compose.yml"
+        }
+      ]
+    },
+    {
+      "file_path": "config/services/mcp-server/docker-compose.yml",
+      "manager": "docker",
+      "dependencies": []
     }
   ],
   "outdated_dependencies": [],
   "vulnerable_dependencies": [],
   "inconsistent_dependencies": [],
-  "recommendations": []
+  "recommendations": [],
+  "last_check_date": "2025-04-08T20:53:08.016323",
+  "next_check_date": "2025-04-15T20:53:08.016325",
+  "scan_duration_seconds": 16.166382,
+  "system_info": {
+    "os": "posix",
+    "python_version": "3.10.12 (main, Feb  4 2025, 14:57:36) [GCC 11.4.0]",
+    "audit_tools": {
+      "python": {
+        "pip_audit": true,
+        "safety": false
+      },
+      "node": {
+        "npm": false,
+        "yarn": false
+      },
+      "docker": {
+        "docker": true,
+        "trivy": false
+      },
+      "java": {
+        "maven": false,
+        "gradle": false,
+        "owasp_dependency_check": false
+      }
+    }
+  }
 }

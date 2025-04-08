@@ -1,0 +1,195 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "MCP-BASE-STACK Specification Manifest Schema",
+  "description": "Schema for validating the MCP-BASE-STACK specification manifest",
+  "type": "object",
+  "required": ["specification_manifest"],
+  "properties": {
+    "specification_manifest": {
+      "type": "object",
+      "required": ["metadata", "directory_structure", "file_templates", "naming_conventions"],
+      "properties": {
+        "metadata": {
+          "type": "object",
+          "required": ["version", "created_at", "description", "purpose"],
+          "properties": {
+            "version": {
+              "type": "string",
+              "pattern": "^\\d+\\.\\d+\\.\\d+$"
+            },
+            "created_at": {
+              "type": "string",
+              "format": "date"
+            },
+            "description": {
+              "type": "string"
+            },
+            "purpose": {
+              "type": "string"
+            }
+          }
+        },
+        "directory_structure": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "required": ["description", "required_subdirectories"],
+            "properties": {
+              "description": {
+                "type": "string"
+              },
+              "required_subdirectories": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "optional_subdirectories": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "file_templates": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "required": ["required_files", "optional_files"],
+            "properties": {
+              "required_files": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "object",
+                  "required": ["description"],
+                  "properties": {
+                    "description": {
+                      "type": "string"
+                    },
+                    "template": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "optional_files": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "object",
+                  "required": ["description"],
+                  "properties": {
+                    "description": {
+                      "type": "string"
+                    },
+                    "template": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "naming_conventions": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "object",
+              "required": ["pattern", "regex", "examples"],
+              "properties": {
+                "pattern": {
+                  "type": "string"
+                },
+                "regex": {
+                  "type": "string"
+                },
+                "examples": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "code_patterns": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "object",
+              "required": ["description", "required"],
+              "properties": {
+                "description": {
+                  "type": "string"
+                },
+                "required": {
+                  "type": "boolean"
+                },
+                "template": {
+                  "type": "string"
+                },
+                "validation_regex": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "validation_rules": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["rule", "severity", "validation_function", "error_message"],
+              "properties": {
+                "rule": {
+                  "type": "string"
+                },
+                "severity": {
+                  "type": "string",
+                  "enum": ["error", "warning", "info"]
+                },
+                "validation_function": {
+                  "type": "string"
+                },
+                "error_message": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "agent_integration": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "object",
+              "required": ["description", "process"],
+              "properties": {
+                "description": {
+                  "type": "string"
+                },
+                "process": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "example": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

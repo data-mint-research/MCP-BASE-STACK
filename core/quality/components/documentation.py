@@ -377,8 +377,12 @@ class DocumentationComponent(QualityComponent):
     
     def _initialize_checks(self) -> None:
         """Initialize the documentation checks."""
+        # Import here to avoid circular imports
+        from core.quality.components.documentation_coverage import EnhancedDocumentationCoverageCheck
+        
         self._checks = [
             DocstringCheck(),
             ReadmeCheck(),
-            DocumentationCoverageCheck()
+            DocumentationCoverageCheck(),
+            EnhancedDocumentationCoverageCheck()
         ]

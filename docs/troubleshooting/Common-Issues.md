@@ -208,7 +208,7 @@ tail -n 50 mcp_server.log
 
 ```bash
 kill $(cat mcp_server.pid)
-./start_mcp_server.sh
+./start-mcp-server.sh
 ```
 
 5. Verify connectivity from LibreChat to MCP Server:

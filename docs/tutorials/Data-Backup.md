@@ -38,7 +38,7 @@ cp LibreChat/librechat.yaml backups/$(date +%Y%m%d)/config/
 
 # Back up MCP Server configuration
 cp mcp_requirements.txt backups/$(date +%Y%m%d)/config/
-cp start_mcp_server.sh backups/$(date +%Y%m%d)/config/
+cp start-mcp-server.sh backups/$(date +%Y%m%d)/config/
 ```
 
 ## Backing up Model Files (Optional)
@@ -76,7 +76,7 @@ mkdir -p $BACKUP_DIR/config
 cp LibreChat/.env $BACKUP_DIR/config/
 cp LibreChat/librechat.yaml $BACKUP_DIR/config/
 cp mcp_requirements.txt $BACKUP_DIR/config/
-cp start_mcp_server.sh $BACKUP_DIR/config/
+cp start-mcp-server.sh $BACKUP_DIR/config/
 
 # Log backup completion
 echo "Backup completed at $(date)" >> backup_log.txt
@@ -111,7 +111,7 @@ kill $(cat mcp_server.pid)
 cp -r backups/20250407/kg-data/* core/kg/data/
 
 # Restart the MCP server
-./start_mcp_server.sh
+./start-mcp-server.sh
 ```
 
 ### Restoring Configuration Files

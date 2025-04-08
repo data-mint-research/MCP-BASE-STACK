@@ -44,7 +44,7 @@ To install the pre-commit hooks:
 
 ```bash
 # Run from the project root directory
-./scripts/utils/installation/install_pre_commit_hooks.sh
+./scripts/utils/installation/install-pre-commit-hooks.sh
 ```
 
 This script will:
@@ -60,7 +60,7 @@ You can run all code quality checks manually using the provided script:
 
 ```bash
 # Run from the project root directory
-./scripts/utils/quality/check_code_quality.sh
+./scripts/utils/quality/check-code-quality.sh
 ```
 
 This script will run:
@@ -99,7 +99,7 @@ Some code quality issues can be fixed automatically using the provided script:
 
 ```bash
 # Run from the project root directory
-./scripts/utils/quality/fix_code_quality.sh
+./scripts/utils/quality/fix-code-quality.sh
 ```
 
 This script will:
@@ -442,11 +442,11 @@ extend-ignore = E203, W503
 
 1. **Run Checks Before Committing**
    - Let pre-commit hooks run automatically before each commit
-   - Alternatively, run `./scripts/utils/quality/check_code_quality.sh` manually before committing
+   - Alternatively, run `./scripts/utils/quality/check-code-quality.sh` manually before committing
 
 2. **Fix Issues Immediately**
    - Don't ignore code quality warnings
-   - Use `./scripts/utils/quality/fix_code_quality.sh` to fix issues automatically when possible
+   - Use `./scripts/utils/quality/fix-code-quality.sh` to fix issues automatically when possible
    - Fix remaining issues manually
 
 3. **Write Tests**

@@ -3,7 +3,7 @@
 Knowledge Graph Integration for Code Quality
 
 This script integrates code quality check and fix results with the knowledge graph.
-It can load reports from the check_code_quality.sh and fix_code_quality.sh scripts
+It can load reports from the check-code-quality.sh and fix-code-quality.sh scripts
 and update the knowledge graph accordingly.
 """
 

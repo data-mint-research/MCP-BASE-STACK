@@ -15,13 +15,13 @@ The git branch-based backup functionality creates a new git branch with a timest
 
 ## Scripts
 
-### create_backup_branch.sh
+### create-backup-branch.sh
 
 This script creates a new git branch with a timestamp-based name (e.g., `backup-20250408-024358`) and commits the current state to this branch as a backup before making changes.
 
 Usage:
 ```bash
-./scripts/utils/backup/create_backup_branch.sh
+./scripts/utils/backup/create-backup-branch.sh
 ```
 
 The script:
@@ -30,20 +30,20 @@ The script:
 3. Returns to the original branch
 4. Saves the backup branch name to `data/backup/.last_backup_branch` for reference
 
-### restore_from_backup.sh
+### restore-from-backup.sh
 
-This script restores files from a backup branch created by `create_backup_branch.sh`. It can either restore specific files or perform a complete restore of all files.
+This script restores files from a backup branch created by `create-backup-branch.sh`. It can either restore specific files or perform a complete restore of all files.
 
 Usage:
 ```bash
 # Restore from the most recent backup (using data/backup/.last_backup_branch)
-./scripts/utils/backup/restore_from_backup.sh
+./scripts/utils/backup/restore-from-backup.sh
 
 # Restore from a specific backup branch
-./scripts/utils/backup/restore_from_backup.sh backup-20250408-024358
+./scripts/utils/backup/restore-from-backup.sh backup-20250408-024358
 
 # Restore specific files from a backup branch
-./scripts/utils/backup/restore_from_backup.sh backup-20250408-024358 file1.py file2.sh
+./scripts/utils/backup/restore-from-backup.sh backup-20250408-024358 file1.py file2.sh
 ```
 
 The script:
@@ -55,5 +55,5 @@ The script:
 
 The backup functionality is integrated with the quality tools:
 
-- `scripts/utils/quality/fix_code_quality.sh` creates a git branch-based backup before applying fixes
-- `scripts/utils/quality/check_code_quality.sh` excludes backup directories from analysis
+- `scripts/utils/quality/fix-code-quality.sh` creates a git branch-based backup before applying fixes
+- `scripts/utils/quality/check-code-quality.sh` excludes backup directories from analysis

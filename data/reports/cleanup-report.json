@@ -1,0 +1,1643 @@
+{
+  "project_dir": "/home/skr/projects/MCP-BASE-STACK",
+  "timestamp": "2025-04-08T21:24:51.794592",
+  "summary": {
+    "total_files_scanned": 327,
+    "orphaned_files": 233,
+    "outdated_files": 3,
+    "duplicate_files": 24,
+    "misplaced_files": 4,
+    "total_files_to_cleanup": 260,
+    "total_files_to_move": 4,
+    "total_size_to_cleanup": 2619920,
+    "files_backed_up": 0,
+    "files_removed": 0,
+    "files_archived": 0,
+    "files_moved": 0
+  },
+  "orphaned_files": [
+    {
+      "path": ".pytest_cache/v/cache/lastfailed",
+      "size": 70,
+      "last_modified": "2025-04-08T21:22:13.604758",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": ".pytest_cache/v/cache/nodeids",
+      "size": 722,
+      "last_modified": "2025-04-08T21:22:33.414560",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": ".pytest_cache/v/cache/stepwise",
+      "size": 2,
+      "last_modified": "2025-04-08T21:22:33.414560",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "core/kg/data/file_cleanup_entry.json",
+      "size": 2819,
+      "last_modified": "2025-04-08T21:24:11.558823",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "core/kg/data/knowledge_graph.graphml",
+      "size": 8633,
+      "last_modified": "2025-04-08T21:23:25.353763",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "core/kg/data/knowledge_graph.ttl",
+      "size": 4868,
+      "last_modified": "2025-04-08T21:23:25.363688",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "core/kg/scripts/setup_knowledge_graph.py",
+      "size": 5690,
+      "last_modified": "2025-04-08T11:38:33.686417",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "data/reports/backups/file_structure_metrics_20250408_200346.json",
+      "size": 269,
+      "last_modified": "2025-04-08T20:03:46.864243",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "data/reports/cleanup-report.json",
+      "size": 82254,
+      "last_modified": "2025-04-08T21:13:51.063614",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "data/reports/code_quality_report_20250408_070629.json",
+      "size": 2637,
+      "last_modified": "2025-04-08T09:21:40.498686",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "data/reports/code_quality_report_20250408_070637.json",
+      "size": 2637,
+      "last_modified": "2025-04-08T09:21:40.498686",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "data/reports/dependency-audit-report.json",
+      "size": 4773,
+      "last_modified": "2025-04-08T20:53:24.602827",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "data/reports/documentation_coverage_metrics.json",
+      "size": 2354,
+      "last_modified": "2025-04-08T19:42:21.158647",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "data/reports/essential-files-report.json",
+      "size": 817,
+      "last_modified": "2025-04-08T09:21:40.498686",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "data/reports/file-structure-report.json",
+      "size": 3418,
+      "last_modified": "2025-04-08T20:28:01.873257",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "data/reports/file_structure_metrics.json",
+      "size": 269,
+      "last_modified": "2025-04-08T20:28:01.873257",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "data/reports/project-structure-report.json",
+      "size": 116782,
+      "last_modified": "2025-04-08T19:47:35.051948",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "data/reports/quality-standards-report.json",
+      "size": 161603,
+      "last_modified": "2025-04-08T19:47:35.051948",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "data_sources/knowledge_graph/scripts/remove_backup_references.py",
+      "size": 5484,
+      "last_modified": "2025-04-08T11:38:33.686417",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "docker-compose.lock.yml",
+      "size": 856,
+      "last_modified": "2025-04-08T20:47:23.873767",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "docs/Backup-Functionality.md",
+      "size": 2429,
+      "last_modified": "2025-04-08T19:47:35.015488",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "docs/Code-Review-Report.md",
+      "size": 3071,
+      "last_modified": "2025-04-08T11:38:33.686417",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "docs/Configuration-File-Reorganization.md",
+      "size": 3235,
+      "last_modified": "2025-04-08T20:39:28.535351",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "docs/Configuration-System.md",
+      "size": 5127,
+      "last_modified": "2025-04-08T11:38:33.686417",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "docs/Dependency-Audit-Enhancement.md",
+      "size": 5410,
+      "last_modified": "2025-04-08T20:51:45.832733",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "docs/Dependency-Lockfile-Implementation.md",
+      "size": 4311,
+      "last_modified": "2025-04-08T20:47:47.299697",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "docs/Dependency-Lockfiles.md",
+      "size": 4094,
+      "last_modified": "2025-04-08T20:46:57.293980",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "docs/Dependency-Management.md",
+      "size": 3177,
+      "last_modified": "2025-04-08T11:38:33.686417",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "docs/Dependency-Standardization.md",
+      "size": 3376,
+      "last_modified": "2025-04-08T20:34:40.033363",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "docs/Documentation-Standards.md",
+      "size": 6433,
+      "last_modified": "2025-04-08T11:38:33.686417",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "docs/File-Cleanup-Guide.md",
+      "size": 4393,
+      "last_modified": "2025-04-08T11:38:33.686417",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "docs/File-Structure-Standardization.md",
+      "size": 6982,
+      "last_modified": "2025-04-08T20:29:48.277271",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "docs/Logging-System.md",
+      "size": 9454,
+      "last_modified": "2025-04-08T11:38:33.686417",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "docs/MCP/Architecture.md",
+      "size": 376,
+      "last_modified": "2025-04-08T11:38:33.686417",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "docs/MCP/Batch-Processing.md",
+      "size": 5750,
+      "last_modified": "2025-04-08T13:42:54.915996",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "docs/MCP/Capability-Negotiation.md",
+      "size": 7088,
+      "last_modified": "2025-04-08T19:21:40.332026",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "docs/MCP/Client-Implementation.md",
+      "size": 5281,
+      "last_modified": "2025-04-08T12:19:24.041167",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "docs/MCP/Client-Usage.md",
+      "size": 5331,
+      "last_modified": "2025-04-08T15:19:21.815185",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "docs/MCP/Compliance-Checklist.md",
+      "size": 336,
+      "last_modified": "2025-04-08T11:38:33.686417",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "docs/MCP/Compliance-Roadmap.md",
+      "size": 5741,
+      "last_modified": "2025-04-08T14:07:40.396815",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "docs/MCP/Host-Implementation.md",
+      "size": 5072,
+      "last_modified": "2025-04-08T12:35:55.465631",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "docs/MCP/JSON-RPC-Validation.md",
+      "size": 3506,
+      "last_modified": "2025-04-08T19:03:47.418278",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "docs/MCP/Protocol.md",
+      "size": 300,
+      "last_modified": "2025-04-08T11:38:33.686417",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "docs/MCP/Quickstart.md",
+      "size": 237,
+      "last_modified": "2025-04-08T11:38:33.686417",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "docs/MCP/README.md",
+      "size": 1392,
+      "last_modified": "2025-04-08T14:12:08.907558",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "docs/MCP/Reference-Links.md",
+      "size": 647,
+      "last_modified": "2025-04-08T11:38:33.686417",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "docs/MCP/Resource-Streaming.md",
+      "size": 6774,
+      "last_modified": "2025-04-08T14:07:24.096566",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "docs/MCP/Resource-URI-Validation.md",
+      "size": 3430,
+      "last_modified": "2025-04-08T19:25:41.177754",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "docs/MCP/Resources.md",
+      "size": 221,
+      "last_modified": "2025-04-08T11:38:33.686417",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "docs/MCP/Sdk-Usage.md",
+      "size": 268,
+      "last_modified": "2025-04-08T11:38:33.686417",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "docs/MCP/Technical-Debt.md",
+      "size": 4338,
+      "last_modified": "2025-04-08T12:39:23.951408",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "docs/MCP/Tools.md",
+      "size": 241,
+      "last_modified": "2025-04-08T11:38:33.686417",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "docs/MCP/docs_MCP.zip:Zone.Identifier",
+      "size": 325,
+      "last_modified": "2025-04-08T11:38:33.686417",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "docs/MCP/init-mcpgeek.sh",
+      "size": 302,
+      "last_modified": "2025-04-08T11:38:33.686417",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "docs/MCP/init-mcpgeek.sh:Zone.Identifier",
+      "size": 330,
+      "last_modified": "2025-04-08T11:38:33.686417",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "docs/MCP/roo-mode.json",
+      "size": 1146,
+      "last_modified": "2025-04-08T11:38:33.686417",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "docs/MCP/roo-mode.json:Zone.Identifier",
+      "size": 327,
+      "last_modified": "2025-04-08T11:38:33.686417",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "docs/backlog/Quality.md",
+      "size": 2529,
+      "last_modified": "2025-04-08T11:38:33.686417",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "docs/conventions/Coding-Conventions.md",
+      "size": 19390,
+      "last_modified": "2025-04-08T11:38:33.686417",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "docs/conventions/Graph-Guidelines.md",
+      "size": 18930,
+      "last_modified": "2025-04-08T11:38:33.686417",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "docs/conventions/Review-Checklist.md",
+      "size": 8869,
+      "last_modified": "2025-04-08T11:38:33.686417",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "docs/conventions/Style-Guide.md",
+      "size": 18944,
+      "last_modified": "2025-04-08T11:38:33.686417",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "docs/knowledge-graph/Code-Generation.md",
+      "size": 7746,
+      "last_modified": "2025-04-08T11:38:33.686417",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "docs/knowledge-graph/Examples.md",
+      "size": 4138,
+      "last_modified": "2025-04-08T11:38:33.686417",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "docs/knowledge-graph/Quality-Metrics-Schema.md",
+      "size": 3597,
+      "last_modified": "2025-04-08T11:38:33.686417",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "docs/knowledge-graph/Schema.md",
+      "size": 5830,
+      "last_modified": "2025-04-08T11:38:33.686417",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "docs/knowledge-graph/Usage-Guide.md",
+      "size": 1597,
+      "last_modified": "2025-04-08T11:38:33.686417",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "docs/quality/Auto-Fix-Capabilities.md",
+      "size": 8414,
+      "last_modified": "2025-04-08T11:38:33.686417",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "docs/quality/Metrics-Dashboard.md",
+      "size": 3495,
+      "last_modified": "2025-04-08T11:38:33.686417",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "docs/quality/Modular-Architecture.md",
+      "size": 6492,
+      "last_modified": "2025-04-08T11:38:33.686417",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "docs/quality/Quality-Standards-Enforcer.md",
+      "size": 5436,
+      "last_modified": "2025-04-08T11:38:33.686417",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "docs/quality/Testing-Framework.md",
+      "size": 10146,
+      "last_modified": "2025-04-08T11:38:33.686417",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "docs/specifications/Specification-Manifest.md",
+      "size": 5787,
+      "last_modified": "2025-04-08T11:38:33.686417",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "docs/troubleshooting/Common-Issues.md",
+      "size": 3420,
+      "last_modified": "2025-04-08T19:47:34.732923",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "docs/troubleshooting/Metrics-Consistency.md",
+      "size": 4066,
+      "last_modified": "2025-04-08T20:04:21.311717",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "docs/troubleshooting/Monitoring-And-Logging.md",
+      "size": 2180,
+      "last_modified": "2025-04-08T19:47:35.051948",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "docs/troubleshooting/Resource-Management.md",
+      "size": 2366,
+      "last_modified": "2025-04-08T19:47:34.732923",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "docs/tutorials/Code-Quality-Guide.md",
+      "size": 12676,
+      "last_modified": "2025-04-08T19:47:35.015488",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "docs/tutorials/Data-Backup.md",
+      "size": 3515,
+      "last_modified": "2025-04-08T19:47:34.732923",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "docs/tutorials/Maintenance-Guide.md",
+      "size": 4274,
+      "last_modified": "2025-04-08T19:47:35.051948",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "docs/tutorials/Mcp-Maintenance-Guide.md",
+      "size": 4269,
+      "last_modified": "2025-04-08T19:47:35.051948",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "docs/tutorials/Setup-Environment.md",
+      "size": 10335,
+      "last_modified": "2025-04-08T11:38:33.695417",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "docs/tutorials/Update-Components.md",
+      "size": 1665,
+      "last_modified": "2025-04-08T19:47:34.732923",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "duplicate_files_report.json",
+      "size": 13555,
+      "last_modified": "2025-04-08T21:08:22.913903",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "duplicate_files_report.md",
+      "size": 8621,
+      "last_modified": "2025-04-08T21:08:22.913903",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "duplicate_files_report_with_recommendations.md",
+      "size": 6608,
+      "last_modified": "2025-04-08T21:09:42.584915",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "duplicate_files_summary.md",
+      "size": 8963,
+      "last_modified": "2025-04-08T21:09:04.761345",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "enforce_quality_standards.py",
+      "size": 5032,
+      "last_modified": "2025-04-08T19:47:34.960798",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "examples/batch_processing_example.py",
+      "size": 7261,
+      "last_modified": "2025-04-08T13:42:28.474077",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "examples/logging_example.py",
+      "size": 3388,
+      "last_modified": "2025-04-08T09:21:40.498686",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "examples/mcp_client_example.py",
+      "size": 8574,
+      "last_modified": "2025-04-08T16:37:22.512095",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "examples/mcp_client_usage_example.py",
+      "size": 4323,
+      "last_modified": "2025-04-08T15:17:47.024474",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "examples/resource_streaming_example.py",
+      "size": 10646,
+      "last_modified": "2025-04-08T14:11:30.637544",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "file_cleanup_results.md",
+      "size": 3377,
+      "last_modified": "2025-04-08T21:16:27.754068",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "file_cleanup_results_final.md",
+      "size": 3392,
+      "last_modified": "2025-04-08T21:22:56.823121",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "find_duplicate_files.py",
+      "size": 10205,
+      "last_modified": "2025-04-08T21:08:18.737904",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "fix_indentation.py",
+      "size": 1776,
+      "last_modified": "2025-04-08T20:25:32.776091",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "identify_orphaned_files.py",
+      "size": 10471,
+      "last_modified": "2025-04-08T20:56:55.785351",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "outdated_files_report.md",
+      "size": 6295,
+      "last_modified": "2025-04-08T21:05:25.788762",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "outdated_files_summary.md",
+      "size": 2264,
+      "last_modified": "2025-04-08T21:05:45.002422",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "rename_files_for_convention.py",
+      "size": 8221,
+      "last_modified": "2025-04-08T19:47:35.070178",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "scripts/deployment/register-new-features.sh",
+      "size": 1086,
+      "last_modified": "2025-04-08T08:23:44.232249",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "scripts/deployment/restart-stack.sh",
+      "size": 390,
+      "last_modified": "2025-04-08T19:47:35.051948",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "scripts/deployment/start-mcp-server.sh",
+      "size": 533,
+      "last_modified": "2025-04-08T08:23:44.232249",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "scripts/deployment/update-ollama-references.sh",
+      "size": 656,
+      "last_modified": "2025-04-08T08:23:44.232249",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "scripts/deployment/update_kg_deployment.py",
+      "size": 1793,
+      "last_modified": "2025-04-08T09:21:40.517550",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "scripts/deployment/update_kg_root.py",
+      "size": 1103,
+      "last_modified": "2025-04-08T09:21:40.517550",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "scripts/maintenance/automated_code_review.py",
+      "size": 49984,
+      "last_modified": "2025-04-08T09:21:40.517550",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "scripts/maintenance/generate_quality_report.py",
+      "size": 54684,
+      "last_modified": "2025-04-08T08:23:44.232249",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "scripts/maintenance/test-mcp-agent.sh",
+      "size": 1727,
+      "last_modified": "2025-04-08T08:23:44.232249",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "scripts/maintenance/verify_kg_migration.py",
+      "size": 412,
+      "last_modified": "2025-04-08T09:21:40.517550",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "scripts/maintenance/verify_librechat_integration.sh",
+      "size": 3623,
+      "last_modified": "2025-04-08T08:23:44.232249",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "scripts/maintenance/verify_stack_health.sh",
+      "size": 1564,
+      "last_modified": "2025-04-08T08:23:44.232249",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "scripts/migration/mcp/README.md",
+      "size": 4861,
+      "last_modified": "2025-04-08T14:45:42.408614",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "scripts/migration/mcp/analyze_current_structure.py",
+      "size": 14798,
+      "last_modified": "2025-04-08T14:22:23.360668",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "scripts/migration/mcp/create_migration_plan.py",
+      "size": 70043,
+      "last_modified": "2025-04-08T14:47:41.761735",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "scripts/migration/mcp/design_mcp_architecture.py",
+      "size": 30998,
+      "last_modified": "2025-04-08T14:23:53.936624",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "scripts/migration/mcp/implement_client_component.py",
+      "size": 39104,
+      "last_modified": "2025-04-08T15:14:46.150726",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "scripts/migration/mcp/implement_host_component.py",
+      "size": 64179,
+      "last_modified": "2025-04-08T14:57:31.399238",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "scripts/migration/mcp/prompt-chain.yaml",
+      "size": 11220,
+      "last_modified": "2025-04-08T14:18:53.300123",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "scripts/migration/mcp/run_mcp_migration.sh",
+      "size": 10201,
+      "last_modified": "2025-04-08T14:19:36.219750",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "scripts/migration/mcp/structure.yaml",
+      "size": 5270,
+      "last_modified": "2025-04-08T19:47:34.814958",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "scripts/migration/mcp/tests/__init__.py",
+      "size": 165,
+      "last_modified": "2025-04-08T14:25:55.293486",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "scripts/migration/mcp/tests/test_analyze_current_structure.py",
+      "size": 10757,
+      "last_modified": "2025-04-08T14:30:04.838384",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "scripts/migration/mcp/tests/test_create_migration_plan.py",
+      "size": 14157,
+      "last_modified": "2025-04-08T14:45:17.904493",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "scripts/migration/mcp/tests/test_design_mcp_architecture.py",
+      "size": 24683,
+      "last_modified": "2025-04-08T14:28:26.805697",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "scripts/migration/migrate-to-git-backup.sh",
+      "size": 2874,
+      "last_modified": "2025-04-08T19:47:35.033718",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "scripts/utils/analysis/analyze_code.py",
+      "size": 48922,
+      "last_modified": "2025-04-08T09:21:40.517550",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "scripts/utils/analysis/analyze_code_structure.py",
+      "size": 66476,
+      "last_modified": "2025-04-08T09:21:40.517550",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "scripts/utils/analysis/check_kg_nodes.py",
+      "size": 638,
+      "last_modified": "2025-04-08T09:21:40.517550",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "scripts/utils/analysis/traverse_project.py",
+      "size": 25236,
+      "last_modified": "2025-04-08T09:21:40.517550",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "scripts/utils/backup/create-backup-branch.sh",
+      "size": 1989,
+      "last_modified": "2025-04-08T19:47:34.869648",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "scripts/utils/backup/restore-from-backup.sh",
+      "size": 5306,
+      "last_modified": "2025-04-08T19:47:34.851418",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "scripts/utils/cleanup/cleanup-backup-dirs.sh",
+      "size": 1274,
+      "last_modified": "2025-04-08T19:47:34.878763",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "scripts/utils/cleanup/cleanup_files.py",
+      "size": 57413,
+      "last_modified": "2025-04-08T09:21:40.517550",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "scripts/utils/cleanup/remove-local-backup-system.sh",
+      "size": 2073,
+      "last_modified": "2025-04-08T19:47:34.878763",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "scripts/utils/hooks/dependency-check.sh",
+      "size": 1276,
+      "last_modified": "2025-04-08T20:50:20.435257",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "scripts/utils/installation/install-file-update-hooks.sh",
+      "size": 2032,
+      "last_modified": "2025-04-08T09:21:40.517550",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "scripts/utils/installation/install-pre-commit-hooks.sh",
+      "size": 2857,
+      "last_modified": "2025-04-08T20:40:37.158103",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "scripts/utils/installation/install-quality-tools.sh",
+      "size": 3113,
+      "last_modified": "2025-04-08T11:38:33.695417",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "scripts/utils/maintenance/audit_dependencies.py",
+      "size": 41497,
+      "last_modified": "2025-04-08T20:53:02.501737",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "scripts/utils/maintenance/update_essential_files.py",
+      "size": 30824,
+      "last_modified": "2025-04-08T09:21:40.517550",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "scripts/utils/mcp.sh",
+      "size": 4231,
+      "last_modified": "2025-04-08T19:47:35.051948",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "scripts/utils/quality/check-code-quality.sh",
+      "size": 15451,
+      "last_modified": "2025-04-08T19:47:35.015488",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "scripts/utils/quality/check_code_quality_nodes.py",
+      "size": 12062,
+      "last_modified": "2025-04-08T19:47:34.997258",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "scripts/utils/quality/check_documentation_coverage.py",
+      "size": 3763,
+      "last_modified": "2025-04-08T19:40:47.689975",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "scripts/utils/quality/check_metrics_consistency.py",
+      "size": 5569,
+      "last_modified": "2025-04-08T20:02:42.400300",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "scripts/utils/quality/enforce_code_standards.py",
+      "size": 27137,
+      "last_modified": "2025-04-08T19:47:35.015488",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "scripts/utils/quality/fix-code-quality.sh",
+      "size": 13292,
+      "last_modified": "2025-04-08T19:47:34.979028",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "scripts/utils/quality/run_quality_dashboard.py",
+      "size": 1803,
+      "last_modified": "2025-04-08T11:38:33.695417",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "scripts/utils/quality/simulate_metrics_inconsistency.py",
+      "size": 6779,
+      "last_modified": "2025-04-08T20:03:37.306679",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "scripts/utils/quality/update_documentation_coverage.py",
+      "size": 5642,
+      "last_modified": "2025-04-08T19:36:02.290516",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "scripts/utils/quality/update_file_structure_metrics.py",
+      "size": 8626,
+      "last_modified": "2025-04-08T20:02:16.711572",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "scripts/utils/quality/update_kg_with_dashboard.py",
+      "size": 4679,
+      "last_modified": "2025-04-08T11:38:33.695417",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "scripts/utils/run-conformance-tests.sh",
+      "size": 3900,
+      "last_modified": "2025-04-08T13:15:36.459401",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "scripts/utils/run-mcp-client-test.sh",
+      "size": 1589,
+      "last_modified": "2025-04-08T15:19:36.780325",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "scripts/utils/run-mcp-host.sh",
+      "size": 668,
+      "last_modified": "2025-04-08T12:37:21.207678",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "scripts/utils/test-shellcheck.sh",
+      "size": 640,
+      "last_modified": "2025-04-08T19:27:49.227299",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "scripts/utils/validation/validate_lockfiles.py",
+      "size": 13592,
+      "last_modified": "2025-04-08T20:46:23.595710",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "scripts/utils/validation/validate_manifest.py",
+      "size": 10472,
+      "last_modified": "2025-04-08T11:38:33.695417",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "scripts/utils/validation/verify-backup-system.sh",
+      "size": 5412,
+      "last_modified": "2025-04-08T19:47:34.896993",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "scripts/utils/validation/verify-stack-health.sh",
+      "size": 5254,
+      "last_modified": "2025-04-08T11:38:33.695417",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "services/mcp-server/src/app.py",
+      "size": 4093,
+      "last_modified": "2025-04-08T09:53:42.239127",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "services/mcp-server/src/client/__init__.py",
+      "size": 434,
+      "last_modified": "2025-04-08T15:14:58.471338",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "services/mcp-server/src/client/capability_negotiator.py",
+      "size": 8185,
+      "last_modified": "2025-04-08T18:09:13.528585",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "services/mcp-server/src/client/client.py",
+      "size": 44538,
+      "last_modified": "2025-04-08T19:24:25.134947",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "services/mcp-server/src/client/error_handler.py",
+      "size": 27853,
+      "last_modified": "2025-04-08T18:08:01.762858",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "services/mcp-server/src/client/interfaces.py",
+      "size": 8920,
+      "last_modified": "2025-04-08T15:14:58.471338",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "services/mcp-server/src/client/json_rpc_client.py",
+      "size": 8301,
+      "last_modified": "2025-04-08T19:09:43.479319",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "services/mcp-server/src/client/resource_subscriber.py",
+      "size": 15471,
+      "last_modified": "2025-04-08T19:25:01.312672",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "services/mcp-server/src/client/tool_proxy.py",
+      "size": 13620,
+      "last_modified": "2025-04-08T19:18:13.353319",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "services/mcp-server/src/di/__init__.py",
+      "size": 445,
+      "last_modified": "2025-04-08T09:53:42.239127",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "services/mcp-server/src/di/containers.py",
+      "size": 2401,
+      "last_modified": "2025-04-08T12:59:59.755750",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "services/mcp-server/src/di/providers.py",
+      "size": 13920,
+      "last_modified": "2025-04-08T13:00:58.437849",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "services/mcp-server/src/examples/client_example.py",
+      "size": 5464,
+      "last_modified": "2025-04-08T12:18:57.646679",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "services/mcp-server/src/host/__init__.py",
+      "size": 193,
+      "last_modified": "2025-04-08T12:08:09.407253",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "services/mcp-server/src/host/host.py",
+      "size": 93471,
+      "last_modified": "2025-04-08T18:21:32.919930",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "services/mcp-server/src/mcp.py",
+      "size": 32049,
+      "last_modified": "2025-04-08T19:08:21.221435",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "services/mcp-server/src/mcp_server.py",
+      "size": 4667,
+      "last_modified": "2025-04-08T09:53:42.239127",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "services/mcp-server/src/modelcontextprotocol/__init__.py",
+      "size": 450,
+      "last_modified": "2025-04-08T19:01:37.719666",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "services/mcp-server/src/modelcontextprotocol/json_rpc_validator.py",
+      "size": 13427,
+      "last_modified": "2025-04-08T19:08:43.242059",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "services/mcp-server/src/persistence/__init__.py",
+      "size": 529,
+      "last_modified": "2025-04-08T14:00:34.742484",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "services/mcp-server/src/persistence/database.py",
+      "size": 4082,
+      "last_modified": "2025-04-08T14:00:52.528931",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "services/mcp-server/src/persistence/models.py",
+      "size": 12770,
+      "last_modified": "2025-04-08T14:01:39.990963",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "services/mcp-server/src/server/__init__.py",
+      "size": 299,
+      "last_modified": "2025-04-08T12:13:34.622320",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "services/mcp-server/src/server/json_rpc_server.py",
+      "size": 5920,
+      "last_modified": "2025-04-08T19:09:13.347377",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "services/mcp-server/src/server/resources/__init__.py",
+      "size": 239,
+      "last_modified": "2025-04-08T12:12:03.740594",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "services/mcp-server/src/server/resources/file_resource.py",
+      "size": 30923,
+      "last_modified": "2025-04-08T14:06:11.502674",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "services/mcp-server/src/server/server.py",
+      "size": 56087,
+      "last_modified": "2025-04-08T19:17:38.720047",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "services/mcp-server/src/server/tools/__init__.py",
+      "size": 246,
+      "last_modified": "2025-04-08T12:13:46.948497",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "services/mcp-server/src/server/tools/shell/__init__.py",
+      "size": 239,
+      "last_modified": "2025-04-08T12:13:56.060865",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "services/mcp-server/src/server/tools/shell/command.py",
+      "size": 1934,
+      "last_modified": "2025-04-08T19:13:53.061317",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "services/mcp-server/src/services/__init__.py",
+      "size": 271,
+      "last_modified": "2025-04-08T09:53:42.239127",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "services/mcp-server/src/services/example_service.py",
+      "size": 2029,
+      "last_modified": "2025-04-08T09:53:42.239127",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "services/mcp-server/src/services/prompt_processor.py",
+      "size": 2050,
+      "last_modified": "2025-04-08T09:53:42.239127",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "services/mcp-server/src/tools/shell/command.py",
+      "size": 1904,
+      "last_modified": "2025-04-08T19:13:43.856640",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "test_suggestions.py",
+      "size": 2286,
+      "last_modified": "2025-04-08T20:25:04.270793",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "tests/chaos/test_quality_resilience.py",
+      "size": 17017,
+      "last_modified": "2025-04-08T09:21:40.526982",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "tests/integration/test_logging_integration.py",
+      "size": 9169,
+      "last_modified": "2025-04-08T08:23:44.241947",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "tests/integration/test_mcp_integration.py",
+      "size": 18467,
+      "last_modified": "2025-04-08T18:22:38.308050",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "tests/integration/test_quality_workflow.py",
+      "size": 26258,
+      "last_modified": "2025-04-08T18:46:12.923272",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "tests/performance/test_quality_performance.py",
+      "size": 16991,
+      "last_modified": "2025-04-08T09:21:40.526982",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "tests/property/test_quality_properties.py",
+      "size": 9625,
+      "last_modified": "2025-04-08T09:21:40.526982",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "tests/unit/__init__.py",
+      "size": 108,
+      "last_modified": "2025-04-08T11:38:33.695417",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "tests/unit/test_auto_fix.py",
+      "size": 16774,
+      "last_modified": "2025-04-08T09:21:40.526982",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "tests/unit/test_batch_processing.py",
+      "size": 19158,
+      "last_modified": "2025-04-08T13:44:09.046379",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "tests/unit/test_capability_negotiator.py",
+      "size": 15496,
+      "last_modified": "2025-04-08T17:01:01.374029",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "tests/unit/test_client.py",
+      "size": 14361,
+      "last_modified": "2025-04-08T13:16:44.277813",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "tests/unit/test_code_review.py",
+      "size": 1485,
+      "last_modified": "2025-04-08T11:38:33.695417",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "tests/unit/test_config.py",
+      "size": 13585,
+      "last_modified": "2025-04-08T09:21:40.526982",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "tests/unit/test_conformance.py",
+      "size": 28421,
+      "last_modified": "2025-04-08T13:15:11.430866",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "tests/unit/test_documentation_generator.py",
+      "size": 13915,
+      "last_modified": "2025-04-08T09:21:40.526982",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "tests/unit/test_error_scenarios.py",
+      "size": 20046,
+      "last_modified": "2025-04-08T17:03:04.119154",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "tests/unit/test_example.py",
+      "size": 2317,
+      "last_modified": "2025-04-07T22:22:40.935959",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "tests/unit/test_host.py",
+      "size": 18690,
+      "last_modified": "2025-04-08T13:17:31.460343",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "tests/unit/test_json_rpc_server_client.py",
+      "size": 7061,
+      "last_modified": "2025-04-08T19:10:28.158123",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "tests/unit/test_json_rpc_validation.py",
+      "size": 19710,
+      "last_modified": "2025-04-08T19:07:45.841393",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "tests/unit/test_kg_integration.py",
+      "size": 14887,
+      "last_modified": "2025-04-08T09:21:40.526982",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "tests/unit/test_log_directory_manager.py",
+      "size": 5975,
+      "last_modified": "2025-04-08T09:21:40.526982",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "tests/unit/test_log_manager.py",
+      "size": 10442,
+      "last_modified": "2025-04-08T09:21:40.526982",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "tests/unit/test_logging_config.py",
+      "size": 5975,
+      "last_modified": "2025-04-08T08:23:44.251646",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "tests/unit/test_mcp_client.py",
+      "size": 20918,
+      "last_modified": "2025-04-08T16:58:20.732681",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "tests/unit/test_mcp_client_integration.py",
+      "size": 17807,
+      "last_modified": "2025-04-08T17:32:52.289845",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "tests/unit/test_pre_commit_hooks.py",
+      "size": 11262,
+      "last_modified": "2025-04-08T09:21:40.526982",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "tests/unit/test_quality_enforcer.py",
+      "size": 8521,
+      "last_modified": "2025-04-08T21:17:47.670415",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "tests/unit/test_record_logging_system.py",
+      "size": 5935,
+      "last_modified": "2025-04-08T08:23:44.251646",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "tests/unit/test_resource_subscriber.py",
+      "size": 16802,
+      "last_modified": "2025-04-08T17:00:10.824487",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "tests/unit/test_resource_uri_validation.py",
+      "size": 5075,
+      "last_modified": "2025-04-08T19:26:03.537140",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "tests/unit/test_sdk_integration.py",
+      "size": 19507,
+      "last_modified": "2025-04-08T17:22:11.077083",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "tests/unit/test_tool_proxy.py",
+      "size": 17770,
+      "last_modified": "2025-04-08T16:59:20.252420",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "tests/utils/__init__.py",
+      "size": 166,
+      "last_modified": "2025-04-08T09:21:40.526982",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "tests/utils/reporting.py",
+      "size": 19045,
+      "last_modified": "2025-04-08T09:21:40.526982",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    },
+    {
+      "path": "validate_report.py",
+      "size": 4579,
+      "last_modified": "2025-04-08T20:27:56.672689",
+      "reason": "Not referenced by any other file, not in the knowledge graph, and not expected based on the manifest"
+    }
+  ],
+  "outdated_files": [
+    {
+      "path": "data/reports/code_quality_report_20250408_070637.json",
+      "size": 2637,
+      "last_modified": "2025-04-08T09:21:40.498686",
+      "reason": "Dated backup"
+    },
+    {
+      "path": "data/reports/code_quality_report_20250408_070629.json",
+      "size": 2637,
+      "last_modified": "2025-04-08T09:21:40.498686",
+      "reason": "Dated backup"
+    },
+    {
+      "path": "data/reports/backups/file_structure_metrics_20250408_200346.json",
+      "size": 269,
+      "last_modified": "2025-04-08T20:03:46.864243",
+      "reason": "Dated backup"
+    }
+  ],
+  "duplicate_files": [
+    {
+      "path": "tests/unit/README.md",
+      "size": 430,
+      "last_modified": "2025-04-08T09:53:42.239127",
+      "duplicate_of": "docs/tests/unit-README.md",
+      "reason": "Duplicate of docs/tests/unit-README.md"
+    },
+    {
+      "path": "tests/integration/README.md",
+      "size": 628,
+      "last_modified": "2025-04-08T09:53:42.239127",
+      "duplicate_of": "docs/tests/integration-README.md",
+      "reason": "Duplicate of docs/tests/integration-README.md"
+    },
+    {
+      "path": "services/mcp-server/config/README.md",
+      "size": 367,
+      "last_modified": "2025-04-08T09:53:42.239127",
+      "duplicate_of": "docs/services/mcp-server-config-README.md",
+      "reason": "Duplicate of docs/services/mcp-server-config-README.md"
+    },
+    {
+      "path": "services/mcp-server/src/di/README.md",
+      "size": 3508,
+      "last_modified": "2025-04-08T09:53:42.239127",
+      "duplicate_of": "docs/services/mcp-server-di-README.md",
+      "reason": "Duplicate of docs/services/mcp-server-di-README.md"
+    },
+    {
+      "path": "docs/MCP/quickstart.md:Zone.Identifier",
+      "size": 114,
+      "last_modified": "2025-04-08T11:38:33.686417",
+      "duplicate_of": "docs/MCP/resources.md:Zone.Identifier",
+      "reason": "Duplicate of docs/MCP/resources.md:Zone.Identifier"
+    },
+    {
+      "path": "docs/MCP/sdk-usage.md:Zone.Identifier",
+      "size": 114,
+      "last_modified": "2025-04-08T11:38:33.686417",
+      "duplicate_of": "docs/MCP/resources.md:Zone.Identifier",
+      "reason": "Duplicate of docs/MCP/resources.md:Zone.Identifier"
+    },
+    {
+      "path": "docs/MCP/compliance-checklist.md:Zone.Identifier",
+      "size": 114,
+      "last_modified": "2025-04-08T11:38:33.686417",
+      "duplicate_of": "docs/MCP/resources.md:Zone.Identifier",
+      "reason": "Duplicate of docs/MCP/resources.md:Zone.Identifier"
+    },
+    {
+      "path": "docs/MCP/protocol.md:Zone.Identifier",
+      "size": 114,
+      "last_modified": "2025-04-08T11:38:33.686417",
+      "duplicate_of": "docs/MCP/resources.md:Zone.Identifier",
+      "reason": "Duplicate of docs/MCP/resources.md:Zone.Identifier"
+    },
+    {
+      "path": "docs/MCP/README.md:Zone.Identifier",
+      "size": 114,
+      "last_modified": "2025-04-08T11:38:33.686417",
+      "duplicate_of": "docs/MCP/resources.md:Zone.Identifier",
+      "reason": "Duplicate of docs/MCP/resources.md:Zone.Identifier"
+    },
+    {
+      "path": "docs/MCP/tools.md:Zone.Identifier",
+      "size": 114,
+      "last_modified": "2025-04-08T11:38:33.686417",
+      "duplicate_of": "docs/MCP/resources.md:Zone.Identifier",
+      "reason": "Duplicate of docs/MCP/resources.md:Zone.Identifier"
+    },
+    {
+      "path": "docs/MCP/architecture.md:Zone.Identifier",
+      "size": 114,
+      "last_modified": "2025-04-08T11:38:33.686417",
+      "duplicate_of": "docs/MCP/resources.md:Zone.Identifier",
+      "reason": "Duplicate of docs/MCP/resources.md:Zone.Identifier"
+    },
+    {
+      "path": "scripts/setup/README.md",
+      "size": 432,
+      "last_modified": "2025-04-08T09:53:42.239127",
+      "duplicate_of": "docs/scripts/setup-README.md",
+      "reason": "Duplicate of docs/scripts/setup-README.md"
+    },
+    {
+      "path": "scripts/utils/quality/README.md",
+      "size": 2936,
+      "last_modified": "2025-04-08T19:47:34.833188",
+      "duplicate_of": "docs/scripts/utils-quality-README.md",
+      "reason": "Duplicate of docs/scripts/utils-quality-README.md"
+    },
+    {
+      "path": "scripts/utils/cleanup/README.md",
+      "size": 4412,
+      "last_modified": "2025-04-08T19:47:34.924338",
+      "duplicate_of": "docs/scripts/utils-cleanup-README.md",
+      "reason": "Duplicate of docs/scripts/utils-cleanup-README.md"
+    },
+    {
+      "path": "scripts/utils/validation/README.md",
+      "size": 3172,
+      "last_modified": "2025-04-08T19:47:35.051948",
+      "duplicate_of": "docs/scripts/utils-validation-README.md",
+      "reason": "Duplicate of docs/scripts/utils-validation-README.md"
+    },
+    {
+      "path": "scripts/maintenance/README.md",
+      "size": 2927,
+      "last_modified": "2025-04-08T19:47:35.051948",
+      "duplicate_of": "docs/scripts/maintenance-README.md",
+      "reason": "Duplicate of docs/scripts/maintenance-README.md"
+    },
+    {
+      "path": "scripts/deployment/README.md",
+      "size": 4771,
+      "last_modified": "2025-04-08T19:47:34.751153",
+      "duplicate_of": "docs/scripts/deployment-README.md",
+      "reason": "Duplicate of docs/scripts/deployment-README.md"
+    },
+    {
+      "path": "scripts/utils/README.md",
+      "size": 2000,
+      "last_modified": "2025-04-08T19:47:35.051948",
+      "duplicate_of": "docs/scripts/utils-README.md",
+      "reason": "Duplicate of docs/scripts/utils-README.md"
+    },
+    {
+      "path": "deploy/docker-compose.dev.yml",
+      "size": 296,
+      "last_modified": "2025-04-08T08:23:44.222550",
+      "duplicate_of": "config/deploy/docker-compose.dev.yml",
+      "reason": "Duplicate of config/deploy/docker-compose.dev.yml"
+    },
+    {
+      "path": "deploy/volumes/model-volumes.yml",
+      "size": 140,
+      "last_modified": "2025-04-08T08:23:44.222550",
+      "duplicate_of": "config/deploy/model-volumes.yml",
+      "reason": "Duplicate of config/deploy/model-volumes.yml"
+    },
+    {
+      "path": "services/mcp-server/docker-compose.yml",
+      "size": 287,
+      "last_modified": "2025-04-08T09:53:42.239127",
+      "duplicate_of": "services/llm-server/docker-compose.yml",
+      "reason": "Duplicate of services/llm-server/docker-compose.yml"
+    },
+    {
+      "path": "services/llm-server/config/server.yaml",
+      "size": 235,
+      "last_modified": "2025-04-08T08:23:44.241947",
+      "duplicate_of": "config/services/llm-server/server.yaml",
+      "reason": "Duplicate of config/services/llm-server/server.yaml"
+    },
+    {
+      "path": "services/librechat/docker-compose.temp.yml",
+      "size": 757,
+      "last_modified": "2025-04-08T08:23:44.241947",
+      "duplicate_of": "config/services/librechat/docker-compose.temp.yml",
+      "reason": "Duplicate of config/services/librechat/docker-compose.temp.yml"
+    },
+    {
+      "path": "services/librechat/config/librechat.yaml",
+      "size": 613,
+      "last_modified": "2025-04-08T08:23:44.241947",
+      "duplicate_of": "config/services/librechat/librechat.yaml",
+      "reason": "Duplicate of config/services/librechat/librechat.yaml"
+    }
+  ],
+  "misplaced_files": [
+    {
+      "path": "services/librechat/docker-compose.yml",
+      "size": 826,
+      "last_modified": "2025-04-08T20:32:54.817879",
+      "ideal_path": "services/llm-server/docker-compose.yml",
+      "reason": "File is not in its ideal location according to the specification manifest"
+    },
+    {
+      "path": "deploy/docker-compose.yml",
+      "size": 587,
+      "last_modified": "2025-04-08T20:33:34.453290",
+      "ideal_path": "services/llm-server/docker-compose.yml",
+      "reason": "File is not in its ideal location according to the specification manifest"
+    },
+    {
+      "path": "scripts/README.md",
+      "size": 1889,
+      "last_modified": "2025-04-08T19:45:59.506362",
+      "ideal_path": "tests/README.md",
+      "reason": "File is not in its ideal location according to the specification manifest"
+    },
+    {
+      "path": "deploy/README.md",
+      "size": 803,
+      "last_modified": "2025-04-08T09:53:42.239127",
+      "ideal_path": "tests/README.md",
+      "reason": "File is not in its ideal location according to the specification manifest"
+    }
+  ],
+  "actions_taken": [],
+  "rollback_info": {
+    "backup_dir": "/home/skr/projects/MCP-BASE-STACK/backup_20250408_212451",
+    "files_backed_up": []
+  }
+}

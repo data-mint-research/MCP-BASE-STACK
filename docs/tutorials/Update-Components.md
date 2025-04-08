@@ -62,7 +62,7 @@ kill $(cat mcp_server.pid)
 # Update the code (e.g., edit mcp_server.py)
 
 # Restart the server
-./start_mcp_server.sh
+./start-mcp-server.sh
 ```
 
 ## Best Practices for Updates

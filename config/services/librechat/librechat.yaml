@@ -1,0 +1,20 @@
+version: 1.0.3
+
+# Social login configuration is managed through environment variables
+# ALLOW_SOCIAL_LOGIN=true in .env file
+
+endpoints:
+  custom:
+    - # Using LLM Server as a custom endpoint
+      baseURL: "http://llm-server:11434/api"
+      models:
+        default: ["mistral", "deepseek-coder"]
+        available:
+          - id: "mistral"
+            name: "Mistral"
+            description: "Mistral AI's 7B parameter model"
+          - id: "deepseek-coder"
+            name: "DeepSeek Coder"
+            description: "Code generation and completion model"
+      titleConvo: true
+      titleModel: "mistral"

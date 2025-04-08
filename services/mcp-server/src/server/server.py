@@ -217,6 +217,8 @@ class MCPServer:
             # Fall back to our custom implementation
             if method == "capabilities/list":
                 result = self._handle_capabilities_list()
+            elif method == "capabilities/negotiate":
+                result = self._handle_capabilities_negotiate(params)
             elif method == "tools/list":
                 result = self._handle_tools_list()
             elif method == "tools/get":
@@ -327,6 +329,50 @@ class MCPServer:
             "server_id": self.server_id
         }
         
+    def _handle_capabilities_negotiate(self, params: Dict[str, Any]) -> Dict[str, Any]:
+        """
+        Handle the capabilities/negotiate method using the MCP SDK.
+        
+        Args:
+            params: Method parameters including client_capabilities
+            
+        Returns:
+            Dict[str, Any]: Negotiated capabilities
+            
+        Raises:
+            ValueError: If client_capabilities is not provided
+        """
+        self.logger.info("Handling capabilities/negotiate request")
+        
+        # Use the SDK server to negotiate capabilities if available
+        if hasattr(self.mcp_server, "negotiate_capabilities"):
+            client_capabilities = params.get("client_capabilities", {})
+            return {
+                "capabilities": self.mcp_server.negotiate_capabilities(client_capabilities),
+                "server_id": self.server_id
+            }
+        
+        # Fall back to our custom implementation
+        if "client_capabilities" not in params:
+            raise ValueError("Client capabilities not specified")
+            
+        client_capabilities = params["client_capabilities"]
+        
+        # Compute intersection of client and server capabilities
+        negotiated = {}
+        for capability, value in self.capabilities.items():
+            if capability in client_capabilities:
+                negotiated[capability] = value and client_capabilities[capability]
+            else:
+                negotiated[capability] = False
+                
+        self.logger.info(f"Negotiated capabilities: {negotiated}")
+        
+        return {
+            "capabilities": negotiated,
+            "server_id": self.server_id
+        }
+    
     def _handle_tools_list(self) -> Dict[str, Any]:
         """
         Handle the tools/list method using the MCP SDK.
@@ -771,41 +817,11 @@ class MCPServer:
         Returns:
             Dict[str, Any]: Validation result with 'valid' boolean and optional 'errors' list
         """
-        # Use the SDK to validate the request
-        if hasattr(JsonRpc, "validate_request"):
-            validation_result = JsonRpc.validate_request(request)
-            if not validation_result["valid"]:
-                self.logger.error(f"Request validation failed: {validation_result.get('errors', ['Unknown error'])}")
-            return validation_result
-        
-        # Fall back to basic validation with detailed error reporting
-        errors = []
-        
-        # Check jsonrpc version
-        if "jsonrpc" not in request:
-            errors.append("Missing 'jsonrpc' field")
-        elif request["jsonrpc"] != "2.0":
-            errors.append(f"Invalid jsonrpc version: {request['jsonrpc']}, expected '2.0'")
-            
-        # Check method
-        if "method" not in request:
-            errors.append("Missing 'method' field")
-        elif not isinstance(request["method"], str):
-            errors.append(f"Method must be a string, got {type(request['method']).__name__}")
-            
-        # Check id for requests (not notifications)
-        if "id" in request:
-            if not isinstance(request["id"], (str, int, type(None))):
-                errors.append(f"Id must be a string, number, or null, got {type(request['id']).__name__}")
-                
-        # Check params if present
-        if "params" in request and not isinstance(request["params"], (dict, list)):
-            errors.append(f"Params must be an object or array, got {type(request['params']).__name__}")
-            
-        return {
-            "valid": len(errors) == 0,
-            "errors": errors
-        }
+        # Always use the SDK's JsonRpc class for validation
+        validation_result = JsonRpc.validate_request(request)
+        if not validation_result["valid"]:
+            self.logger.error(f"Request validation failed: {validation_result.get('errors', ['Unknown error'])}")
+        return validation_result
         def handle_batch_request(self, batch_request: List[Dict[str, Any]],
                                 client_context: Optional[Dict[str, Any]] = None) -> List[Dict[str, Any]]:
             """

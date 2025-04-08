@@ -1,0 +1,4140 @@
+{
+  "timestamp": "2025-04-08T21:35:15.647201",
+  "overall_metrics": {
+    "total_files": 158,
+    "documented_files": 111,
+    "total_modules": 242,
+    "documented_modules": 111,
+    "total_classes": 188,
+    "documented_classes": 179,
+    "total_functions": 1034,
+    "documented_functions": 955,
+    "total_parameters": 773,
+    "documented_parameters": 355,
+    "total_returns": 459,
+    "documented_returns": 244,
+    "module_coverage": 0.45867768595041325,
+    "class_coverage": 0.9521276595744681,
+    "function_coverage": 0.9235976789168279,
+    "parameter_coverage": 0.4592496765847348,
+    "return_coverage": 0.5315904139433552,
+    "overall_coverage": 0.6839762611275965
+  },
+  "file_metrics": {
+    "./validate_report.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 0,
+      "total_classes": 0,
+      "documented_functions": 1,
+      "total_functions": 1,
+      "documented_parameters": 0,
+      "total_parameters": 0,
+      "documented_returns": 0,
+      "total_returns": 1,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [],
+      "undocumented_returns": [
+        "main"
+      ]
+    },
+    "./test_suggestions.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 0,
+      "total_classes": 0,
+      "documented_functions": 1,
+      "total_functions": 1,
+      "documented_parameters": 0,
+      "total_parameters": 0,
+      "documented_returns": 0,
+      "total_returns": 1,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [],
+      "undocumented_returns": [
+        "main"
+      ]
+    },
+    "./fix_indentation.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 0,
+      "total_classes": 0,
+      "documented_functions": 2,
+      "total_functions": 2,
+      "documented_parameters": 0,
+      "total_parameters": 1,
+      "documented_returns": 0,
+      "total_returns": 2,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [
+        {
+          "function": "fix_indentation",
+          "parameters": [
+            "content"
+          ]
+        }
+      ],
+      "undocumented_returns": [
+        "main",
+        "fix_indentation"
+      ]
+    },
+    "./data_sources/knowledge_graph/scripts/remove_backup_references.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 0,
+      "total_classes": 0,
+      "documented_functions": 4,
+      "total_functions": 4,
+      "documented_parameters": 0,
+      "total_parameters": 4,
+      "documented_returns": 0,
+      "total_returns": 3,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [
+        {
+          "function": "save_knowledge_graph",
+          "parameters": [
+            "nx_graph",
+            "rdf_graph"
+          ]
+        },
+        {
+          "function": "remove_backup_references",
+          "parameters": [
+            "nx_graph",
+            "rdf_graph"
+          ]
+        }
+      ],
+      "undocumented_returns": [
+        "load_knowledge_graph",
+        "remove_backup_references",
+        "main"
+      ]
+    },
+    "./backup_20250408_212451/core/kg/scripts/setup_knowledge_graph.py": {
+      "has_module_docstring": false,
+      "documented_modules": 0,
+      "total_modules": 1,
+      "documented_classes": 0,
+      "total_classes": 0,
+      "documented_functions": 1,
+      "total_functions": 1,
+      "documented_parameters": 0,
+      "total_parameters": 0,
+      "documented_returns": 0,
+      "total_returns": 0,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [],
+      "undocumented_returns": []
+    },
+    "./tests/conftest.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 0,
+      "total_classes": 0,
+      "documented_functions": 4,
+      "total_functions": 4,
+      "documented_parameters": 2,
+      "total_parameters": 3,
+      "documented_returns": 3,
+      "total_returns": 3,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [
+        {
+          "function": "pytest_configure",
+          "parameters": [
+            "config"
+          ]
+        }
+      ],
+      "undocumented_returns": []
+    },
+    "./tests/unit/test_conformance.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 1,
+      "total_classes": 1,
+      "documented_functions": 25,
+      "total_functions": 25,
+      "documented_parameters": 0,
+      "total_parameters": 0,
+      "documented_returns": 0,
+      "total_returns": 0,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [],
+      "undocumented_returns": []
+    },
+    "./tests/unit/test_auto_fix.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 8,
+      "total_classes": 8,
+      "documented_functions": 27,
+      "total_functions": 27,
+      "documented_parameters": 0,
+      "total_parameters": 8,
+      "documented_returns": 0,
+      "total_returns": 0,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [
+        {
+          "function": "TestCodeStyleFixes.test_fix_isort_imports",
+          "parameters": [
+            "mock_run"
+          ]
+        },
+        {
+          "function": "TestStructureFixes.test_fix_file_naming",
+          "parameters": [
+            "mock_move"
+          ]
+        },
+        {
+          "function": "TestStructureFixes.test_fix_import_organization",
+          "parameters": [
+            "mock_run"
+          ]
+        },
+        {
+          "function": "TestStaticAnalysisFixes.test_fix_flake8_issues",
+          "parameters": [
+            "mock_run"
+          ]
+        },
+        {
+          "function": "TestInteractiveFixMode.test_interactive_mode",
+          "parameters": [
+            "mock_print",
+            "mock_input"
+          ]
+        },
+        {
+          "function": "TestQualityEnforcerAutoFix.test_auto_fix_issues",
+          "parameters": [
+            "mock_fix_issues",
+            "mock_run_all_checks"
+          ]
+        }
+      ],
+      "undocumented_returns": []
+    },
+    "./tests/unit/test_json_rpc_validation.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 1,
+      "total_classes": 1,
+      "documented_functions": 20,
+      "total_functions": 20,
+      "documented_parameters": 0,
+      "total_parameters": 0,
+      "documented_returns": 0,
+      "total_returns": 0,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [],
+      "undocumented_returns": []
+    },
+    "./tests/unit/test_kg_integration.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 5,
+      "total_classes": 5,
+      "documented_functions": 21,
+      "total_functions": 21,
+      "documented_parameters": 0,
+      "total_parameters": 17,
+      "documented_returns": 0,
+      "total_returns": 1,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [
+        {
+          "function": "TestQualityMetricsSchema.test_get_quality_metrics_schema",
+          "parameters": [
+            "mock_schema_module"
+          ]
+        },
+        {
+          "function": "TestQualityMetricsSchema.test_validate_quality_metrics_schema",
+          "parameters": [
+            "mock_schema_module"
+          ]
+        },
+        {
+          "function": "TestQualityMetricsSchema.test_validate_quality_metrics_schema_invalid",
+          "parameters": [
+            "mock_schema_module"
+          ]
+        },
+        {
+          "function": "TestQualityMetricsQuery.test_get_quality_metrics_query",
+          "parameters": [
+            "mock_query_module"
+          ]
+        },
+        {
+          "function": "TestQualityMetricsQuery.test_execute_quality_metrics_query",
+          "parameters": [
+            "mock_query_module"
+          ]
+        },
+        {
+          "function": "TestQualityMetricsQuery.test_get_quality_metrics",
+          "parameters": [
+            "mock_query_module"
+          ]
+        },
+        {
+          "function": "TestUpdateOperations.mock_update_module",
+          "parameters": [
+            "mock_kg"
+          ]
+        },
+        {
+          "function": "TestUpdateOperations.test_update_quality_metrics",
+          "parameters": [
+            "mock_update_module"
+          ]
+        },
+        {
+          "function": "TestUpdateOperations.test_update_quality_checks",
+          "parameters": [
+            "mock_update_module",
+            "mock_quality_results"
+          ]
+        },
+        {
+          "function": "TestUpdateOperations.test_get_quality_status",
+          "parameters": [
+            "mock_update_module"
+          ]
+        },
+        {
+          "function": "TestErrorConditions.test_schema_error_handling",
+          "parameters": [
+            "mock_error_module"
+          ]
+        },
+        {
+          "function": "TestErrorConditions.test_query_error_handling",
+          "parameters": [
+            "mock_error_module"
+          ]
+        },
+        {
+          "function": "TestErrorConditions.test_update_error_handling",
+          "parameters": [
+            "mock_error_module"
+          ]
+        },
+        {
+          "function": "TestRecoveryMechanisms.test_recover_from_schema_error",
+          "parameters": [
+            "mock_recovery_module"
+          ]
+        },
+        {
+          "function": "TestRecoveryMechanisms.test_recover_from_query_error",
+          "parameters": [
+            "mock_recovery_module"
+          ]
+        },
+        {
+          "function": "TestRecoveryMechanisms.test_recover_from_update_error",
+          "parameters": [
+            "mock_recovery_module"
+          ]
+        }
+      ],
+      "undocumented_returns": [
+        "TestUpdateOperations.mock_kg"
+      ]
+    },
+    "./tests/unit/test_capability_negotiator.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 4,
+      "total_classes": 4,
+      "documented_functions": 14,
+      "total_functions": 14,
+      "documented_parameters": 0,
+      "total_parameters": 0,
+      "documented_returns": 0,
+      "total_returns": 0,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [],
+      "undocumented_returns": []
+    },
+    "./tests/unit/test_resource_subscriber.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 4,
+      "total_classes": 4,
+      "documented_functions": 21,
+      "total_functions": 21,
+      "documented_parameters": 0,
+      "total_parameters": 0,
+      "documented_returns": 0,
+      "total_returns": 0,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [],
+      "undocumented_returns": []
+    },
+    "./tests/unit/__init__.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 0,
+      "total_classes": 0,
+      "documented_functions": 0,
+      "total_functions": 0,
+      "documented_parameters": 0,
+      "total_parameters": 0,
+      "documented_returns": 0,
+      "total_returns": 0,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [],
+      "undocumented_returns": []
+    },
+    "./tests/unit/test_documentation_generator.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 4,
+      "total_classes": 4,
+      "documented_functions": 16,
+      "total_functions": 17,
+      "documented_parameters": 0,
+      "total_parameters": 23,
+      "documented_returns": 0,
+      "total_returns": 2,
+      "undocumented_classes": [],
+      "undocumented_functions": [
+        "mock_generate"
+      ],
+      "undocumented_parameters": [
+        {
+          "function": "TestDocumentationGenerator.test_initialization",
+          "parameters": [
+            "mock_doc_generator_module"
+          ]
+        },
+        {
+          "function": "TestDocumentationGenerator.test_generate_documentation",
+          "parameters": [
+            "mock_doc_generator_module",
+            "temp_test_dir"
+          ]
+        },
+        {
+          "function": "TestDocumentationGenerator.test_generate_module_documentation",
+          "parameters": [
+            "mock_doc_generator_module",
+            "temp_test_file"
+          ]
+        },
+        {
+          "function": "TestDocumentationGenerator.test_generate_class_documentation",
+          "parameters": [
+            "mock_doc_generator_module",
+            "temp_test_file"
+          ]
+        },
+        {
+          "function": "TestDocumentationGenerator.test_generate_function_documentation",
+          "parameters": [
+            "mock_doc_generator_module",
+            "temp_test_file"
+          ]
+        },
+        {
+          "function": "TestDocumentationGeneratorIntegration.test_documentation_generation_workflow",
+          "parameters": [
+            "temp_test_dir",
+            "doc_config"
+          ]
+        },
+        {
+          "function": "TestDocumentationGeneratorErrorConditions.test_generation_error",
+          "parameters": [
+            "mock_error_module",
+            "temp_test_dir"
+          ]
+        },
+        {
+          "function": "TestDocumentationGeneratorErrorConditions.test_module_error",
+          "parameters": [
+            "mock_error_module",
+            "temp_test_file"
+          ]
+        },
+        {
+          "function": "TestDocumentationGeneratorErrorConditions.test_missing_file_error",
+          "parameters": [
+            "mock_doc_generator_module",
+            "temp_test_dir"
+          ]
+        },
+        {
+          "function": "TestDocumentationGeneratorErrorConditions.test_permission_error",
+          "parameters": [
+            "mock_doc_generator_module",
+            "temp_test_dir"
+          ]
+        },
+        {
+          "function": "TestDocumentationGeneratorRecovery.test_generation_recovery",
+          "parameters": [
+            "mock_recovery_module",
+            "temp_test_dir"
+          ]
+        },
+        {
+          "function": "TestDocumentationGeneratorRecovery.test_module_recovery",
+          "parameters": [
+            "mock_recovery_module",
+            "temp_test_file"
+          ]
+        }
+      ],
+      "undocumented_returns": [
+        "TestDocumentationGeneratorIntegration.doc_config",
+        "TestDocumentationGeneratorErrorConditions.test_missing_file_error"
+      ]
+    },
+    "./tests/unit/test_host.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 2,
+      "total_classes": 2,
+      "documented_functions": 14,
+      "total_functions": 14,
+      "documented_parameters": 0,
+      "total_parameters": 0,
+      "documented_returns": 0,
+      "total_returns": 0,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [],
+      "undocumented_returns": []
+    },
+    "./tests/unit/test_logging_config.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 1,
+      "total_classes": 1,
+      "documented_functions": 10,
+      "total_functions": 10,
+      "documented_parameters": 0,
+      "total_parameters": 4,
+      "documented_returns": 0,
+      "total_returns": 0,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [
+        {
+          "function": "TestLoggingConfig.test_get_file_handler",
+          "parameters": [
+            "mock_get_path"
+          ]
+        },
+        {
+          "function": "TestLoggingConfig.test_get_file_handler_error",
+          "parameters": [
+            "mock_get_path"
+          ]
+        },
+        {
+          "function": "TestLoggingConfig.test_configure_logger",
+          "parameters": [
+            "mock_console_handler",
+            "mock_file_handler"
+          ]
+        }
+      ],
+      "undocumented_returns": []
+    },
+    "./tests/unit/test_mcp_client_integration.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 2,
+      "total_classes": 2,
+      "documented_functions": 19,
+      "total_functions": 20,
+      "documented_parameters": 2,
+      "total_parameters": 19,
+      "documented_returns": 1,
+      "total_returns": 10,
+      "undocumented_classes": [],
+      "undocumented_functions": [
+        "update_callback"
+      ],
+      "undocumented_parameters": [
+        {
+          "function": "MockMCPServer.__init__",
+          "parameters": [
+            "server_id"
+          ]
+        },
+        {
+          "function": "MockMCPServer._handle_capabilities_negotiate",
+          "parameters": [
+            "request",
+            "params"
+          ]
+        },
+        {
+          "function": "MockMCPServer._handle_tools_list",
+          "parameters": [
+            "request"
+          ]
+        },
+        {
+          "function": "MockMCPServer._handle_tools_get",
+          "parameters": [
+            "request",
+            "params"
+          ]
+        },
+        {
+          "function": "MockMCPServer._handle_tools_execute",
+          "parameters": [
+            "request",
+            "params"
+          ]
+        },
+        {
+          "function": "MockMCPServer._handle_resources_list",
+          "parameters": [
+            "request",
+            "params"
+          ]
+        },
+        {
+          "function": "MockMCPServer._handle_resources_read",
+          "parameters": [
+            "request",
+            "params"
+          ]
+        },
+        {
+          "function": "MockMCPServer._handle_resources_subscribe",
+          "parameters": [
+            "request",
+            "params",
+            "client_id"
+          ]
+        },
+        {
+          "function": "MockMCPServer._handle_resources_unsubscribe",
+          "parameters": [
+            "request",
+            "params"
+          ]
+        }
+      ],
+      "undocumented_returns": [
+        "MockMCPServer._handle_capabilities_negotiate",
+        "MockMCPServer._handle_tools_list",
+        "MockMCPServer._handle_tools_get",
+        "MockMCPServer._handle_tools_execute",
+        "MockMCPServer._handle_resources_list",
+        "MockMCPServer._handle_resources_read",
+        "MockMCPServer._handle_resources_subscribe",
+        "MockMCPServer._handle_resources_unsubscribe",
+        "main"
+      ]
+    },
+    "./tests/unit/test_pre_commit_hooks.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 4,
+      "total_classes": 4,
+      "documented_functions": 14,
+      "total_functions": 14,
+      "documented_parameters": 0,
+      "total_parameters": 18,
+      "documented_returns": 0,
+      "total_returns": 0,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [
+        {
+          "function": "TestValidateFileStructure.test_validate_file_structure_empty",
+          "parameters": [
+            "mock_validate_module",
+            "temp_test_dir"
+          ]
+        },
+        {
+          "function": "TestValidateFileStructure.test_validate_file_structure_with_files",
+          "parameters": [
+            "mock_validate_module",
+            "temp_test_dir"
+          ]
+        },
+        {
+          "function": "TestValidateFileStructure.test_validate_file_structure_with_issues",
+          "parameters": [
+            "mock_validate_module",
+            "temp_test_dir"
+          ]
+        },
+        {
+          "function": "TestCheckDocumentationQuality.test_check_documentation_quality_empty",
+          "parameters": [
+            "mock_check_docs_module",
+            "temp_test_dir"
+          ]
+        },
+        {
+          "function": "TestCheckDocumentationQuality.test_check_documentation_quality_with_files",
+          "parameters": [
+            "mock_check_docs_module",
+            "test_files"
+          ]
+        },
+        {
+          "function": "TestCheckDocumentationQuality.test_check_documentation_quality_with_issues",
+          "parameters": [
+            "mock_check_docs_module",
+            "test_files"
+          ]
+        },
+        {
+          "function": "TestSuggestImprovements.test_suggest_improvements_empty",
+          "parameters": [
+            "mock_suggest_module",
+            "temp_test_dir"
+          ]
+        },
+        {
+          "function": "TestSuggestImprovements.test_suggest_improvements_with_files",
+          "parameters": [
+            "mock_suggest_module",
+            "test_files"
+          ]
+        },
+        {
+          "function": "TestSuggestImprovements.test_suggest_improvements_with_suggestions",
+          "parameters": [
+            "mock_suggest_module",
+            "test_files"
+          ]
+        }
+      ],
+      "undocumented_returns": []
+    },
+    "./tests/unit/test_log_directory_manager.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 1,
+      "total_classes": 1,
+      "documented_functions": 9,
+      "total_functions": 9,
+      "documented_parameters": 0,
+      "total_parameters": 1,
+      "documented_returns": 0,
+      "total_returns": 0,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [
+        {
+          "function": "TestLogDirectoryManager.test_permission_error_handling",
+          "parameters": [
+            "mock_makedirs"
+          ]
+        }
+      ],
+      "undocumented_returns": []
+    },
+    "./tests/unit/test_record_logging_system.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 1,
+      "total_classes": 1,
+      "documented_functions": 5,
+      "total_functions": 5,
+      "documented_parameters": 0,
+      "total_parameters": 0,
+      "documented_returns": 0,
+      "total_returns": 0,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [],
+      "undocumented_returns": []
+    },
+    "./tests/unit/test_config.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 2,
+      "total_classes": 2,
+      "documented_functions": 15,
+      "total_functions": 15,
+      "documented_parameters": 0,
+      "total_parameters": 4,
+      "documented_returns": 0,
+      "total_returns": 0,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [
+        {
+          "function": "TestConfigSettings.test_get_config",
+          "parameters": [
+            "mock_load_config"
+          ]
+        },
+        {
+          "function": "TestConfigSettings.test_get_logging_config",
+          "parameters": [
+            "mock_get_config"
+          ]
+        },
+        {
+          "function": "TestConfigSettings.test_get_quality_config",
+          "parameters": [
+            "mock_get_config"
+          ]
+        },
+        {
+          "function": "TestConfigSettings.test_get_documentation_config",
+          "parameters": [
+            "mock_get_config"
+          ]
+        }
+      ],
+      "undocumented_returns": []
+    },
+    "./tests/unit/test_client.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 2,
+      "total_classes": 2,
+      "documented_functions": 14,
+      "total_functions": 14,
+      "documented_parameters": 0,
+      "total_parameters": 1,
+      "documented_returns": 0,
+      "total_returns": 0,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [
+        {
+          "function": "TestMCPClient.test_send_request_to_server",
+          "parameters": [
+            "mock_handle_request"
+          ]
+        }
+      ],
+      "undocumented_returns": []
+    },
+    "./tests/unit/test_tool_proxy.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 4,
+      "total_classes": 4,
+      "documented_functions": 19,
+      "total_functions": 19,
+      "documented_parameters": 0,
+      "total_parameters": 0,
+      "documented_returns": 0,
+      "total_returns": 0,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [],
+      "undocumented_returns": []
+    },
+    "./tests/unit/test_log_manager.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 4,
+      "total_classes": 4,
+      "documented_functions": 16,
+      "total_functions": 16,
+      "documented_parameters": 0,
+      "total_parameters": 17,
+      "documented_returns": 0,
+      "total_returns": 1,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [
+        {
+          "function": "TestLogManager.test_initialization",
+          "parameters": [
+            "mock_log_manager_module"
+          ]
+        },
+        {
+          "function": "TestLogManager.test_configure",
+          "parameters": [
+            "mock_log_manager_module",
+            "test_config"
+          ]
+        },
+        {
+          "function": "TestLogManager.test_get_logger",
+          "parameters": [
+            "mock_log_manager_module"
+          ]
+        },
+        {
+          "function": "TestLogManager.test_log",
+          "parameters": [
+            "mock_log_manager_module"
+          ]
+        },
+        {
+          "function": "TestLogManagerIntegration.test_log_file_creation",
+          "parameters": [
+            "temp_test_dir",
+            "log_config"
+          ]
+        },
+        {
+          "function": "TestLogManagerIntegration.test_log_rotation",
+          "parameters": [
+            "temp_test_dir",
+            "log_config"
+          ]
+        },
+        {
+          "function": "TestLogManagerErrorConditions.test_configuration_error",
+          "parameters": [
+            "mock_error_module",
+            "test_config"
+          ]
+        },
+        {
+          "function": "TestLogManagerErrorConditions.test_logger_error",
+          "parameters": [
+            "mock_error_module"
+          ]
+        },
+        {
+          "function": "TestLogManagerErrorConditions.test_log_error",
+          "parameters": [
+            "mock_error_module"
+          ]
+        },
+        {
+          "function": "TestLogManagerRecovery.test_configuration_recovery",
+          "parameters": [
+            "mock_recovery_module",
+            "test_config"
+          ]
+        },
+        {
+          "function": "TestLogManagerRecovery.test_logger_recovery",
+          "parameters": [
+            "mock_recovery_module"
+          ]
+        },
+        {
+          "function": "TestLogManagerRecovery.test_log_recovery",
+          "parameters": [
+            "mock_recovery_module"
+          ]
+        }
+      ],
+      "undocumented_returns": [
+        "TestLogManagerIntegration.log_config"
+      ]
+    },
+    "./tests/unit/test_sdk_integration.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 4,
+      "total_classes": 4,
+      "documented_functions": 18,
+      "total_functions": 18,
+      "documented_parameters": 0,
+      "total_parameters": 0,
+      "documented_returns": 0,
+      "total_returns": 0,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [],
+      "undocumented_returns": []
+    },
+    "./tests/unit/test_mcp_client.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 4,
+      "total_classes": 4,
+      "documented_functions": 33,
+      "total_functions": 33,
+      "documented_parameters": 0,
+      "total_parameters": 0,
+      "documented_returns": 0,
+      "total_returns": 0,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [],
+      "undocumented_returns": []
+    },
+    "./tests/unit/test_example.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 2,
+      "total_classes": 2,
+      "documented_functions": 6,
+      "total_functions": 6,
+      "documented_parameters": 1,
+      "total_parameters": 1,
+      "documented_returns": 1,
+      "total_returns": 6,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [],
+      "undocumented_returns": [
+        "ExampleTest.setUp",
+        "ExampleTest.tearDown",
+        "ExampleTest.test_data_structure",
+        "ExampleTest.test_data_values",
+        "CalculationTest.test_calculate_sum"
+      ]
+    },
+    "./tests/unit/test_code_review.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 0,
+      "total_classes": 1,
+      "documented_functions": 0,
+      "total_functions": 5,
+      "documented_parameters": 0,
+      "total_parameters": 0,
+      "documented_returns": 0,
+      "total_returns": 0,
+      "undocumented_classes": [
+        "DataProcessor"
+      ],
+      "undocumented_functions": [
+        "calculate_sum",
+        "process_data",
+        "DataProcessor.__init__",
+        "DataProcessor.process",
+        "run_command"
+      ],
+      "undocumented_parameters": [],
+      "undocumented_returns": []
+    },
+    "./tests/unit/test_batch_processing.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 1,
+      "total_classes": 1,
+      "documented_functions": 16,
+      "total_functions": 16,
+      "documented_parameters": 0,
+      "total_parameters": 6,
+      "documented_returns": 0,
+      "total_returns": 4,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [
+        {
+          "function": "add",
+          "parameters": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "function": "multiply",
+          "parameters": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "function": "divide",
+          "parameters": [
+            "a",
+            "b"
+          ]
+        }
+      ],
+      "undocumented_returns": [
+        "TestBatchProcessing.setUp",
+        "add",
+        "multiply",
+        "divide"
+      ]
+    },
+    "./tests/unit/test_quality_enforcer.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 1,
+      "total_classes": 1,
+      "documented_functions": 7,
+      "total_functions": 7,
+      "documented_parameters": 0,
+      "total_parameters": 5,
+      "documented_returns": 0,
+      "total_returns": 0,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [
+        {
+          "function": "TestQualityEnforcer.test_run_component_checks",
+          "parameters": [
+            "mock_run_checks"
+          ]
+        },
+        {
+          "function": "TestQualityEnforcer.test_run_all_checks",
+          "parameters": [
+            "mock_structure",
+            "mock_documentation",
+            "mock_static_analysis",
+            "mock_code_style"
+          ]
+        }
+      ],
+      "undocumented_returns": []
+    },
+    "./tests/unit/test_resource_uri_validation.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 1,
+      "total_classes": 1,
+      "documented_functions": 7,
+      "total_functions": 7,
+      "documented_parameters": 0,
+      "total_parameters": 4,
+      "documented_returns": 0,
+      "total_returns": 0,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [
+        {
+          "function": "TestResourceUriValidation.test_access_resource_validates_uri",
+          "parameters": [
+            "mock_send_request",
+            "mock_ensure_capability"
+          ]
+        },
+        {
+          "function": "TestResourceUriValidation.test_subscribe_to_resource_validates_uri",
+          "parameters": [
+            "mock_send_request",
+            "mock_ensure_capability"
+          ]
+        }
+      ],
+      "undocumented_returns": []
+    },
+    "./tests/unit/test_error_scenarios.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 4,
+      "total_classes": 4,
+      "documented_functions": 22,
+      "total_functions": 22,
+      "documented_parameters": 0,
+      "total_parameters": 0,
+      "documented_returns": 0,
+      "total_returns": 0,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [],
+      "undocumented_returns": []
+    },
+    "./tests/chaos/test_quality_resilience.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 4,
+      "total_classes": 4,
+      "documented_functions": 13,
+      "total_functions": 16,
+      "documented_parameters": 0,
+      "total_parameters": 6,
+      "documented_returns": 0,
+      "total_returns": 1,
+      "undocumented_classes": [],
+      "undocumented_functions": [
+        "run_checks",
+        "fix_issues",
+        "update_kg"
+      ],
+      "undocumented_parameters": [
+        {
+          "function": "TestRandomConfigurationChanges.test_random_config_validation",
+          "parameters": [
+            "random_config"
+          ]
+        },
+        {
+          "function": "TestRandomConfigurationChanges.test_component_initialization_with_random_config",
+          "parameters": [
+            "random_config"
+          ]
+        },
+        {
+          "function": "TestRandomConfigurationChanges.test_config_change_during_operation",
+          "parameters": [
+            "random_config"
+          ]
+        },
+        {
+          "function": "TestUnexpectedFileSystemStates.test_missing_files",
+          "parameters": [
+            "temp_test_dir"
+          ]
+        },
+        {
+          "function": "TestUnexpectedFileSystemStates.test_permission_denied",
+          "parameters": [
+            "temp_test_dir"
+          ]
+        },
+        {
+          "function": "TestUnexpectedFileSystemStates.test_corrupted_files",
+          "parameters": [
+            "temp_test_dir"
+          ]
+        }
+      ],
+      "undocumented_returns": [
+        "TestRandomConfigurationChanges.random_config"
+      ]
+    },
+    "./tests/performance/test_quality_performance.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 5,
+      "total_classes": 5,
+      "documented_functions": 17,
+      "total_functions": 20,
+      "documented_parameters": 6,
+      "total_parameters": 24,
+      "documented_returns": 3,
+      "total_returns": 14,
+      "undocumented_classes": [],
+      "undocumented_functions": [
+        "mock_run_checks",
+        "mock_fix_issues",
+        "mock_update_kg"
+      ],
+      "undocumented_parameters": [
+        {
+          "function": "PerformanceMetrics.__init__",
+          "parameters": [
+            "name",
+            "baseline_path"
+          ]
+        },
+        {
+          "function": "PerformanceMetrics.start_timer",
+          "parameters": [
+            "operation"
+          ]
+        },
+        {
+          "function": "PerformanceMetrics.record_metric",
+          "parameters": [
+            "operation",
+            "metric",
+            "value"
+          ]
+        },
+        {
+          "function": "PerformanceMetrics.save_metrics",
+          "parameters": [
+            "output_path"
+          ]
+        },
+        {
+          "function": "PerformanceMetrics.generate_report",
+          "parameters": [
+            "output_path"
+          ]
+        },
+        {
+          "function": "TestQualityCheckPerformance.large_test_project",
+          "parameters": [
+            "temp_test_dir"
+          ]
+        },
+        {
+          "function": "TestQualityCheckPerformance.test_quality_check_performance",
+          "parameters": [
+            "large_test_project",
+            "performance_metrics"
+          ]
+        },
+        {
+          "function": "TestFixOperationsPerformance.test_fix_operations_performance",
+          "parameters": [
+            "temp_test_dir",
+            "performance_metrics"
+          ]
+        },
+        {
+          "function": "TestReportingPerformance.test_reporting_performance",
+          "parameters": [
+            "temp_test_dir",
+            "performance_metrics"
+          ]
+        },
+        {
+          "function": "TestPerformanceRegression.baseline_metrics",
+          "parameters": [
+            "temp_test_dir"
+          ]
+        },
+        {
+          "function": "TestPerformanceRegression.test_performance_regression_detection",
+          "parameters": [
+            "temp_test_dir",
+            "baseline_metrics"
+          ]
+        }
+      ],
+      "undocumented_returns": [
+        "PerformanceMetrics.start_timer",
+        "PerformanceMetrics.record_metric",
+        "PerformanceMetrics.save_metrics",
+        "PerformanceMetrics.generate_report",
+        "TestQualityCheckPerformance.performance_metrics",
+        "TestQualityCheckPerformance.large_test_project",
+        "TestQualityCheckPerformance.test_quality_check_performance",
+        "TestFixOperationsPerformance.performance_metrics",
+        "TestFixOperationsPerformance.test_fix_operations_performance",
+        "TestReportingPerformance.performance_metrics",
+        "TestPerformanceRegression.baseline_metrics"
+      ]
+    },
+    "./tests/utils/reporting.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 4,
+      "total_classes": 4,
+      "documented_functions": 16,
+      "total_functions": 16,
+      "documented_parameters": 24,
+      "total_parameters": 30,
+      "documented_returns": 10,
+      "total_returns": 12,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [
+        {
+          "function": "TestResultCollector.__init__",
+          "parameters": [
+            "output_dir"
+          ]
+        },
+        {
+          "function": "TestResultCollector.add_result",
+          "parameters": [
+            "test_name",
+            "result"
+          ]
+        },
+        {
+          "function": "PerformanceVisualizer.__init__",
+          "parameters": [
+            "output_dir"
+          ]
+        },
+        {
+          "function": "CoverageReporter.__init__",
+          "parameters": [
+            "output_dir"
+          ]
+        },
+        {
+          "function": "TestTrendAnalyzer.__init__",
+          "parameters": [
+            "output_dir"
+          ]
+        }
+      ],
+      "undocumented_returns": [
+        "TestResultCollector.start_test_run",
+        "TestResultCollector.add_result"
+      ]
+    },
+    "./tests/utils/__init__.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 0,
+      "total_classes": 0,
+      "documented_functions": 0,
+      "total_functions": 0,
+      "documented_parameters": 0,
+      "total_parameters": 0,
+      "documented_returns": 0,
+      "total_returns": 0,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [],
+      "undocumented_returns": []
+    },
+    "./tests/utils/fixtures.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 0,
+      "total_classes": 0,
+      "documented_functions": 5,
+      "total_functions": 5,
+      "documented_parameters": 0,
+      "total_parameters": 0,
+      "documented_returns": 3,
+      "total_returns": 5,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [],
+      "undocumented_returns": [
+        "temp_test_dir",
+        "temp_test_file"
+      ]
+    },
+    "./tests/integration/test_logging_integration.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 1,
+      "total_classes": 1,
+      "documented_functions": 6,
+      "total_functions": 7,
+      "documented_parameters": 0,
+      "total_parameters": 0,
+      "documented_returns": 0,
+      "total_returns": 0,
+      "undocumented_classes": [],
+      "undocumented_functions": [
+        "mock_makedirs"
+      ],
+      "undocumented_parameters": [],
+      "undocumented_returns": []
+    },
+    "./tests/integration/test_mcp_integration.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 2,
+      "total_classes": 2,
+      "documented_functions": 12,
+      "total_functions": 15,
+      "documented_parameters": 0,
+      "total_parameters": 0,
+      "documented_returns": 0,
+      "total_returns": 0,
+      "undocumented_classes": [],
+      "undocumented_functions": [
+        "callback",
+        "mock_list_resources",
+        "handle_jsonrpc_request_with_error"
+      ],
+      "undocumented_parameters": [],
+      "undocumented_returns": []
+    },
+    "./examples/batch_processing_example.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 0,
+      "total_classes": 0,
+      "documented_functions": 8,
+      "total_functions": 8,
+      "documented_parameters": 0,
+      "total_parameters": 12,
+      "documented_returns": 1,
+      "total_returns": 4,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [
+        {
+          "function": "demonstrate_individual_requests",
+          "parameters": [
+            "client",
+            "server_id"
+          ]
+        },
+        {
+          "function": "demonstrate_batch_requests",
+          "parameters": [
+            "client",
+            "server_id"
+          ]
+        },
+        {
+          "function": "demonstrate_error_handling",
+          "parameters": [
+            "client",
+            "server_id"
+          ]
+        },
+        {
+          "function": "add",
+          "parameters": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "function": "multiply",
+          "parameters": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "function": "divide",
+          "parameters": [
+            "a",
+            "b"
+          ]
+        }
+      ],
+      "undocumented_returns": [
+        "add",
+        "multiply",
+        "divide"
+      ]
+    },
+    "./examples/resource_streaming_example.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 0,
+      "total_classes": 0,
+      "documented_functions": 6,
+      "total_functions": 6,
+      "documented_parameters": 0,
+      "total_parameters": 9,
+      "documented_returns": 0,
+      "total_returns": 1,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [
+        {
+          "function": "demonstrate_basic_resource_access",
+          "parameters": [
+            "client",
+            "server_id"
+          ]
+        },
+        {
+          "function": "demonstrate_range_requests",
+          "parameters": [
+            "client",
+            "server_id"
+          ]
+        },
+        {
+          "function": "demonstrate_streaming",
+          "parameters": [
+            "client",
+            "server_id"
+          ]
+        },
+        {
+          "function": "demonstrate_compression",
+          "parameters": [
+            "client",
+            "server_id",
+            "file_provider"
+          ]
+        }
+      ],
+      "undocumented_returns": [
+        "setup_example_environment"
+      ]
+    },
+    "./examples/mcp_client_usage_example.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 0,
+      "total_classes": 0,
+      "documented_functions": 2,
+      "total_functions": 3,
+      "documented_parameters": 0,
+      "total_parameters": 2,
+      "documented_returns": 0,
+      "total_returns": 1,
+      "undocumented_classes": [],
+      "undocumented_functions": [
+        "resource_update_callback"
+      ],
+      "undocumented_parameters": [
+        {
+          "function": "demonstrate_server_interaction",
+          "parameters": [
+            "client",
+            "server_id"
+          ]
+        }
+      ],
+      "undocumented_returns": [
+        "main"
+      ]
+    },
+    "./examples/mcp_client_example.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 0,
+      "total_classes": 0,
+      "documented_functions": 2,
+      "total_functions": 2,
+      "documented_parameters": 0,
+      "total_parameters": 1,
+      "documented_returns": 0,
+      "total_returns": 1,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [
+        {
+          "function": "resource_update_callback",
+          "parameters": [
+            "update_data"
+          ]
+        }
+      ],
+      "undocumented_returns": [
+        "resource_update_callback"
+      ]
+    },
+    "./examples/logging_example.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 0,
+      "total_classes": 0,
+      "documented_functions": 1,
+      "total_functions": 1,
+      "documented_parameters": 0,
+      "total_parameters": 0,
+      "documented_returns": 0,
+      "total_returns": 0,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [],
+      "undocumented_returns": []
+    },
+    "./services/mcp-server/src/mcp.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 13,
+      "total_classes": 13,
+      "documented_functions": 35,
+      "total_functions": 36,
+      "documented_parameters": 26,
+      "total_parameters": 60,
+      "documented_returns": 12,
+      "total_returns": 24,
+      "undocumented_classes": [],
+      "undocumented_functions": [
+        "decorator"
+      ],
+      "undocumented_parameters": [
+        {
+          "function": "Client.create",
+          "parameters": [
+            "client_id"
+          ]
+        },
+        {
+          "function": "Host.__init__",
+          "parameters": [
+            "host_id"
+          ]
+        },
+        {
+          "function": "Host.register_server",
+          "parameters": [
+            "server_id",
+            "server_info"
+          ]
+        },
+        {
+          "function": "Host.unregister_server",
+          "parameters": [
+            "server_id"
+          ]
+        },
+        {
+          "function": "Host.register_client",
+          "parameters": [
+            "client_id",
+            "client_info"
+          ]
+        },
+        {
+          "function": "Host.unregister_client",
+          "parameters": [
+            "client_id"
+          ]
+        },
+        {
+          "function": "Server.__init__",
+          "parameters": [
+            "server_id"
+          ]
+        },
+        {
+          "function": "Server.register_tool",
+          "parameters": [
+            "tool_func"
+          ]
+        },
+        {
+          "function": "Server.register_resource_provider",
+          "parameters": [
+            "provider_name",
+            "provider_instance"
+          ]
+        },
+        {
+          "function": "Resource.create",
+          "parameters": [
+            "uri",
+            "content",
+            "metadata"
+          ]
+        },
+        {
+          "function": "Tool.create",
+          "parameters": [
+            "name",
+            "func",
+            "description",
+            "input_schema"
+          ]
+        },
+        {
+          "function": "Consent.create_manager",
+          "parameters": [
+            "config"
+          ]
+        },
+        {
+          "function": "Context.create_manager",
+          "parameters": [
+            "config"
+          ]
+        },
+        {
+          "function": "Authentication.create_provider",
+          "parameters": [
+            "config"
+          ]
+        },
+        {
+          "function": "Capability.create",
+          "parameters": [
+            "name",
+            "version",
+            "features"
+          ]
+        },
+        {
+          "function": "JsonRpcRequest.__init__",
+          "parameters": [
+            "method",
+            "params",
+            "request_id"
+          ]
+        },
+        {
+          "function": "JsonRpcResponse.__init__",
+          "parameters": [
+            "request_id",
+            "result",
+            "error"
+          ]
+        },
+        {
+          "function": "JsonRpcError.__init__",
+          "parameters": [
+            "code",
+            "message",
+            "data"
+          ]
+        }
+      ],
+      "undocumented_returns": [
+        "Client.create",
+        "Host.get_available_servers",
+        "Host.get_registered_clients",
+        "Resource.create",
+        "Tool.create",
+        "Consent.create_manager",
+        "Context.create_manager",
+        "Authentication.create_provider",
+        "Capability.create",
+        "JsonRpcRequest.to_dict",
+        "JsonRpcResponse.to_dict",
+        "JsonRpcError.to_dict"
+      ]
+    },
+    "./services/mcp-server/src/app.py": {
+      "has_module_docstring": false,
+      "documented_modules": 0,
+      "total_modules": 1,
+      "documented_classes": 0,
+      "total_classes": 2,
+      "documented_functions": 5,
+      "total_functions": 8,
+      "documented_parameters": 1,
+      "total_parameters": 6,
+      "documented_returns": 1,
+      "total_returns": 5,
+      "undocumented_classes": [
+        "InferRequest",
+        "InferResponse"
+      ],
+      "undocumented_functions": [
+        "get_prompt_processor",
+        "get_llm_client",
+        "get_example_service"
+      ],
+      "undocumented_parameters": [
+        {
+          "function": "mcp_infer",
+          "parameters": [
+            "request",
+            "prompt_processor",
+            "llm_client"
+          ]
+        },
+        {
+          "function": "example_info",
+          "parameters": [
+            "example_service"
+          ]
+        },
+        {
+          "function": "example_process",
+          "parameters": [
+            "example_service"
+          ]
+        }
+      ],
+      "undocumented_returns": [
+        "mcp_infer",
+        "health_check",
+        "system_info",
+        "example_info"
+      ]
+    },
+    "./services/mcp-server/src/mcp_server.py": {
+      "has_module_docstring": false,
+      "documented_modules": 0,
+      "total_modules": 1,
+      "documented_classes": 0,
+      "total_classes": 2,
+      "documented_functions": 3,
+      "total_functions": 4,
+      "documented_parameters": 0,
+      "total_parameters": 1,
+      "documented_returns": 0,
+      "total_returns": 3,
+      "undocumented_classes": [
+        "InferRequest",
+        "InferResponse"
+      ],
+      "undocumented_functions": [
+        "process_prompt"
+      ],
+      "undocumented_parameters": [
+        {
+          "function": "mcp_infer",
+          "parameters": [
+            "request"
+          ]
+        }
+      ],
+      "undocumented_returns": [
+        "mcp_infer",
+        "health_check",
+        "system_info"
+      ]
+    },
+    "./services/mcp-server/src/persistence/__init__.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 0,
+      "total_classes": 0,
+      "documented_functions": 0,
+      "total_functions": 0,
+      "documented_parameters": 0,
+      "total_parameters": 0,
+      "documented_returns": 0,
+      "total_returns": 0,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [],
+      "undocumented_returns": []
+    },
+    "./services/mcp-server/src/persistence/models.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 9,
+      "total_classes": 9,
+      "documented_functions": 11,
+      "total_functions": 11,
+      "documented_parameters": 0,
+      "total_parameters": 6,
+      "documented_returns": 0,
+      "total_returns": 11,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [
+        {
+          "function": "Server.from_dict",
+          "parameters": [
+            "data"
+          ]
+        },
+        {
+          "function": "Client.from_dict",
+          "parameters": [
+            "data"
+          ]
+        },
+        {
+          "function": "Tool.from_dict",
+          "parameters": [
+            "data",
+            "server_id"
+          ]
+        },
+        {
+          "function": "Resource.from_dict",
+          "parameters": [
+            "data",
+            "server_id"
+          ]
+        }
+      ],
+      "undocumented_returns": [
+        "Server.to_dict",
+        "Server.from_dict",
+        "Client.to_dict",
+        "Client.from_dict",
+        "Tool.to_dict",
+        "Tool.from_dict",
+        "Resource.to_dict",
+        "Resource.from_dict",
+        "Subscription.to_dict",
+        "Session.to_dict",
+        "Consent.to_dict"
+      ]
+    },
+    "./services/mcp-server/src/persistence/database.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 0,
+      "total_classes": 0,
+      "documented_functions": 4,
+      "total_functions": 4,
+      "documented_parameters": 1,
+      "total_parameters": 1,
+      "documented_returns": 3,
+      "total_returns": 4,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [],
+      "undocumented_returns": [
+        "db_session"
+      ]
+    },
+    "./services/mcp-server/src/host/__init__.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 0,
+      "total_classes": 0,
+      "documented_functions": 0,
+      "total_functions": 0,
+      "documented_parameters": 0,
+      "total_parameters": 0,
+      "documented_returns": 0,
+      "total_returns": 0,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [],
+      "undocumented_returns": []
+    },
+    "./services/mcp-server/src/examples/client_example.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 0,
+      "total_classes": 0,
+      "documented_functions": 4,
+      "total_functions": 4,
+      "documented_parameters": 0,
+      "total_parameters": 2,
+      "documented_returns": 0,
+      "total_returns": 2,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [
+        {
+          "function": "create_test_server",
+          "parameters": [
+            "logger"
+          ]
+        },
+        {
+          "function": "resource_update_callback",
+          "parameters": [
+            "update_data"
+          ]
+        }
+      ],
+      "undocumented_returns": [
+        "setup_logging",
+        "create_test_server"
+      ]
+    },
+    "./services/mcp-server/src/services/prompt_processor.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 1,
+      "total_classes": 1,
+      "documented_functions": 2,
+      "total_functions": 2,
+      "documented_parameters": 1,
+      "total_parameters": 3,
+      "documented_returns": 1,
+      "total_returns": 1,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [
+        {
+          "function": "PromptProcessor.__init__",
+          "parameters": [
+            "logger",
+            "shell_command_executor"
+          ]
+        }
+      ],
+      "undocumented_returns": []
+    },
+    "./services/mcp-server/src/services/example_service.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 1,
+      "total_classes": 1,
+      "documented_functions": 3,
+      "total_functions": 3,
+      "documented_parameters": 1,
+      "total_parameters": 3,
+      "documented_returns": 2,
+      "total_returns": 2,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [
+        {
+          "function": "ExampleService.__init__",
+          "parameters": [
+            "logger",
+            "config"
+          ]
+        }
+      ],
+      "undocumented_returns": []
+    },
+    "./services/mcp-server/src/services/__init__.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 0,
+      "total_classes": 0,
+      "documented_functions": 0,
+      "total_functions": 0,
+      "documented_parameters": 0,
+      "total_parameters": 0,
+      "documented_returns": 0,
+      "total_returns": 0,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [],
+      "undocumented_returns": []
+    },
+    "./services/mcp-server/src/client/interfaces.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 4,
+      "total_classes": 4,
+      "documented_functions": 22,
+      "total_functions": 22,
+      "documented_parameters": 36,
+      "total_parameters": 43,
+      "documented_returns": 19,
+      "total_returns": 22,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [
+        {
+          "function": "IClient.send_notification_to_server",
+          "parameters": [
+            "server_id",
+            "method",
+            "params"
+          ]
+        },
+        {
+          "function": "IClient.handle_resource_update",
+          "parameters": [
+            "subscription_id",
+            "update_data"
+          ]
+        },
+        {
+          "function": "IResourceSubscriber.handle_update",
+          "parameters": [
+            "subscription_id",
+            "update_data"
+          ]
+        }
+      ],
+      "undocumented_returns": [
+        "IClient.send_notification_to_server",
+        "IClient.handle_resource_update",
+        "IResourceSubscriber.handle_update"
+      ]
+    },
+    "./services/mcp-server/src/client/client.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 1,
+      "total_classes": 1,
+      "documented_functions": 19,
+      "total_functions": 19,
+      "documented_parameters": 33,
+      "total_parameters": 39,
+      "documented_returns": 15,
+      "total_returns": 18,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [
+        {
+          "function": "MCPClient.__init__",
+          "parameters": [
+            "logger",
+            "config",
+            "mcp_client",
+            "tool_proxy_manager",
+            "resource_subscriber",
+            "capability_negotiator"
+          ]
+        }
+      ],
+      "undocumented_returns": [
+        "MCPClient.send_notification_to_server",
+        "MCPClient._ensure_capability_negotiation",
+        "MCPClient.handle_resource_update"
+      ]
+    },
+    "./services/mcp-server/src/client/__init__.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 0,
+      "total_classes": 0,
+      "documented_functions": 0,
+      "total_functions": 0,
+      "documented_parameters": 0,
+      "total_parameters": 0,
+      "documented_returns": 0,
+      "total_returns": 0,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [],
+      "undocumented_returns": []
+    },
+    "./services/mcp-server/src/client/json_rpc_client.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 2,
+      "total_classes": 2,
+      "documented_functions": 8,
+      "total_functions": 8,
+      "documented_parameters": 9,
+      "total_parameters": 16,
+      "documented_returns": 5,
+      "total_returns": 6,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [
+        {
+          "function": "JsonRpcClient.__init__",
+          "parameters": [
+            "client_id",
+            "transport"
+          ]
+        },
+        {
+          "function": "JsonRpcClient.notify",
+          "parameters": [
+            "method",
+            "params"
+          ]
+        },
+        {
+          "function": "JsonRpcError.__init__",
+          "parameters": [
+            "code",
+            "message",
+            "data"
+          ]
+        }
+      ],
+      "undocumented_returns": [
+        "JsonRpcClient.notify"
+      ]
+    },
+    "./services/mcp-server/src/client/resource_subscriber.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 1,
+      "total_classes": 1,
+      "documented_functions": 6,
+      "total_functions": 6,
+      "documented_parameters": 8,
+      "total_parameters": 9,
+      "documented_returns": 3,
+      "total_returns": 5,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [
+        {
+          "function": "ResourceSubscriberManager.__init__",
+          "parameters": [
+            "client"
+          ]
+        }
+      ],
+      "undocumented_returns": [
+        "ResourceSubscriberManager.handle_update",
+        "ResourceSubscriberManager._ensure_capability_negotiation"
+      ]
+    },
+    "./services/mcp-server/src/client/capability_negotiator.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 1,
+      "total_classes": 1,
+      "documented_functions": 3,
+      "total_functions": 3,
+      "documented_parameters": 2,
+      "total_parameters": 3,
+      "documented_returns": 2,
+      "total_returns": 2,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [
+        {
+          "function": "CapabilityNegotiator.__init__",
+          "parameters": [
+            "client"
+          ]
+        }
+      ],
+      "undocumented_returns": []
+    },
+    "./services/mcp-server/src/di/__init__.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 0,
+      "total_classes": 0,
+      "documented_functions": 0,
+      "total_functions": 0,
+      "documented_parameters": 0,
+      "total_parameters": 0,
+      "documented_returns": 0,
+      "total_returns": 0,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [],
+      "undocumented_returns": []
+    },
+    "./services/mcp-server/src/di/providers.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 7,
+      "total_classes": 7,
+      "documented_functions": 11,
+      "total_functions": 11,
+      "documented_parameters": 16,
+      "total_parameters": 21,
+      "documented_returns": 10,
+      "total_returns": 10,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [
+        {
+          "function": "LLMClient.__init__",
+          "parameters": [
+            "host",
+            "port",
+            "model",
+            "timeout",
+            "logger"
+          ]
+        }
+      ],
+      "undocumented_returns": []
+    },
+    "./services/mcp-server/src/di/containers.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 1,
+      "total_classes": 1,
+      "documented_functions": 0,
+      "total_functions": 0,
+      "documented_parameters": 0,
+      "total_parameters": 0,
+      "documented_returns": 0,
+      "total_returns": 0,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [],
+      "undocumented_returns": []
+    },
+    "./services/mcp-server/src/modelcontextprotocol/__init__.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 0,
+      "total_classes": 0,
+      "documented_functions": 0,
+      "total_functions": 0,
+      "documented_parameters": 0,
+      "total_parameters": 0,
+      "documented_returns": 0,
+      "total_returns": 0,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [],
+      "undocumented_returns": []
+    },
+    "./services/mcp-server/src/modelcontextprotocol/json_rpc_validator.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 1,
+      "total_classes": 1,
+      "documented_functions": 8,
+      "total_functions": 8,
+      "documented_parameters": 13,
+      "total_parameters": 13,
+      "documented_returns": 8,
+      "total_returns": 8,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [],
+      "undocumented_returns": []
+    },
+    "./services/mcp-server/src/server/__init__.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 0,
+      "total_classes": 0,
+      "documented_functions": 0,
+      "total_functions": 0,
+      "documented_parameters": 0,
+      "total_parameters": 0,
+      "documented_returns": 0,
+      "total_returns": 0,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [],
+      "undocumented_returns": []
+    },
+    "./services/mcp-server/src/server/json_rpc_server.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 1,
+      "total_classes": 1,
+      "documented_functions": 5,
+      "total_functions": 5,
+      "documented_parameters": 3,
+      "total_parameters": 6,
+      "documented_returns": 3,
+      "total_returns": 3,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [
+        {
+          "function": "JsonRpcServer.__init__",
+          "parameters": [
+            "server_id"
+          ]
+        },
+        {
+          "function": "JsonRpcServer.register_method",
+          "parameters": [
+            "method_name",
+            "handler"
+          ]
+        }
+      ],
+      "undocumented_returns": []
+    },
+    "./services/mcp-server/src/server/resources/__init__.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 0,
+      "total_classes": 0,
+      "documented_functions": 0,
+      "total_functions": 0,
+      "documented_parameters": 0,
+      "total_parameters": 0,
+      "documented_returns": 0,
+      "total_returns": 0,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [],
+      "undocumented_returns": []
+    },
+    "./services/mcp-server/src/server/resources/file_resource.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 1,
+      "total_classes": 1,
+      "documented_functions": 14,
+      "total_functions": 14,
+      "documented_parameters": 20,
+      "total_parameters": 25,
+      "documented_returns": 12,
+      "total_returns": 13,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [
+        {
+          "function": "FileResourceProvider.__init__",
+          "parameters": [
+            "base_path",
+            "config"
+          ]
+        },
+        {
+          "function": "FileResourceProvider.read_resource_stream",
+          "parameters": [
+            "compress"
+          ]
+        },
+        {
+          "function": "FileResourceProvider._cache_resource",
+          "parameters": [
+            "uri",
+            "data"
+          ]
+        }
+      ],
+      "undocumented_returns": [
+        "FileResourceProvider._cache_resource"
+      ]
+    },
+    "./services/mcp-server/src/server/tools/__init__.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 0,
+      "total_classes": 0,
+      "documented_functions": 0,
+      "total_functions": 0,
+      "documented_parameters": 0,
+      "total_parameters": 0,
+      "documented_returns": 0,
+      "total_returns": 0,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [],
+      "undocumented_returns": []
+    },
+    "./services/mcp-server/src/server/tools/shell/__init__.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 0,
+      "total_classes": 0,
+      "documented_functions": 0,
+      "total_functions": 0,
+      "documented_parameters": 0,
+      "total_parameters": 0,
+      "documented_returns": 0,
+      "total_returns": 0,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [],
+      "undocumented_returns": []
+    },
+    "./services/mcp-server/src/server/tools/shell/command.py": {
+      "has_module_docstring": false,
+      "documented_modules": 0,
+      "total_modules": 1,
+      "documented_classes": 0,
+      "total_classes": 0,
+      "documented_functions": 1,
+      "total_functions": 1,
+      "documented_parameters": 2,
+      "total_parameters": 2,
+      "documented_returns": 1,
+      "total_returns": 1,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [],
+      "undocumented_returns": []
+    },
+    "./services/mcp-server/src/tools/shell/command.py": {
+      "has_module_docstring": false,
+      "documented_modules": 0,
+      "total_modules": 1,
+      "documented_classes": 0,
+      "total_classes": 0,
+      "documented_functions": 1,
+      "total_functions": 1,
+      "documented_parameters": 2,
+      "total_parameters": 2,
+      "documented_returns": 1,
+      "total_returns": 1,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [],
+      "undocumented_returns": []
+    },
+    "./core/quality/dashboard.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 1,
+      "total_classes": 1,
+      "documented_functions": 20,
+      "total_functions": 20,
+      "documented_parameters": 2,
+      "total_parameters": 5,
+      "documented_returns": 6,
+      "total_returns": 19,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [
+        {
+          "function": "QualityMetricsDashboard.run",
+          "parameters": [
+            "host",
+            "port",
+            "debug"
+          ]
+        }
+      ],
+      "undocumented_returns": [
+        "QualityMetricsDashboard._ensure_directories",
+        "QualityMetricsDashboard._setup_routes",
+        "QualityMetricsDashboard.run",
+        "QualityMetricsDashboard._generate_dashboard_files",
+        "QualityMetricsDashboard._generate_index_template",
+        "QualityMetricsDashboard._generate_css",
+        "QualityMetricsDashboard._generate_js",
+        "index",
+        "get_metrics",
+        "get_trends",
+        "get_components",
+        "get_improvements",
+        "run_checks"
+      ]
+    },
+    "./core/quality/components/interactive.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 2,
+      "total_classes": 2,
+      "documented_functions": 12,
+      "total_functions": 12,
+      "documented_parameters": 6,
+      "total_parameters": 16,
+      "documented_returns": 5,
+      "total_returns": 11,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [
+        {
+          "function": "InteractiveFixMode.__init__",
+          "parameters": [
+            "results"
+          ]
+        },
+        {
+          "function": "InteractiveFixMode._process_component",
+          "parameters": [
+            "component",
+            "results"
+          ]
+        },
+        {
+          "function": "InteractiveFixMode._process_file",
+          "parameters": [
+            "file_path",
+            "results"
+          ]
+        },
+        {
+          "function": "InteractiveFixMode._process_check",
+          "parameters": [
+            "check_id",
+            "results"
+          ]
+        },
+        {
+          "function": "InteractiveFixMode._preview_fixes",
+          "parameters": [
+            "check_id",
+            "results"
+          ]
+        },
+        {
+          "function": "InteractiveFixMode._customize_fix_options",
+          "parameters": [
+            "check_id"
+          ]
+        }
+      ],
+      "undocumented_returns": [
+        "InteractiveFixMode._initialize_fix_options",
+        "InteractiveFixMode._process_component",
+        "InteractiveFixMode._process_file",
+        "InteractiveFixMode._process_check",
+        "InteractiveFixMode._preview_fixes",
+        "InteractiveFixMode._customize_fix_options"
+      ]
+    },
+    "./core/quality/components/documentation.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 4,
+      "total_classes": 4,
+      "documented_functions": 11,
+      "total_functions": 22,
+      "documented_parameters": 3,
+      "total_parameters": 8,
+      "documented_returns": 3,
+      "total_returns": 11,
+      "undocumented_classes": [],
+      "undocumented_functions": [
+        "DocstringCheck.id",
+        "DocstringCheck.name",
+        "DocstringCheck.description",
+        "ReadmeCheck.id",
+        "ReadmeCheck.name",
+        "ReadmeCheck.description",
+        "DocumentationCoverageCheck.id",
+        "DocumentationCoverageCheck.name",
+        "DocumentationCoverageCheck.description",
+        "DocumentationComponent.name",
+        "DocumentationComponent.description"
+      ],
+      "undocumented_parameters": [
+        {
+          "function": "DocstringCheck._has_module_docstring",
+          "parameters": [
+            "content"
+          ]
+        },
+        {
+          "function": "DocstringCheck._has_docstring_after",
+          "parameters": [
+            "content",
+            "pos"
+          ]
+        },
+        {
+          "function": "DocumentationCoverageCheck._is_code_directory",
+          "parameters": [
+            "dir_path"
+          ]
+        },
+        {
+          "function": "DocumentationCoverageCheck._has_documentation",
+          "parameters": [
+            "dir_path"
+          ]
+        }
+      ],
+      "undocumented_returns": [
+        "DocstringCheck._has_module_docstring",
+        "DocstringCheck._has_docstring_after",
+        "DocstringCheck._find_python_files",
+        "ReadmeCheck._find_important_directories",
+        "DocumentationCoverageCheck._find_code_directories",
+        "DocumentationCoverageCheck._is_code_directory",
+        "DocumentationCoverageCheck._has_documentation",
+        "DocumentationComponent._initialize_checks"
+      ]
+    },
+    "./core/quality/components/code_style.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 4,
+      "total_classes": 4,
+      "documented_functions": 9,
+      "total_functions": 22,
+      "documented_parameters": 5,
+      "total_parameters": 5,
+      "documented_returns": 5,
+      "total_returns": 9,
+      "undocumented_classes": [],
+      "undocumented_functions": [
+        "BlackCheck.id",
+        "BlackCheck.name",
+        "BlackCheck.description",
+        "BlackCheck.can_fix",
+        "IsortCheck.id",
+        "IsortCheck.name",
+        "IsortCheck.description",
+        "IsortCheck.can_fix",
+        "LineEndingCheck.id",
+        "LineEndingCheck.name",
+        "LineEndingCheck.description",
+        "CodeStyleComponent.name",
+        "CodeStyleComponent.description"
+      ],
+      "undocumented_parameters": [],
+      "undocumented_returns": [
+        "BlackCheck._find_python_files",
+        "IsortCheck._find_python_files",
+        "LineEndingCheck._find_text_files",
+        "CodeStyleComponent._initialize_checks"
+      ]
+    },
+    "./core/quality/components/preview.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 1,
+      "total_classes": 1,
+      "documented_functions": 8,
+      "total_functions": 8,
+      "documented_parameters": 12,
+      "total_parameters": 14,
+      "documented_returns": 7,
+      "total_returns": 8,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [
+        {
+          "function": "FixPreview._apply_fixes_to_temp_file",
+          "parameters": [
+            "temp_file_path",
+            "results"
+          ]
+        }
+      ],
+      "undocumented_returns": [
+        "FixPreview._apply_fixes_to_temp_file"
+      ]
+    },
+    "./core/quality/components/base.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 5,
+      "total_classes": 5,
+      "documented_functions": 27,
+      "total_functions": 27,
+      "documented_parameters": 6,
+      "total_parameters": 12,
+      "documented_returns": 8,
+      "total_returns": 26,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [
+        {
+          "function": "QualityComponent.__init__",
+          "parameters": [
+            "name",
+            "config"
+          ]
+        },
+        {
+          "function": "QualityCheckRegistry.register_check",
+          "parameters": [
+            "check_class"
+          ]
+        },
+        {
+          "function": "QualityCheckRegistry.register_component",
+          "parameters": [
+            "component_class"
+          ]
+        },
+        {
+          "function": "QualityCheckRegistry.discover_plugins",
+          "parameters": [
+            "plugin_dirs"
+          ]
+        },
+        {
+          "function": "QualityCheckRegistry._discover_plugins_in_dir",
+          "parameters": [
+            "plugin_dir"
+          ]
+        }
+      ],
+      "undocumented_returns": [
+        "QualityCheckResult.__str__",
+        "QualityCheck.id",
+        "QualityCheck.name",
+        "QualityCheck.description",
+        "QualityCheck.enabled",
+        "QualityCheck.severity",
+        "QualityCheck.can_fix",
+        "QualityComponent.name",
+        "QualityComponent.description",
+        "QualityComponent._initialize_checks",
+        "QualityComponent.checks",
+        "QualityComponent.get_enabled_checks",
+        "QualityCheckRegistry.__new__",
+        "QualityCheckRegistry.register_check",
+        "QualityCheckRegistry.register_component",
+        "QualityCheckRegistry.discover_plugins",
+        "QualityCheckRegistry._discover_plugins_in_dir",
+        "QualityCheckRegistry.initialize"
+      ]
+    },
+    "./core/quality/components/structure.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 6,
+      "total_classes": 6,
+      "documented_functions": 15,
+      "total_functions": 32,
+      "documented_parameters": 5,
+      "total_parameters": 14,
+      "documented_returns": 6,
+      "total_returns": 15,
+      "undocumented_classes": [],
+      "undocumented_functions": [
+        "DirectoryStructureCheck.id",
+        "DirectoryStructureCheck.name",
+        "DirectoryStructureCheck.description",
+        "FileNamingCheck.id",
+        "FileNamingCheck.name",
+        "FileNamingCheck.description",
+        "ImportOrganizationCheck.id",
+        "ImportOrganizationCheck.name",
+        "ImportOrganizationCheck.description",
+        "CircularDependencyCheck.id",
+        "CircularDependencyCheck.name",
+        "CircularDependencyCheck.description",
+        "FileStructureCheck.id",
+        "FileStructureCheck.name",
+        "FileStructureCheck.description",
+        "StructureComponent.name",
+        "StructureComponent.description"
+      ],
+      "undocumented_parameters": [
+        {
+          "function": "ImportOrganizationCheck._group_imports",
+          "parameters": [
+            "import_lines"
+          ]
+        },
+        {
+          "function": "ImportOrganizationCheck._get_import_group",
+          "parameters": [
+            "import_line"
+          ]
+        },
+        {
+          "function": "CircularDependencyCheck._find_cycles",
+          "parameters": [
+            "module",
+            "graph",
+            "visited",
+            "path",
+            "results",
+            "file_to_module"
+          ]
+        },
+        {
+          "function": "CircularDependencyCheck._file_path_to_module_name",
+          "parameters": [
+            "file_path"
+          ]
+        }
+      ],
+      "undocumented_returns": [
+        "FileNamingCheck._find_all_files",
+        "ImportOrganizationCheck._group_imports",
+        "ImportOrganizationCheck._get_import_group",
+        "ImportOrganizationCheck._get_stdlib_modules",
+        "ImportOrganizationCheck._find_python_files",
+        "CircularDependencyCheck._find_cycles",
+        "CircularDependencyCheck._file_path_to_module_name",
+        "CircularDependencyCheck._find_python_files",
+        "StructureComponent._initialize_checks"
+      ]
+    },
+    "./core/quality/components/verification.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 1,
+      "total_classes": 1,
+      "documented_functions": 8,
+      "total_functions": 8,
+      "documented_parameters": 16,
+      "total_parameters": 16,
+      "documented_returns": 6,
+      "total_returns": 7,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [],
+      "undocumented_returns": [
+        "FixVerification.cleanup_backups"
+      ]
+    },
+    "./core/quality/components/static_analysis.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 5,
+      "total_classes": 5,
+      "documented_functions": 9,
+      "total_functions": 23,
+      "documented_parameters": 4,
+      "total_parameters": 4,
+      "documented_returns": 4,
+      "total_returns": 9,
+      "undocumented_classes": [],
+      "undocumented_functions": [
+        "MypyCheck.id",
+        "MypyCheck.name",
+        "MypyCheck.description",
+        "PylintCheck.id",
+        "PylintCheck.name",
+        "PylintCheck.description",
+        "Flake8Check.id",
+        "Flake8Check.name",
+        "Flake8Check.description",
+        "ShellcheckCheck.id",
+        "ShellcheckCheck.name",
+        "ShellcheckCheck.description",
+        "StaticAnalysisComponent.name",
+        "StaticAnalysisComponent.description"
+      ],
+      "undocumented_parameters": [],
+      "undocumented_returns": [
+        "MypyCheck._find_python_files",
+        "PylintCheck._find_python_files",
+        "Flake8Check._find_python_files",
+        "ShellcheckCheck._find_shell_scripts",
+        "StaticAnalysisComponent._initialize_checks"
+      ]
+    },
+    "./core/quality/components/documentation_coverage.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 1,
+      "total_classes": 1,
+      "documented_functions": 13,
+      "total_functions": 13,
+      "documented_parameters": 20,
+      "total_parameters": 22,
+      "documented_returns": 10,
+      "total_returns": 13,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [
+        {
+          "function": "EnhancedDocumentationCoverageCheck._calculate_coverage_percentages",
+          "parameters": [
+            "metrics"
+          ]
+        },
+        {
+          "function": "EnhancedDocumentationCoverageCheck._export_metrics",
+          "parameters": [
+            "metrics"
+          ]
+        }
+      ],
+      "undocumented_returns": [
+        "EnhancedDocumentationCoverageCheck._calculate_coverage_percentages",
+        "EnhancedDocumentationCoverageCheck._export_metrics",
+        "EnhancedDocumentationCoverageCheck._find_python_files"
+      ]
+    },
+    "./core/quality/components/fixes/documentation.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 1,
+      "total_classes": 1,
+      "documented_functions": 6,
+      "total_functions": 6,
+      "documented_parameters": 7,
+      "total_parameters": 7,
+      "documented_returns": 6,
+      "total_returns": 6,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [],
+      "undocumented_returns": []
+    },
+    "./core/quality/components/fixes/code_style.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 1,
+      "total_classes": 1,
+      "documented_functions": 5,
+      "total_functions": 5,
+      "documented_parameters": 6,
+      "total_parameters": 6,
+      "documented_returns": 5,
+      "total_returns": 5,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [],
+      "undocumented_returns": []
+    },
+    "./core/quality/components/fixes/structure.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 1,
+      "total_classes": 1,
+      "documented_functions": 6,
+      "total_functions": 6,
+      "documented_parameters": 8,
+      "total_parameters": 8,
+      "documented_returns": 6,
+      "total_returns": 6,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [],
+      "undocumented_returns": []
+    },
+    "./core/quality/components/fixes/file_structure_validator.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 1,
+      "total_classes": 1,
+      "documented_functions": 5,
+      "total_functions": 5,
+      "documented_parameters": 2,
+      "total_parameters": 2,
+      "documented_returns": 5,
+      "total_returns": 5,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [],
+      "undocumented_returns": []
+    },
+    "./core/quality/components/fixes/static_analysis.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 1,
+      "total_classes": 1,
+      "documented_functions": 5,
+      "total_functions": 5,
+      "documented_parameters": 5,
+      "total_parameters": 5,
+      "documented_returns": 5,
+      "total_returns": 5,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [],
+      "undocumented_returns": []
+    },
+    "./core/config/loader.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 0,
+      "total_classes": 0,
+      "documented_functions": 6,
+      "total_functions": 6,
+      "documented_parameters": 4,
+      "total_parameters": 4,
+      "documented_returns": 5,
+      "total_returns": 5,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [],
+      "undocumented_returns": []
+    },
+    "./core/documentation/generator.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 1,
+      "total_classes": 1,
+      "documented_functions": 7,
+      "total_functions": 7,
+      "documented_parameters": 10,
+      "total_parameters": 11,
+      "documented_returns": 5,
+      "total_returns": 6,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [
+        {
+          "function": "DocumentationGenerator.__init__",
+          "parameters": [
+            "config"
+          ]
+        }
+      ],
+      "undocumented_returns": [
+        "DocumentationGenerator._load_config"
+      ]
+    },
+    "./core/kg/scripts/record_logging_system.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 0,
+      "total_classes": 0,
+      "documented_functions": 11,
+      "total_functions": 11,
+      "documented_parameters": 0,
+      "total_parameters": 31,
+      "documented_returns": 0,
+      "total_returns": 10,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [
+        {
+          "function": "save_knowledge_graph",
+          "parameters": [
+            "nx_graph",
+            "rdf_graph"
+          ]
+        },
+        {
+          "function": "add_logging_system_component",
+          "parameters": [
+            "nx_graph",
+            "rdf_graph"
+          ]
+        },
+        {
+          "function": "add_logging_module",
+          "parameters": [
+            "nx_graph",
+            "rdf_graph",
+            "module_id",
+            "module_name",
+            "file_path",
+            "description",
+            "language"
+          ]
+        },
+        {
+          "function": "add_documentation_file",
+          "parameters": [
+            "nx_graph",
+            "rdf_graph",
+            "doc_id",
+            "doc_name",
+            "doc_path",
+            "description"
+          ]
+        },
+        {
+          "function": "add_test_file",
+          "parameters": [
+            "nx_graph",
+            "rdf_graph",
+            "test_id",
+            "test_name",
+            "test_path",
+            "description"
+          ]
+        },
+        {
+          "function": "add_directory_structure_metadata",
+          "parameters": [
+            "nx_graph",
+            "rdf_graph"
+          ]
+        },
+        {
+          "function": "add_naming_convention_metadata",
+          "parameters": [
+            "nx_graph",
+            "rdf_graph"
+          ]
+        },
+        {
+          "function": "connect_to_existing_components",
+          "parameters": [
+            "nx_graph",
+            "rdf_graph"
+          ]
+        },
+        {
+          "function": "record_migration_decision",
+          "parameters": [
+            "nx_graph",
+            "rdf_graph"
+          ]
+        }
+      ],
+      "undocumented_returns": [
+        "load_knowledge_graph",
+        "add_logging_system_component",
+        "add_logging_module",
+        "add_documentation_file",
+        "add_test_file",
+        "add_directory_structure_metadata",
+        "add_naming_convention_metadata",
+        "connect_to_existing_components",
+        "record_migration_decision",
+        "main"
+      ]
+    },
+    "./core/logging/directory_manager.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 1,
+      "total_classes": 1,
+      "documented_functions": 8,
+      "total_functions": 8,
+      "documented_parameters": 2,
+      "total_parameters": 6,
+      "documented_returns": 4,
+      "total_returns": 8,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [
+        {
+          "function": "LogDirectoryManager._handle_permission_error",
+          "parameters": [
+            "error",
+            "path"
+          ]
+        },
+        {
+          "function": "create_log_directory",
+          "parameters": [
+            "module_name"
+          ]
+        },
+        {
+          "function": "get_log_file_path",
+          "parameters": [
+            "module_name"
+          ]
+        }
+      ],
+      "undocumented_returns": [
+        "LogDirectoryManager._handle_permission_error",
+        "create_log_directory",
+        "get_log_file_path",
+        "verify_log_directory_structure"
+      ]
+    },
+    "./core/logging/manager.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 1,
+      "total_classes": 1,
+      "documented_functions": 2,
+      "total_functions": 2,
+      "documented_parameters": 1,
+      "total_parameters": 2,
+      "documented_returns": 1,
+      "total_returns": 1,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [
+        {
+          "function": "LogManager.__init__",
+          "parameters": [
+            "config"
+          ]
+        }
+      ],
+      "undocumented_returns": []
+    },
+    "./core/logging/config.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 0,
+      "total_classes": 0,
+      "documented_functions": 4,
+      "total_functions": 4,
+      "documented_parameters": 3,
+      "total_parameters": 3,
+      "documented_returns": 4,
+      "total_returns": 4,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [],
+      "undocumented_returns": []
+    },
+    "./scripts/maintenance/verify_kg_migration.py": {
+      "has_module_docstring": false,
+      "documented_modules": 0,
+      "total_modules": 1,
+      "documented_classes": 0,
+      "total_classes": 0,
+      "documented_functions": 0,
+      "total_functions": 0,
+      "documented_parameters": 0,
+      "total_parameters": 0,
+      "documented_returns": 0,
+      "total_returns": 0,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [],
+      "undocumented_returns": []
+    },
+    "./scripts/maintenance/generate_quality_report.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 6,
+      "total_classes": 6,
+      "documented_functions": 32,
+      "total_functions": 33,
+      "documented_parameters": 0,
+      "total_parameters": 38,
+      "documented_returns": 1,
+      "total_returns": 29,
+      "undocumented_classes": [],
+      "undocumented_functions": [
+        "process_node"
+      ],
+      "undocumented_parameters": [
+        {
+          "function": "ComponentMetrics.add_file",
+          "parameters": [
+            "file_metrics"
+          ]
+        },
+        {
+          "function": "CodebaseMetrics.add_component",
+          "parameters": [
+            "component_metrics"
+          ]
+        },
+        {
+          "function": "CodeQualityAnalyzer.__init__",
+          "parameters": [
+            "project_root"
+          ]
+        },
+        {
+          "function": "CodeQualityAnalyzer._get_component_for_file",
+          "parameters": [
+            "file_path"
+          ]
+        },
+        {
+          "function": "CodeQualityAnalyzer._get_language_for_file",
+          "parameters": [
+            "file_path"
+          ]
+        },
+        {
+          "function": "CodeQualityAnalyzer._count_lines",
+          "parameters": [
+            "file_path"
+          ]
+        },
+        {
+          "function": "CodeQualityAnalyzer.analyze_python_file",
+          "parameters": [
+            "file_path"
+          ]
+        },
+        {
+          "function": "CodeQualityAnalyzer._calculate_cyclomatic_complexity",
+          "parameters": [
+            "node"
+          ]
+        },
+        {
+          "function": "CodeQualityAnalyzer._calculate_cognitive_complexity",
+          "parameters": [
+            "node"
+          ]
+        },
+        {
+          "function": "CodeQualityAnalyzer.analyze_file",
+          "parameters": [
+            "file_path"
+          ]
+        },
+        {
+          "function": "DatabaseManager.__init__",
+          "parameters": [
+            "db_path"
+          ]
+        },
+        {
+          "function": "DatabaseManager.store_metrics",
+          "parameters": [
+            "metrics"
+          ]
+        },
+        {
+          "function": "DatabaseManager.get_historical_metrics",
+          "parameters": [
+            "days"
+          ]
+        },
+        {
+          "function": "DatabaseManager.get_component_history",
+          "parameters": [
+            "component_name",
+            "days"
+          ]
+        },
+        {
+          "function": "ReportGenerator.__init__",
+          "parameters": [
+            "metrics",
+            "db_manager"
+          ]
+        },
+        {
+          "function": "ReportGenerator._create_figure",
+          "parameters": [
+            "title",
+            "x_data",
+            "y_data",
+            "xlabel",
+            "ylabel"
+          ]
+        },
+        {
+          "function": "ReportGenerator._create_pie_chart",
+          "parameters": [
+            "title",
+            "labels",
+            "sizes"
+          ]
+        },
+        {
+          "function": "ReportGenerator._create_bar_chart",
+          "parameters": [
+            "title",
+            "labels",
+            "values",
+            "xlabel",
+            "ylabel"
+          ]
+        },
+        {
+          "function": "ReportGenerator._generate_trend_graphs",
+          "parameters": [
+            "historical_metrics"
+          ]
+        },
+        {
+          "function": "ReportGenerator.generate_html_report",
+          "parameters": [
+            "output_path",
+            "report_type"
+          ]
+        },
+        {
+          "function": "ReportGenerator.generate_json_report",
+          "parameters": [
+            "output_path"
+          ]
+        },
+        {
+          "function": "ReportGenerator.generate_csv_report",
+          "parameters": [
+            "output_path"
+          ]
+        },
+        {
+          "function": "ReportGenerator.generate_report",
+          "parameters": [
+            "output_path",
+            "format_type",
+            "report_type"
+          ]
+        }
+      ],
+      "undocumented_returns": [
+        "ComponentMetrics.add_file",
+        "ComponentMetrics.calculate_averages",
+        "CodebaseMetrics.add_component",
+        "CodebaseMetrics.calculate_averages",
+        "CodeQualityAnalyzer._load_component_map",
+        "CodeQualityAnalyzer._get_component_for_file",
+        "CodeQualityAnalyzer._get_language_for_file",
+        "CodeQualityAnalyzer.analyze_python_file",
+        "CodeQualityAnalyzer._calculate_cyclomatic_complexity",
+        "CodeQualityAnalyzer._calculate_cognitive_complexity",
+        "CodeQualityAnalyzer.analyze_file",
+        "CodeQualityAnalyzer.analyze_codebase",
+        "CodeQualityAnalyzer.get_hotspots",
+        "DatabaseManager._ensure_db_exists",
+        "DatabaseManager.store_metrics",
+        "DatabaseManager.get_historical_metrics",
+        "DatabaseManager.get_component_history",
+        "ReportGenerator._create_figure",
+        "ReportGenerator._create_pie_chart",
+        "ReportGenerator._create_bar_chart",
+        "ReportGenerator._generate_trend_graphs",
+        "ReportGenerator._generate_component_graphs",
+        "ReportGenerator.generate_html_report",
+        "ReportGenerator.generate_json_report",
+        "ReportGenerator.generate_csv_report",
+        "ReportGenerator.generate_report",
+        "parse_args",
+        "main"
+      ]
+    },
+    "./scripts/utils/quality/simulate_metrics_inconsistency.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 0,
+      "total_classes": 0,
+      "documented_functions": 2,
+      "total_functions": 2,
+      "documented_parameters": 1,
+      "total_parameters": 1,
+      "documented_returns": 1,
+      "total_returns": 1,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [],
+      "undocumented_returns": []
+    },
+    "./scripts/utils/quality/update_kg_with_dashboard.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 0,
+      "total_classes": 0,
+      "documented_functions": 1,
+      "total_functions": 1,
+      "documented_parameters": 0,
+      "total_parameters": 0,
+      "documented_returns": 0,
+      "total_returns": 0,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [],
+      "undocumented_returns": []
+    },
+    "./scripts/utils/quality/run_quality_dashboard.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 0,
+      "total_classes": 0,
+      "documented_functions": 2,
+      "total_functions": 2,
+      "documented_parameters": 0,
+      "total_parameters": 0,
+      "documented_returns": 0,
+      "total_returns": 1,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [],
+      "undocumented_returns": [
+        "parse_args"
+      ]
+    },
+    "./scripts/utils/quality/update_file_structure_metrics.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 0,
+      "total_classes": 0,
+      "documented_functions": 3,
+      "total_functions": 3,
+      "documented_parameters": 0,
+      "total_parameters": 0,
+      "documented_returns": 1,
+      "total_returns": 2,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [],
+      "undocumented_returns": [
+        "update_file_structure_metrics"
+      ]
+    },
+    "./scripts/utils/analysis/check_kg_nodes.py": {
+      "has_module_docstring": false,
+      "documented_modules": 0,
+      "total_modules": 1,
+      "documented_classes": 0,
+      "total_classes": 0,
+      "documented_functions": 0,
+      "total_functions": 0,
+      "documented_parameters": 0,
+      "total_parameters": 0,
+      "documented_returns": 0,
+      "total_returns": 0,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [],
+      "undocumented_returns": []
+    },
+    "./scripts/utils/validation/validate_manifest.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 0,
+      "total_classes": 0,
+      "documented_functions": 7,
+      "total_functions": 7,
+      "documented_parameters": 11,
+      "total_parameters": 11,
+      "documented_returns": 6,
+      "total_returns": 6,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [],
+      "undocumented_returns": []
+    },
+    "./scripts/migration/mcp/tests/test_design_mcp_architecture.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 2,
+      "total_classes": 2,
+      "documented_functions": 16,
+      "total_functions": 16,
+      "documented_parameters": 0,
+      "total_parameters": 5,
+      "documented_returns": 0,
+      "total_returns": 0,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [
+        {
+          "function": "TestArchitectureDesigner.test_verbose_logging",
+          "parameters": [
+            "mock_logger"
+          ]
+        },
+        {
+          "function": "TestMainFunction.test_main_success",
+          "parameters": [
+            "mock_parse_args",
+            "mock_designer"
+          ]
+        },
+        {
+          "function": "TestMainFunction.test_main_error",
+          "parameters": [
+            "mock_parse_args",
+            "mock_logger"
+          ]
+        }
+      ],
+      "undocumented_returns": []
+    },
+    "./scripts/migration/mcp/tests/test_analyze_current_structure.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 2,
+      "total_classes": 2,
+      "documented_functions": 12,
+      "total_functions": 12,
+      "documented_parameters": 0,
+      "total_parameters": 5,
+      "documented_returns": 0,
+      "total_returns": 0,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [
+        {
+          "function": "TestStructureAnalyzer.test_verbose_logging",
+          "parameters": [
+            "mock_logger"
+          ]
+        },
+        {
+          "function": "TestMainFunction.test_main_success",
+          "parameters": [
+            "mock_parse_args",
+            "mock_analyzer"
+          ]
+        },
+        {
+          "function": "TestMainFunction.test_main_error",
+          "parameters": [
+            "mock_parse_args",
+            "mock_logger"
+          ]
+        }
+      ],
+      "undocumented_returns": []
+    },
+    "./scripts/migration/mcp/tests/__init__.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 0,
+      "total_classes": 0,
+      "documented_functions": 0,
+      "total_functions": 0,
+      "documented_parameters": 0,
+      "total_parameters": 0,
+      "documented_returns": 0,
+      "total_returns": 0,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [],
+      "undocumented_returns": []
+    },
+    "./scripts/migration/mcp/tests/test_create_migration_plan.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 3,
+      "total_classes": 3,
+      "documented_functions": 11,
+      "total_functions": 11,
+      "documented_parameters": 0,
+      "total_parameters": 16,
+      "documented_returns": 0,
+      "total_returns": 0,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [
+        {
+          "function": "TestMigrationPlanner.test_initialization",
+          "parameters": [
+            "mock_file",
+            "mock_exists"
+          ]
+        },
+        {
+          "function": "TestMigrationPlanner.test_validate_paths",
+          "parameters": [
+            "mock_file",
+            "mock_exists"
+          ]
+        },
+        {
+          "function": "TestMigrationPlanner.test_load_architecture_design",
+          "parameters": [
+            "mock_file",
+            "mock_exists"
+          ]
+        },
+        {
+          "function": "TestMigrationPlanner.test_load_analysis_report",
+          "parameters": [
+            "mock_file",
+            "mock_exists"
+          ]
+        },
+        {
+          "function": "TestMigrationPlanner.test_define_migration_phases",
+          "parameters": [
+            "mock_file",
+            "mock_exists"
+          ]
+        },
+        {
+          "function": "TestMigrationPlanner.test_save_plan",
+          "parameters": [
+            "mock_file",
+            "mock_exists"
+          ]
+        },
+        {
+          "function": "TestMain.test_main_success",
+          "parameters": [
+            "mock_planner_class",
+            "mock_parse_arguments"
+          ]
+        },
+        {
+          "function": "TestMain.test_main_failure",
+          "parameters": [
+            "mock_planner_class",
+            "mock_parse_arguments"
+          ]
+        }
+      ],
+      "undocumented_returns": []
+    },
+    "./scripts/deployment/update_kg_deployment.py": {
+      "has_module_docstring": false,
+      "documented_modules": 0,
+      "total_modules": 1,
+      "documented_classes": 0,
+      "total_classes": 0,
+      "documented_functions": 0,
+      "total_functions": 0,
+      "documented_parameters": 0,
+      "total_parameters": 0,
+      "documented_returns": 0,
+      "total_returns": 0,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [],
+      "undocumented_returns": []
+    },
+    "./scripts/deployment/update_kg_root.py": {
+      "has_module_docstring": false,
+      "documented_modules": 0,
+      "total_modules": 1,
+      "documented_classes": 0,
+      "total_classes": 0,
+      "documented_functions": 0,
+      "total_functions": 0,
+      "documented_parameters": 0,
+      "total_parameters": 0,
+      "documented_returns": 0,
+      "total_returns": 0,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [],
+      "undocumented_returns": []
+    },
+    "./backup_20250408_211350/cleanup_files.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 1,
+      "total_classes": 1,
+      "documented_functions": 16,
+      "total_functions": 16,
+      "documented_parameters": 5,
+      "total_parameters": 13,
+      "documented_returns": 7,
+      "total_returns": 15,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [
+        {
+          "function": "FileCleanup.__init__",
+          "parameters": [
+            "project_dir",
+            "manifest",
+            "verbose",
+            "dry_run",
+            "interactive",
+            "batch",
+            "backup_dir"
+          ]
+        },
+        {
+          "function": "FileCleanup.log",
+          "parameters": [
+            "message"
+          ]
+        }
+      ],
+      "undocumented_returns": [
+        "FileCleanup.log",
+        "FileCleanup._scan_files",
+        "FileCleanup._load_knowledge_graph",
+        "FileCleanup._collect_expected_files",
+        "FileCleanup._scan_file_references",
+        "FileCleanup._identify_orphaned_files",
+        "FileCleanup._identify_outdated_files",
+        "FileCleanup._identify_duplicate_files"
+      ]
+    },
+    "./backup_20250408_211350/create_new_file.py": {
+      "has_module_docstring": false,
+      "documented_modules": 0,
+      "total_modules": 1,
+      "documented_classes": 0,
+      "total_classes": 0,
+      "documented_functions": 0,
+      "total_functions": 0,
+      "documented_parameters": 0,
+      "total_parameters": 0,
+      "documented_returns": 0,
+      "total_returns": 0,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [],
+      "undocumented_returns": []
+    },
+    "./backup_20250408_211350/app.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 0,
+      "total_classes": 4,
+      "documented_functions": 0,
+      "total_functions": 0,
+      "documented_parameters": 0,
+      "total_parameters": 0,
+      "documented_returns": 0,
+      "total_returns": 0,
+      "undocumented_classes": [
+        "ServerInfo",
+        "ClientInfo",
+        "JsonRpcRequest",
+        "ConsentRequest"
+      ],
+      "undocumented_functions": [],
+      "undocumented_parameters": [],
+      "undocumented_returns": []
+    },
+    "./backup_20250408_211350/core/__init__.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 0,
+      "total_classes": 0,
+      "documented_functions": 0,
+      "total_functions": 0,
+      "documented_parameters": 0,
+      "total_parameters": 0,
+      "documented_returns": 0,
+      "total_returns": 0,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [],
+      "undocumented_returns": []
+    },
+    "./backup_20250408_211350/core/quality/__init__.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 0,
+      "total_classes": 0,
+      "documented_functions": 0,
+      "total_functions": 0,
+      "documented_parameters": 0,
+      "total_parameters": 0,
+      "documented_returns": 0,
+      "total_returns": 0,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [],
+      "undocumented_returns": []
+    },
+    "./backup_20250408_211350/core/quality/components/__init__.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 0,
+      "total_classes": 0,
+      "documented_functions": 1,
+      "total_functions": 1,
+      "documented_parameters": 2,
+      "total_parameters": 2,
+      "documented_returns": 1,
+      "total_returns": 1,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [],
+      "undocumented_returns": []
+    },
+    "./backup_20250408_211350/core/quality/components/fixes/__init__.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 0,
+      "total_classes": 0,
+      "documented_functions": 0,
+      "total_functions": 0,
+      "documented_parameters": 0,
+      "total_parameters": 0,
+      "documented_returns": 0,
+      "total_returns": 0,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [],
+      "undocumented_returns": []
+    },
+    "./backup_20250408_211350/core/config/__init__.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 0,
+      "total_classes": 0,
+      "documented_functions": 0,
+      "total_functions": 0,
+      "documented_parameters": 0,
+      "total_parameters": 0,
+      "documented_returns": 0,
+      "total_returns": 0,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [],
+      "undocumented_returns": []
+    },
+    "./backup_20250408_211350/core/documentation/__init__.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 0,
+      "total_classes": 0,
+      "documented_functions": 0,
+      "total_functions": 0,
+      "documented_parameters": 0,
+      "total_parameters": 0,
+      "documented_returns": 0,
+      "total_returns": 0,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [],
+      "undocumented_returns": []
+    },
+    "./backup_20250408_211350/core/kg/__init__.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 0,
+      "total_classes": 0,
+      "documented_functions": 1,
+      "total_functions": 1,
+      "documented_parameters": 0,
+      "total_parameters": 0,
+      "documented_returns": 1,
+      "total_returns": 1,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [],
+      "undocumented_returns": []
+    },
+    "./backup_20250408_211350/core/kg/scripts/__init__.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 0,
+      "total_classes": 0,
+      "documented_functions": 0,
+      "total_functions": 0,
+      "documented_parameters": 0,
+      "total_parameters": 0,
+      "documented_returns": 0,
+      "total_returns": 0,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [],
+      "undocumented_returns": []
+    },
+    "./backup_20250408_211350/core/logging/__init__.py": {
+      "has_module_docstring": true,
+      "documented_modules": 1,
+      "total_modules": 1,
+      "documented_classes": 0,
+      "total_classes": 0,
+      "documented_functions": 0,
+      "total_functions": 0,
+      "documented_parameters": 0,
+      "total_parameters": 0,
+      "documented_returns": 0,
+      "total_returns": 0,
+      "undocumented_classes": [],
+      "undocumented_functions": [],
+      "undocumented_parameters": [],
+      "undocumented_returns": []
+    }
+  },
+  "component_metrics": {
+    ".": {
+      "total_files": 121,
+      "documented_files": 111,
+      "total_modules": 121,
+      "documented_modules": 111,
+      "total_classes": 188,
+      "documented_classes": 179,
+      "total_functions": 1034,
+      "documented_functions": 955,
+      "total_parameters": 773,
+      "documented_parameters": 355,
+      "total_returns": 459,
+      "documented_returns": 244,
+      "module_coverage": 0.9173553719008265,
+      "class_coverage": 0.9521276595744681,
+      "function_coverage": 0.9235976789168279,
+      "parameter_coverage": 0.4592496765847348,
+      "return_coverage": 0.5315904139433552,
+      "overall_coverage": 0.716116504854369
+    }
+  }
+}

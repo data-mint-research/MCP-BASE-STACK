@@ -1,0 +1,48 @@
+# YAMLlint configuration
+# See https://yamllint.readthedocs.io/en/stable/configuration.html for details
+
+extends: default
+
+rules:
+  # 80 chars should be enough, but don't fail if a line is longer
+  line-length:
+    max: 120
+    level: warning
+
+  # Accept both %YAML 1.1 and %YAML 1.2
+  document-start:
+    present: true
+    level: warning
+
+  # Don't require document end markers
+  document-end:
+    present: false
+
+  # Allow duplicate keys in mappings
+  # (useful for anchors and aliases)
+  key-duplicates: enable
+
+  # Don't require starting and ending newlines
+  new-line-at-end-of-file: enable
+  empty-lines:
+    max: 2
+    max-start: 0
+    max-end: 1
+
+  # Allow any indentation level
+  indentation:
+    spaces: consistent
+    indent-sequences: consistent
+    check-multi-line-strings: false
+
+  # Allow flow style mappings and sequences
+  brackets:
+    min-spaces-inside: 0
+    max-spaces-inside: 1
+    min-spaces-inside-empty: 0
+    max-spaces-inside-empty: 0
+
+  # Allow quoted strings
+  quoted-strings:
+    quote-type: any
+    required: false

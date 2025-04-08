@@ -92,7 +92,7 @@ function status {
     
     # Run the health check script
     echo -e "\n${GREEN}Running health check...${NC}"
-    bash scripts/utils/validation/verify_stack_health.sh
+    bash scripts/utils/validation/verify-stack-health.sh
 }
 
 # Function to view logs from all services

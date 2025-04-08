@@ -1,0 +1,283 @@
+{
+  "specification_manifest": {
+    "metadata": {
+      "version": "1.0.0",
+      "created_at": "2025-04-08",
+      "description": "Specification manifest for MCP-BASE-STACK",
+      "purpose": "Single source of truth for the Autonomous AI Coding Agent"
+    },
+    "directory_structure": {
+      "root": {
+        "description": "Project root directory",
+        "required_subdirectories": [
+          "docs",
+          "config",
+          "core",
+          "services",
+          "scripts",
+          "tests"
+        ],
+        "optional_subdirectories": [
+          "data",
+          "deploy",
+          "examples"
+        ]
+      },
+      "docs": {
+        "description": "Project documentation",
+        "required_subdirectories": [
+          "MCP",
+          "specifications"
+        ],
+        "optional_subdirectories": [
+          "backlog",
+          "conventions",
+          "quality"
+        ]
+      },
+      "config": {
+        "description": "Configuration files",
+        "required_subdirectories": [
+          "environments",
+          "specifications"
+        ],
+        "optional_subdirectories": [
+          "deploy",
+          "lint",
+          "github",
+          "services"
+        ]
+      },
+      "core": {
+        "description": "Core functionality",
+        "required_subdirectories": [
+          "config",
+          "logging",
+          "quality"
+        ],
+        "optional_subdirectories": [
+          "kg",
+          "documentation"
+        ]
+      },
+      "services": {
+        "description": "Service implementations",
+        "required_subdirectories": [
+          "mcp-server"
+        ],
+        "optional_subdirectories": [
+          "librechat",
+          "llm-server"
+        ]
+      },
+      "scripts": {
+        "description": "Utility scripts",
+        "required_subdirectories": [
+          "utils"
+        ],
+        "optional_subdirectories": [
+          "deployment",
+          "maintenance",
+          "migration",
+          "setup",
+          "kg"
+        ]
+      },
+      "tests": {
+        "description": "Test files",
+        "required_subdirectories": [
+          "unit"
+        ],
+        "optional_subdirectories": [
+          "integration",
+          "performance",
+          "chaos",
+          "property",
+          "utils"
+        ]
+      },
+      "data": {
+        "description": "Data files",
+        "required_subdirectories": [
+          "reports"
+        ],
+        "optional_subdirectories": [
+          "logs",
+          "dashboard",
+          "migration"
+        ]
+      }
+    },
+    "file_templates": {
+      "root": {
+        "required_files": {
+          "README.md": {
+            "description": "Project overview"
+          },
+          "LICENSE": {
+            "description": "License information"
+          },
+          "requirements.txt": {
+            "description": "Python dependencies"
+          }
+        },
+        "optional_files": {
+          "requirements.lock": {
+            "description": "Locked Python dependencies"
+          },
+          "pytest.ini": {
+            "description": "PyTest configuration"
+          },
+          ".pre-commit-config.yaml": {
+            "description": "Pre-commit hooks configuration"
+          },
+          ".markdownlint.yaml": {
+            "description": "Markdown linting configuration"
+          },
+          ".yamllint.yaml": {
+            "description": "YAML linting configuration"
+          },
+          ".gitignore": {
+            "description": "Git ignore file"
+          }
+        }
+      },
+      "docs": {
+        "required_files": {
+          "README.md": {
+            "description": "Documentation overview"
+          }
+        },
+        "optional_files": {}
+      },
+      "config/specifications": {
+        "required_files": {
+          "specification-manifest.json": {
+            "description": "Specification manifest"
+          },
+          "specification-manifest-schema.json": {
+            "description": "Schema for the specification manifest"
+          }
+        },
+        "optional_files": {}
+      },
+      "services/mcp-server": {
+        "required_files": {
+          "README.md": {
+            "description": "MCP server documentation"
+          }
+        },
+        "optional_files": {
+          "docker-compose.yml": {
+            "description": "Docker Compose configuration for MCP server"
+          }
+        }
+      },
+      "services/librechat": {
+        "required_files": {},
+        "optional_files": {
+          "docker-compose.yml": {
+            "description": "Docker Compose configuration for LibreChat"
+          }
+        }
+      },
+      "services/llm-server": {
+        "required_files": {},
+        "optional_files": {
+          "docker-compose.yml": {
+            "description": "Docker Compose configuration for LLM server"
+          }
+        }
+      },
+      "tests": {
+        "required_files": {
+          "README.md": {
+            "description": "Testing documentation"
+          },
+          "conftest.py": {
+            "description": "PyTest configuration"
+          }
+        },
+        "optional_files": {}
+      }
+    },
+    "naming_conventions": {
+      "python": {
+        "classes": {
+          "pattern": "CamelCase",
+          "regex": "^[A-Z][a-zA-Z0-9]*$",
+          "examples": [
+            "ConfigManager",
+            "KnowledgeGraph"
+          ]
+        },
+        "functions": {
+          "pattern": "snake_case",
+          "regex": "^[a-z][a-z0-9_]*$",
+          "examples": [
+            "load_config",
+            "update_knowledge_graph"
+          ]
+        },
+        "variables": {
+          "pattern": "snake_case",
+          "regex": "^[a-z][a-z0-9_]*$",
+          "examples": [
+            "config_path",
+            "knowledge_graph_data"
+          ]
+        },
+        "constants": {
+          "pattern": "UPPER_SNAKE_CASE",
+          "regex": "^[A-Z][A-Z0-9_]*$",
+          "examples": [
+            "MAX_RETRY_COUNT",
+            "DEFAULT_TIMEOUT"
+          ]
+        },
+        "modules": {
+          "pattern": "snake_case",
+          "regex": "^[a-z][a-z0-9_]*$",
+          "examples": [
+            "config_manager",
+            "knowledge_graph"
+          ]
+        }
+      },
+      "files": {
+        "python": {
+          "pattern": "snake_case",
+          "regex": "^[a-z][a-z0-9_]*\\.py$",
+          "examples": [
+            "config_manager.py",
+            "knowledge_graph.py"
+          ]
+        },
+        "markdown": {
+          "pattern": "Kebab-Case",
+          "regex": "^[A-Z][a-zA-Z0-9-]*\\.md$",
+          "examples": [
+            "README.md",
+            "Code-Review-Report.md"
+          ]
+        },
+        "json": {
+          "pattern": "kebab-case",
+          "regex": "^[a-z][a-z0-9-]*\\.json$",
+          "examples": [
+            "specification-manifest.json",
+            "code-quality-report.json"
+          ]
+        },
+        "yaml": {
+          "pattern": "kebab-case",
+          "regex": "^[a-z][a-z0-9-]*\\.ya?ml$",
+          "examples": [
+            "docker-compose.yml",
+            "github-actions.yaml"
+          ]
+        }
+      }
+    }
+  }
+}

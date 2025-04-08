@@ -41,8 +41,8 @@ logger = logging.getLogger("enforce_code_standards")
 PROJECT_ROOT = Path(__file__).resolve().parents[3]
 SPEC_MANIFEST_PATH = PROJECT_ROOT / "config" / "specifications" / "specification-manifest.json"
 REPORT_DIR = PROJECT_ROOT / "data" / "reports"
-CHECK_SCRIPT_PATH = PROJECT_ROOT / "scripts" / "utils" / "quality" / "check_code_quality.sh"
-FIX_SCRIPT_PATH = PROJECT_ROOT / "scripts" / "utils" / "quality" / "fix_code_quality.sh"
+CHECK_SCRIPT_PATH = PROJECT_ROOT / "scripts" / "utils" / "quality" / "check-code-quality.sh"
+FIX_SCRIPT_PATH = PROJECT_ROOT / "scripts" / "utils" / "quality" / "fix-code-quality.sh"
 KG_PATH = PROJECT_ROOT / "core" / "kg" / "data" / "knowledge_graph.graphml"
 
 # Define file categories

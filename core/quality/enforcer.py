@@ -5,9 +5,10 @@ This module provides the QualityEnforcer class, which serves as a facade over
 the modular quality component system. It maintains backward compatibility with
 the existing hooks while leveraging the new component-based architecture.
 """
-
 import logging
 import os
+import re
+from typing import Any, Dict, List, Optional, Set, Tuple, Union, Callable
 from typing import Any, Dict, List, Optional, Set, Tuple, Union, Callable
 
 from core.config.settings import get_config
@@ -571,7 +572,8 @@ class QualityEnforcer:
             "black": f"black --check {files_arg}",
             "mypy": f"mypy {files_arg}",
             "pylint": f"pylint {files_arg}",
-            "flake8": f"flake8 {files_arg}"
+            "flake8": f"flake8 {files_arg}",
+            "shellcheck": f"shellcheck --format=gcc {files_arg}"
         }
         
         if tool_name not in tool_commands:
@@ -671,6 +673,31 @@ class QualityEnforcer:
                                     ))
                                 except ValueError:
                                     pass
+                    elif tool_name == "shellcheck":
+                        # shellcheck gcc format: file:line:column: severity: message [SC####]
+                        match = re.match(r'(.+?):(\d+):(\d+): (\w+): (.+) \[SC(\d+)\]', line)
+                        if match:
+                            file_path, line_num, col_num, severity_str, message, sc_code = match.groups()
+                            
+                            # Determine severity
+                            severity = QualityCheckSeverity.WARNING
+                            if severity_str.lower() == "error":
+                                severity = QualityCheckSeverity.ERROR
+                            elif severity_str.lower() == "warning":
+                                severity = QualityCheckSeverity.WARNING
+                            elif severity_str.lower() == "note" or severity_str.lower() == "info":
+                                severity = QualityCheckSeverity.INFO
+                            
+                            results.append(QualityCheckResult(
+                                check_id="shellcheck",
+                                severity=severity,
+                                message=f"{message} (SC{sc_code})",
+                                file_path=file_path,
+                                line_number=int(line_num),
+                                column=int(col_num),
+                                source="Shellcheck Linter",
+                                details={"sc_code": sc_code}
+                            ))
             
             logger.info(f"External tool {tool_name} found {len(results)} issues")
             return results

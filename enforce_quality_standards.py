@@ -65,7 +65,7 @@ def install_quality_tools():
         return False
     
     # Install additional quality tools
-    script_path = Path("scripts/utils/installation/install_quality_tools.sh")
+    script_path = Path("scripts/utils/installation/install-quality-tools.sh")
     if not script_path.exists():
         logger.error(f"Quality tools installation script not found at {script_path}")
         return False
@@ -82,7 +82,7 @@ def setup_pre_commit_hooks():
     logger.info("Setting up pre-commit hooks...")
     
     # Install pre-commit hooks
-    script_path = Path("scripts/utils/installation/install_pre_commit_hooks.sh")
+    script_path = Path("scripts/utils/installation/install-pre-commit-hooks.sh")
     if not script_path.exists():
         logger.error(f"Pre-commit hooks installation script not found at {script_path}")
         return False

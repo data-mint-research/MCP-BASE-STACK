@@ -1,0 +1,304 @@
+@prefix ns1: <http://mcp-base-stack.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns1:core a ns1:Directory ;
+    ns1:contains ns1:kg ;
+    ns1:path "core" ;
+    ns1:purpose "core_functionality" .
+
+ns1:core_quality ns1:critical_count 0 ;
+    ns1:error_count 0 ;
+    ns1:info_count 0 ;
+    ns1:issues_count 0 ;
+    ns1:last_modified 1.744101e+09,
+        1.744102e+09,
+        1.744104e+09,
+        1.744126e+09,
+        1.744134e+09,
+        1.744135e+09,
+        1.744138e+09,
+        1.744138e+09 ;
+    ns1:warning_count 0 .
+
+ns1:docker a ns1:Component ;
+    ns1:component_type "runtime" ;
+    ns1:name "Docker" ;
+    ns1:status "planned" .
+
+ns1:docs a ns1:Directory ;
+    ns1:contains ns1:docs_conventions,
+        ns1:docs_knowledge-graph,
+        ns1:docs_troubleshooting,
+        ns1:docs_tutorials ;
+    ns1:documents ns1:documentation_structure ;
+    ns1:last_modified 1.7441e+09,
+        1.744101e+09,
+        1.744102e+09,
+        1.744104e+09,
+        1.744105e+09,
+        1.744135e+09,
+        1.744138e+09,
+        1.744138e+09 ;
+    ns1:path "docs" ;
+    ns1:purpose "documentation" .
+
+ns1:docs_quality ns1:critical_count 0 ;
+    ns1:error_count 0 ;
+    ns1:info_count 0 ;
+    ns1:issues_count 0 ;
+    ns1:last_modified 1.744101e+09,
+        1.744102e+09,
+        1.744104e+09,
+        1.744126e+09,
+        1.744134e+09,
+        1.744135e+09,
+        1.744138e+09,
+        1.744138e+09 ;
+    ns1:warning_count 0 .
+
+ns1:documentation a ns1:Component ;
+    ns1:component_type "resource" ;
+    ns1:implements ns1:documentation_structure ;
+    ns1:name "Documentation" ;
+    ns1:status "created",
+        "planned" .
+
+ns1:kg_visualization a ns1:Feature ;
+    ns1:description "Visualize the knowledge graph" ;
+    ns1:name "Knowledge Graph Visualization" ;
+    ns1:owner "System Admin" ;
+    ns1:status "planned" .
+
+ns1:librechat a ns1:Component ;
+    ns1:component_type "service" ;
+    ns1:connects_to ns1:llm_server,
+        ns1:mcp_server ;
+    ns1:depends_on ns1:llm_server ;
+    ns1:name "LibreChat" ;
+    ns1:status "cloned",
+        "configured",
+        "planned" .
+
+ns1:nvidia_container a ns1:Component ;
+    ns1:component_type "runtime" ;
+    ns1:name "NVIDIA Container Toolkit" ;
+    ns1:status "planned" .
+
+ns1:nvidia_gpu a ns1:Component ;
+    ns1:component_type "hardware" ;
+    ns1:name "NVIDIA GPU" ;
+    ns1:status "planned" .
+
+ns1:quality_metrics_dashboard a ns1:Component ;
+    ns1:component_type "dashboard" ;
+    ns1:description "Centralized dashboard for quality metrics, trend analysis, and improvement tracking" ;
+    ns1:name "Quality Metrics Dashboard" ;
+    ns1:status "implemented" ;
+    ns1:visualizes ns1:quality_metrics .
+
+ns1:tests a ns1:Component,
+        ns1:Directory ;
+    ns1:component_type "resource" ;
+    ns1:contains ns1:tests_integration,
+        ns1:tests_performance,
+        ns1:tests_unit ;
+    ns1:implements ns1:test_structure ;
+    ns1:last_modified 1.744099e+09,
+        1.744104e+09,
+        1.744105e+09,
+        1.744127e+09,
+        1.744127e+09 ;
+    ns1:name "Tests" ;
+    ns1:path "tests" ;
+    ns1:purpose "testing" ;
+    ns1:status "created",
+        "planned" ;
+    ns1:tests ns1:test_structure .
+
+ns1:tests_quality ns1:critical_count 0 ;
+    ns1:error_count 0 ;
+    ns1:info_count 0 ;
+    ns1:issues_count 0 ;
+    ns1:last_modified 1.744101e+09,
+        1.744102e+09,
+        1.744104e+09,
+        1.744126e+09,
+        1.744134e+09,
+        1.744135e+09,
+        1.744138e+09,
+        1.744138e+09 ;
+    ns1:warning_count 0 .
+
+ns1:deepseek a ns1:Component ;
+    ns1:component_type "model" ;
+    ns1:name "DeepSeek Coder" ;
+    ns1:status "planned" .
+
+ns1:docs_conventions a ns1:Directory ;
+    ns1:file_count 4 ;
+    ns1:last_modified 1.744023e+09,
+        1.744104e+09,
+        1.744105e+09,
+        1.744105e+09 ;
+    ns1:path "docs/conventions" .
+
+ns1:docs_knowledge-graph a ns1:Directory ;
+    ns1:file_count 4,
+        5 ;
+    ns1:last_modified 1.744023e+09,
+        1.744101e+09,
+        1.744104e+09,
+        1.744105e+09,
+        1.744105e+09 ;
+    ns1:path "docs/knowledge-graph" .
+
+ns1:docs_troubleshooting a ns1:Directory ;
+    ns1:file_count 3,
+        4 ;
+    ns1:last_modified 1.744097e+09,
+        1.744104e+09,
+        1.744105e+09,
+        1.744135e+09,
+        1.744135e+09 ;
+    ns1:path "docs/troubleshooting" .
+
+ns1:docs_tutorials a ns1:Directory ;
+    ns1:file_count 4,
+        6 ;
+    ns1:last_modified 1.744097e+09,
+        1.744104e+09,
+        1.744105e+09,
+        1.744105e+09 ;
+    ns1:path "docs/tutorials" .
+
+ns1:documentation_coverage_metrics a ns1:Metrics ;
+    ns1:component_type "documentation" ;
+    ns1:coverage_percentage 1e+02 ;
+    ns1:description "Documentation coverage metrics for key directories" ;
+    ns1:documented_directories 6 ;
+    ns1:last_modified 1.744134e+09 ;
+    ns1:name "Documentation Coverage Metrics" ;
+    ns1:status "created" ;
+    ns1:total_directories 6 .
+
+ns1:file_structure_metrics a ns1:Metrics ;
+    ns1:component_type "file_structure" ;
+    ns1:description "File structure standardization metrics" ;
+    ns1:directory_compliance 9.774648e+01,
+        1e+02 ;
+    ns1:last_modified 1.744104e+09,
+        1.744126e+09,
+        1.744134e+09,
+        1.744135e+09,
+        1.744138e+09,
+        1.744138e+09 ;
+    ns1:name "File Structure Metrics" ;
+    ns1:naming_compliance 9.577465e+01,
+        9.745763e+01,
+        9.746835e+01,
+        9.748954e+01,
+        9.753086e+01,
+        9.753086e+01,
+        1e+02 ;
+    ns1:overall_compliance 9.676056e+01,
+        9.872881e+01,
+        9.873418e+01,
+        9.874477e+01,
+        9.876543e+01,
+        9.876543e+01,
+        1e+02 ;
+    ns1:status "created",
+        "updated" ;
+    ns1:total_files 249,
+        355,
+        409,
+        444,
+        472,
+        474,
+        478,
+        486 .
+
+ns1:kg a ns1:Directory ;
+    ns1:path "core/kg" ;
+    ns1:purpose "knowledge_graph" .
+
+ns1:mcp_agent_test a ns1:Feature ;
+    ns1:description "Test the MCP server's functionality" ;
+    ns1:name "MCP Agent Test" ;
+    ns1:owner "Developer" ;
+    ns1:status "planned" .
+
+ns1:mcp_server a ns1:Component ;
+    ns1:component_type "service" ;
+    ns1:depends_on ns1:llm_server ;
+    ns1:implements ns1:mcp_agent_test ;
+    ns1:name "MCP Server" ;
+    ns1:status "implemented",
+        "planned" .
+
+ns1:mistral a ns1:Component ;
+    ns1:component_type "model" ;
+    ns1:name "Mistral" ;
+    ns1:status "planned" .
+
+ns1:quality_metrics ns1:TRACKS ns1:documentation_coverage_metrics,
+        ns1:file_structure_metrics ;
+    ns1:last_modified 1.744101e+09,
+        1.744102e+09,
+        1.744104e+09,
+        1.744126e+09,
+        1.744134e+09,
+        1.744135e+09,
+        1.744138e+09,
+        1.744138e+09 ;
+    ns1:status "updated" .
+
+ns1:tests_integration a ns1:Directory ;
+    ns1:file_count 3,
+        4,
+        7 ;
+    ns1:last_modified 1.744099e+09,
+        1.744124e+09,
+        1.744127e+09,
+        1.744127e+09 ;
+    ns1:path "tests/integration" .
+
+ns1:tests_performance a ns1:Directory ;
+    ns1:file_count 1 ;
+    ns1:last_modified 1.744097e+09,
+        1.744097e+09 ;
+    ns1:path "tests/performance" .
+
+ns1:tests_unit a ns1:Directory ;
+    ns1:file_count 20,
+        21,
+        27,
+        31,
+        60 ;
+    ns1:last_modified 1.7441e+09,
+        1.744104e+09,
+        1.744125e+09,
+        1.744126e+09,
+        1.744133e+09,
+        1.744133e+09 ;
+    ns1:path "tests/unit" .
+
+ns1:documentation_structure a ns1:Feature ;
+    ns1:description "Organized documentation structure" ;
+    ns1:name "Documentation Structure" ;
+    ns1:owner "Technical Writer" ;
+    ns1:status "planned" .
+
+ns1:test_structure a ns1:Feature ;
+    ns1:description "Comprehensive test structure" ;
+    ns1:name "Test Structure" ;
+    ns1:owner "QA Engineer" ;
+    ns1:status "planned" .
+
+ns1:llm_server a ns1:Component ;
+    ns1:component_type "service" ;
+    ns1:depends_on ns1:deepseek,
+        ns1:mistral ;
+    ns1:name "LLM Server" ;
+    ns1:status "planned" .
+

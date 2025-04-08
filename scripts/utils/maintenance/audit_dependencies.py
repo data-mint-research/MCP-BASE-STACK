@@ -105,10 +105,19 @@ class DependencyAuditor:
                 "errors": 0
             },
             "dependency_files": [],
+            "dependencies": [],  # New field to store all detected dependencies
             "outdated_dependencies": [],
             "vulnerable_dependencies": [],
             "inconsistent_dependencies": [],
-            "recommendations": []
+            "recommendations": [],
+            "last_check_date": datetime.datetime.now().isoformat(),
+            "next_check_date": (datetime.datetime.now() + datetime.timedelta(days=7)).isoformat(),
+            "scan_duration_seconds": 0,
+            "system_info": {
+                "os": os.name,
+                "python_version": sys.version,
+                "audit_tools": {}
+            }
         }
         
         # Try to load the QualityEnforcer for integration
@@ -121,6 +130,9 @@ class DependencyAuditor:
             "java": self._check_java_dependencies,
             "docker": self._check_docker_dependencies
         }
+        
+        # Check for available audit tools
+        self._check_audit_tools()
     
     def log(self, message: str) -> None:
         """
@@ -131,6 +143,38 @@ class DependencyAuditor:
         """
         if self.verbose:
             logger.info(message)
+    def _check_audit_tools(self) -> None:
+        """
+        Check for available audit tools and record them in the report.
+        """
+        self.log("Checking for available audit tools...")
+        
+        # Check for Python audit tools
+        self.report["system_info"]["audit_tools"]["python"] = {
+            "pip_audit": shutil.which("pip-audit") is not None,
+            "safety": shutil.which("safety") is not None
+        }
+        
+        # Check for Node.js audit tools
+        self.report["system_info"]["audit_tools"]["node"] = {
+            "npm": shutil.which("npm") is not None,
+            "yarn": shutil.which("yarn") is not None
+        }
+        
+        # Check for Docker audit tools
+        self.report["system_info"]["audit_tools"]["docker"] = {
+            "docker": shutil.which("docker") is not None,
+            "trivy": shutil.which("trivy") is not None
+        }
+        
+        # Check for Java audit tools
+        self.report["system_info"]["audit_tools"]["java"] = {
+            "maven": shutil.which("mvn") is not None,
+            "gradle": shutil.which("gradle") is not None,
+            "owasp_dependency_check": shutil.which("dependency-check") is not None
+        }
+        
+        self.log(f"Audit tools detected: {self.report['system_info']['audit_tools']}")
     
     def _load_quality_enforcer(self) -> Optional[Any]:
         """
@@ -155,6 +199,7 @@ class DependencyAuditor:
             return None
         except Exception as e:
             logger.error(f"Error loading QualityEnforcer: {e}")
+            return None
             return None
     
     def _find_dependency_files(self) -> List[Dict[str, Any]]:
@@ -467,7 +512,21 @@ class DependencyAuditor:
         Returns:
             Tuple of (outdated_dependencies, vulnerable_dependencies)
         """
-        self.log(f"Checking Java dependencies in {file_path} is not yet implemented")
+        self.log(f"Checking Java dependencies in {file_path}...")
+        
+        # This is a placeholder for Java dependency checking
+        # In a real implementation, we would parse pom.xml or build.gradle files
+        # and use tools like OWASP Dependency Check
+        
+        # For now, just record that we checked this file
+        self.report["dependencies"].append({
+            "file_path": file_path,
+            "manager": "java",
+            "dependencies": [],
+            "status": "not_implemented"
+        })
+        
+        self.log(f"Java dependency checking not fully implemented for {file_path}")
         return [], []
     
     def _check_docker_dependencies(self, file_path: str) -> Tuple[List[Dict[str, Any]], List[Dict[str, Any]]]:
@@ -480,8 +539,97 @@ class DependencyAuditor:
         Returns:
             Tuple of (outdated_dependencies, vulnerable_dependencies)
         """
-        self.log(f"Checking Docker dependencies in {file_path} is not yet implemented")
-        return [], []
+        self.log(f"Checking Docker dependencies in {file_path}...")
+        
+        outdated = []
+        vulnerable = []
+        docker_deps = []
+        
+        try:
+            # Parse the Docker Compose file
+            if file_path.endswith(("docker-compose.yml", "docker-compose.yaml")):
+                with open(os.path.join(self.project_dir, file_path), 'r') as f:
+                    try:
+                        import yaml
+                        compose_data = yaml.safe_load(f)
+                        
+                        # Extract image information from services
+                        if compose_data and "services" in compose_data:
+                            for service_name, service_config in compose_data["services"].items():
+                                if "image" in service_config:
+                                    image = service_config["image"]
+                                    # Parse image name and tag
+                                    if ":" in image:
+                                        image_name, tag = image.split(":", 1)
+                                    else:
+                                        image_name, tag = image, "latest"
+                                    
+                                    docker_deps.append({
+                                        "name": image_name,
+                                        "version": tag,
+                                        "service": service_name,
+                                        "file_path": file_path
+                                    })
+                                    
+                                    # Check if using 'latest' tag (not recommended for production)
+                                    if tag == "latest":
+                                        outdated.append({
+                                            "name": image_name,
+                                            "current_version": "latest",
+                                            "latest_version": "unknown",
+                                            "file_path": file_path,
+                                            "service": service_name,
+                                            "recommendation": "Specify a fixed version instead of 'latest'"
+                                        })
+                    except yaml.YAMLError as e:
+                        logger.error(f"Error parsing Docker Compose file {file_path}: {e}")
+                        self.report["summary"]["errors"] += 1
+            
+            # Check for vulnerabilities using Trivy if available
+            if not self.dry_run and shutil.which("trivy") and docker_deps:
+                for dep in docker_deps:
+                    image = f"{dep['name']}:{dep['version']}"
+                    self.log(f"Scanning Docker image {image} with Trivy...")
+                    
+                    # Run Trivy scan
+                    result = subprocess.run(
+                        ["trivy", "image", "--format", "json", image],
+                        capture_output=True,
+                        text=True,
+                        check=False
+                    )
+                    
+                    if result.returncode == 0:
+                        try:
+                            trivy_results = json.loads(result.stdout)
+                            for vuln in trivy_results.get("Results", []):
+                                for v in vuln.get("Vulnerabilities", []):
+                                    vulnerable.append({
+                                        "name": dep["name"],
+                                        "version": dep["version"],
+                                        "vulnerability_id": v["VulnerabilityID"],
+                                        "description": v["Description"],
+                                        "severity": v["Severity"],
+                                        "fixed_version": v.get("FixedVersion"),
+                                        "file_path": file_path,
+                                        "service": dep["service"]
+                                    })
+                                    self.log(f"Vulnerable Docker image: {image} ({v['VulnerabilityID']})")
+                        except json.JSONDecodeError:
+                            logger.error(f"Error parsing Trivy output for {image}")
+            
+            # Record the dependencies we found
+            self.report["dependencies"].append({
+                "file_path": file_path,
+                "manager": "docker",
+                "dependencies": docker_deps
+            })
+            
+        except Exception as e:
+            logger.error(f"Error checking Docker dependencies in {file_path}: {e}")
+            self.report["summary"]["errors"] += 1
+        
+        return outdated, vulnerable
     
     def _detect_inconsistent_dependencies(self, dependency_files: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         """
@@ -672,7 +820,7 @@ class DependencyAuditor:
                 update_script = os.path.join(self.project_dir, "core/kg/scripts/update_knowledge_graph.py")
                 if os.path.exists(update_script):
                     self.log("Updating knowledge graph via update_knowledge_graph.py...")
-                    result = subprocess.run(["python", update_script], cwd=self.project_dir)
+                    result = subprocess.run(["python3", update_script], cwd=self.project_dir)
                     if result.returncode == 0:
                         self.log("Successfully updated knowledge graph")
                         return True
@@ -696,6 +844,7 @@ class DependencyAuditor:
             True if the audit was successful, False otherwise
         """
         self.log("Starting dependency audit...")
+        start_time = datetime.datetime.now()
         
         success = True
         
@@ -707,6 +856,7 @@ class DependencyAuditor:
         # Check dependencies for each file
         all_outdated = []
         all_vulnerable = []
+        total_dependencies_checked = 0
         
         for dep_file in dependency_files:
             file_path = dep_file["path"]
@@ -718,8 +868,14 @@ class DependencyAuditor:
                 all_outdated.extend(outdated)
                 all_vulnerable.extend(vulnerable)
                 
-                # Update summary
-                self.report["summary"]["dependencies_checked"] += len(outdated) + len(vulnerable)
+                # Count dependencies checked
+                if manager == "python" and file_path.endswith("requirements.txt"):
+                    deps = self._parse_requirements_txt(file_path)
+                    total_dependencies_checked += len(deps)
+                elif manager == "node" and file_path.endswith("package.json"):
+                    deps = self._parse_package_json(file_path)
+                    total_dependencies_checked += len(deps)
+                # Add counts for other dependency types as they're implemented
             else:
                 self.log(f"No dependency manager available for {manager}")
         
@@ -730,6 +886,7 @@ class DependencyAuditor:
         self.report["outdated_dependencies"] = all_outdated
         self.report["vulnerable_dependencies"] = all_vulnerable
         self.report["inconsistent_dependencies"] = inconsistent
+        self.report["summary"]["dependencies_checked"] = total_dependencies_checked
         self.report["summary"]["outdated_dependencies"] = len(all_outdated)
         self.report["summary"]["vulnerable_dependencies"] = len(all_vulnerable)
         self.report["summary"]["inconsistent_dependencies"] = len(inconsistent)
@@ -738,11 +895,17 @@ class DependencyAuditor:
         recommendations = self._generate_recommendations(all_outdated, all_vulnerable, inconsistent)
         self.report["recommendations"] = recommendations
         
+        # Calculate scan duration
+        end_time = datetime.datetime.now()
+        scan_duration = (end_time - start_time).total_seconds()
+        self.report["scan_duration_seconds"] = scan_duration
+        
         # Update knowledge graph
         if not self.dry_run:
             if not self._update_knowledge_graph():
                 logger.warning("Failed to update knowledge graph, but audit was successful")
         
+        self.log(f"Dependency audit completed in {scan_duration:.2f} seconds")
         return success
     
     def save_report(self) -> bool:
@@ -800,6 +963,8 @@ def main():
     print(f"  Vulnerable dependencies: {auditor.report['summary']['vulnerable_dependencies']}")
     print(f"  Inconsistent dependencies: {auditor.report['summary']['inconsistent_dependencies']}")
     print(f"  Errors: {auditor.report['summary']['errors']}")
+    print(f"  Scan duration: {auditor.report['scan_duration_seconds']:.2f} seconds")
+    print(f"  Next scheduled check: {auditor.report['next_check_date']}")
     
     if auditor.dry_run:
         print("\nDry run mode: No changes were made to the knowledge graph.")

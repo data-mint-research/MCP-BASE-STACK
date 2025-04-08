@@ -1,0 +1,125 @@
+name: Dependency Updates
+
+on:
+  schedule:
+    - cron: "0 0 * * 1" # Run weekly on Monday at midnight
+  workflow_dispatch: # Allow manual triggering
+
+jobs:
+  update-dependencies:
+    name: Check and Update Dependencies
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # Fetch all history for proper analysis
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pip-audit safety pyyaml
+          
+          # Install Trivy for Docker image scanning
+          curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b /usr/local/bin v0.40.0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16"
+
+      - name: Run dependency audit
+        id: audit
+        run: |
+          python scripts/utils/maintenance/audit_dependencies.py --verbose --output dependency-audit-report.json
+          
+          # Use the new GitHub Actions output syntax
+          echo "has_updates=$(jq '.summary.outdated_dependencies > 0' dependency-audit-report.json)" >> $GITHUB_OUTPUT
+          echo "has_vulnerabilities=$(jq '.summary.vulnerable_dependencies > 0' dependency-audit-report.json)" >> $GITHUB_OUTPUT
+          echo "has_inconsistencies=$(jq '.summary.inconsistent_dependencies > 0' dependency-audit-report.json)" >> $GITHUB_OUTPUT
+          
+          # Generate a markdown summary of the audit
+          echo "## Dependency Audit Summary" > $GITHUB_STEP_SUMMARY
+          echo "- **Files Scanned**: $(jq '.summary.dependency_files_scanned' dependency-audit-report.json)" >> $GITHUB_STEP_SUMMARY
+          echo "- **Dependencies Checked**: $(jq '.summary.dependencies_checked' dependency-audit-report.json)" >> $GITHUB_STEP_SUMMARY
+          echo "- **Outdated Dependencies**: $(jq '.summary.outdated_dependencies' dependency-audit-report.json)" >> $GITHUB_STEP_SUMMARY
+          echo "- **Vulnerable Dependencies**: $(jq '.summary.vulnerable_dependencies' dependency-audit-report.json)" >> $GITHUB_STEP_SUMMARY
+          echo "- **Inconsistent Dependencies**: $(jq '.summary.inconsistent_dependencies' dependency-audit-report.json)" >> $GITHUB_STEP_SUMMARY
+          echo "- **Scan Duration**: $(jq '.scan_duration_seconds' dependency-audit-report.json) seconds" >> $GITHUB_STEP_SUMMARY
+
+      - name: Create dependency update PR for outdated dependencies
+        if: steps.audit.outputs.has_updates == 'true'
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "chore: update outdated dependencies"
+          title: "Dependency Updates"
+          body: |
+            This PR updates outdated dependencies based on the weekly dependency audit.
+
+            ## Changes
+            - Updates outdated dependencies to their latest versions
+            - Standardizes dependency versions across the project
+
+            ## Audit Report
+            The full dependency audit report is attached as an artifact to the workflow run.
+          branch: dependency-updates
+          base: main
+          labels: dependencies,automated-pr
+
+      - name: Create security fix PR for vulnerable dependencies
+        if: steps.audit.outputs.has_vulnerabilities == 'true'
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "fix: update vulnerable dependencies"
+          title: "Security: Fix Vulnerable Dependencies"
+          body: |
+            This PR fixes vulnerable dependencies identified in the weekly dependency audit.
+
+            ## Changes
+            - Updates vulnerable dependencies to patched versions
+
+            ## Audit Report
+            The full dependency audit report is attached as an artifact to the workflow run.
+          branch: dependency-security-fixes
+          base: main
+          labels: dependencies,security,automated-pr
+
+      - name: Create consistency fix PR for inconsistent dependencies
+        if: steps.audit.outputs.has_inconsistencies == 'true'
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "fix: standardize inconsistent dependency versions"
+          title: "Dependency Consistency Fixes"
+          body: |
+            This PR standardizes inconsistent dependency versions identified in the weekly dependency audit.
+
+            ## Changes
+            - Standardizes dependency versions across the project
+
+            ## Audit Report
+            The full dependency audit report is attached as an artifact to the workflow run.
+          branch: dependency-consistency-fixes
+          base: main
+          labels: dependencies,automated-pr
+
+      - name: Upload audit report
+        uses: actions/upload-artifact@v3
+        with:
+          name: dependency-audit-report
+          path: dependency-audit-report.json
+          
+      - name: Update knowledge graph
+        run: |
+          # Update the knowledge graph with dependency information
+          python core/kg/scripts/update_knowledge_graph.py --dependency-report dependency-audit-report.json

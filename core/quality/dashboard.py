@@ -135,12 +135,21 @@ class QualityMetricsDashboard:
             logger.error(f"Error loading dependency audit report: {e}")
             dependency_data = {}
         
+        # Get documentation coverage metrics
+        try:
+            with open(REPORTS_DIR / "documentation_coverage_metrics.json", 'r') as f:
+                documentation_data = json.load(f)
+        except Exception as e:
+            logger.error(f"Error loading documentation coverage metrics: {e}")
+            documentation_data = {}
+        
         # Combine metrics from different sources
         metrics = {
             "timestamp": datetime.datetime.now().isoformat(),
             "code_quality": quality_data.get("summary", {}),
             "file_structure": structure_data.get("file_structure_metrics", {}),
-            "dependencies": dependency_data.get("summary", {})
+            "dependencies": dependency_data.get("summary", {}),
+            "documentation_coverage": documentation_data.get("overall_metrics", {})
         }
         
         # Add knowledge graph metrics if available
@@ -336,7 +345,9 @@ class QualityMetricsDashboard:
         
         # Define key metrics to track
         key_metrics = [
-            {"name": "Documentation Coverage", "key": "documentation_coverage", "target": 0.95, "source": "knowledge_graph"},
+            {"name": "Documentation Coverage", "key": "overall_coverage", "target": 0.95, "source": "documentation_coverage"},
+            {"name": "Module Docstring Coverage", "key": "module_coverage", "target": 0.95, "source": "documentation_coverage"},
+            {"name": "Function Docstring Coverage", "key": "function_coverage", "target": 0.90, "source": "documentation_coverage"},
             {"name": "Type Hint Coverage", "key": "type_hint_coverage", "target": 0.90, "source": "knowledge_graph"},
             {"name": "File Structure Compliance", "key": "overall_compliance", "target": 95.0, "source": "file_structure"},
             {"name": "Code Quality Issues", "key": "issues_count", "target": 0, "source": "code_quality", "lower_is_better": True}
@@ -450,6 +461,40 @@ class QualityMetricsDashboard:
                     <h3>Quality Issues</h3>
                     <div class="metric-value" id="quality-issues">-</div>
                     <div class="metric-trend" id="issues-trend"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="dashboard-section">
+            <h2>Documentation Coverage Details</h2>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <h3>Module Coverage</h3>
+                    <div class="metric-value" id="module-coverage">-</div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" id="module-coverage-bar" style="width: 0%"></div>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <h3>Class Coverage</h3>
+                    <div class="metric-value" id="class-coverage">-</div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" id="class-coverage-bar" style="width: 0%"></div>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <h3>Function Coverage</h3>
+                    <div class="metric-value" id="function-coverage">-</div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" id="function-coverage-bar" style="width: 0%"></div>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <h3>Parameter Coverage</h3>
+                    <div class="metric-value" id="parameter-coverage">-</div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" id="parameter-coverage-bar" style="width: 0%"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -821,7 +866,7 @@ function loadDashboardData() {
 // Update summary metrics
 function updateSummaryMetrics(data) {
     // Documentation coverage
-    const docCoverage = data.knowledge_graph?.components?.core?.documentation_coverage || 0;
+    const docCoverage = data.documentation_coverage?.overall_coverage || 0;
     document.getElementById('documentation-coverage').textContent = formatPercentage(docCoverage);
     
     // Type hint coverage
@@ -835,6 +880,34 @@ function updateSummaryMetrics(data) {
     // Quality issues
     const qualityIssues = data.code_quality?.total_checks || 0;
     document.getElementById('quality-issues').textContent = qualityIssues;
+    
+    // Update documentation coverage details
+    updateDocumentationCoverageDetails(data.documentation_coverage);
+}
+
+// Update documentation coverage details
+function updateDocumentationCoverageDetails(docCoverage) {
+    if (!docCoverage) return;
+    
+    // Module coverage
+    const moduleCoverage = docCoverage.module_coverage || 0;
+    document.getElementById('module-coverage').textContent = formatPercentage(moduleCoverage);
+    document.getElementById('module-coverage-bar').style.width = `${moduleCoverage * 100}%`;
+    
+    // Class coverage
+    const classCoverage = docCoverage.class_coverage || 0;
+    document.getElementById('class-coverage').textContent = formatPercentage(classCoverage);
+    document.getElementById('class-coverage-bar').style.width = `${classCoverage * 100}%`;
+    
+    // Function coverage
+    const functionCoverage = docCoverage.function_coverage || 0;
+    document.getElementById('function-coverage').textContent = formatPercentage(functionCoverage);
+    document.getElementById('function-coverage-bar').style.width = `${functionCoverage * 100}%`;
+    
+    // Parameter coverage
+    const parameterCoverage = docCoverage.parameter_coverage || 0;
+    document.getElementById('parameter-coverage').textContent = formatPercentage(parameterCoverage);
+    document.getElementById('parameter-coverage-bar').style.width = `${parameterCoverage * 100}%`;
 }
 
 // Update last updated timestamp

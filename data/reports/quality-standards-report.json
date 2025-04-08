@@ -61,7 +61,7 @@
             "success": true,
             "execution_time": 0.3309061527252197,
             "output": {
-              "stdout": "\u001b[0;34mLoading standards from specification manifest...\u001b[0m\n\u001b[1;33mWarning: jq is not installed. Using default standards.\u001b[0m\n\u001b[1;33mInstall jq with: sudo apt-get install jq\u001b[0m\nUsing default naming conventions:\nPython modules naming convention: \u001b[0;34msnake_case.py\u001b[0m\nShell scripts naming convention: \u001b[0;34mkebab-case.sh\u001b[0m\nMarkdown files naming convention: \u001b[0;34mkebab-case.md\u001b[0m\nYAML files naming convention: \u001b[0;34mkebab-case.yaml or kebab-case.yml\u001b[0m\n\nUsing default code patterns for applying fixes.\n\u001b[1;33mWarning: isort is not installed. Install with: pip install isort\u001b[0m\n\u001b[1;33mWarning: Black is not installed. Install with: pip install black\u001b[0m\n\u001b[1;33mWarning: autopep8 is not installed. Install with: pip install autopep8\u001b[0m\n\u001b[1;33mWarning: autoflake is not installed. Install with: pip install autoflake\u001b[0m\n\u001b[1;33mWarning: shfmt is not installed. Install with: go install mvdan.cc/sh/v3/cmd/shfmt@latest\u001b[0m\n\u001b[1;33mWarning: prettier is not installed. Install with: npm install -g prettier\u001b[0m\n\n\u001b[0;32mFix report generated at /home/skr/projects/MCP-BASE-STACK/data/reports/code_quality_fixes_report.json\u001b[0m\n\n\u001b[0;34mUpdating knowledge graph with code quality fixes...\u001b[0m\nCode Quality Component:\n- code_quality: Code Quality (active)\n\nConvention Document Nodes:\n\nCode Quality Relationships:\n- code_quality --has_feature-> code_quality_checks\n- code_quality --has_feature-> code_quality_fixes\n\nDocs Conventions Relationships:\n\nCode Quality Checks:\n- Last check: 2025-04-08T05:39:15Z\n- Total checks: 0\n- Passed checks: 0\n- Failed checks: 0\n\nCode Quality Fixes:\n- Last fix: 2025-04-08T05:39:16Z\n- Total issues: 0\n- Fixable issues: 0\n- Fixed issues: 0\n- Unfixed issues: 0\n\u001b[0;32mKnowledge graph updated successfully.\u001b[0m\n\n\u001b[1;33m========================================\n  Fix Complete\n========================================\u001b[0m\n\n\u001b[0;32mAutomatic fixes have been applied.\u001b[0m\nRun \u001b[1;33m./scripts/utils/quality/check_code_quality.sh\u001b[0m to verify all issues are fixed.\nFor more granular control, run:\n\u001b[1;33m  python3 ./scripts/utils/quality/enforce_code_standards.py --check\u001b[0m\nSome issues may require manual fixes, especially for mypy, pylint, and shellcheck.\nA detailed report of applied fixes is available at: \u001b[0;34m/home/skr/projects/MCP-BASE-STACK/data/reports/code_quality_fixes_report.json\u001b[0m\n",
+              "stdout": "\u001b[0;34mLoading standards from specification manifest...\u001b[0m\n\u001b[1;33mWarning: jq is not installed. Using default standards.\u001b[0m\n\u001b[1;33mInstall jq with: sudo apt-get install jq\u001b[0m\nUsing default naming conventions:\nPython modules naming convention: \u001b[0;34msnake_case.py\u001b[0m\nShell scripts naming convention: \u001b[0;34mkebab-case.sh\u001b[0m\nMarkdown files naming convention: \u001b[0;34mkebab-case.md\u001b[0m\nYAML files naming convention: \u001b[0;34mkebab-case.yaml or kebab-case.yml\u001b[0m\n\nUsing default code patterns for applying fixes.\n\u001b[1;33mWarning: isort is not installed. Install with: pip install isort\u001b[0m\n\u001b[1;33mWarning: Black is not installed. Install with: pip install black\u001b[0m\n\u001b[1;33mWarning: autopep8 is not installed. Install with: pip install autopep8\u001b[0m\n\u001b[1;33mWarning: autoflake is not installed. Install with: pip install autoflake\u001b[0m\n\u001b[1;33mWarning: shfmt is not installed. Install with: go install mvdan.cc/sh/v3/cmd/shfmt@latest\u001b[0m\n\u001b[1;33mWarning: prettier is not installed. Install with: npm install -g prettier\u001b[0m\n\n\u001b[0;32mFix report generated at /home/skr/projects/MCP-BASE-STACK/data/reports/code_quality_fixes_report.json\u001b[0m\n\n\u001b[0;34mUpdating knowledge graph with code quality fixes...\u001b[0m\nCode Quality Component:\n- code_quality: Code Quality (active)\n\nConvention Document Nodes:\n\nCode Quality Relationships:\n- code_quality --has_feature-> code_quality_checks\n- code_quality --has_feature-> code_quality_fixes\n\nDocs Conventions Relationships:\n\nCode Quality Checks:\n- Last check: 2025-04-08T05:39:15Z\n- Total checks: 0\n- Passed checks: 0\n- Failed checks: 0\n\nCode Quality Fixes:\n- Last fix: 2025-04-08T05:39:16Z\n- Total issues: 0\n- Fixable issues: 0\n- Fixed issues: 0\n- Unfixed issues: 0\n\u001b[0;32mKnowledge graph updated successfully.\u001b[0m\n\n\u001b[1;33m========================================\n  Fix Complete\n========================================\u001b[0m\n\n\u001b[0;32mAutomatic fixes have been applied.\u001b[0m\nRun \u001b[1;33m./scripts/utils/quality/check-code-quality.sh\u001b[0m to verify all issues are fixed.\nFor more granular control, run:\n\u001b[1;33m  python3 ./scripts/utils/quality/enforce_code_standards.py --check\u001b[0m\nSome issues may require manual fixes, especially for mypy, pylint, and shellcheck.\nA detailed report of applied fixes is available at: \u001b[0;34m/home/skr/projects/MCP-BASE-STACK/data/reports/code_quality_fixes_report.json\u001b[0m\n",
               "stderr": "2025-04-08 07:39:16,724 - check_code_quality_nodes - INFO - Loading knowledge graph from /home/skr/projects/core/kg/data/knowledge_graph.graphml\n2025-04-08 07:39:16,766 - check_code_quality_nodes - INFO - Knowledge graph loaded with 21 nodes and 20 edges\n2025-04-08 07:39:16,766 - check_code_quality_nodes - INFO - Loading report from /home/skr/projects/MCP-BASE-STACK/data/reports/code_quality_fixes_report.json\n2025-04-08 07:39:16,766 - check_code_quality_nodes - INFO - Report loaded successfully\n2025-04-08 07:39:16,766 - check_code_quality_nodes - INFO - Updating knowledge graph with code quality fix results\n2025-04-08 07:39:16,766 - check_code_quality_nodes - INFO - Knowledge graph updated with fix results\n2025-04-08 07:39:16,766 - check_code_quality_nodes - INFO - Saving knowledge graph to /home/skr/projects/core/kg/data/knowledge_graph.graphml\n2025-04-08 07:39:16,767 - check_code_quality_nodes - INFO - Knowledge graph saved with 21 nodes and 20 edges\n"
             }
           }
@@ -1942,17 +1942,17 @@
             "cleanup-report.json",
             "pyproject.toml",
             "analyze_code.py",
-            "create_backup_branch.sh",
+            "create-backup-branch.sh",
             "project-structure-report.json",
-            "fix_code_quality.sh",
+            "fix-code-quality.sh",
             "specification-manifest.json",
             "code_review_report.md",
             ".flake8",
             "cleanup_files.log",
-            "check_code_quality.sh",
-            "verify_stack_health.sh",
+            "check-code-quality.sh",
+            "verify-stack-health.sh",
             "check_kg_nodes.py",
-            "install_pre_commit_hooks.sh",
+            "install-pre-commit-hooks.sh",
             "cleanup_files.py",
             "traverse_project.py",
             "LICENSE",
@@ -2489,10 +2489,10 @@
           "scripts/maintenance": [
             "verify_kg_migration.py",
             "automated_code_review.py",
-            "verify_stack_health.sh",
+            "verify-stack-health.sh",
             "generate_quality_report.py",
             "verify_librechat_integration.sh",
-            "test_mcp_agent.sh"
+            "test-mcp-agent.sh"
           ],
           ".git/objects/c5": [
             "8d94af48f5ab1284031606ac674df5bf87ba85",
@@ -2602,12 +2602,12 @@
             "10c1faeccc5b92a39ce34d7dc1fa048327e562"
           ],
           "scripts/deployment": [
-            "restart_stack.sh",
-            "update_ollama_references.sh",
+            "restart-stack.sh",
+            "update-ollama-references.sh",
             "update_kg_deployment.py",
-            "start_mcp_server.sh",
+            "start-mcp-server.sh",
             "update_kg_root.py",
-            "register_new_features.sh"
+            "register-new-features.sh"
           ],
           "backup_20250407_220136/services/mcp-server": [
             "requirements.txt",
@@ -2770,7 +2770,7 @@
           ],
           "backup_20250407_215945": [
             "cleanup-report.json",
-            "restore_from_backup.sh"
+            "restore-from-backup.sh"
           ],
           ".git/objects/39": [
             "1e764acdc7146ab840cf6d230dda0be165d361"
@@ -2962,43 +2962,43 @@
           },
           {
             "type": "invalid_shell_script_name",
-            "path": "verify_stack_health.sh",
-            "name": "verify_stack_health.sh",
+            "path": "verify-stack-health.sh",
+            "name": "verify-stack-health.sh",
             "pattern": "kebab-case.sh",
             "severity": "error",
-            "message": "Shell script name 'verify_stack_health.sh' does not follow the required pattern 'kebab-case.sh'"
+            "message": "Shell script name 'verify-stack-health.sh' does not follow the required pattern 'kebab-case.sh'"
           },
           {
             "type": "invalid_shell_script_name",
-            "path": "fix_code_quality.sh",
-            "name": "fix_code_quality.sh",
+            "path": "fix-code-quality.sh",
+            "name": "fix-code-quality.sh",
             "pattern": "kebab-case.sh",
             "severity": "error",
-            "message": "Shell script name 'fix_code_quality.sh' does not follow the required pattern 'kebab-case.sh'"
+            "message": "Shell script name 'fix-code-quality.sh' does not follow the required pattern 'kebab-case.sh'"
           },
           {
             "type": "invalid_shell_script_name",
-            "path": "create_backup_branch.sh",
-            "name": "create_backup_branch.sh",
+            "path": "create-backup-branch.sh",
+            "name": "create-backup-branch.sh",
             "pattern": "kebab-case.sh",
             "severity": "error",
-            "message": "Shell script name 'create_backup_branch.sh' does not follow the required pattern 'kebab-case.sh'"
+            "message": "Shell script name 'create-backup-branch.sh' does not follow the required pattern 'kebab-case.sh'"
           },
           {
             "type": "invalid_shell_script_name",
-            "path": "install_pre_commit_hooks.sh",
-            "name": "install_pre_commit_hooks.sh",
+            "path": "install-pre-commit-hooks.sh",
+            "name": "install-pre-commit-hooks.sh",
             "pattern": "kebab-case.sh",
             "severity": "error",
-            "message": "Shell script name 'install_pre_commit_hooks.sh' does not follow the required pattern 'kebab-case.sh'"
+            "message": "Shell script name 'install-pre-commit-hooks.sh' does not follow the required pattern 'kebab-case.sh'"
           },
           {
             "type": "invalid_shell_script_name",
-            "path": "check_code_quality.sh",
-            "name": "check_code_quality.sh",
+            "path": "check-code-quality.sh",
+            "name": "check-code-quality.sh",
             "pattern": "kebab-case.sh",
             "severity": "error",
-            "message": "Shell script name 'check_code_quality.sh' does not follow the required pattern 'kebab-case.sh'"
+            "message": "Shell script name 'check-code-quality.sh' does not follow the required pattern 'kebab-case.sh'"
           },
           {
             "type": "invalid_shell_script_name",
@@ -3010,19 +3010,19 @@
           },
           {
             "type": "invalid_shell_script_name",
-            "path": "scripts/maintenance/test_mcp_agent.sh",
-            "name": "test_mcp_agent.sh",
+            "path": "scripts/maintenance/test-mcp-agent.sh",
+            "name": "test-mcp-agent.sh",
             "pattern": "kebab-case.sh",
             "severity": "error",
-            "message": "Shell script name 'test_mcp_agent.sh' does not follow the required pattern 'kebab-case.sh'"
+            "message": "Shell script name 'test-mcp-agent.sh' does not follow the required pattern 'kebab-case.sh'"
           },
           {
             "type": "invalid_shell_script_name",
-            "path": "scripts/maintenance/verify_stack_health.sh",
-            "name": "verify_stack_health.sh",
+            "path": "scripts/maintenance/verify-stack-health.sh",
+            "name": "verify-stack-health.sh",
             "pattern": "kebab-case.sh",
             "severity": "error",
-            "message": "Shell script name 'verify_stack_health.sh' does not follow the required pattern 'kebab-case.sh'"
+            "message": "Shell script name 'verify-stack-health.sh' does not follow the required pattern 'kebab-case.sh'"
           },
           {
             "type": "invalid_shell_script_name",
@@ -3034,43 +3034,43 @@
           },
           {
             "type": "invalid_shell_script_name",
-            "path": "scripts/deployment/start_mcp_server.sh",
-            "name": "start_mcp_server.sh",
+            "path": "scripts/deployment/start-mcp-server.sh",
+            "name": "start-mcp-server.sh",
             "pattern": "kebab-case.sh",
             "severity": "error",
-            "message": "Shell script name 'start_mcp_server.sh' does not follow the required pattern 'kebab-case.sh'"
+            "message": "Shell script name 'start-mcp-server.sh' does not follow the required pattern 'kebab-case.sh'"
           },
           {
             "type": "invalid_shell_script_name",
-            "path": "scripts/deployment/restart_stack.sh",
-            "name": "restart_stack.sh",
+            "path": "scripts/deployment/restart-stack.sh",
+            "name": "restart-stack.sh",
             "pattern": "kebab-case.sh",
             "severity": "error",
-            "message": "Shell script name 'restart_stack.sh' does not follow the required pattern 'kebab-case.sh'"
+            "message": "Shell script name 'restart-stack.sh' does not follow the required pattern 'kebab-case.sh'"
           },
           {
             "type": "invalid_shell_script_name",
-            "path": "scripts/deployment/register_new_features.sh",
-            "name": "register_new_features.sh",
+            "path": "scripts/deployment/register-new-features.sh",
+            "name": "register-new-features.sh",
             "pattern": "kebab-case.sh",
             "severity": "error",
-            "message": "Shell script name 'register_new_features.sh' does not follow the required pattern 'kebab-case.sh'"
+            "message": "Shell script name 'register-new-features.sh' does not follow the required pattern 'kebab-case.sh'"
           },
           {
             "type": "invalid_shell_script_name",
-            "path": "scripts/deployment/update_ollama_references.sh",
-            "name": "update_ollama_references.sh",
+            "path": "scripts/deployment/update-ollama-references.sh",
+            "name": "update-ollama-references.sh",
             "pattern": "kebab-case.sh",
             "severity": "error",
-            "message": "Shell script name 'update_ollama_references.sh' does not follow the required pattern 'kebab-case.sh'"
+            "message": "Shell script name 'update-ollama-references.sh' does not follow the required pattern 'kebab-case.sh'"
           },
           {
             "type": "invalid_shell_script_name",
-            "path": "backup_20250407_215945/restore_from_backup.sh",
-            "name": "restore_from_backup.sh",
+            "path": "backup_20250407_215945/restore-from-backup.sh",
+            "name": "restore-from-backup.sh",
             "pattern": "kebab-case.sh",
             "severity": "error",
-            "message": "Shell script name 'restore_from_backup.sh' does not follow the required pattern 'kebab-case.sh'"
+            "message": "Shell script name 'restore-from-backup.sh' does not follow the required pattern 'kebab-case.sh'"
           },
           {
             "type": "invalid_markdown_file_name",
@@ -3605,14 +3605,14 @@
           },
           {
             "type": "non_ideal_location",
-            "path": "backup_20250407_215945/restore_from_backup.sh",
-            "name": "restore_from_backup.sh",
+            "path": "backup_20250407_215945/restore-from-backup.sh",
+            "name": "restore-from-backup.sh",
             "extension": ".sh",
             "ideal_directories": [
               "scripts"
             ],
             "severity": "warning",
-            "message": "File 'backup_20250407_215945/restore_from_backup.sh' with extension '.sh' is not in an ideal directory. Consider moving to one of: scripts"
+            "message": "File 'backup_20250407_215945/restore-from-backup.sh' with extension '.sh' is not in an ideal directory. Consider moving to one of: scripts"
           },
           {
             "type": "non_ideal_location",

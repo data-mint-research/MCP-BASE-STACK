@@ -1767,17 +1767,17 @@
         "cleanup-report.json",
         "pyproject.toml",
         "analyze_code.py",
-        "create_backup_branch.sh",
+        "create-backup-branch.sh",
         "project-structure-report.json",
-        "fix_code_quality.sh",
+        "fix-code-quality.sh",
         "specification-manifest.json",
         "code_review_report.md",
         ".flake8",
         "cleanup_files.log",
-        "check_code_quality.sh",
-        "verify_stack_health.sh",
+        "check-code-quality.sh",
+        "verify-stack-health.sh",
         "check_kg_nodes.py",
-        "install_pre_commit_hooks.sh",
+        "install-pre-commit-hooks.sh",
         "cleanup_files.py",
         "traverse_project.py",
         "LICENSE",
@@ -2314,10 +2314,10 @@
       "scripts/maintenance": [
         "verify_kg_migration.py",
         "automated_code_review.py",
-        "verify_stack_health.sh",
+        "verify-stack-health.sh",
         "generate_quality_report.py",
         "verify_librechat_integration.sh",
-        "test_mcp_agent.sh"
+        "test-mcp-agent.sh"
       ],
       ".git/objects/c5": [
         "8d94af48f5ab1284031606ac674df5bf87ba85",
@@ -2427,12 +2427,12 @@
         "10c1faeccc5b92a39ce34d7dc1fa048327e562"
       ],
       "scripts/deployment": [
-        "restart_stack.sh",
-        "update_ollama_references.sh",
+        "restart-stack.sh",
+        "update-ollama-references.sh",
         "update_kg_deployment.py",
-        "start_mcp_server.sh",
+        "start-mcp-server.sh",
         "update_kg_root.py",
-        "register_new_features.sh"
+        "register-new-features.sh"
       ],
       "backup_20250407_220136/services/mcp-server": [
         "requirements.txt",
@@ -2595,7 +2595,7 @@
       ],
       "backup_20250407_215945": [
         "cleanup-report.json",
-        "restore_from_backup.sh"
+        "restore-from-backup.sh"
       ],
       ".git/objects/39": [
         "1e764acdc7146ab840cf6d230dda0be165d361"
@@ -2787,43 +2787,43 @@
       },
       {
         "type": "invalid_shell_script_name",
-        "path": "verify_stack_health.sh",
-        "name": "verify_stack_health.sh",
+        "path": "verify-stack-health.sh",
+        "name": "verify-stack-health.sh",
         "pattern": "kebab-case.sh",
         "severity": "error",
-        "message": "Shell script name 'verify_stack_health.sh' does not follow the required pattern 'kebab-case.sh'"
+        "message": "Shell script name 'verify-stack-health.sh' does not follow the required pattern 'kebab-case.sh'"
       },
       {
         "type": "invalid_shell_script_name",
-        "path": "fix_code_quality.sh",
-        "name": "fix_code_quality.sh",
+        "path": "fix-code-quality.sh",
+        "name": "fix-code-quality.sh",
         "pattern": "kebab-case.sh",
         "severity": "error",
-        "message": "Shell script name 'fix_code_quality.sh' does not follow the required pattern 'kebab-case.sh'"
+        "message": "Shell script name 'fix-code-quality.sh' does not follow the required pattern 'kebab-case.sh'"
       },
       {
         "type": "invalid_shell_script_name",
-        "path": "create_backup_branch.sh",
-        "name": "create_backup_branch.sh",
+        "path": "create-backup-branch.sh",
+        "name": "create-backup-branch.sh",
         "pattern": "kebab-case.sh",
         "severity": "error",
-        "message": "Shell script name 'create_backup_branch.sh' does not follow the required pattern 'kebab-case.sh'"
+        "message": "Shell script name 'create-backup-branch.sh' does not follow the required pattern 'kebab-case.sh'"
       },
       {
         "type": "invalid_shell_script_name",
-        "path": "install_pre_commit_hooks.sh",
-        "name": "install_pre_commit_hooks.sh",
+        "path": "install-pre-commit-hooks.sh",
+        "name": "install-pre-commit-hooks.sh",
         "pattern": "kebab-case.sh",
         "severity": "error",
-        "message": "Shell script name 'install_pre_commit_hooks.sh' does not follow the required pattern 'kebab-case.sh'"
+        "message": "Shell script name 'install-pre-commit-hooks.sh' does not follow the required pattern 'kebab-case.sh'"
       },
       {
         "type": "invalid_shell_script_name",
-        "path": "check_code_quality.sh",
-        "name": "check_code_quality.sh",
+        "path": "check-code-quality.sh",
+        "name": "check-code-quality.sh",
         "pattern": "kebab-case.sh",
         "severity": "error",
-        "message": "Shell script name 'check_code_quality.sh' does not follow the required pattern 'kebab-case.sh'"
+        "message": "Shell script name 'check-code-quality.sh' does not follow the required pattern 'kebab-case.sh'"
       },
       {
         "type": "invalid_shell_script_name",
@@ -2835,19 +2835,19 @@
       },
       {
         "type": "invalid_shell_script_name",
-        "path": "scripts/maintenance/test_mcp_agent.sh",
-        "name": "test_mcp_agent.sh",
+        "path": "scripts/maintenance/test-mcp-agent.sh",
+        "name": "test-mcp-agent.sh",
         "pattern": "kebab-case.sh",
         "severity": "error",
-        "message": "Shell script name 'test_mcp_agent.sh' does not follow the required pattern 'kebab-case.sh'"
+        "message": "Shell script name 'test-mcp-agent.sh' does not follow the required pattern 'kebab-case.sh'"
       },
       {
         "type": "invalid_shell_script_name",
-        "path": "scripts/maintenance/verify_stack_health.sh",
-        "name": "verify_stack_health.sh",
+        "path": "scripts/maintenance/verify-stack-health.sh",
+        "name": "verify-stack-health.sh",
         "pattern": "kebab-case.sh",
         "severity": "error",
-        "message": "Shell script name 'verify_stack_health.sh' does not follow the required pattern 'kebab-case.sh'"
+        "message": "Shell script name 'verify-stack-health.sh' does not follow the required pattern 'kebab-case.sh'"
       },
       {
         "type": "invalid_shell_script_name",
@@ -2859,43 +2859,43 @@
       },
       {
         "type": "invalid_shell_script_name",
-        "path": "scripts/deployment/start_mcp_server.sh",
-        "name": "start_mcp_server.sh",
+        "path": "scripts/deployment/start-mcp-server.sh",
+        "name": "start-mcp-server.sh",
         "pattern": "kebab-case.sh",
         "severity": "error",
-        "message": "Shell script name 'start_mcp_server.sh' does not follow the required pattern 'kebab-case.sh'"
+        "message": "Shell script name 'start-mcp-server.sh' does not follow the required pattern 'kebab-case.sh'"
       },
       {
         "type": "invalid_shell_script_name",
-        "path": "scripts/deployment/restart_stack.sh",
-        "name": "restart_stack.sh",
+        "path": "scripts/deployment/restart-stack.sh",
+        "name": "restart-stack.sh",
         "pattern": "kebab-case.sh",
         "severity": "error",
-        "message": "Shell script name 'restart_stack.sh' does not follow the required pattern 'kebab-case.sh'"
+        "message": "Shell script name 'restart-stack.sh' does not follow the required pattern 'kebab-case.sh'"
       },
       {
         "type": "invalid_shell_script_name",
-        "path": "scripts/deployment/register_new_features.sh",
-        "name": "register_new_features.sh",
+        "path": "scripts/deployment/register-new-features.sh",
+        "name": "register-new-features.sh",
         "pattern": "kebab-case.sh",
         "severity": "error",
-        "message": "Shell script name 'register_new_features.sh' does not follow the required pattern 'kebab-case.sh'"
+        "message": "Shell script name 'register-new-features.sh' does not follow the required pattern 'kebab-case.sh'"
       },
       {
         "type": "invalid_shell_script_name",
-        "path": "scripts/deployment/update_ollama_references.sh",
-        "name": "update_ollama_references.sh",
+        "path": "scripts/deployment/update-ollama-references.sh",
+        "name": "update-ollama-references.sh",
         "pattern": "kebab-case.sh",
         "severity": "error",
-        "message": "Shell script name 'update_ollama_references.sh' does not follow the required pattern 'kebab-case.sh'"
+        "message": "Shell script name 'update-ollama-references.sh' does not follow the required pattern 'kebab-case.sh'"
       },
       {
         "type": "invalid_shell_script_name",
-        "path": "backup_20250407_215945/restore_from_backup.sh",
-        "name": "restore_from_backup.sh",
+        "path": "backup_20250407_215945/restore-from-backup.sh",
+        "name": "restore-from-backup.sh",
         "pattern": "kebab-case.sh",
         "severity": "error",
-        "message": "Shell script name 'restore_from_backup.sh' does not follow the required pattern 'kebab-case.sh'"
+        "message": "Shell script name 'restore-from-backup.sh' does not follow the required pattern 'kebab-case.sh'"
       },
       {
         "type": "invalid_markdown_file_name",
@@ -3430,14 +3430,14 @@
       },
       {
         "type": "non_ideal_location",
-        "path": "backup_20250407_215945/restore_from_backup.sh",
-        "name": "restore_from_backup.sh",
+        "path": "backup_20250407_215945/restore-from-backup.sh",
+        "name": "restore-from-backup.sh",
         "extension": ".sh",
         "ideal_directories": [
           "scripts"
         ],
         "severity": "warning",
-        "message": "File 'backup_20250407_215945/restore_from_backup.sh' with extension '.sh' is not in an ideal directory. Consider moving to one of: scripts"
+        "message": "File 'backup_20250407_215945/restore-from-backup.sh' with extension '.sh' is not in an ideal directory. Consider moving to one of: scripts"
       },
       {
         "type": "non_ideal_location",

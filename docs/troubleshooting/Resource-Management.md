@@ -55,14 +55,14 @@ To restart the complete stack, use the restart script or follow the original dep
 
 ```bash
 # Using the restart script
-./restart_stack.sh
+./restart-stack.sh
 
 # Or manually restart components in the correct order
 cd LibreChat
 docker compose up -d
 cd ..
 docker start ollama
-./start_mcp_server.sh
+./start-mcp-server.sh
 ```
 
 ## Resource Optimization

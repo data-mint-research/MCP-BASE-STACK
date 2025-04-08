@@ -1,0 +1,28 @@
+{
+  "project_dir": "/home/skr/projects/MCP-BASE-STACK",
+  "timestamp": "2025-04-08T21:02:13.187845",
+  "summary": {
+    "total_orphaned_files": 3,
+    "total_size": 71728
+  },
+  "orphaned_files": [
+    {
+      "path": "orphaned_files_report.json",
+      "size": 62942,
+      "last_modified": "2025-04-08T20:57:02.144613",
+      "reason": "Not referenced by any other file"
+    },
+    {
+      "path": "orphaned_files_report_with_recommendations.md",
+      "size": 6658,
+      "last_modified": "2025-04-08T20:57:41.623371",
+      "reason": "Not referenced by any other file"
+    },
+    {
+      "path": "orphaned_files_summary.md",
+      "size": 2128,
+      "last_modified": "2025-04-08T20:57:59.280175",
+      "reason": "Not referenced by any other file"
+    }
+  ]
+}

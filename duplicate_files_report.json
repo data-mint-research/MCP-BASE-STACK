@@ -1,0 +1,504 @@
+{
+  "project_dir": "/home/skr/projects/MCP-BASE-STACK",
+  "timestamp": "2025-04-08T21:08:22.915338",
+  "summary": {
+    "total_duplicate_sets": 31,
+    "total_duplicate_files": 38,
+    "total_wasted_space": 82428
+  },
+  "duplicate_sets": [
+    {
+      "hash": "567574f5d074ab363f6cecf02dc10e82",
+      "file_size": 34712,
+      "wasted_space": 34712,
+      "files": [
+        {
+          "path": "standardize_file_structure_fixed.py",
+          "last_modified": "2025-04-08T20:41:26.806644"
+        },
+        {
+          "path": "standardize_file_structure.py",
+          "last_modified": "2025-04-08T20:41:07.076050"
+        }
+      ]
+    },
+    {
+      "hash": "ff1cd436b5d53fc99d1da8571db458e0",
+      "file_size": 4771,
+      "wasted_space": 4771,
+      "files": [
+        {
+          "path": "docs/scripts/deployment-README.md",
+          "last_modified": "2025-04-08T19:53:51.572269"
+        },
+        {
+          "path": "scripts/deployment/README.md",
+          "last_modified": "2025-04-08T19:47:34.751153"
+        }
+      ]
+    },
+    {
+      "hash": "743cf42383e257a1a4cd79fd0a374f4d",
+      "file_size": 4756,
+      "wasted_space": 4756,
+      "files": [
+        {
+          "path": "docs/kg/scripts-README.md",
+          "last_modified": "2025-04-08T19:52:41.505028"
+        },
+        {
+          "path": "core/kg/scripts/README.md",
+          "last_modified": "2025-04-08T11:38:33.686417"
+        }
+      ]
+    },
+    {
+      "hash": "bf0be56001dda3a503ede826d59d5a8c",
+      "file_size": 4412,
+      "wasted_space": 4412,
+      "files": [
+        {
+          "path": "docs/scripts/utils-cleanup-README.md",
+          "last_modified": "2025-04-08T19:54:40.147535"
+        },
+        {
+          "path": "scripts/utils/cleanup/README.md",
+          "last_modified": "2025-04-08T19:47:34.924338"
+        }
+      ]
+    },
+    {
+      "hash": "5522c5a9323452cfe43442243fc6840c",
+      "file_size": 3508,
+      "wasted_space": 3508,
+      "files": [
+        {
+          "path": "docs/services/mcp-server-di-README.md",
+          "last_modified": "2025-04-08T19:50:55.999411"
+        },
+        {
+          "path": "services/mcp-server/src/di/README.md",
+          "last_modified": "2025-04-08T09:53:42.239127"
+        }
+      ]
+    },
+    {
+      "hash": "90b85ccbe6264a94b30688fa8e080db8",
+      "file_size": 3172,
+      "wasted_space": 3172,
+      "files": [
+        {
+          "path": "docs/scripts/utils-validation-README.md",
+          "last_modified": "2025-04-08T19:54:40.147535"
+        },
+        {
+          "path": "scripts/utils/validation/README.md",
+          "last_modified": "2025-04-08T19:47:35.051948"
+        }
+      ]
+    },
+    {
+      "hash": "161d60b8781cc8ba5488a8ed5b2bd2ca",
+      "file_size": 2936,
+      "wasted_space": 2936,
+      "files": [
+        {
+          "path": "docs/scripts/utils-quality-README.md",
+          "last_modified": "2025-04-08T19:54:40.147535"
+        },
+        {
+          "path": "scripts/utils/quality/README.md",
+          "last_modified": "2025-04-08T19:47:34.833188"
+        }
+      ]
+    },
+    {
+      "hash": "1a13620c5d775c169d5aabf3d38069b8",
+      "file_size": 2927,
+      "wasted_space": 2927,
+      "files": [
+        {
+          "path": "docs/scripts/maintenance-README.md",
+          "last_modified": "2025-04-08T19:54:24.943789"
+        },
+        {
+          "path": "scripts/maintenance/README.md",
+          "last_modified": "2025-04-08T19:47:35.051948"
+        }
+      ]
+    },
+    {
+      "hash": "5a3a3b701ba1b800391dd5225388a3e0",
+      "file_size": 2670,
+      "wasted_space": 2670,
+      "files": [
+        {
+          "path": ".pre-commit-config.yaml",
+          "last_modified": "2025-04-08T20:50:33.611289"
+        },
+        {
+          "path": "config/lint/pre-commit-config.yaml",
+          "last_modified": "2025-04-08T20:50:33.611289"
+        }
+      ]
+    },
+    {
+      "hash": "2f4d0852c8ee8bdb8e787426b24fe3f9",
+      "file_size": 2314,
+      "wasted_space": 2314,
+      "files": [
+        {
+          "path": "docs/tests/README.md",
+          "last_modified": "2025-04-08T19:50:42.830865"
+        },
+        {
+          "path": "tests/README.md",
+          "last_modified": "2025-04-08T09:53:42.239127"
+        }
+      ]
+    },
+    {
+      "hash": "c2204ae59aea14a7fd127a9c2a65c544",
+      "file_size": 2000,
+      "wasted_space": 2000,
+      "files": [
+        {
+          "path": "docs/scripts/utils-README.md",
+          "last_modified": "2025-04-08T19:54:40.138394"
+        },
+        {
+          "path": "scripts/utils/README.md",
+          "last_modified": "2025-04-08T19:47:35.051948"
+        }
+      ]
+    },
+    {
+      "hash": "e4912874f312fd8c025b2bf8cf610207",
+      "file_size": 1889,
+      "wasted_space": 1889,
+      "files": [
+        {
+          "path": "docs/scripts/README.md",
+          "last_modified": "2025-04-08T19:50:48.335018"
+        },
+        {
+          "path": "scripts/README.md",
+          "last_modified": "2025-04-08T19:45:59.506362"
+        }
+      ]
+    },
+    {
+      "hash": "770b9eab132bdb25c8d9aa4f4967c127",
+      "file_size": 1526,
+      "wasted_space": 1526,
+      "files": [
+        {
+          "path": "config/github/mcp-conformance.yml",
+          "last_modified": "2025-04-08T19:52:25.689179"
+        },
+        {
+          "path": ".github/workflows/mcp-conformance.yml",
+          "last_modified": "2025-04-08T19:47:34.769383"
+        }
+      ]
+    },
+    {
+      "hash": "cce6e0bd17cadc51ce3372ede1a9269b",
+      "file_size": 1091,
+      "wasted_space": 1091,
+      "files": [
+        {
+          "path": "pytest.ini",
+          "last_modified": "2025-04-08T20:38:20.329155"
+        },
+        {
+          "path": "config/pytest.ini",
+          "last_modified": "2025-04-08T20:38:20.329155"
+        }
+      ]
+    },
+    {
+      "hash": "136476d50d5e1ac2e3d369381a754658",
+      "file_size": 1046,
+      "wasted_space": 1046,
+      "files": [
+        {
+          "path": ".yamllint.yaml",
+          "last_modified": "2025-04-08T20:38:08.134278"
+        },
+        {
+          "path": "config/lint/yamllint.yaml",
+          "last_modified": "2025-04-08T20:38:08.134278"
+        }
+      ]
+    },
+    {
+      "hash": "5f5cb17c864e04763f94a57ce015b66d",
+      "file_size": 831,
+      "wasted_space": 831,
+      "files": [
+        {
+          "path": ".markdownlint.yaml",
+          "last_modified": "2025-04-08T20:37:30.801802"
+        },
+        {
+          "path": "config/lint/markdownlint.yaml",
+          "last_modified": "2025-04-08T20:37:30.801802"
+        }
+      ]
+    },
+    {
+      "hash": "0124a22c38ab07f1d587da8e996a9e58",
+      "file_size": 826,
+      "wasted_space": 826,
+      "files": [
+        {
+          "path": "config/services/librechat/docker-compose.yml",
+          "last_modified": "2025-04-08T20:33:14.612058"
+        },
+        {
+          "path": "services/librechat/docker-compose.yml",
+          "last_modified": "2025-04-08T20:32:54.817879"
+        }
+      ]
+    },
+    {
+      "hash": "c76481c3e048c548d25caba2ae5df732",
+      "file_size": 803,
+      "wasted_space": 803,
+      "files": [
+        {
+          "path": "docs/deploy/README.md",
+          "last_modified": "2025-04-08T19:54:52.616872"
+        },
+        {
+          "path": "deploy/README.md",
+          "last_modified": "2025-04-08T09:53:42.239127"
+        }
+      ]
+    },
+    {
+      "hash": "debf7c8ca0e0a74cbda5fbf976728f5e",
+      "file_size": 114,
+      "wasted_space": 798,
+      "files": [
+        {
+          "path": "docs/MCP/quickstart.md:Zone.Identifier",
+          "last_modified": "2025-04-08T11:38:33.686417"
+        },
+        {
+          "path": "docs/MCP/sdk-usage.md:Zone.Identifier",
+          "last_modified": "2025-04-08T11:38:33.686417"
+        },
+        {
+          "path": "docs/MCP/compliance-checklist.md:Zone.Identifier",
+          "last_modified": "2025-04-08T11:38:33.686417"
+        },
+        {
+          "path": "docs/MCP/protocol.md:Zone.Identifier",
+          "last_modified": "2025-04-08T11:38:33.686417"
+        },
+        {
+          "path": "docs/MCP/README.md:Zone.Identifier",
+          "last_modified": "2025-04-08T11:38:33.686417"
+        },
+        {
+          "path": "docs/MCP/tools.md:Zone.Identifier",
+          "last_modified": "2025-04-08T11:38:33.686417"
+        },
+        {
+          "path": "docs/MCP/architecture.md:Zone.Identifier",
+          "last_modified": "2025-04-08T11:38:33.686417"
+        },
+        {
+          "path": "docs/MCP/resources.md:Zone.Identifier",
+          "last_modified": "2025-04-08T11:38:33.686417"
+        }
+      ]
+    },
+    {
+      "hash": "0fb5c5aad34007fcf7be577c0cd14db1",
+      "file_size": 757,
+      "wasted_space": 757,
+      "files": [
+        {
+          "path": "config/services/librechat/docker-compose.temp.yml",
+          "last_modified": "2025-04-08T19:51:40.004824"
+        },
+        {
+          "path": "services/librechat/docker-compose.temp.yml",
+          "last_modified": "2025-04-08T08:23:44.241947"
+        }
+      ]
+    },
+    {
+      "hash": "fef334ff856ff7cc56e5d153205d0355",
+      "file_size": 367,
+      "wasted_space": 734,
+      "files": [
+        {
+          "path": "config/services/mcp-server/README.md",
+          "last_modified": "2025-04-08T20:39:11.978669"
+        },
+        {
+          "path": "docs/services/mcp-server-config-README.md",
+          "last_modified": "2025-04-08T19:50:55.999411"
+        },
+        {
+          "path": "services/mcp-server/config/README.md",
+          "last_modified": "2025-04-08T09:53:42.239127"
+        }
+      ]
+    },
+    {
+      "hash": "a5d836f80710f412db5aa39c49e15866",
+      "file_size": 628,
+      "wasted_space": 628,
+      "files": [
+        {
+          "path": "docs/tests/integration-README.md",
+          "last_modified": "2025-04-08T19:50:42.830865"
+        },
+        {
+          "path": "tests/integration/README.md",
+          "last_modified": "2025-04-08T09:53:42.239127"
+        }
+      ]
+    },
+    {
+      "hash": "9e4d9c0eaf18f531917135620ef1fbed",
+      "file_size": 613,
+      "wasted_space": 613,
+      "files": [
+        {
+          "path": "config/services/librechat/librechat.yaml",
+          "last_modified": "2025-04-08T19:51:40.004824"
+        },
+        {
+          "path": "services/librechat/config/librechat.yaml",
+          "last_modified": "2025-04-08T08:23:44.241947"
+        }
+      ]
+    },
+    {
+      "hash": "b6c08acd2617400379e9c9c15e9ffa1f",
+      "file_size": 587,
+      "wasted_space": 587,
+      "files": [
+        {
+          "path": "config/deploy/docker-compose.yml",
+          "last_modified": "2025-04-08T20:33:42.571290"
+        },
+        {
+          "path": "deploy/docker-compose.yml",
+          "last_modified": "2025-04-08T20:33:34.453290"
+        }
+      ]
+    },
+    {
+      "hash": "aa9864bc348a5949119441ccfe77cc00",
+      "file_size": 432,
+      "wasted_space": 432,
+      "files": [
+        {
+          "path": "docs/scripts/setup-README.md",
+          "last_modified": "2025-04-08T19:50:48.335018"
+        },
+        {
+          "path": "scripts/setup/README.md",
+          "last_modified": "2025-04-08T09:53:42.239127"
+        }
+      ]
+    },
+    {
+      "hash": "ffd5ade21d69d87489016687f5ea87e4",
+      "file_size": 430,
+      "wasted_space": 430,
+      "files": [
+        {
+          "path": "docs/tests/unit-README.md",
+          "last_modified": "2025-04-08T19:50:42.830865"
+        },
+        {
+          "path": "tests/unit/README.md",
+          "last_modified": "2025-04-08T09:53:42.239127"
+        }
+      ]
+    },
+    {
+      "hash": "806e1474b72b69973ca0c6e6bc005554",
+      "file_size": 301,
+      "wasted_space": 301,
+      "files": [
+        {
+          "path": "config/services/llm-server/docker-compose.yml",
+          "last_modified": "2025-04-08T20:33:21.119079"
+        },
+        {
+          "path": "services/llm-server/docker-compose.yml",
+          "last_modified": "2025-04-08T20:33:01.756879"
+        }
+      ]
+    },
+    {
+      "hash": "ae59ceda2c2d6576502848ce96d82563",
+      "file_size": 296,
+      "wasted_space": 296,
+      "files": [
+        {
+          "path": "config/deploy/docker-compose.dev.yml",
+          "last_modified": "2025-04-08T19:51:31.688824"
+        },
+        {
+          "path": "deploy/docker-compose.dev.yml",
+          "last_modified": "2025-04-08T08:23:44.222550"
+        }
+      ]
+    },
+    {
+      "hash": "2678e42cb3028ec50a0af381e9e4612a",
+      "file_size": 287,
+      "wasted_space": 287,
+      "files": [
+        {
+          "path": "config/services/mcp-server/docker-compose.yml",
+          "last_modified": "2025-04-08T20:33:27.289290"
+        },
+        {
+          "path": "services/mcp-server/docker-compose.yml",
+          "last_modified": "2025-04-08T09:53:42.239127"
+        }
+      ]
+    },
+    {
+      "hash": "a25a32ad7da4826f8c93709a99ec49e7",
+      "file_size": 235,
+      "wasted_space": 235,
+      "files": [
+        {
+          "path": "config/services/llm-server/server.yaml",
+          "last_modified": "2025-04-08T19:51:39.995824"
+        },
+        {
+          "path": "services/llm-server/config/server.yaml",
+          "last_modified": "2025-04-08T08:23:44.241947"
+        }
+      ]
+    },
+    {
+      "hash": "cea0a08d655e83e251c355b41b6a701d",
+      "file_size": 140,
+      "wasted_space": 140,
+      "files": [
+        {
+          "path": "config/deploy/model-volumes.yml",
+          "last_modified": "2025-04-08T19:51:31.688824"
+        },
+        {
+          "path": "deploy/volumes/model-volumes.yml",
+          "last_modified": "2025-04-08T08:23:44.222550"
+        }
+      ]
+    }
+  ]
+}

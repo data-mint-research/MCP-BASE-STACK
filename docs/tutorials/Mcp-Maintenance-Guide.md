@@ -90,7 +90,7 @@ kill $(cat mcp_server.pid)
 # Update the code (e.g., edit mcp_server.py)
 
 # Restart the server
-./start_mcp_server.sh
+./start-mcp-server.sh
 ```
 
 ## 3. Monitoring and Logging
@@ -115,7 +115,7 @@ tail -f mcp_debug.log
 Run periodic health checks to ensure all components are functioning:
 
 ```bash
-./scripts/utils/validation/verify_stack_health.sh
+./scripts/utils/validation/verify-stack-health.sh
 ```
 
 ## 4. Resource Management

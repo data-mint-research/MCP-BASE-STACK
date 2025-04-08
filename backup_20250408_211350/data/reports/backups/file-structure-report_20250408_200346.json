@@ -1,0 +1,76 @@
+{
+  "timestamp": "2025-04-08T20:02:56.558069",
+  "total_files": 478,
+  "naming_issues": {
+    "count": 12,
+    "compliance_percentage": 97.48953974895397,
+    "issues": [
+      {
+        "file_path": "./docs/tests/unit-README.md",
+        "issue": "naming_convention",
+        "suggested_name": "Unit-Readme.md"
+      },
+      {
+        "file_path": "./docs/tests/integration-README.md",
+        "issue": "naming_convention",
+        "suggested_name": "Integration-Readme.md"
+      },
+      {
+        "file_path": "./docs/services/mcp-server-config-README.md",
+        "issue": "naming_convention",
+        "suggested_name": "Mcp-Server-Config-Readme.md"
+      },
+      {
+        "file_path": "./docs/services/mcp-server-di-README.md",
+        "issue": "naming_convention",
+        "suggested_name": "Mcp-Server-Di-Readme.md"
+      },
+      {
+        "file_path": "./docs/scripts/setup-README.md",
+        "issue": "naming_convention",
+        "suggested_name": "Setup-Readme.md"
+      },
+      {
+        "file_path": "./docs/scripts/utils-quality-README.md",
+        "issue": "naming_convention",
+        "suggested_name": "Utils-Quality-Readme.md"
+      },
+      {
+        "file_path": "./docs/scripts/utils-cleanup-README.md",
+        "issue": "naming_convention",
+        "suggested_name": "Utils-Cleanup-Readme.md"
+      },
+      {
+        "file_path": "./docs/scripts/utils-validation-README.md",
+        "issue": "naming_convention",
+        "suggested_name": "Utils-Validation-Readme.md"
+      },
+      {
+        "file_path": "./docs/scripts/maintenance-README.md",
+        "issue": "naming_convention",
+        "suggested_name": "Maintenance-Readme.md"
+      },
+      {
+        "file_path": "./docs/scripts/deployment-README.md",
+        "issue": "naming_convention",
+        "suggested_name": "Deployment-Readme.md"
+      },
+      {
+        "file_path": "./docs/scripts/utils-README.md",
+        "issue": "naming_convention",
+        "suggested_name": "Utils-Readme.md"
+      },
+      {
+        "file_path": "./docs/kg/scripts-README.md",
+        "issue": "naming_convention",
+        "suggested_name": "Scripts-Readme.md"
+      }
+    ]
+  },
+  "directory_issues": {
+    "count": 0,
+    "compliance_percentage": 100.0,
+    "issues": []
+  },
+  "overall_compliance_percentage": 98.74476987447699
+}

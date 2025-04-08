@@ -5,7 +5,8 @@ Unit tests for the QualityEnforcer class.
 import unittest
 from unittest.mock import patch, MagicMock, call
 
-from core.quality import QualityEnforcer, QualityCheckResult, QualityCheckSeverity
+from core.quality.enforcer import QualityEnforcer
+from core.quality.components.base import QualityCheckResult, QualityCheckSeverity
 
 
 class TestQualityEnforcer(unittest.TestCase):
