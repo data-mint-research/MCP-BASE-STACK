@@ -87,3 +87,5 @@ htmlcov/
 *.tmp
 mcp_*.log.*
 *.py[cod]
+mcp_*.log.*
+*.py[cod]

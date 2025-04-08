@@ -25,7 +25,7 @@ logger = logging.getLogger(__name__)
 
 # Define paths
 PROJECT_ROOT = Path(__file__).resolve().parents[3]
-KG_DATA_DIR = PROJECT_ROOT / "data_sources" / "knowledge_graph" / "data"
+KG_DATA_DIR = PROJECT_ROOT / "core" / "kg" / "data"
 NX_GRAPH_PATH = KG_DATA_DIR / "knowledge_graph.graphml"
 RDF_GRAPH_PATH = KG_DATA_DIR / "knowledge_graph.ttl"
 

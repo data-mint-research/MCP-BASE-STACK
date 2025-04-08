@@ -126,9 +126,14 @@ check_file_exists "data/backup/.last_backup_branch" || VERIFICATION_FAILED=true
 
 echo -e "\n${BLUE}Checking documentation for local backup references...${NC}"
 # Check documentation for references to local backup
-check_string_in_file "docs/backup-functionality.md" "directory-based backup" || VERIFICATION_FAILED=true
-check_string_in_file "docs/backup-functionality.md" "local backup" || VERIFICATION_FAILED=true
-check_string_in_file "docs/backup-functionality.md" "cleanup_backup_dirs.sh" || VERIFICATION_FAILED=true
+if [ -f "docs/backup-functionality.md" ]; then
+    check_string_in_file "docs/backup-functionality.md" "directory-based backup" || VERIFICATION_FAILED=true
+    check_string_in_file "docs/backup-functionality.md" "local backup" || VERIFICATION_FAILED=true
+    check_string_in_file "docs/backup-functionality.md" "cleanup_backup_dirs.sh" || VERIFICATION_FAILED=true
+else
+    echo -e "${RED}✗ docs/backup-functionality.md file not found${NC}"
+    VERIFICATION_FAILED=true
+fi
 
 echo -e "\n${BLUE}Testing git-based backup system...${NC}"
 # Test git-based backup
