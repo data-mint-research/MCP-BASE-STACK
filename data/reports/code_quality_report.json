@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-04-08T07:59:30Z",
+  "timestamp": "2025-04-08T08:00:12Z",
   "results": [
 {"tool":"Black (Python formatter)","category":"python","status":"skipped","output":"Not installed","file_pattern":"*.py"},{"tool":"isort (Python import sorter)","category":"python","status":"skipped","output":"Not installed","file_pattern":"*.py"},{"tool":"flake8 (Python linter)","category":"python","status":"skipped","output":"Not installed","file_pattern":"*.py"},{"tool":"mypy (Python type checker)","category":"python","status":"skipped","output":"Not installed","file_pattern":"*.py"},{"tool":"pylint (Python linter)","category":"python","status":"skipped","output":"Not installed","file_pattern":"*.py"},{"tool":"shellcheck (Shell script linter)","category":"shell","status":"skipped","output":"Not installed","file_pattern":"*.sh"},{"tool":"shfmt (Shell script formatter)","category":"shell","status":"skipped","output":"Not installed","file_pattern":"*.sh"},{"tool":"markdownlint (Markdown linter)","category":"markdown","status":"skipped","output":"Not installed","file_pattern":"*.md"},{"tool":"yamllint (YAML linter)","category":"yaml","status":"skipped","output":"Not installed","file_pattern":"*.yml,*.yaml"},{"tool":"prettier","category":"general","status":"skipped","output":"Not installed","file_pattern":"multiple"}
   ],
