@@ -9,12 +9,8 @@ import logging
 import os
 from typing import Dict, Optional
 
+from core.config import get_logging_config
 from core.logging.directory_manager import LogDirectoryManager
-
-# Default log format
-DEFAULT_LOG_FORMAT = "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
-# Default date format for log messages
-DEFAULT_DATE_FORMAT = "%Y-%m-%d %H:%M:%S"
 
 # Mapping of string log levels to logging module constants
 LOG_LEVELS: Dict[str, int] = {
@@ -26,14 +22,14 @@ LOG_LEVELS: Dict[str, int] = {
 }
 
 
-def configure_logger(module_name: str, level: str = "INFO") -> logging.Logger:
+def configure_logger(module_name: str, level: str = None) -> logging.Logger:
     """
     Configures and returns a logger for a specific module.
     
     Args:
         module_name: The name of the module to configure a logger for.
         level: The logging level as a string (DEBUG, INFO, WARNING, ERROR, CRITICAL).
-            Defaults to "INFO".
+            If None, the level will be determined from the configuration.
             
     Returns:
         A configured logger instance.
@@ -41,6 +37,13 @@ def configure_logger(module_name: str, level: str = "INFO") -> logging.Logger:
     Raises:
         ValueError: If an invalid logging level is provided.
     """
+    # Get logging configuration
+    config = get_logging_config()
+    
+    # Determine logging level
+    if level is None:
+        level = config.get("level", "INFO")
+    
     # Validate the logging level
     if level not in LOG_LEVELS:
         valid_levels = ", ".join(LOG_LEVELS.keys())
@@ -86,7 +89,14 @@ def get_file_handler(module_name: str) -> logging.FileHandler:
         
         # Create a file handler
         file_handler = logging.FileHandler(log_file_path)
-        file_handler.setFormatter(_get_formatter())
+        # Get logging configuration
+        config = get_logging_config()
+        log_format = config.get("format", "%(asctime)s - %(name)s - %(levelname)s - %(message)s")
+        date_format = config.get("date_format", "%Y-%m-%d %H:%M:%S")
+        
+        # Create formatter
+        formatter = logging.Formatter(log_format, date_format)
+        file_handler.setFormatter(formatter)
         
         return file_handler
         
@@ -104,17 +114,25 @@ def get_console_handler() -> logging.StreamHandler:
         A configured StreamHandler instance.
     """
     # Create a console handler
+    # Get logging configuration
+    config = get_logging_config()
+    log_format = config.get("format", "%(asctime)s - %(name)s - %(levelname)s - %(message)s")
+    date_format = config.get("date_format", "%Y-%m-%d %H:%M:%S")
+    
+    # Create console handler and formatter
     console_handler = logging.StreamHandler()
-    console_handler.setFormatter(_get_formatter())
+    formatter = logging.Formatter(log_format, date_format)
+    console_handler.setFormatter(formatter)
     
     return console_handler
 
 
-def _get_formatter() -> logging.Formatter:
-    """
-    Helper function to create a standardized log formatter.
-    
-    Returns:
-        A configured Formatter instance.
-    """
-    return logging.Formatter(DEFAULT_LOG_FORMAT, DEFAULT_DATE_FORMAT)
+# This function is no longer needed as formatters are created inline
+# def _get_formatter() -> logging.Formatter:
+#     """
+#     Helper function to create a standardized log formatter.
+#
+#     Returns:
+#         A configured Formatter instance.
+#     """
+#     return logging.Formatter(DEFAULT_LOG_FORMAT, DEFAULT_DATE_FORMAT)

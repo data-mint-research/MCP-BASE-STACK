@@ -11,11 +11,10 @@ import logging
 from pathlib import Path
 from typing import Optional
 
+from core.config import get_logging_config
+
 # Configure logging for the module itself
 logger = logging.getLogger(__name__)
-
-# Base path for all logs
-LOG_BASE_DIR = os.path.join("docs", "logs")
 
 
 class LogDirectoryManager:
@@ -43,19 +42,24 @@ class LogDirectoryManager:
         """
         try:
             # Ensure the base log directory exists
-            if not os.path.exists(LOG_BASE_DIR):
-                os.makedirs(LOG_BASE_DIR, exist_ok=True)
-                logger.info(f"Created base log directory: {LOG_BASE_DIR}")
+            # Get log directory from configuration
+            config = get_logging_config()
+            log_base_dir = config.get("directory", os.path.join("data", "logs"))
+            
+            # Ensure the base log directory exists
+            if not os.path.exists(log_base_dir):
+                os.makedirs(log_base_dir, exist_ok=True)
+                logger.info(f"Created base log directory: {log_base_dir}")
             
             # Create module-specific log directory
-            module_log_dir = os.path.join(LOG_BASE_DIR, module_name)
+            module_log_dir = os.path.join(log_base_dir, module_name)
             os.makedirs(module_log_dir, exist_ok=True)
             logger.info(f"Created module log directory: {module_log_dir}")
             
             return module_log_dir
             
         except PermissionError as e:
-            LogDirectoryManager._handle_permission_error(e, LOG_BASE_DIR)
+            LogDirectoryManager._handle_permission_error(e, log_base_dir)
             raise
         except OSError as e:
             logger.error(f"Error creating log directory for module {module_name}: {str(e)}")
@@ -93,23 +97,27 @@ class LogDirectoryManager:
         """
         try:
             # Check if base log directory exists
-            if not os.path.exists(LOG_BASE_DIR):
-                logger.warning(f"Base log directory does not exist: {LOG_BASE_DIR}")
+            # Get log directory from configuration
+            config = get_logging_config()
+            log_base_dir = config.get("directory", os.path.join("data", "logs"))
+            
+            if not os.path.exists(log_base_dir):
+                logger.warning(f"Base log directory does not exist: {log_base_dir}")
                 return False
             
             # Check if base log directory is a directory
-            if not os.path.isdir(LOG_BASE_DIR):
-                logger.error(f"Base log path exists but is not a directory: {LOG_BASE_DIR}")
+            if not os.path.isdir(log_base_dir):
+                logger.error(f"Base log path exists but is not a directory: {log_base_dir}")
                 return False
             
             # Check if base log directory is writable
-            test_file_path = os.path.join(LOG_BASE_DIR, ".write_test")
+            test_file_path = os.path.join(log_base_dir, ".write_test")
             try:
                 with open(test_file_path, 'w') as f:
                     f.write("test")
                 os.remove(test_file_path)
             except (PermissionError, OSError):
-                logger.error(f"Base log directory is not writable: {LOG_BASE_DIR}")
+                logger.error(f"Base log directory is not writable: {log_base_dir}")
                 return False
             
             return True

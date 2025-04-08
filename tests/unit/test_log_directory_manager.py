@@ -12,12 +12,12 @@ from unittest import mock
 from datetime import datetime
 from pathlib import Path
 
+from core.config import get_logging_config
 from core.logging.directory_manager import (
     LogDirectoryManager,
     create_log_directory,
     get_log_file_path,
-    verify_log_directory_structure,
-    LOG_BASE_DIR
+    verify_log_directory_structure
 )
 
 
@@ -28,7 +28,11 @@ class TestLogDirectoryManager(unittest.TestCase):
         """Set up test environment before each test."""
         # Create a temporary test directory
         self.test_module = "test_module"
-        self.test_log_dir = os.path.join(LOG_BASE_DIR, self.test_module)
+        
+        # Get log directory from configuration
+        config = get_logging_config()
+        self.log_base_dir = config.get("directory", os.path.join("data", "logs"))
+        self.test_log_dir = os.path.join(self.log_base_dir, self.test_module)
         
         # Ensure the test directory doesn't exist before tests
         if os.path.exists(self.test_log_dir):
@@ -68,8 +72,12 @@ class TestLogDirectoryManager(unittest.TestCase):
 
     def test_verify_log_directory_structure_valid(self):
         """Test verifying a valid log directory structure."""
+        # Get log directory from configuration
+        config = get_logging_config()
+        log_base_dir = config.get("directory", os.path.join("data", "logs"))
+        
         # Create the base log directory
-        os.makedirs(LOG_BASE_DIR, exist_ok=True)
+        os.makedirs(log_base_dir, exist_ok=True)
         
         # Call the function
         result = LogDirectoryManager.verify_log_directory_structure()
@@ -79,9 +87,13 @@ class TestLogDirectoryManager(unittest.TestCase):
 
     def test_verify_log_directory_structure_missing(self):
         """Test verifying when log directory is missing."""
+        # Get log directory from configuration
+        config = get_logging_config()
+        log_base_dir = config.get("directory", os.path.join("data", "logs"))
+        
         # Ensure the base log directory doesn't exist
-        if os.path.exists(LOG_BASE_DIR):
-            shutil.rmtree(LOG_BASE_DIR)
+        if os.path.exists(log_base_dir):
+            shutil.rmtree(log_base_dir)
         
         # Call the function
         result = LogDirectoryManager.verify_log_directory_structure()

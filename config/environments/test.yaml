@@ -1,0 +1,18 @@
+# Test Environment Configuration
+
+logging:
+  level: INFO
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  date_format: "%Y-%m-%d %H:%M:%S"
+  directory: "data/logs"
+
+quality:
+  enforcer:
+    enabled: true
+    hooks_directory: "core/quality/hooks"
+    report_directory: "data/reports"
+
+documentation:
+  output_directory: "docs"
+  templates_directory: "core/documentation/templates"
+  auto_generate: false  # Disable auto-generation in test environment

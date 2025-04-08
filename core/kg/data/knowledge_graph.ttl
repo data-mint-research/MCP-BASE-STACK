@@ -7,6 +7,23 @@ ns1:analyze_code_script a ns1:File ;
     ns1:language "python" ;
     ns1:path "scripts/utils/analysis/analyze_code.py" .
 
+ns1:auto_fix_capabilities a ns1:Feature ;
+    ns1:category "quality" ;
+    ns1:contains ns1:code_style_fixes,
+        ns1:documentation_fixes,
+        ns1:fix_preview,
+        ns1:fix_verification,
+        ns1:interactive_fix_mode,
+        ns1:static_analysis_fixes,
+        ns1:structure_fixes ;
+    ns1:description "Capabilities for automatically fixing quality issues" ;
+    ns1:documented_by ns1:auto_fix_documentation ;
+    ns1:implementation_date "2025-04-08T05:58:03.920672" ;
+    ns1:name "Auto-fix Capabilities" ;
+    ns1:priority "high" ;
+    ns1:status "implemented" ;
+    ns1:tested_by ns1:auto_fix_tests .
+
 ns1:check_kg_nodes_script a ns1:File ;
     ns1:description "Script to check knowledge graph nodes" ;
     ns1:language "python" ;
@@ -64,7 +81,6 @@ ns1:tests a ns1:Component ;
         ns1:tests_unit ;
     ns1:last_modified 1.744024e+09,
         1.744041e+09,
-        1.744074e+09,
         1.744074e+09 ;
     ns1:path "tests" ;
     ns1:status "created" .
@@ -90,6 +106,20 @@ ns1:app_py a ns1:File ;
     ns1:last_modified 1.744043e+09 ;
     ns1:name "app.py" ;
     ns1:path "services/mcp-server/src/app.py" .
+
+ns1:auto_fix_documentation a ns1:Documentation ;
+    ns1:category "quality" ;
+    ns1:description "Documentation for auto-fix capabilities" ;
+    ns1:file_path "docs/quality/auto-fix-capabilities.md" ;
+    ns1:name "Auto-fix Capabilities Documentation" ;
+    ns1:status "implemented" .
+
+ns1:auto_fix_tests a ns1:TestSuite ;
+    ns1:category "quality" ;
+    ns1:description "Unit tests for auto-fix capabilities" ;
+    ns1:file_path "tests/unit/test_auto_fix.py" ;
+    ns1:name "Auto-fix Tests" ;
+    ns1:status "implemented" .
 
 ns1:automated_code_review a ns1:File ;
     ns1:description "Tool for automated code review of changes in pull requests or between git references" ;
@@ -150,6 +180,13 @@ ns1:code_review_config a ns1:File ;
     ns1:last_modified 1.744042e+09 ;
     ns1:name "code_review.yaml" ;
     ns1:path "config/code_review.yaml" .
+
+ns1:code_style_fixes a ns1:Component ;
+    ns1:category "quality" ;
+    ns1:description "Fixes for code style issues" ;
+    ns1:file_path "core/quality/components/fixes/code_style.py" ;
+    ns1:name "Code Style Fixes" ;
+    ns1:status "implemented" .
 
 ns1:decision_code_quality_tooling_1744038759 a ns1:Decision ;
     ns1:description "Implementation of code quality configuration files and scripts" ;
@@ -233,21 +270,18 @@ ns1:docs_conventions a ns1:Directory ;
         ns1:review_checklist,
         ns1:style_guide ;
     ns1:file_count 4 ;
-    ns1:last_modified 1.744023e+09,
-        1.744023e+09 ;
+    ns1:last_modified 1.744023e+09 ;
     ns1:path "docs/conventions" .
 
 ns1:docs_knowledge-graph a ns1:Directory ;
     ns1:file_count 4 ;
-    ns1:last_modified 1.744023e+09,
-        1.744023e+09 ;
+    ns1:last_modified 1.744023e+09 ;
     ns1:path "docs/knowledge-graph" .
 
 ns1:docs_troubleshooting a ns1:Directory ;
     ns1:file_count 3,
         8 ;
     ns1:last_modified 1.74403e+09,
-        1.744056e+09,
         1.744056e+09 ;
     ns1:path "docs/troubleshooting" .
 
@@ -257,9 +291,15 @@ ns1:docs_tutorials a ns1:Directory ;
         9 ;
     ns1:last_modified 1.74403e+09,
         1.744039e+09,
-        1.744056e+09,
         1.744056e+09 ;
     ns1:path "docs/tutorials" .
+
+ns1:documentation_fixes a ns1:Component ;
+    ns1:category "quality" ;
+    ns1:description "Fixes for documentation issues" ;
+    ns1:file_path "core/quality/components/fixes/documentation.py" ;
+    ns1:name "Documentation Fixes" ;
+    ns1:status "implemented" .
 
 ns1:example_service a ns1:File ;
     ns1:description "Example service that demonstrates dependency injection" ;
@@ -337,6 +377,15 @@ ns1:install_pre_commit_hooks_script a ns1:File ;
     ns1:last_modified 1.744039e+09 ;
     ns1:name "install_pre_commit_hooks.sh" ;
     ns1:path "scripts/utils/installation/install_pre_commit_hooks.sh" .
+
+ns1:interactive_fix_mode a ns1:Component ;
+    ns1:category "quality" ;
+    ns1:description "Interactive mode for fixing quality issues" ;
+    ns1:file_path "core/quality/components/interactive.py" ;
+    ns1:name "Interactive Fix Mode" ;
+    ns1:status "implemented" ;
+    ns1:uses ns1:fix_preview,
+        ns1:fix_verification .
 
 ns1:librechat a ns1:software ;
     rdfs:label "LibreChat UI and API" ;
@@ -450,6 +499,20 @@ ns1:shellcheck_config a ns1:File ;
     ns1:name ".shellcheckrc" ;
     ns1:path ".shellcheckrc" .
 
+ns1:static_analysis_fixes a ns1:Component ;
+    ns1:category "quality" ;
+    ns1:description "Fixes for static analysis issues" ;
+    ns1:file_path "core/quality/components/fixes/static_analysis.py" ;
+    ns1:name "Static Analysis Fixes" ;
+    ns1:status "implemented" .
+
+ns1:structure_fixes a ns1:Component ;
+    ns1:category "quality" ;
+    ns1:description "Fixes for structure-related issues" ;
+    ns1:file_path "core/quality/components/fixes/structure.py" ;
+    ns1:name "Structure Fixes" ;
+    ns1:status "implemented" .
+
 ns1:tests_agent_tests a ns1:Directory ;
     ns1:file_count 0 ;
     ns1:last_modified 1.744023e+09 ;
@@ -459,7 +522,6 @@ ns1:tests_data a ns1:Directory ;
     ns1:file_count 0,
         1 ;
     ns1:last_modified 1.74403e+09,
-        1.744056e+09,
         1.744056e+09 ;
     ns1:path "tests/data" .
 
@@ -472,7 +534,6 @@ ns1:tests_integration a ns1:Directory ;
     ns1:file_count 0,
         2 ;
     ns1:last_modified 1.744023e+09,
-        1.744074e+09,
         1.744074e+09 ;
     ns1:path "tests/integration" .
 
@@ -490,7 +551,6 @@ ns1:tests_unit a ns1:Directory ;
     ns1:file_count 0,
         13 ;
     ns1:last_modified 1.744023e+09,
-        1.744074e+09,
         1.744074e+09 ;
     ns1:path "tests/unit" .
 
@@ -506,6 +566,20 @@ ns1:decision_ci_code_quality_1744039069 a ns1:Decision ;
     ns1:name "Implementation of CI for Code Quality" ;
     ns1:rationale "To automate code quality checks on push and pull requests, ensuring consistent code quality standards across the project" ;
     ns1:timestamp "2025-04-07T17:17:49.153585" .
+
+ns1:fix_preview a ns1:Component ;
+    ns1:category "quality" ;
+    ns1:description "Preview functionality for fixes" ;
+    ns1:file_path "core/quality/components/preview.py" ;
+    ns1:name "Fix Preview" ;
+    ns1:status "implemented" .
+
+ns1:fix_verification a ns1:Component ;
+    ns1:category "quality" ;
+    ns1:description "Verification functionality for fixes" ;
+    ns1:file_path "core/quality/components/verification.py" ;
+    ns1:name "Fix Verification" ;
+    ns1:status "implemented" .
 
 ns1:graph_guidelines a ns1:File ;
     ns1:description "Standards and best practices for working with the knowledge graph" ;
