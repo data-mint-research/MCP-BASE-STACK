@@ -44,7 +44,7 @@ To install the pre-commit hooks:
 
 ```bash
 # Run from the project root directory
-./install_pre_commit_hooks.sh
+./scripts/utils/installation/install_pre_commit_hooks.sh
 ```
 
 This script will:
@@ -60,7 +60,7 @@ You can run all code quality checks manually using the provided script:
 
 ```bash
 # Run from the project root directory
-./check_code_quality.sh
+./scripts/utils/quality/check_code_quality.sh
 ```
 
 This script will run:
@@ -99,7 +99,7 @@ Some code quality issues can be fixed automatically using the provided script:
 
 ```bash
 # Run from the project root directory
-./fix_code_quality.sh
+./scripts/utils/quality/fix_code_quality.sh
 ```
 
 This script will:
@@ -396,7 +396,7 @@ fi
 **Issue:** Black and isort formatting conflicts.
 
 **Solution:**
-Ensure isort is configured to be compatible with Black. In our project, this is already set up in `pyproject.toml`:
+Ensure isort is configured to be compatible with Black. In our project, this is already set up in `config/pyproject.toml`:
 
 ```toml
 [tool.isort]
@@ -419,8 +419,7 @@ black path/to/file.py
    ```bash
    pip install types-requests types-PyYAML
    ```
-
-2. Add missing libraries to mypy configuration in `mypy.ini`:
+2. Add missing libraries to mypy configuration in `config/linting/mypy.ini`:
    ```ini
    [mypy.plugins.third_party_library.*]
    ignore_missing_imports = True
@@ -431,7 +430,7 @@ black path/to/file.py
 **Issue:** flake8 reports line length errors on lines that Black has formatted.
 
 **Solution:**
-Our configuration already aligns flake8 and Black line length (88 characters) and ignores E203 (whitespace before ':') which Black handles differently. If you're still having issues, check `.flake8` configuration:
+Our configuration already aligns flake8 and Black line length (88 characters) and ignores E203 (whitespace before ':') which Black handles differently. If you're still having issues, check `config/linting/.flake8` configuration:
 
 ```ini
 [flake8]
@@ -443,11 +442,11 @@ extend-ignore = E203, W503
 
 1. **Run Checks Before Committing**
    - Let pre-commit hooks run automatically before each commit
-   - Alternatively, run `./check_code_quality.sh` manually before committing
+   - Alternatively, run `./scripts/utils/quality/check_code_quality.sh` manually before committing
 
 2. **Fix Issues Immediately**
    - Don't ignore code quality warnings
-   - Use `./fix_code_quality.sh` to fix issues automatically when possible
+   - Use `./scripts/utils/quality/fix_code_quality.sh` to fix issues automatically when possible
    - Fix remaining issues manually
 
 3. **Write Tests**

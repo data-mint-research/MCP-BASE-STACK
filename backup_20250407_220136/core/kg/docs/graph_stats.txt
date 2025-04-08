@@ -1,9 +1,0 @@
-Knowledge Graph Statistics for MCP-BASE-STACK
-Total nodes: 12
-Total edges: 27
-Node types:
-  - project: 1
-  - hardware: 1
-  - platform: 1
-  - software: 7
-  - model: 2

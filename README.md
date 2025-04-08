@@ -98,9 +98,9 @@ This repository includes Git hooks that automatically update README.md, .gitigno
 To install the hooks, run:
 
 ```bash
-./install-file-update-hooks.sh
+./scripts/utils/installation/install-file-update-hooks.sh
 ```
 
 ## Maintenance
 
-Last updated: 2025-04-07 23:45:15
+Last updated: 2025-04-08 03:37:44

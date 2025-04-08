@@ -99,5 +99,5 @@ When contributing to the documentation:
 If you encounter issues:
 
 1. Check the [Troubleshooting](troubleshooting/common-issues.md) section
-2. Run the health check script: `./verify_stack_health.sh`
+2. Run the health check script: `./scripts/utils/validation/verify_stack_health.sh`
 3. Review the logs as described in [Monitoring and Logging](troubleshooting/monitoring-and-logging.md)

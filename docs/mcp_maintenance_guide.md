@@ -115,7 +115,7 @@ tail -f mcp_debug.log
 Run periodic health checks to ensure all components are functioning:
 
 ```bash
-./verify_stack_health.sh
+./scripts/utils/validation/verify_stack_health.sh
 ```
 
 ## 4. Resource Management

@@ -1,0 +1,68 @@
+# Backup Functionality
+
+## Overview
+
+This document describes the backup functionality used in the MCP-BASE-STACK project. The system uses a git branch-based backup approach to create snapshots before making changes to the codebase.
+
+## Git Branch-Based Backup
+
+The git branch-based backup functionality creates a new git branch with a timestamp-based name and commits the current state to this branch as a backup before making changes. This approach has several advantages:
+
+- **Version Control Integration**: Backups are integrated with the git version control system
+- **Space Efficiency**: Only stores the differences between versions
+- **Selective Restoration**: Can restore specific files or the entire project
+- **History Preservation**: Maintains a history of backups as git branches
+
+## Scripts
+
+### create_backup_branch.sh
+
+This script creates a new git branch with a timestamp-based name (e.g., `backup-20250408-024358`) and commits the current state to this branch as a backup before making changes.
+
+Usage:
+```bash
+./scripts/utils/backup/create_backup_branch.sh
+```
+
+The script:
+1. Creates a new git branch with a timestamp-based name
+2. Commits the current state to this branch
+3. Returns to the original branch
+4. Saves the backup branch name to `data/backup/.last_backup_branch` for reference
+
+### restore_from_backup.sh
+
+This script restores files from a backup branch created by `create_backup_branch.sh`. It can either restore specific files or perform a complete restore of all files.
+
+Usage:
+```bash
+# Restore from the most recent backup (using data/backup/.last_backup_branch)
+./scripts/utils/backup/restore_from_backup.sh
+
+# Restore from a specific backup branch
+./scripts/utils/backup/restore_from_backup.sh backup-20250408-024358
+
+# Restore specific files from a backup branch
+./scripts/utils/backup/restore_from_backup.sh backup-20250408-024358 file1.py file2.sh
+```
+
+The script:
+1. Checks if a backup branch exists
+2. For specific file restoration: Creates a temporary branch, restores the specified files, then returns to the original branch
+3. For full restoration: Creates a new branch from the backup branch
+
+## Integration with Quality Tools
+
+The backup functionality is integrated with the quality tools:
+
+- `scripts/utils/quality/fix_code_quality.sh` creates a git branch-based backup before applying fixes
+- `scripts/utils/quality/check_code_quality.sh` excludes backup directories from analysis
+
+## Legacy Directory-Based Backup
+
+Previously, the system used a directory-based backup approach that created directories like `backup_20250408_024358/` with copies of files. This approach has been replaced with the git branch-based backup functionality.
+
+The `cleanup_backup_dirs.sh` script can be used to remove any existing directory-based backups:
+
+```bash
+./scripts/utils/cleanup/cleanup_backup_dirs.sh

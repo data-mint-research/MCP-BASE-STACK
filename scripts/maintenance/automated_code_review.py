@@ -48,7 +48,7 @@ logger = configure_logger("automated_code_review")
 # Constants
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_CONFIG_PATH = PROJECT_ROOT / "config" / "code_review.yaml"
-DEFAULT_OUTPUT_PATH = PROJECT_ROOT / "code_review_report.md"
+DEFAULT_OUTPUT_PATH = PROJECT_ROOT / "data" / "reports" / "code_review_report.md"
 KNOWLEDGE_GRAPH_PATH = PROJECT_ROOT / "core" / "kg" / "data" / "knowledge_graph.graphml"
 
 # File extensions by language
@@ -143,7 +143,7 @@ class CodeReviewConfig:
             "tools": {
                 "flake8": {
                     "enabled": True,
-                    "config_file": ".flake8",
+                    "config_file": "config/linting/.flake8",
                     "severity_map": {
                         "E": "high",
                         "F": "critical",
@@ -164,7 +164,7 @@ class CodeReviewConfig:
                 },
                 "mypy": {
                     "enabled": True,
-                    "config_file": "mypy.ini",
+                    "config_file": "config/linting/mypy.ini",
                     "severity_map": {
                         "error": "high",
                         "note": "low",
@@ -493,7 +493,7 @@ class CodeQualityAnalyzer:
                 temp_file_path = temp_file.name
             
             # Run flake8
-            flake8_cmd = ["flake8", "--config", self.config.get("tools.flake8.config_file", ".flake8"), 
+            flake8_cmd = ["flake8", "--config", self.config.get("tools.flake8.config_file", "config/linting/.flake8"),
                           "--filename", temp_file_path]
             
             try:
@@ -687,7 +687,7 @@ class CodeQualityAnalyzer:
             
         try:
             # Run mypy
-            mypy_cmd = ["mypy", "--config-file", self.config.get("tools.mypy.config_file", "mypy.ini")] + file_paths
+            mypy_cmd = ["mypy", "--config-file", self.config.get("tools.mypy.config_file", "config/linting/mypy.ini")] + file_paths
             
             try:
                 output = subprocess.check_output(mypy_cmd, cwd=self.project_root, stderr=subprocess.STDOUT).decode("utf-8")

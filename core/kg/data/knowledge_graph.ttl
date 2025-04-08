@@ -2,6 +2,16 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+ns1:analyze_code_script a ns1:File ;
+    ns1:description "Script to analyze code structure and patterns" ;
+    ns1:language "python" ;
+    ns1:path "scripts/utils/analysis/analyze_code.py" .
+
+ns1:check_kg_nodes_script a ns1:File ;
+    ns1:description "Script to check knowledge graph nodes" ;
+    ns1:language "python" ;
+    ns1:path "scripts/utils/analysis/check_kg_nodes.py" .
+
 ns1:docs a ns1:Directory ;
     ns1:contains ns1:docs_conventions,
         ns1:docs_knowledge-graph,
@@ -11,7 +21,8 @@ ns1:docs a ns1:Directory ;
         ns1:git_hooks_kg_integration_plan,
         ns1:logging_system_documentation ;
     ns1:last_modified 1.74403e+09,
-        1.744038e+09 ;
+        1.744038e+09,
+        1.744074e+09 ;
     ns1:path "docs" .
 
 ns1:documentation a ns1:Component ;
@@ -51,9 +62,25 @@ ns1:tests a ns1:Component ;
         ns1:tests_regression,
         ns1:tests_unit ;
     ns1:last_modified 1.744024e+09,
-        1.744041e+09 ;
+        1.744041e+09,
+        1.744074e+09 ;
     ns1:path "tests" ;
     ns1:status "created" .
+
+ns1:traverse_project_script a ns1:File ;
+    ns1:description "Script to traverse the project structure" ;
+    ns1:language "python" ;
+    ns1:path "scripts/utils/analysis/traverse_project.py" .
+
+ns1:validate_manifest_script a ns1:File ;
+    ns1:description "Script to validate the project manifest" ;
+    ns1:language "python" ;
+    ns1:path "scripts/utils/validation/validate-manifest.py" .
+
+ns1:verify_stack_health_script a ns1:File ;
+    ns1:description "Script to verify the health of the stack" ;
+    ns1:language "shell" ;
+    ns1:path "scripts/utils/validation/verify_stack_health.sh" .
 
 ns1:app_py a ns1:File ;
     ns1:description "Main application entry point with dependency injection integration" ;
@@ -75,15 +102,15 @@ ns1:check_code_quality_script a ns1:File ;
     ns1:language "shell" ;
     ns1:last_modified 1.744039e+09 ;
     ns1:name "check_code_quality.sh" ;
-    ns1:path "check_code_quality.sh" .
+    ns1:path "scripts/utils/quality/check_code_quality.sh" .
 
 ns1:cleanup_report a ns1:File ;
     ns1:language "json" ;
-    ns1:path "cleanup-report.json" .
+    ns1:path "data/reports/cleanup-report.json" .
 
 ns1:cleanup_script a ns1:File ;
     ns1:language "python" ;
-    ns1:path "cleanup_files.py" .
+    ns1:path "scripts/utils/cleanup/cleanup_files.py" .
 
 ns1:code_quality a ns1:Component ;
     ns1:contains ns1:automated_code_review,
@@ -204,24 +231,30 @@ ns1:docs_conventions a ns1:Directory ;
         ns1:review_checklist,
         ns1:style_guide ;
     ns1:file_count 4 ;
-    ns1:last_modified 1.744023e+09 ;
+    ns1:last_modified 1.744023e+09,
+        1.744023e+09 ;
     ns1:path "docs/conventions" .
 
 ns1:docs_knowledge-graph a ns1:Directory ;
     ns1:file_count 4 ;
-    ns1:last_modified 1.744023e+09 ;
+    ns1:last_modified 1.744023e+09,
+        1.744023e+09 ;
     ns1:path "docs/knowledge-graph" .
 
 ns1:docs_troubleshooting a ns1:Directory ;
-    ns1:file_count 8 ;
-    ns1:last_modified 1.74403e+09 ;
+    ns1:file_count 3,
+        8 ;
+    ns1:last_modified 1.74403e+09,
+        1.744056e+09 ;
     ns1:path "docs/troubleshooting" .
 
 ns1:docs_tutorials a ns1:Directory ;
-    ns1:file_count 7,
+    ns1:file_count 4,
+        7,
         9 ;
     ns1:last_modified 1.74403e+09,
-        1.744039e+09 ;
+        1.744039e+09,
+        1.744056e+09 ;
     ns1:path "docs/tutorials" .
 
 ns1:example_service a ns1:File ;
@@ -248,14 +281,14 @@ ns1:fix_code_quality_script a ns1:File ;
     ns1:language "shell" ;
     ns1:last_modified 1.744039e+09 ;
     ns1:name "fix_code_quality.sh" ;
-    ns1:path "fix_code_quality.sh" .
+    ns1:path "scripts/utils/quality/fix_code_quality.sh" .
 
 ns1:flake8_config a ns1:File ;
     ns1:description "Configuration for flake8 Python linter" ;
     ns1:language "ini" ;
     ns1:last_modified 1.744039e+09 ;
     ns1:name ".flake8" ;
-    ns1:path ".flake8" .
+    ns1:path "config/linting/.flake8" .
 
 ns1:generate_quality_report a ns1:File ;
     ns1:description "Tool for analyzing code quality metrics and generating comprehensive reports" ;
@@ -292,14 +325,14 @@ ns1:hooks_documentation a ns1:File ;
 
 ns1:install_hooks_script a ns1:File ;
     ns1:language "bash" ;
-    ns1:path "install-file-update-hooks.sh" .
+    ns1:path "scripts/utils/installation/install-file-update-hooks.sh" .
 
 ns1:install_pre_commit_hooks_script a ns1:File ;
     ns1:description "Script to install pre-commit hooks for code quality checks" ;
     ns1:language "shell" ;
     ns1:last_modified 1.744039e+09 ;
     ns1:name "install_pre_commit_hooks.sh" ;
-    ns1:path "install_pre_commit_hooks.sh" .
+    ns1:path "scripts/utils/installation/install_pre_commit_hooks.sh" .
 
 ns1:librechat a ns1:software ;
     rdfs:label "LibreChat UI and API" ;
@@ -374,7 +407,7 @@ ns1:mypy_config a ns1:File ;
     ns1:language "ini" ;
     ns1:last_modified 1.744039e+09 ;
     ns1:name "mypy.ini" ;
-    ns1:path "mypy.ini" .
+    ns1:path "config/linting/mypy.ini" .
 
 ns1:nvidia_container a ns1:software ;
     rdfs:label "NVIDIA Container Toolkit" ;
@@ -404,7 +437,7 @@ ns1:pyproject_toml a ns1:File ;
     ns1:language "toml" ;
     ns1:last_modified 1.744039e+09 ;
     ns1:name "pyproject.toml" ;
-    ns1:path "pyproject.toml" .
+    ns1:path "config/pyproject.toml" .
 
 ns1:shellcheck_config a ns1:File ;
     ns1:description "Configuration for shellcheck shell script linter" ;
@@ -419,8 +452,10 @@ ns1:tests_agent_tests a ns1:Directory ;
     ns1:path "tests/agent_tests" .
 
 ns1:tests_data a ns1:Directory ;
-    ns1:file_count 1 ;
-    ns1:last_modified 1.74403e+09 ;
+    ns1:file_count 0,
+        1 ;
+    ns1:last_modified 1.74403e+09,
+        1.744056e+09 ;
     ns1:path "tests/data" .
 
 ns1:tests_e2e a ns1:Directory ;
@@ -429,8 +464,10 @@ ns1:tests_e2e a ns1:Directory ;
     ns1:path "tests/e2e" .
 
 ns1:tests_integration a ns1:Directory ;
-    ns1:file_count 0 ;
-    ns1:last_modified 1.744023e+09 ;
+    ns1:file_count 0,
+        2 ;
+    ns1:last_modified 1.744023e+09,
+        1.744074e+09 ;
     ns1:path "tests/integration" .
 
 ns1:tests_performance a ns1:Directory ;
@@ -444,8 +481,10 @@ ns1:tests_regression a ns1:Directory ;
     ns1:path "tests/regression" .
 
 ns1:tests_unit a ns1:Directory ;
-    ns1:file_count 0 ;
-    ns1:last_modified 1.744023e+09 ;
+    ns1:file_count 0,
+        13 ;
+    ns1:last_modified 1.744023e+09,
+        1.744074e+09 ;
     ns1:path "tests/unit" .
 
 ns1:coding_conventions a ns1:File ;

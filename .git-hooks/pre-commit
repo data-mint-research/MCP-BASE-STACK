@@ -149,18 +149,18 @@ fi
 # ============================================================================
 # 5. Check for orphaned or outdated files
 # ============================================================================
-if [ -f "cleanup_files.py" ]; then
+if [ -f "scripts/utils/cleanup/cleanup_files.py" ]; then
     echo "Running file cleanup check in dry-run mode..."
     
     # Run the cleanup script in dry-run mode
-    if python3 cleanup_files.py --project-dir . --manifest specification-manifest.json --dry-run --output cleanup-report.json; then
+    if python3 scripts/utils/cleanup/cleanup_files.py --project-dir . --manifest specification-manifest.json --dry-run --output cleanup-report.json; then
         echo "File cleanup check completed. See cleanup-report.json for details."
         
         # Check if there are files to clean up
         CLEANUP_COUNT=$(grep -o '"total_files_to_cleanup": [0-9]*' cleanup-report.json | grep -o '[0-9]*')
         if [ "$CLEANUP_COUNT" -gt 0 ]; then
             echo "Warning: Found $CLEANUP_COUNT files that could be cleaned up."
-            echo "Run 'python3 cleanup_files.py --project-dir . --manifest specification-manifest.json --interactive' to review and clean up these files."
+            echo "Run 'python3 scripts/utils/cleanup/cleanup_files.py --project-dir . --manifest specification-manifest.json --interactive' to review and clean up these files."
         fi
     else
         echo "Warning: File cleanup check failed"
@@ -189,14 +189,14 @@ else
     echo "Install with: pip install pre-commit && pre-commit install"
     
     # Run basic code quality checks using our custom script if available
-    if [ -f "check_code_quality.sh" ]; then
+    if [ -f "scripts/utils/quality/check_code_quality.sh" ]; then
         echo "Running basic code quality checks..."
-        if ./check_code_quality.sh; then
+        if ./scripts/utils/quality/check_code_quality.sh; then
             echo "Basic code quality checks passed"
         else
             echo "Basic code quality checks failed"
             echo "Please fix the issues or use --no-verify to bypass (not recommended)"
-            echo "You can run ./fix_code_quality.sh to automatically fix some issues"
+            echo "You can run ./scripts/utils/quality/fix_code_quality.sh to automatically fix some issues"
             exit 1
         fi
     fi

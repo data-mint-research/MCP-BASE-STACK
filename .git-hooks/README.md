@@ -30,7 +30,7 @@ All modified files are automatically staged and included in the commit.
 To install the hooks, run the installation script from the repository root:
 
 ```bash
-./install-file-update-hooks.sh
+./scripts/utils/installation/install-file-update-hooks.sh
 ```
 
 This script:
@@ -43,7 +43,7 @@ This script:
 The installation script is included in the repository, so new clones can easily install the hooks by running:
 
 ```bash
-./install-file-update-hooks.sh
+./scripts/utils/installation/install-file-update-hooks.sh
 ```
 
 ## Manual Installation

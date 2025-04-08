@@ -95,8 +95,8 @@ def register_file_cleanup_feature():
     
     # Add file nodes
     files = [
-        ("cleanup_files.py", "cleanup_script", "python"),
-        ("cleanup-report.json", "cleanup_report", "json")
+        ("scripts/utils/cleanup/cleanup_files.py", "cleanup_script", "python"),
+        ("data/reports/cleanup-report.json", "cleanup_report", "json")
     ]
     
     for file_path, file_id, language in files:

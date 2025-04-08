@@ -295,20 +295,50 @@ def main():
             {
                 "id": "check_code_quality_script",
                 "name": "check_code_quality.sh",
-                "path": "check_code_quality.sh",
+                "path": "scripts/utils/quality/check_code_quality.sh",
                 "description": "Script to check code quality using various tools"
             },
             {
                 "id": "fix_code_quality_script",
                 "name": "fix_code_quality.sh",
-                "path": "fix_code_quality.sh",
+                "path": "scripts/utils/quality/fix_code_quality.sh",
                 "description": "Script to automatically fix code quality issues"
             },
             {
                 "id": "install_pre_commit_hooks_script",
                 "name": "install_pre_commit_hooks.sh",
-                "path": "install_pre_commit_hooks.sh",
+                "path": "scripts/utils/installation/install_pre_commit_hooks.sh",
                 "description": "Script to install pre-commit hooks for code quality checks"
+            },
+            {
+                "id": "analyze_code_script",
+                "name": "analyze_code.py",
+                "path": "scripts/utils/analysis/analyze_code.py",
+                "description": "Script to analyze code structure and patterns"
+            },
+            {
+                "id": "check_kg_nodes_script",
+                "name": "check_kg_nodes.py",
+                "path": "scripts/utils/analysis/check_kg_nodes.py",
+                "description": "Script to check knowledge graph nodes"
+            },
+            {
+                "id": "traverse_project_script",
+                "name": "traverse_project.py",
+                "path": "scripts/utils/analysis/traverse_project.py",
+                "description": "Script to traverse the project structure"
+            },
+            {
+                "id": "validate_manifest_script",
+                "name": "validate-manifest.py",
+                "path": "scripts/utils/validation/validate-manifest.py",
+                "description": "Script to validate the project manifest"
+            },
+            {
+                "id": "verify_stack_health_script",
+                "name": "verify_stack_health.sh",
+                "path": "scripts/utils/validation/verify_stack_health.sh",
+                "description": "Script to verify the health of the stack"
             }
         ]
         

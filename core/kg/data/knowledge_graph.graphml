@@ -77,12 +77,12 @@
       <data key="d3">created</data>
       <data key="d1">component</data>
       <data key="d4">tests</data>
-      <data key="d5">1744041399.5284119</data>
+      <data key="d5">1744074002.1114466</data>
     </node>
     <node id="docs">
       <data key="d1">directory</data>
       <data key="d4">docs</data>
-      <data key="d5">1744038489.3983514</data>
+      <data key="d5">1744074152.032965</data>
     </node>
     <node id="docs_knowledge-graph">
       <data key="d1">directory</data>
@@ -93,14 +93,14 @@
     <node id="docs_tutorials">
       <data key="d1">directory</data>
       <data key="d4">docs/tutorials</data>
-      <data key="d5">1744038844.1385777</data>
-      <data key="d6">9</data>
+      <data key="d5">1744056096.0947492</data>
+      <data key="d6">4</data>
     </node>
     <node id="docs_troubleshooting">
       <data key="d1">directory</data>
       <data key="d4">docs/troubleshooting</data>
-      <data key="d5">1744030185.4666543</data>
-      <data key="d6">8</data>
+      <data key="d5">1744056096.0947492</data>
+      <data key="d6">3</data>
     </node>
     <node id="docs_conventions">
       <data key="d1">directory</data>
@@ -111,14 +111,14 @@
     <node id="tests_unit">
       <data key="d1">directory</data>
       <data key="d4">tests/unit</data>
-      <data key="d5">1744022989.4370184</data>
-      <data key="d6">0</data>
+      <data key="d5">1744074002.1114466</data>
+      <data key="d6">13</data>
     </node>
     <node id="tests_integration">
       <data key="d1">directory</data>
       <data key="d4">tests/integration</data>
-      <data key="d5">1744022989.4370184</data>
-      <data key="d6">0</data>
+      <data key="d5">1744074002.1114466</data>
+      <data key="d6">2</data>
     </node>
     <node id="tests_agent_tests">
       <data key="d1">directory</data>
@@ -147,8 +147,8 @@
     <node id="tests_data">
       <data key="d1">directory</data>
       <data key="d4">tests/data</data>
-      <data key="d5">1744030243.6570637</data>
-      <data key="d6">1</data>
+      <data key="d5">1744056096.1045494</data>
+      <data key="d6">0</data>
     </node>
     <node id="feature_git_file_update_hooks">
       <data key="d1">feature</data>
@@ -170,7 +170,7 @@
     </node>
     <node id="install_hooks_script">
       <data key="d1">file</data>
-      <data key="d4">install-file-update-hooks.sh</data>
+      <data key="d4">scripts/utils/installation/install-file-update-hooks.sh</data>
       <data key="d10">bash</data>
     </node>
     <node id="hooks_documentation">
@@ -231,7 +231,7 @@
     <node id="pyproject_toml">
       <data key="d1">file</data>
       <data key="d2">pyproject.toml</data>
-      <data key="d4">pyproject.toml</data>
+      <data key="d4">config/pyproject.toml</data>
       <data key="d7">Configuration for Black and isort Python formatters</data>
       <data key="d10">toml</data>
       <data key="d5">1744038759.659645</data>
@@ -239,7 +239,7 @@
     <node id="flake8_config">
       <data key="d1">file</data>
       <data key="d2">.flake8</data>
-      <data key="d4">.flake8</data>
+      <data key="d4">config/linting/.flake8</data>
       <data key="d7">Configuration for flake8 Python linter</data>
       <data key="d10">ini</data>
       <data key="d5">1744038759.659907</data>
@@ -247,7 +247,7 @@
     <node id="mypy_config">
       <data key="d1">file</data>
       <data key="d2">mypy.ini</data>
-      <data key="d4">mypy.ini</data>
+      <data key="d4">config/linting/mypy.ini</data>
       <data key="d7">Configuration for mypy Python type checker</data>
       <data key="d10">ini</data>
       <data key="d5">1744038759.660194</data>
@@ -279,7 +279,7 @@
     <node id="check_code_quality_script">
       <data key="d1">file</data>
       <data key="d2">check_code_quality.sh</data>
-      <data key="d4">check_code_quality.sh</data>
+      <data key="d4">scripts/utils/quality/check_code_quality.sh</data>
       <data key="d7">Script to check code quality using various tools</data>
       <data key="d10">shell</data>
       <data key="d5">1744038759.661211</data>
@@ -287,7 +287,7 @@
     <node id="fix_code_quality_script">
       <data key="d1">file</data>
       <data key="d2">fix_code_quality.sh</data>
-      <data key="d4">fix_code_quality.sh</data>
+      <data key="d4">scripts/utils/quality/fix_code_quality.sh</data>
       <data key="d7">Script to automatically fix code quality issues</data>
       <data key="d10">shell</data>
       <data key="d5">1744038759.661496</data>
@@ -295,7 +295,7 @@
     <node id="install_pre_commit_hooks_script">
       <data key="d1">file</data>
       <data key="d2">install_pre_commit_hooks.sh</data>
-      <data key="d4">install_pre_commit_hooks.sh</data>
+      <data key="d4">scripts/utils/installation/install_pre_commit_hooks.sh</data>
       <data key="d7">Script to install pre-commit hooks for code quality checks</data>
       <data key="d10">shell</data>
       <data key="d5">1744038759.661784</data>
@@ -432,12 +432,42 @@
     </node>
     <node id="cleanup_script">
       <data key="d1">file</data>
-      <data key="d4">cleanup_files.py</data>
+      <data key="d4">scripts/utils/cleanup/cleanup_files.py</data>
       <data key="d10">python</data>
+    </node>
+    <node id="analyze_code_script">
+      <data key="d1">file</data>
+      <data key="d4">scripts/utils/analysis/analyze_code.py</data>
+      <data key="d7">Script to analyze code structure and patterns</data>
+      <data key="d10">python</data>
+    </node>
+    <node id="check_kg_nodes_script">
+      <data key="d1">file</data>
+      <data key="d4">scripts/utils/analysis/check_kg_nodes.py</data>
+      <data key="d7">Script to check knowledge graph nodes</data>
+      <data key="d10">python</data>
+    </node>
+    <node id="traverse_project_script">
+      <data key="d1">file</data>
+      <data key="d4">scripts/utils/analysis/traverse_project.py</data>
+      <data key="d7">Script to traverse the project structure</data>
+      <data key="d10">python</data>
+    </node>
+    <node id="validate_manifest_script">
+      <data key="d1">file</data>
+      <data key="d4">scripts/utils/validation/validate-manifest.py</data>
+      <data key="d7">Script to validate the project manifest</data>
+      <data key="d10">python</data>
+    </node>
+    <node id="verify_stack_health_script">
+      <data key="d1">file</data>
+      <data key="d4">scripts/utils/validation/verify_stack_health.sh</data>
+      <data key="d7">Script to verify the health of the stack</data>
+      <data key="d10">shell</data>
     </node>
     <node id="cleanup_report">
       <data key="d1">file</data>
-      <data key="d4">cleanup-report.json</data>
+      <data key="d4">data/reports/cleanup-report.json</data>
       <data key="d10">json</data>
     </node>
     <node id="file_cleanup_guide">

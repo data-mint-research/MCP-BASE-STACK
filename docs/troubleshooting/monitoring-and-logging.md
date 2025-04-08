@@ -42,7 +42,7 @@ tail -f mcp_debug.log
 Run periodic health checks to ensure all components are functioning properly:
 
 ```bash
-./verify_stack_health.sh
+./scripts/utils/validation/verify_stack_health.sh
 ```
 
 This script checks:
@@ -65,7 +65,7 @@ You can set up automated health checks using cron:
 crontab -e
 
 # Add a line to run health check every hour
-0 * * * * cd /home/skr/projects/MCP-BASE-STACK && ./verify_stack_health.sh
+0 * * * * cd /home/skr/projects/MCP-BASE-STACK && ./scripts/utils/validation/verify_stack_health.sh
 ```
 
 ### Log Rotation

@@ -56,7 +56,7 @@ def add_git_hooks_to_kg():
     # Add file nodes
     files = [
         (".git-hooks/pre-commit", "pre_commit_hook", "bash"),
-        ("install-file-update-hooks.sh", "install_hooks_script", "bash"),
+        ("scripts/utils/installation/install-file-update-hooks.sh", "install_hooks_script", "bash"),
         (".git-hooks/README.md", "hooks_documentation", "markdown")
     ]
     

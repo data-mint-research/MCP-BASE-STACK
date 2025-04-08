@@ -17,7 +17,7 @@ The cleanup tool can be run in different modes depending on your needs:
 Preview files that would be cleaned up without making any changes:
 
 ```bash
-python3 cleanup_files.py --project-dir . --manifest specification-manifest.json --dry-run
+python3 scripts/utils/cleanup/cleanup_files.py --project-dir . --manifest config/specifications/specification-manifest.json --dry-run
 ```
 
 ### Interactive Mode
@@ -25,7 +25,7 @@ python3 cleanup_files.py --project-dir . --manifest specification-manifest.json 
 Review and confirm each file deletion individually:
 
 ```bash
-python3 cleanup_files.py --project-dir . --manifest specification-manifest.json --interactive
+python3 scripts/utils/cleanup/cleanup_files.py --project-dir . --manifest config/specifications/specification-manifest.json --interactive
 ```
 
 ### Batch Mode
@@ -33,7 +33,7 @@ python3 cleanup_files.py --project-dir . --manifest specification-manifest.json 
 Clean up all identified files with a single confirmation:
 
 ```bash
-python3 cleanup_files.py --project-dir . --manifest specification-manifest.json --batch
+python3 scripts/utils/cleanup/cleanup_files.py --project-dir . --manifest config/specifications/specification-manifest.json --batch
 ```
 
 ## Integration with Git Hooks
@@ -55,7 +55,7 @@ The cleanup tool includes several safety features:
 ## Command-line Options
 
 ```
-usage: cleanup_files.py [-h] --project-dir PROJECT_DIR --manifest MANIFEST [--output OUTPUT] [--verbose] [--dry-run] [--interactive] [--batch] [--backup-dir BACKUP_DIR]
+usage: scripts/utils/cleanup/cleanup_files.py [-h] --project-dir PROJECT_DIR --manifest MANIFEST [--output OUTPUT] [--verbose] [--dry-run] [--interactive] [--batch] [--backup-dir BACKUP_DIR]
 
 Identify and clean up orphaned or outdated files.
 

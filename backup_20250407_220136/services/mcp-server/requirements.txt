@@ -1,8 +1,0 @@
-fastapi>=0.95.0
-uvicorn[standard]>=0.22.0
-langchain>=0.0.267
-langgraph>=0.0.10
-pydantic~=1.10.0
-requests>=2.30.0
-python-dotenv>=1.0.0
-dependency-injector>=4.41.0

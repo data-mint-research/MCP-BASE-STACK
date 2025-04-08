@@ -10,6 +10,6 @@ docker compose up -d
 
 # Verify stack health
 echo "Verifying stack health..."
-./verify_stack_health.sh
+./scripts/utils/validation/verify_stack_health.sh
 
 echo "Stack restart completed."
