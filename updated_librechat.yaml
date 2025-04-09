@@ -10,9 +10,15 @@ endpoints:
   custom:
     - name: "Ollama"
       apiKey: "dummy-key"  # Adding a dummy key to pass the filter
-      baseURL: "http://172.20.106.58:11434"
+      baseURL: "http://ollama:11434"  # Use Docker service name for proper networking
       models:
         default: ["deepseek-coder:6.7b", "mistral:7b"]
         fetch: true  # Fetch available models from Ollama
       titleConvo: true
       titleModel: "mistral:7b"
+
+# MCP configuration
+mcp:
+  enabled: true
+  adapter_url: "http://mcp-adapter:8001"  # Use Docker service name for proper networking
+  server_id: "serj-agent"
